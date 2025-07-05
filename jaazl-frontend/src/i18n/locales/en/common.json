@@ -1,0 +1,228 @@
+{
+  "site": {
+    "name": "JAAZL Industrial Company",
+    "tagline": "Advanced Industrial Solutions"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "industries": "Industries",
+    "about": "About Us",
+    "contact": "Contact",
+    "language": "Language",
+    "callUs": "Call Us",
+    "getQuote": "Get a Quote"
+  },
+  "services": {
+    "title": "Services",
+    "engineering": "Engineering Consulting & AI",
+    "environmental": "Environmental Solutions",
+    "chemicals": "Chemical Solutions",
+    "electromechanical": "Electromechanical Services",
+    "viewService": "View Service",
+    "inquire": "Inquire About This Service",
+    "featuredSolutions": "Featured Solutions",
+    "caseStudies": "Case Studies",
+    "learnMore": "Learn More"
+  },
+  "industries": {
+    "title": "Industries",
+    "oilGas": "Oil & Gas",
+    "petrochemicals": "Petrochemicals",
+    "refineries": "Refineries",
+    "mining": "Mining & Minerals",
+    "municipal": "Municipal"
+  },
+  "homepage": {
+    "hero": {
+      "title": "Advanced Industrial Solutions for Complex Challenges",
+      "subtitle": "Comprehensive Engineering, Environmental, Chemical and Electromechanical Services",
+      "cta": "Explore Solutions"
+    },
+    "stats": {
+      "years": "Years Experience",
+      "clients": "Satisfied Clients",
+      "projects": "Successful Projects",
+      "experts": "Expert Staff"
+    },
+    "services": {
+      "title": "Our Comprehensive Services",
+      "subtitle": "Specialized expertise across multiple industrial domains",
+      "seeAllServices": "See All Services"
+    },
+    "industries": {
+      "title": "Industries We Serve",
+      "subtitle": "Supporting critical infrastructure across Saudi Arabia",
+      "viewSolutions": "View Solutions"
+    },
+    "clients": {
+      "title": "Our Clients",
+      "subtitle": "Trusted by industry leaders"
+    },
+    "contact": {
+      "title": "Ready to Transform Your Operations?",
+      "subtitle": "Get in touch with our experts for a consultation",
+      "cta": "Contact Us"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "company": "Company Name",
+      "message": "Your Message",
+      "submit": "Submit"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Hours",
+      "workingHours": "Monday - Friday: 8:00 AM - 5:00 PM"
+    }
+  },
+  "about": {
+    "title": "About JAAZL",
+    "history": {
+      "title": "Our History",
+      "content": "Founded in 2010, JAAZL Industrial Company has grown to become a leading provider of industrial solutions in Saudi Arabia."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To deliver innovative, sustainable and reliable industrial solutions that help our clients optimize operations and achieve strategic objectives."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "content": "To be the preferred partner for industrial solutions across the Middle East, known for technical excellence, innovation and commitment to sustainability."
+    },
+    "values": {
+      "title": "Our Values",
+      "integrity": "Integrity",
+      "excellence": "Technical Excellence",
+      "innovation": "Innovation",
+      "sustainability": "Sustainability",
+      "partnership": "Client Partnership"
+    },
+    "team": {
+      "title": "Our Team",
+      "leadership": "Leadership Team",
+      "experts": "Our Experts"
+    },
+    "certifications": {
+      "title": "Certifications",
+      "iso": "ISO Certified",
+      "quality": "Quality Management",
+      "environmental": "Environmental Management",
+      "safety": "Safety Standards"
+    }
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "industries": "Industries",
+    "contact": {
+      "title": "Contact Us",
+      "address": "Riyadh, Saudi Arabia",
+      "email": "info@jaazl.com",
+      "phone": "+966 11 XXX XXXX"
+    },
+    "social": "Follow Us",
+    "copyright": "© 2023 JAAZL Industrial Company. All Rights Reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "cta": {
+    "getQuote": "Get a Quote",
+    "contactSales": "Contact Sales",
+    "learnMore": "Learn More",
+    "downloadBrochure": "Download Brochure"
+  },
+  "modals": {
+    "serviceInquiry": {
+      "title": "Service Inquiry",
+      "steps": {
+        "contact": "Contact Information",
+        "project": "Project Details",
+        "requirements": "Service Requirements",
+        "success": "Inquiry Submitted"
+      },
+      "form": {
+        "fullName": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "company": "Company Name",
+        "position": "Job Title",
+        "projectName": "Project Name",
+        "projectType": "Project Type",
+        "projectLocation": "Project Location",
+        "projectTimeline": "Expected Timeline",
+        "projectBudget": "Budget Range",
+        "serviceType": "Service Type",
+        "projectDescription": "Project Description",
+        "technicalRequirements": "Technical Requirements",
+        "additionalInfo": "Additional Information"
+      },
+      "buttons": {
+        "continue": "Continue",
+        "back": "Back",
+        "submit": "Submit Inquiry",
+        "close": "Close"
+      },
+      "success": {
+        "title": "Thank You!",
+        "message": "Your service inquiry has been submitted successfully. Our team will review your request and get back to you within 24 hours.",
+        "emailSent": "A confirmation email has been sent to:"
+      }
+    },
+    "quoteRequest": {
+      "title": "Request a Detailed Quote",
+      "sections": {
+        "contact": "Contact Information",
+        "project": "Project Information",
+        "technical": "Technical Specifications & Files"
+      },
+      "form": {
+        "fullName": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "company": "Company Name",
+        "serviceType": "Service Type",
+        "projectType": "Project Type",
+        "projectLocation": "Project Location",
+        "projectDescription": "Project Description",
+        "budget": "Budget Range",
+        "timeline": "Expected Timeline",
+        "specifications": "Technical Specifications",
+        "uploadFiles": "Upload Files (Optional)",
+        "dragDrop": "Drag & drop files here or click to browse",
+        "fileTypes": "PDF, Word, Excel, CAD files (Max. 10MB each)",
+        "uploadedFiles": "Uploaded Files:"
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "submit": "Submit Request",
+        "processing": "Processing...",
+        "close": "Close"
+      },
+      "success": {
+        "title": "Quote Request Submitted!",
+        "message": "Thank you for your interest in JAAZL industrial solutions. Our team will review your quote request and prepare a detailed proposal for your project.",
+        "nextSteps": "What to expect next:",
+        "confirmation": "You'll receive a confirmation email within 15 minutes",
+        "contact": "A JAAZL representative will contact you within 24-48 hours",
+        "quote": "You'll receive your detailed quote within 3-5 business days"
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "required": "Required",
+    "optional": "Optional",
+    "selectOption": "Select an option",
+    "fileSize": "File size"
+  }
+}
