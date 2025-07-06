@@ -8,6 +8,7 @@
 # Handle form submissions
 [build.environment]
   NEXT_PUBLIC_SITE_URL = "https://jaazl.com"
+  NODE_VERSION = "18.20.8"
 
 # Form notifications settings
 [forms]
