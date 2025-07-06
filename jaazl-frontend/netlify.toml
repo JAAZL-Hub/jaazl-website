@@ -13,6 +13,9 @@
 [forms]
   [forms.contact]
     name = "Contact Form"
+    [forms.contact.email_notification]
+      to = "aalmodhayan@jaazl.com"
+      subject = "New contact form submission from JAAZL website"
 
 # Redirect for form success
 [[redirects]]
