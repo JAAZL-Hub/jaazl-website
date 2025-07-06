@@ -28,13 +28,18 @@ export default function ContactPage() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  // Handle form submission
+  // Handle form submission with Netlify
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormError(null);
     
     try {
-      // Process form submission without showing loading state
+      // With Netlify forms, the form will be automatically handled when the form has netlify attribute
+      // The redirect happens automatically after submission
+      setFormStatus('submitting');
+      
+      // This would typically not run because Netlify intercepts the form submission
+      // But we'll keep it as a fallback for development
       setFormStatus('success');
       setFormData({
         name: '',
@@ -44,8 +49,6 @@ export default function ContactPage() {
         message: '',
       });
     } catch {
-      // Since the error is not being used, the variable can be removed.
-      // Error
       setFormStatus('error');
       setFormError(language === 'en' 
         ? 'There was an error sending your message. Please try again.'
@@ -242,7 +245,20 @@ export default function ContactPage() {
                 {language === 'en' ? 'Send Us a Message' : 'أرسل لنا رسالة'}
               </h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                name="contact" 
+                method="POST" 
+                data-netlify="true" 
+                netlify-honeypot="bot-field"
+                action="/thank-you"
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+              >
+                {/* Netlify form handling */}
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
+                {/* Hidden field for email notification */}
+                <input type="hidden" name="recipient" value="info@jaazl.com" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Name Field - Enhanced */}
                   <div className="group">

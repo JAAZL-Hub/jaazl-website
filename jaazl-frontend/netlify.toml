@@ -4,3 +4,18 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Handle form submissions
+[build.environment]
+  NEXT_PUBLIC_SITE_URL = "https://jaazl.com"
+
+# Form notifications settings
+[forms]
+  [forms.contact]
+    name = "Contact Form"
+
+# Redirect for form success
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you"
+  status = 200
