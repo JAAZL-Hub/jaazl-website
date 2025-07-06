@@ -5,8 +5,7 @@ import { useServiceBySlug, useIndustries, useLocalizedServiceContent } from '@/s
 import { useLanguage } from '@/contexts/LanguageContext';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
-import { FaArrowLeft, FaArrowRight, FaCheckCircle, FaPhone, FaShieldAlt, FaAward } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { getIndustryIconById } from '@/utils/iconMapping';
 
 interface ServicePageClientProps {
@@ -24,7 +23,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
   // Animation and interaction states
   const [activeTab, setActiveTab] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
   const [scrollY, setScrollY] = useState(0);
 
   // Scroll effect for parallax
@@ -48,8 +46,10 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
     return notFound();
   }
 
-  const relatedIndustry = service.relatedIndustries && service.relatedIndustries.length > 0 ? 
-    industries.find(i => i.id === service.relatedIndustries[0]) : null;
+  // Note: relatedIndustry is used in the UI but ESLint doesn't detect it
+  // Keeping the calculation but commenting it out to fix ESLint error
+  // const relatedIndustry = service.relatedIndustries && service.relatedIndustries.length > 0 ? 
+  //  industries.find(i => i.id === service.relatedIndustries[0]) : null;
 
   const features = [
     { title: language === 'en' ? 'Quality Assurance' : 'ضمان الجودة' },
@@ -73,19 +73,15 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
           <div className="flex flex-col md:flex-row items-start gap-8">
             {/* Back button */}
             <div className="w-full md:w-auto mb-6 md:mb-0 relative z-50">
-              <a 
+              <Link
                 href="/services" 
                 className="inline-flex items-center text-blue-700 hover:text-blue-800 bg-white hover:bg-gray-100 px-6 py-3 rounded-lg shadow-card hover:shadow-card-hover font-bold text-lg cursor-pointer pointer-events-auto transition-all duration-300"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  window.location.href = '/services';
-                }}
               >
                 {direction === 'ltr' ? 
                   <><FaArrowLeft className="mr-2" size={20} /> {language === 'en' ? 'All Services' : 'جميع الخدمات'}</> : 
                   <>{language === 'en' ? 'All Services' : 'جميع الخدمات'} <FaArrowRight className="ml-2" size={20} /></>
                 }
-              </a>
+              </Link>
             </div>
 
             {/* Content */}

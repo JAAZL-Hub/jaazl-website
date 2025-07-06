@@ -138,7 +138,13 @@ export type IconName =
   | MiscIconName;
 
 // Generic icon getter function
-export const getIcon = (iconName: IconName): React.ComponentType<any> => {
+type IconProps = {
+  size?: number;
+  className?: string;
+  color?: string;
+};
+
+export const getIcon = (iconName: IconName): React.ComponentType<IconProps> => {
   // Delegate to the appropriate category getter
   if (isIndustryIcon(iconName)) return getIndustryIcon(iconName as IndustryIconName);
   if (isNavigationIcon(iconName)) return getNavigationIcon(iconName as NavigationIconName);
@@ -167,12 +173,8 @@ const isContactIcon = (name: string): boolean => {
   return ['phone', 'mail', 'message-square', 'message-circle', 'send'].includes(name);
 };
 
-const isSocialIcon = (name: string): boolean => {
-  return ['linkedin', 'twitter', 'facebook', 'youtube', 'instagram'].includes(name);
-};
-
 // Map social media icon names to actual Lucide icon components
-export const getSocialIcon = (iconName: SocialIconName | string): React.ComponentType<any> => {
+export const getSocialIcon = (iconName: SocialIconName): React.ComponentType<IconProps> => {
   switch (iconName) {
     case 'linkedin':
       return FaLinkedin;
@@ -191,7 +193,7 @@ export const getSocialIcon = (iconName: SocialIconName | string): React.Componen
 };
 
 // Map industry icon names to actual Lucide icon components
-export const getIndustryIcon = (iconName: IndustryIconName | string): React.ComponentType<any> => {
+export const getIndustryIcon = (iconName: IndustryIconName | string): React.ComponentType<IconProps> => {
   switch (iconName) {
     case 'droplet':
       return FaTint;
@@ -226,7 +228,7 @@ export const getIndustryIcon = (iconName: IndustryIconName | string): React.Comp
 };
 
 // Map navigation icon names to actual Lucide icon components
-export const getNavigationIcon = (iconName: NavigationIconName | string): React.ComponentType<any> => {
+export const getNavigationIcon = (iconName: NavigationIconName | string): React.ComponentType<IconProps> => {
   switch (iconName) {
     case 'chevron-down':
       return FaChevronDown;
@@ -252,7 +254,7 @@ export const getNavigationIcon = (iconName: NavigationIconName | string): React.
 };
 
 // Map feature icon names to actual Lucide icon components
-export const getFeatureIcon = (iconName: FeatureIconName | string): React.ComponentType<any> => {
+export const getFeatureIcon = (iconName: FeatureIconName | string): React.ComponentType<IconProps> => {
   switch (iconName) {
     case 'check-circle':
       return FaCheckCircle;
@@ -276,7 +278,7 @@ export const getFeatureIcon = (iconName: FeatureIconName | string): React.Compon
 };
 
 // Map contact icon names to actual Lucide icon components
-export const getContactIcon = (iconName: ContactIconName | string): React.ComponentType<any> => {
+export const getContactIcon = (iconName: ContactIconName | string): React.ComponentType<IconProps> => {
   switch (iconName) {
     case 'phone':
       return FaPhone;
@@ -294,7 +296,7 @@ export const getContactIcon = (iconName: ContactIconName | string): React.Compon
 };
 
 // Map misc icon names to actual Lucide icon components
-export const getMiscIcon = (iconName: MiscIconName | string): React.ComponentType<any> => {
+export const getMiscIcon = (iconName: MiscIconName | string): React.ComponentType<IconProps> => {
   switch (iconName) {
     case 'clock':
       return FaClock;
@@ -324,7 +326,7 @@ export const getMiscIcon = (iconName: MiscIconName | string): React.ComponentTyp
 };
 
 // Helper function to get an industry icon by its industry ID
-export const getIndustryIconById = (industryId: string): React.ComponentType<any> => {
+export const getIndustryIconById = (industryId: string): React.ComponentType<IconProps> => {
   // Map industry IDs to appropriate icon names
   let iconName: IndustryIconName;
   

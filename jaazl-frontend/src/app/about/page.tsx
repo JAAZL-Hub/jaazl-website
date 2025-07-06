@@ -3,7 +3,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useAboutInfo } from '@/services/hooks';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { FaCheckCircle, FaTimes, FaAward, FaHeart, FaShieldAlt, FaEye, FaBolt, FaUsers } from 'react-icons/fa';
+import { AboutInfo } from '@/services/types';
+import { FaTimes, FaAward, FaHeart, FaShieldAlt, FaEye, FaBolt, FaUsers } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -11,6 +12,14 @@ import Image from 'next/image';
 interface LocalizedContent {
   en: string;
   ar: string;
+}
+
+// Helper function to safely get localized content
+function getLocalizedValue(value: string | LocalizedContent, lang: string): string {
+  if (typeof value === 'string') {
+    return value;
+  }
+  return lang === 'en' ? value.en : value.ar;
 }
 
 interface ImageContent {
@@ -26,14 +35,30 @@ interface ValueItem {
 
 interface TeamMember {
   name: string;
-  position: LocalizedContent;
-  bio: LocalizedContent;
+  position: LocalizedContent | string;
+  bio: LocalizedContent | string;
+  imageAlt?: string;
   image?: ImageContent;
+  id?: string;
 }
 
 interface Certificate {
   name: LocalizedContent;
   description: LocalizedContent;
+  image?: ImageContent;
+  issuedBy?: string;
+  validUntil?: string;
+  id?: string;
+}
+
+// Interface that maps AboutInfo to the structure used in this component
+interface AboutData {
+  history: LocalizedContent;
+  mission: LocalizedContent;
+  vision: LocalizedContent;
+  values: ValueItem[]; // maps to coreValues in AboutInfo
+  team: TeamMember[];  // maps to leadership in AboutInfo
+  certificates: Certificate[]; // maps to certifications in AboutInfo
   issuedBy?: string;
   validUntil?: string;
   id?: string;
@@ -91,8 +116,32 @@ export default function AboutPage() {
     };
   }, []);
 
-  // Use empty data for initial render instead of showing loading state
-  const aboutData: AboutData = aboutInfo || {
+  // Map AboutInfo to AboutData structure or use empty data for initial render
+  const aboutData: AboutData = aboutInfo ? {
+    history: aboutInfo.history,
+    mission: aboutInfo.mission,
+    vision: aboutInfo.vision,
+    values: aboutInfo.coreValues?.map(value => ({
+      icon: value.icon,
+      title: value.title,
+      description: value.description
+    })) || [],
+    team: aboutInfo.leadership?.map(member => ({
+      id: member.id,
+      name: typeof member.name === 'string' ? member.name : (member.name.en || ''),
+      position: member.position,
+      bio: member.bio,
+      image: member.imageSrc ? { url: member.imageSrc, altText: typeof member.name === 'object' ? member.name : { en: member.name, ar: member.name } } : undefined
+    })) || [],
+    certificates: aboutInfo.certifications?.map(cert => ({
+      id: cert.id,
+      name: cert.name,
+      description: cert.description,
+      image: cert.imageSrc ? { url: cert.imageSrc, altText: cert.name } : undefined,
+      issuedBy: '',  // Add default values for optional properties
+      validUntil: ''
+    })) || []
+  } : {
     history: { en: '', ar: '' },
     mission: { en: '', ar: '' },
     vision: { en: '', ar: '' },
@@ -113,8 +162,8 @@ export default function AboutPage() {
     team: aboutData.team.map(member => ({
       ...member,
       name: member.name,
-      position: language === 'en' ? member.position.en : member.position.ar,
-      bio: language === 'en' ? member.bio.en : member.bio.ar,
+      position: getLocalizedValue(member.position, language),
+      bio: getLocalizedValue(member.bio, language),
       imageAlt: member.image ? (language === 'en' ? member.image.altText.en : member.image.altText.ar) : ''
     })),
     certificates: aboutData.certificates.map(certificate => ({
@@ -337,10 +386,10 @@ export default function AboutPage() {
                   
                   <div className="md:w-2/3 p-8">
                     <h3 className="text-3xl font-bold text-gray-900">{activeMember.name}</h3>
-                    <p className="text-blue-700 text-xl font-medium mt-1">{activeMember.position[language]}</p>
+                    <p className="text-blue-700 text-xl font-medium mt-1">{getLocalizedValue(activeMember.position, language)}</p>
                     
                     <div className="prose prose-lg max-w-none text-gray-600 mt-6 leading-relaxed">
-                      <p>{activeMember.bio[language]}</p>
+                      <p>{getLocalizedValue(activeMember.bio, language)}</p>
                     </div>
                     
                     <div className="mt-8 pt-6 border-t border-gray-200">

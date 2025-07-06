@@ -7,7 +7,6 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import { getIndustryIconById } from '@/utils/iconMapping';
 
 interface LocalizedText {
   en: string;
@@ -185,9 +184,9 @@ export default function IndustryPageClient({ slug }: IndustryPageClientProps) {
 
               {/* Success Stories Tab */}
               <div className={`${activeTab === 1 ? 'block' : 'hidden'}`}>
-                {(industry as { caseStudies?: CaseStudy[] }).caseStudies && (industry as { caseStudies?: CaseStudy[] }).caseStudies.length > 0 ? (
+                {industry?.caseStudies && industry.caseStudies.length > 0 ? (
                   <div className="space-y-8">
-                    {(industry as { caseStudies: CaseStudy[] }).caseStudies.map((caseStudy: CaseStudy) => (
+                    {industry.caseStudies.map((caseStudy: CaseStudy) => (
                       <div 
                         key={caseStudy.id}
                         className="border border-gray-200 rounded-lg overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 hover:border-blue-200"
@@ -242,7 +241,7 @@ export default function IndustryPageClient({ slug }: IndustryPageClientProps) {
               {/* Solutions Tab with Enhanced Animations */}
               <div className={`${activeTab === 2 ? 'block' : 'hidden'}`}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {(industry as { solutions?: Solution[] }).solutions && (industry as { solutions?: Solution[] }).solutions.map((solution: Solution) => (
+                  {industry?.solutions && industry.solutions.map((solution: Solution) => (
                     <div 
                       key={solution.id}
                       className="p-6 border border-gray-200 rounded-lg shadow-card hover:shadow-card-hover hover:border-blue-200 transition-all duration-300 bg-white hover:bg-gradient-to-br hover:from-white hover:to-blue-50"
@@ -258,7 +257,7 @@ export default function IndustryPageClient({ slug }: IndustryPageClientProps) {
                     </div>
                   ))}
 
-                  {(!(industry as { solutions?: Solution[] }).solutions || (industry as { solutions?: Solution[] }).solutions.length === 0) && (
+                  {(!industry?.solutions || industry.solutions.length === 0) && (
                     <div className="text-gray-500 italic font-manifalight p-4 text-center border border-dashed border-gray-300 rounded-lg md:col-span-2">
                       {language === 'en' ? 'Solutions will be added soon.' : 'سيتم إضافة الحلول قريبًا.'}
                     </div>
