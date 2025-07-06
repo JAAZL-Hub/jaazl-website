@@ -6,8 +6,30 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, ArrowRight, CheckCircle, Star, Phone, Briefcase, FileText, Lightbulb, TrendingUp } from 'lucide-react';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { getIndustryIconById } from '@/utils/iconMapping';
+
+interface LocalizedText {
+  en: string;
+  ar: string;
+}
+
+interface CaseStudy {
+  id: string;
+  title: LocalizedText;
+  description: LocalizedText;
+  image?: {
+    url: string;
+    altText: LocalizedText;
+  };
+  tags?: string[];
+}
+
+interface Solution {
+  id: string;
+  title: LocalizedText;
+  description: LocalizedText;
+}
 
 interface IndustryPageClientProps {
   slug: string;
@@ -50,9 +72,9 @@ export default function IndustryPageClient({ slug }: IndustryPageClientProps) {
     services.filter(s => industry.relatedServices?.includes(s.id)) : [];
 
   const keyStats = [
-    { title: language === 'en' ? 'Clients Served' : 'العملاء المخدومين', icon: <Briefcase size={24} /> },
-    { title: language === 'en' ? 'Annual Growth' : 'النمو السنوي', icon: <TrendingUp size={24} /> },
-    { title: language === 'en' ? 'Success Rate' : 'معدل النجاح', icon: <Lightbulb size={24} /> },
+    { title: language === 'en' ? 'Clients Served' : 'العملاء المخدومين' },
+    { title: language === 'en' ? 'Annual Growth' : 'النمو السنوي' },
+    { title: language === 'en' ? 'Success Rate' : 'معدل النجاح' },
   ];
 
   return (
@@ -71,19 +93,15 @@ export default function IndustryPageClient({ slug }: IndustryPageClientProps) {
           <div className="flex flex-col md:flex-row items-start gap-8">
             {/* Back button */}
             <div className="w-full md:w-auto mb-6 md:mb-0 relative z-50">
-              <a 
+              <Link 
                 href="/industries" 
-                className="inline-flex items-center text-blue-700 hover:text-blue-800 bg-white hover:bg-gray-100 px-6 py-3 rounded-lg shadow-lg font-bold text-lg cursor-pointer pointer-events-auto"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  window.location.href = '/industries';
-                }}
+                className="inline-flex items-center text-blue-700 hover:text-blue-800 bg-white hover:bg-gray-100 px-6 py-3 rounded-lg shadow-card hover:shadow-card-hover font-bold text-lg cursor-pointer pointer-events-auto transition-all duration-300"
               >
                 {direction === 'ltr' ? 
-                  <><ArrowLeft className="mr-2" size={20} /> {language === 'en' ? 'All Industries' : 'جميع الصناعات'}</> : 
-                  <>{language === 'en' ? 'All Industries' : 'جميع الصناعات'} <ArrowRight className="ml-2" size={20} /></>
+                  <><FaArrowLeft className="me-2" size={20} /> {language === 'en' ? 'All Industries' : 'جميع الصناعات'}</> : 
+                  <>{language === 'en' ? 'All Industries' : 'جميع الصناعات'} <FaArrowRight className="ms-2" size={20} /></>
                 }
-              </a>
+              </Link>
             </div>
 
             {/* Content */}
@@ -102,7 +120,6 @@ export default function IndustryPageClient({ slug }: IndustryPageClientProps) {
                     key={index} 
                     className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full"
                   >
-                    <span className="text-blue-300 mr-2">{stat.icon}</span>
                     <span className="text-white font-manifalight">{stat.title}</span>
                   </div>
                 ))}
@@ -168,12 +185,12 @@ export default function IndustryPageClient({ slug }: IndustryPageClientProps) {
 
               {/* Success Stories Tab */}
               <div className={`${activeTab === 1 ? 'block' : 'hidden'}`}>
-                {(industry as any).caseStudies && (industry as any).caseStudies.length > 0 ? (
+                {(industry as { caseStudies?: CaseStudy[] }).caseStudies && (industry as { caseStudies?: CaseStudy[] }).caseStudies.length > 0 ? (
                   <div className="space-y-8">
-                    {(industry as any).caseStudies.map((caseStudy: any) => (
+                    {(industry as { caseStudies: CaseStudy[] }).caseStudies.map((caseStudy: CaseStudy) => (
                       <div 
                         key={caseStudy.id}
-                        className="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:border-blue-200"
+                        className="border border-gray-200 rounded-lg overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 hover:border-blue-200"
                         onMouseEnter={() => setHoveredCard(caseStudy.id)}
                         onMouseLeave={() => setHoveredCard(null)}
                       >
@@ -194,7 +211,7 @@ export default function IndustryPageClient({ slug }: IndustryPageClientProps) {
                           )}
                           <div className="md:w-2/3 p-6">
                             <h3 className="text-xl font-manifabold text-gray-900 mb-2 flex items-center">
-                              <span className={`w-1 h-8 bg-blue-600 rounded-full mr-3 transition-all duration-300 ${hoveredCard === caseStudy.id ? 'h-16' : 'h-8'}`}></span>
+                              <span className={`w-1 h-8 bg-blue-600 rounded-full me-3 transition-all duration-300 ${hoveredCard === caseStudy.id ? 'h-16' : 'h-8'}`}></span>
                               {language === 'en' ? caseStudy.title.en : caseStudy.title.ar}
                             </h3>
                             <p className="text-gray-700 mb-4 font-manifalight">
@@ -225,29 +242,23 @@ export default function IndustryPageClient({ slug }: IndustryPageClientProps) {
               {/* Solutions Tab with Enhanced Animations */}
               <div className={`${activeTab === 2 ? 'block' : 'hidden'}`}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {(industry as any).solutions && (industry as any).solutions.map((solution: any) => (
+                  {(industry as { solutions?: Solution[] }).solutions && (industry as { solutions?: Solution[] }).solutions.map((solution: Solution) => (
                     <div 
                       key={solution.id}
-                      className="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 bg-white transform hover:-translate-y-1 hover:bg-gradient-to-br hover:from-white hover:to-blue-50"
+                      className="p-6 border border-gray-200 rounded-lg shadow-card hover:shadow-card-hover hover:border-blue-200 transition-all duration-300 bg-white hover:bg-gradient-to-br hover:from-white hover:to-blue-50"
                       onMouseEnter={() => setHoveredCard(solution.id)}
                       onMouseLeave={() => setHoveredCard(null)}
                     >
-                      <div className="flex items-center mb-3">
-                        <div className={`w-10 h-10 rounded-full flex items-center justify-center mr-3 transition-all duration-300 ${hoveredCard === solution.id ? 'bg-blue-600 text-white scale-110' : 'bg-blue-100 text-blue-600'}`}>
-                          {/* Get industry-specific icon */}
-                          {React.createElement(getIndustryIconById(industry.id), { size: 20 })}
-                        </div>
-                        <h3 className="text-xl font-manifabold text-gray-900 group-hover:text-blue-700 transition-colors">
-                          {language === 'en' ? solution.title.en : solution.title.ar}
-                        </h3>
-                      </div>
-                      <p className="text-gray-700 font-manifalight pl-13">
+                      <h3 className="text-xl font-manifabold text-gray-900 group-hover:text-blue-700 transition-colors mb-3">
+                        {language === 'en' ? solution.title.en : solution.title.ar}
+                      </h3>
+                      <p className="text-gray-700 font-manifalight">
                         {language === 'en' ? solution.description.en : solution.description.ar}
                       </p>
                     </div>
                   ))}
 
-                  {(!(industry as any).solutions || (industry as any).solutions.length === 0) && (
+                  {(!(industry as { solutions?: Solution[] }).solutions || (industry as { solutions?: Solution[] }).solutions.length === 0) && (
                     <div className="text-gray-500 italic font-manifalight p-4 text-center border border-dashed border-gray-300 rounded-lg md:col-span-2">
                       {language === 'en' ? 'Solutions will be added soon.' : 'سيتم إضافة الحلول قريبًا.'}
                     </div>
@@ -268,7 +279,7 @@ export default function IndustryPageClient({ slug }: IndustryPageClientProps) {
               </p>
               <Link 
                 href="/contact" 
-                className="inline-block bg-blue-700 hover:bg-blue-800 text-white font-manifabold py-3 px-8 rounded-lg transition-all transform hover:translate-y-[-2px] hover:shadow-lg"
+                className="inline-block bg-blue-700 hover:bg-blue-800 text-white font-manifabold py-3 px-8 rounded-lg transition-all duration-300 shadow-btn-primary hover:shadow-btn-primary-hover transform hover:-translate-y-1"
               >
                 {language === 'en' ? 'Contact Us' : 'اتصل بنا'}
               </Link>
@@ -278,9 +289,8 @@ export default function IndustryPageClient({ slug }: IndustryPageClientProps) {
           {/* Right Column - Sidebar */}
           <div className="w-full lg:w-1/3">
             {/* Industry Insights */}
-            <div className="mb-8 p-6 bg-white rounded-xl border border-gray-200 shadow-sm">
-              <h3 className="text-xl font-manifabold text-gray-900 mb-4 flex items-center">
-                <FileText size={20} className="mr-2 text-blue-600" />
+            <div className="mb-8 p-6 bg-white rounded-xl border border-gray-200 shadow-card">
+              <h3 className="text-xl font-manifabold text-gray-900 mb-4">
                 {language === 'en' ? 'Industry Insights' : 'رؤى الصناعة'}
               </h3>
               <div className="space-y-4">
@@ -306,9 +316,8 @@ export default function IndustryPageClient({ slug }: IndustryPageClientProps) {
             </div>
 
             {/* Contact Card */}
-            <div className="mb-8 p-6 bg-white rounded-xl border border-gray-200 shadow-sm">
-              <h3 className="text-xl font-manifabold text-gray-900 mb-4 flex items-center">
-                <Phone size={20} className="mr-2 text-blue-600" />
+            <div className="mb-8 p-6 bg-white rounded-xl border border-gray-200 shadow-card">
+              <h3 className="text-xl font-manifabold text-gray-900 mb-4">
                 {language === 'en' ? 'Need Assistance?' : 'بحاجة للمساعدة؟'}
               </h3>
               <p className="text-gray-700 mb-6 font-manifalight">
@@ -318,7 +327,7 @@ export default function IndustryPageClient({ slug }: IndustryPageClientProps) {
               </p>
               <Link 
                 href="/contact" 
-                className="w-full inline-block text-center bg-blue-700 hover:bg-blue-800 text-white font-manifabold py-3 px-6 rounded-lg transition-all"
+                className="w-full inline-block text-center bg-blue-700 hover:bg-blue-800 text-white font-manifabold py-3 px-6 rounded-lg transition-all duration-300 shadow-btn-primary hover:shadow-btn-primary-hover"
               >
                 {language === 'en' ? 'Get in Touch' : 'تواصل معنا'}
               </Link>
@@ -335,9 +344,8 @@ export default function IndustryPageClient({ slug }: IndustryPageClientProps) {
                     <li key={service.id} className="group">
                       <Link 
                         href={`/services/${service.slug}`}
-                        className="flex items-start p-3 rounded-lg hover:bg-blue-100/50 transition-colors"
+                        className="block p-3 rounded-lg hover:bg-blue-100/50 transition-colors"
                       >
-                        <Star size={18} className="text-blue-600 mt-1 mr-2 flex-shrink-0" />
                         <div>
                           <h4 className="text-gray-900 font-manifabold group-hover:text-blue-700 transition-colors">
                             {language === 'en' ? service.name.en : service.name.ar}

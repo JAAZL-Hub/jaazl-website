@@ -1,68 +1,68 @@
 import React from 'react';
 import { 
   // Industry icons
-  Droplet, 
-  FlaskConical, 
-  Filter, 
-  Building2, 
-  Hammer, 
-  Factory, 
-  Power, 
-  Workflow, 
-  Droplets,
-  Stethoscope,
-  Landmark,
-  Car,
-  Ship,
+  FaTint, 
+  FaFlask, 
+  FaFilter, 
+  FaBuilding, 
+  FaHammer, 
+  FaIndustry, 
+  FaBolt, 
+  FaProjectDiagram, 
+  FaTintSlash,
+  FaStethoscope,
+  FaLandmark,
+  FaCar,
+  FaShip,
   
   // Navigation icons
-  ChevronDown,
-  ChevronRight,
-  ChevronUp,
-  Menu,
-  X,
-  Globe,
-  ArrowRight,
-  ArrowLeft,
-  Home,
+  FaChevronDown,
+  FaChevronRight,
+  FaChevronUp,
+  FaBars,
+  FaTimes,
+  FaGlobe,
+  FaArrowRight,
+  FaArrowLeft,
+  FaHome,
   
   // Feature & benefit icons
-  CheckCircle,
-  Shield,
-  Award,
-  Star,
-  TrendingUp,
-  Zap,
-  Eye,
-  Heart,
+  FaCheckCircle,
+  FaShieldAlt,
+  FaAward,
+  FaStar,
+  FaChartLine,
+  FaBolt as FaZap, // Alias to avoid conflict
+  FaEye,
+  FaHeart,
   
   // Contact & communication icons
-  Phone,
-  Mail,
-  MessageSquare,
-  MessageCircle,
-  Send,
+  FaPhone,
+  FaEnvelope,
+  FaCommentDots,
+  FaCommentAlt,
+  FaPaperPlane,
   
   // Social media icons
-  Linkedin,
-  XIcon,
-  Facebook,
-  Youtube,
-  Instagram,
+  FaLinkedin,
+  FaFacebook,
+  FaYoutube,
+  FaInstagram,
   
   // Misc icons
-  Clock,
-  Calendar,
-  FileText,
-  Briefcase,
-  Lightbulb,
-  Cog,
-  MapPin,
-  Users,
-  Download,
-  PlayCircle,
-  CircleEllipsis
-} from 'lucide-react';
+  FaClock,
+  FaCalendarAlt,
+  FaFileAlt,
+  FaBriefcase,
+  FaLightbulb,
+  FaCog,
+  FaMapMarkerAlt,
+  FaUsers,
+  FaDownload,
+  FaPlayCircle,
+  FaEllipsisH
+} from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 // Icon name types organized by category
 export type IndustryIconName = 
@@ -82,7 +82,7 @@ export type IndustryIconName =
 
 export type SocialIconName =
   | 'linkedin'
-  | 'x-twitter'
+  | 'twitter'
   | 'facebook'
   | 'youtube'
   | 'instagram';
@@ -175,18 +175,18 @@ const isSocialIcon = (name: string): boolean => {
 export const getSocialIcon = (iconName: SocialIconName | string): React.ComponentType<any> => {
   switch (iconName) {
     case 'linkedin':
-      return Linkedin;
+      return FaLinkedin;
     case 'twitter':
-      return XIcon;
+      return FaXTwitter;
     case 'facebook':
-      return Facebook;
+      return FaFacebook;
     case 'youtube':
-      return Youtube;
+      return FaYoutube;
     case 'instagram':
-      return Instagram;
+      return FaInstagram;
     default:
       console.warn(`Unknown social icon: ${iconName}, defaulting to Linkedin`);
-      return Linkedin;
+      return FaLinkedin;
   }
 };
 
@@ -194,34 +194,34 @@ export const getSocialIcon = (iconName: SocialIconName | string): React.Componen
 export const getIndustryIcon = (iconName: IndustryIconName | string): React.ComponentType<any> => {
   switch (iconName) {
     case 'droplet':
-      return Droplet;
+      return FaTint;
     case 'flask-conical':
-      return FlaskConical;
+      return FaFlask;
     case 'filter':
-      return Filter;
+      return FaFilter;
     case 'building-2':
-      return Building2;
+      return FaBuilding;
     case 'hammer':
-      return Hammer;
+      return FaHammer;
     case 'factory':
-      return Factory;
+      return FaIndustry;
     case 'power':
-      return Power;
+      return FaBolt;
     case 'workflow':
-      return Workflow;
+      return FaProjectDiagram;
     case 'droplets':
-      return Droplets;
+      return FaTintSlash;
     case 'stethoscope':
-      return Stethoscope;
+      return FaStethoscope;
     case 'landmark':
-      return Landmark;
+      return FaLandmark;
     case 'car':
-      return Car;
+      return FaCar;
     case 'ship':
-      return Ship;
+      return FaShip;
     default:
       // Fallback to factory as a safe default
-      return Factory;
+      return FaIndustry;
   }
 };
 
@@ -229,25 +229,25 @@ export const getIndustryIcon = (iconName: IndustryIconName | string): React.Comp
 export const getNavigationIcon = (iconName: NavigationIconName | string): React.ComponentType<any> => {
   switch (iconName) {
     case 'chevron-down':
-      return ChevronDown;
+      return FaChevronDown;
     case 'chevron-right':
-      return ChevronRight;
+      return FaChevronRight;
     case 'chevron-up':
-      return ChevronUp;
+      return FaChevronUp;
     case 'menu':
-      return Menu;
+      return FaBars;
     case 'close':
-      return X;
+      return FaTimes;
     case 'globe':
-      return Globe;
+      return FaGlobe;
     case 'arrow-right':
-      return ArrowRight;
+      return FaArrowRight;
     case 'arrow-left':
-      return ArrowLeft;
+      return FaArrowLeft;
     case 'home':
-      return Home;
+      return FaHome;
     default:
-      return ChevronRight;
+      return FaChevronRight;
   }
 };
 
@@ -255,23 +255,23 @@ export const getNavigationIcon = (iconName: NavigationIconName | string): React.
 export const getFeatureIcon = (iconName: FeatureIconName | string): React.ComponentType<any> => {
   switch (iconName) {
     case 'check-circle':
-      return CheckCircle;
+      return FaCheckCircle;
     case 'shield':
-      return Shield;
+      return FaShieldAlt;
     case 'award':
-      return Award;
+      return FaAward;
     case 'star':
-      return Star;
+      return FaStar;
     case 'trending-up':
-      return TrendingUp;
+      return FaChartLine;
     case 'zap':
-      return Zap;
+      return FaZap;
     case 'eye':
-      return Eye;
+      return FaEye;
     case 'heart':
-      return Heart;
+      return FaHeart;
     default:
-      return CheckCircle;
+      return FaCheckCircle;
   }
 };
 
@@ -279,17 +279,17 @@ export const getFeatureIcon = (iconName: FeatureIconName | string): React.Compon
 export const getContactIcon = (iconName: ContactIconName | string): React.ComponentType<any> => {
   switch (iconName) {
     case 'phone':
-      return Phone;
+      return FaPhone;
     case 'mail':
-      return Mail;
+      return FaEnvelope;
     case 'message-square':
-      return MessageSquare;
+      return FaCommentDots;
     case 'message-circle':
-      return MessageCircle;
+      return FaCommentAlt;
     case 'send':
-      return Send;
+      return FaPaperPlane;
     default:
-      return Phone;
+      return FaPhone;
   }
 };
 
@@ -297,29 +297,29 @@ export const getContactIcon = (iconName: ContactIconName | string): React.Compon
 export const getMiscIcon = (iconName: MiscIconName | string): React.ComponentType<any> => {
   switch (iconName) {
     case 'clock':
-      return Clock;
+      return FaClock;
     case 'calendar':
-      return Calendar;
+      return FaCalendarAlt;
     case 'file-text':
-      return FileText;
+      return FaFileAlt;
     case 'briefcase':
-      return Briefcase;
+      return FaBriefcase;
     case 'lightbulb':
-      return Lightbulb;
+      return FaLightbulb;
     case 'cog':
-      return Cog;
+      return FaCog;
     case 'map-pin':
-      return MapPin;
+      return FaMapMarkerAlt;
     case 'users':
-      return Users;
+      return FaUsers;
     case 'download':
-      return Download;
+      return FaDownload;
     case 'play-circle':
-      return PlayCircle;
+      return FaPlayCircle;
     case 'circle-ellipsis':
-      return CircleEllipsis;
+      return FaEllipsisH;
     default:
-      return FileText;
+      return FaFileAlt;
   }
 };
 

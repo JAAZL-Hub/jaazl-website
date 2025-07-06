@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ChevronRight, Home } from 'lucide-react';
+import { FaChevronRight, FaHome } from 'react-icons/fa';
 
 interface BreadcrumbItem {
   label: string;
@@ -60,14 +60,14 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items = [], showHome = true }
                   href="/"
                   className="flex items-center text-gray-600 hover:text-blue-800 transition-colors"
                 >
-                  <Home className="w-4 h-4" />
+                  <FaHome className="w-4 h-4" />
                   <span className="sr-only">Home</span>
                 </Link>
               </li>
               {/* Separator after home */}
               {(breadcrumbs.length > 0 || items.length > 0) && (
                 <li className="text-gray-400">
-                  <ChevronRight className="w-4 h-4" />
+                  <FaChevronRight className="w-4 h-4" />
                 </li>
               )}
             </>
@@ -91,7 +91,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items = [], showHome = true }
               {/* Separator between items */}
               {index < breadcrumbs.length - 1 && (
                 <li className="text-gray-400">
-                  <ChevronRight className="w-4 h-4" />
+                  <FaChevronRight className="w-4 h-4" />
                 </li>
               )}
             </React.Fragment>

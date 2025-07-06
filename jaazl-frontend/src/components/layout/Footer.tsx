@@ -8,7 +8,7 @@ import {
   getSocialIcon,
   getNavigationIcon,
   getContactIcon,
-  getMiscIcon
+
 } from '@/utils/iconMapping';
 
 const Footer: React.FC = () => {
@@ -62,9 +62,9 @@ const Footer: React.FC = () => {
                 : "شركة رائدة في تقديم الحلول الصناعية في المنطقة الشرقية بالمملكة العربية السعودية، نقدم التميز من خلال الابتكار والخبرة والشراكات العالمية."}
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-12 h-12 bg-gray-800 hover:bg-blue-900 rounded-xl flex items-center justify-center transition-colors duration-300">{React.createElement(getSocialIcon('linkedin'), { className: "w-5 h-5" })}</a>
-              <a href="#" className="w-12 h-12 bg-gray-800 hover:bg-blue-900 rounded-xl flex items-center justify-center transition-colors duration-300">{React.createElement(getSocialIcon('twitter'), { className: "w-5 h-5" })}</a>
-              <a href="#" className="w-12 h-12 bg-gray-800 hover:bg-blue-900 rounded-xl flex items-center justify-center transition-colors duration-300">{React.createElement(getSocialIcon('facebook'), { className: "w-5 h-5" })}</a>
+              <a href="https://www.linkedin.com/company/jaazl" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 hover:bg-secondary-500 rounded-xl flex items-center justify-center transition-all duration-300 shadow-card hover:shadow-btn-secondary">{React.createElement(getSocialIcon('linkedin'), { className: "w-5 h-5" })}</a>
+              <a href="https://twitter.com/jaazl" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 hover:bg-secondary-500 rounded-xl flex items-center justify-center transition-all duration-300 shadow-card hover:shadow-btn-secondary">{React.createElement(getSocialIcon('twitter'), { className: "w-5 h-5" })}</a>
+              <a href="https://facebook.com/jaazl" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 hover:bg-secondary-500 rounded-xl flex items-center justify-center transition-all duration-300 shadow-card hover:shadow-btn-secondary">{React.createElement(getSocialIcon('facebook'), { className: "w-5 h-5" })}</a>
             </div>
           </div>
 
@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
                 </li>
               ))}
                <li className="pt-4">
-                <button onClick={toggleLanguage} className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group w-full border border-gray-700 hover:border-orange-400 rounded-full px-4 py-2">
+                <button onClick={toggleLanguage} className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center group w-full border border-gray-700 hover:border-secondary-400 rounded-full px-4 py-2">
                   {React.createElement(getNavigationIcon('globe'), { className: "w-4 h-4 mx-2" })}
                   {language === 'en' ? 'تغيير إلى العربية' : 'Switch to English'}
                 </button>
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
               {React.createElement(getContactIcon('phone'), { className: "w-6 h-6 mx-3 text-green-400" })}
               <div>
                 <div className="font-semibold">{language === 'en' ? 'Call Us' : 'اتصل بنا'}</div>
-                <a href="tel:+966555109268" className="text-gray-400 hover:text-white transition-colors">+966 12 345 6789</a>
+                <a href="tel:+966555109268" className="text-gray-400 hover:text-white transition-colors">+966 55 510 9268</a>
               </div>
             </div>
             <div className="flex items-center justify-center md:justify-start">

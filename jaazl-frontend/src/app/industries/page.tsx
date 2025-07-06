@@ -4,13 +4,13 @@ import React from 'react';
 import { useIndustries } from '@/services/hooks';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cmsService } from '@/services/api/cmsService';
-import { ArrowRight, ChevronRight, Factory } from 'lucide-react';
+
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function IndustriesPage() {
   const { industries = [], isLoading } = useIndustries();
-  const { language, direction } = useLanguage();
+  const { language } = useLanguage();
 
   const scrollToIndustries = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -43,10 +43,9 @@ export default function IndustriesPage() {
           <a 
             href="#industry-cards" 
             onClick={scrollToIndustries}
-            className="inline-flex items-center bg-white text-blue-800 px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:bg-gray-100 shadow-2xl hover:shadow-blue-300/20 transform hover:-translate-y-1 group"
+            className="inline-block bg-white text-blue-800 px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:bg-gray-100 shadow-2xl hover:shadow-blue-300/20 transform hover:-translate-y-1"
           >
             {language === 'en' ? 'Explore Our Sectors' : 'استكشف قطاعاتنا'}
-            <ChevronRight className={`w-5 h-5 transition-transform duration-300 ${language === 'ar' ? 'mr-2 rotate-180' : 'ml-2'} group-hover:translate-x-1`} />
           </a>
         </div>
       </section>
@@ -73,8 +72,7 @@ export default function IndustriesPage() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-                  <h3 className="absolute bottom-4 left-4 text-2xl font-bold text-white flex items-center">
-                    <Factory className="mr-3 w-6 h-6" />
+                  <h3 className="absolute bottom-4 left-4 text-2xl font-bold text-white">
                     {cmsService.getLocalizedContent(industry.name, language)}
                   </h3>
                 </div>
@@ -82,9 +80,8 @@ export default function IndustriesPage() {
                   <p className="text-gray-600 mb-4 leading-relaxed h-20">
                     {cmsService.getLocalizedContent(industry.shortDescription, language)}
                   </p>
-                  <div className="inline-flex items-center text-blue-700 font-semibold group-hover:text-orange-600 transition-colors duration-300">
+                  <div className="inline-block text-blue-700 font-semibold group-hover:text-orange-600 transition-colors duration-300">
                     {language === 'en' ? 'Explore Solutions' : 'استكشاف الحلول'}
-                    <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${language === 'ar' ? 'mr-2 rotate-180' : 'ml-2'} group-hover:translate-x-1`} />
                   </div>
                 </div>
               </Link>

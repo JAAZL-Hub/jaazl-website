@@ -1,9 +1,8 @@
 'use client';
 
-import React, { createContext, useState, useEffect, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useEffect, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next'; // Import directly for fallback
-import i18n from '@/i18n';
 
 export type Direction = 'ltr' | 'rtl';
 export type Language = 'en' | 'ar';
@@ -11,14 +10,14 @@ export type Language = 'en' | 'ar';
 interface LanguageContextProps {
   language: Language;
   direction: Direction;
-  setLanguage: (lang: Language) => void;
+  changeLanguage: (lang: Language) => void;
   toggleLanguage: () => void;
 }
 
 const defaultContext: LanguageContextProps = {
   language: 'en',
   direction: 'ltr',
-  setLanguage: () => {},
+  changeLanguage: () => {},
   toggleLanguage: () => {},
 };
 
@@ -59,7 +58,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     document.documentElement.setAttribute('lang', language);
   }, [language]);
 
-  const setLanguage = (lang: Language) => {
+  const changeLanguage = (lang: Language) => {
     try {
       // Update state first (this will always work)
       setLanguageState(lang);
@@ -102,12 +101,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   };
 
   const toggleLanguage = () => {
-    const newLang = language === 'en' ? 'ar' : 'en';
-    setLanguage(newLang);
+    const newLanguage = language === 'en' ? 'ar' : 'en';
+    changeLanguage(newLanguage);
   };
 
   return (
-    <LanguageContext.Provider value={{ language, direction, setLanguage, toggleLanguage }}>
+    <LanguageContext.Provider value={{ language, direction, changeLanguage, toggleLanguage }}>
       {children}
     </LanguageContext.Provider>
   );

@@ -6,7 +6,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, ArrowRight, CheckCircle, Phone, Clock, Shield, Award } from 'lucide-react';
+import { FaArrowLeft, FaArrowRight, FaCheckCircle, FaPhone, FaShieldAlt, FaAward } from 'react-icons/fa';
 import { getIndustryIconById } from '@/utils/iconMapping';
 
 interface ServicePageClientProps {
@@ -52,9 +52,9 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
     industries.find(i => i.id === service.relatedIndustries[0]) : null;
 
   const features = [
-    { title: language === 'en' ? 'Quality Assurance' : 'ضمان الجودة', icon: <CheckCircle size={24} /> },
-    { title: language === 'en' ? 'Safety Standards' : 'معايير السلامة', icon: <Shield size={24} /> },
-    { title: language === 'en' ? 'Industrial Grade' : 'مستوى صناعي', icon: <Award size={24} /> },
+    { title: language === 'en' ? 'Quality Assurance' : 'ضمان الجودة' },
+    { title: language === 'en' ? 'Safety Standards' : 'معايير السلامة' },
+    { title: language === 'en' ? 'Industrial Grade' : 'مستوى صناعي' },
   ];
 
   return (
@@ -75,15 +75,15 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
             <div className="w-full md:w-auto mb-6 md:mb-0 relative z-50">
               <a 
                 href="/services" 
-                className="inline-flex items-center text-blue-700 hover:text-blue-800 bg-white hover:bg-gray-100 px-6 py-3 rounded-lg shadow-lg font-bold text-lg cursor-pointer pointer-events-auto"
+                className="inline-flex items-center text-blue-700 hover:text-blue-800 bg-white hover:bg-gray-100 px-6 py-3 rounded-lg shadow-card hover:shadow-card-hover font-bold text-lg cursor-pointer pointer-events-auto transition-all duration-300"
                 onClick={(e) => {
                   e.stopPropagation();
                   window.location.href = '/services';
                 }}
               >
                 {direction === 'ltr' ? 
-                  <><ArrowLeft className="mr-2" size={20} /> {language === 'en' ? 'All Services' : 'جميع الخدمات'}</> : 
-                  <>{language === 'en' ? 'All Services' : 'جميع الخدمات'} <ArrowRight className="ml-2" size={20} /></>
+                  <><FaArrowLeft className="mr-2" size={20} /> {language === 'en' ? 'All Services' : 'جميع الخدمات'}</> : 
+                  <>{language === 'en' ? 'All Services' : 'جميع الخدمات'} <FaArrowRight className="ml-2" size={20} /></>
                 }
               </a>
             </div>
@@ -104,7 +104,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                     key={index} 
                     className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full"
                   >
-                    <span className="text-blue-300 mr-2">{feature.icon}</span>
                     <span className="text-white font-manifalight">{feature.title}</span>
                   </div>
                 ))}
@@ -175,7 +174,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                   {service.features && service.features.map((feature) => (
                     <div 
                       key={feature.id}
-                      className="p-6 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 bg-white hover:bg-gradient-to-br hover:from-white hover:to-blue-50 transform hover:-translate-y-1"
+                      className="p-6 border border-gray-200 rounded-lg shadow-card hover:shadow-card-hover transition-all duration-300 bg-white hover:bg-gradient-to-br hover:from-white hover:to-blue-50"
                     >
                       <h3 className="text-xl font-manifabold text-gray-900 mb-2">
                         {language === 'en' ? feature.title.en : feature.title.ar}
@@ -270,7 +269,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
               </p>
               <Link 
                 href="/contact" 
-                className="inline-block bg-blue-700 hover:bg-blue-800 text-white font-manifabold py-3 px-8 rounded-lg transition-all transform hover:translate-y-[-2px] hover:shadow-lg"
+                className="inline-block bg-blue-700 hover:bg-blue-800 text-white font-manifabold py-3 px-8 rounded-lg transition-all duration-300 shadow-btn-primary hover:shadow-btn-primary-hover transform hover:-translate-y-1"
               >
                 {language === 'en' ? 'Contact Us' : 'اتصل بنا'}
               </Link>
@@ -280,9 +279,8 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
           {/* Right Column - Sidebar */}
           <div className="w-full lg:w-1/3">
             {/* Contact Card */}
-            <div className="mb-8 p-6 bg-white rounded-xl border border-gray-200 shadow-sm">
-              <h3 className="text-xl font-manifabold text-gray-900 mb-4 flex items-center">
-                <Phone size={20} className="mr-2 text-blue-600" />
+            <div className="mb-8 p-6 bg-white rounded-xl border border-gray-200 shadow-card">
+              <h3 className="text-xl font-manifabold text-gray-900 mb-4">
                 {language === 'en' ? 'Need Assistance?' : 'بحاجة للمساعدة؟'}
               </h3>
               <p className="text-gray-700 mb-6 font-manifalight">
@@ -292,7 +290,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
               </p>
               <Link 
                 href="/contact" 
-                className="w-full inline-block text-center bg-blue-700 hover:bg-blue-800 text-white font-manifabold py-3 px-6 rounded-lg transition-all"
+                className="w-full inline-block text-center bg-blue-700 hover:bg-blue-800 text-white font-manifabold py-3 px-6 rounded-lg transition-all duration-300 shadow-btn-primary hover:shadow-btn-primary-hover"
               >
                 {language === 'en' ? 'Get in Touch' : 'تواصل معنا'}
               </Link>
@@ -305,28 +303,29 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                 <span className="absolute -bottom-2 left-0 h-1 w-20 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full"></span>
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {industries
                   .filter(ind => (service.relatedIndustries || []).includes(ind.id))
                   .map(industry => {
-                    // Get the appropriate industry icon based on the industry id
-                    const IconComponent = getIndustryIconById(industry.id);
-                    
+                    const Icon = getIndustryIconById(industry.id);
                     return (
                       <Link 
                         key={industry.id}
                         href={`/industries/${industry.slug}`}
-                        onMouseEnter={() => setHoveredCard(industry.id)}
-                        onMouseLeave={() => setHoveredCard(null)}
-                        className="group block p-5 rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-lg hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-1"
+                        className="group flex flex-col p-8 rounded-2xl border border-gray-200 bg-white shadow-card hover:shadow-card-hover hover:border-blue-200 transition-all duration-300 text-center min-h-[200px]"
                       >
-                        <div className="flex items-center gap-4">
-                          <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${hoveredCard === industry.id ? 'bg-blue-600 text-white scale-110' : 'bg-blue-100 text-blue-700'}`}>
-                            <IconComponent size={24} />
+                        {Icon && (
+                          <div className="text-blue-600 group-hover:text-blue-700 mb-4 flex justify-center transition-all duration-300 group-hover:scale-110">
+                            <Icon size={40} />
                           </div>
+                        )}
+                        <div className="flex-grow flex flex-col justify-center">
                           <h3 className="font-manifabold text-lg text-gray-900 group-hover:text-blue-700 transition-colors">
                             {language === 'en' ? industry.name.en : industry.name.ar}
                           </h3>
+                        </div>
+                        <div className="mt-auto pt-4">
+                          <div className="h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                         </div>
                       </Link>
                     );
@@ -335,29 +334,16 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
             </div>
 
             {/* Service Benefits with Animation */}
-            <div className="p-8 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl border border-blue-100 shadow-inner transform hover:scale-[1.01] transition-transform duration-300 mt-8">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center text-white shadow-lg mr-4">
-                  <Award size={24} />
-                </div>
-                <h3 className="text-2xl font-manifabold text-gray-900">
-                  {language === 'en' ? 'Service Benefits' : 'فوائد الخدمة'}
-                </h3>
-              </div>
-              
+            <div className="p-8 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl border border-blue-100 shadow-inner hover:shadow-card-hover transition-all duration-300 mt-8">
+              <h3 className="text-2xl font-manifabold text-gray-900 mb-6">
+                {language === 'en' ? 'Service Benefits' : 'فوائد الخدمة'}
+              </h3>
               <ul className="space-y-4">
                 {[1, 2, 3, 4].map((i) => (
                   <li 
                     key={`benefit-${i}`}
                     className="flex items-start p-3 hover:bg-white rounded-lg transition-colors duration-200"
-                    onMouseEnter={() => setHoveredCard(`benefit-${i}`)}
-                    onMouseLeave={() => setHoveredCard(null)}
                   >
-                    <div 
-                      className={`mr-3 p-2 rounded-full transition-all duration-300 ${hoveredCard === `benefit-${i}` ? 'bg-blue-600 text-white scale-110' : 'bg-blue-100 text-blue-600'}`}
-                    >
-                      <CheckCircle size={20} />
-                    </div>
                     <span className="text-gray-700 font-manifalight">
                       {language === 'en' ? 
                         i === 1 ? 'Enhanced operational efficiency and productivity' :

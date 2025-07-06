@@ -1,15 +1,15 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useContacts } from '@/services/hooks';
-import { cmsService } from '@/services/api/cmsService';
-import { MapPin, Phone, Mail, Star, Send, MessageSquare } from 'lucide-react';
-import Link from 'next/link';
+
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaPaperPlane, FaCommentDots } from 'react-icons/fa';
+
 
 export default function ContactPage() {
-  const { language, direction } = useLanguage();
-  const { contacts, isLoading, error } = useContacts();
+  const { language } = useLanguage();
+  const { contacts } = useContacts();
   
   // Form state
   const [formData, setFormData] = useState({
@@ -43,7 +43,8 @@ export default function ContactPage() {
         subject: '',
         message: '',
       });
-    } catch (error) {
+    } catch {
+      // Since the error is not being used, the variable can be removed.
       // Error
       setFormStatus('error');
       setFormError(language === 'en' 
@@ -53,10 +54,18 @@ export default function ContactPage() {
   };
 
   // Extract contact details
-  const address = contacts?.find(c => c.type === 'address')?.value || '';
-  const email = contacts?.find(c => c.type === 'email')?.value || '';
-  const phone = contacts?.find(c => c.type === 'phone')?.value || '';
-  const social = contacts?.filter(c => c.type === 'social') || [];
+  const officeContact = contacts?.find(c => c.type === 'office');
+  const address = officeContact ? officeContact.address[language] : '';
+  const email = officeContact?.email || '';
+  const phone = officeContact?.phone || '';
+
+  const [isFormAnimated, setIsFormAnimated] = useState(false);
+
+  useEffect(() => {
+    const formAnimTimer = setTimeout(() => setIsFormAnimated(true), 300);
+    return () => clearTimeout(formAnimTimer);
+  }, []);
+  
   
   return (
     <div className="bg-gradient-to-br from-white to-gray-50 min-h-screen">
@@ -65,9 +74,9 @@ export default function ContactPage() {
         {/* Glass Morphism Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-slate-800 to-indigo-900">
           <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:30px_30px]"></div>
-          <div className="absolute top-20 left-10 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 start-10 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 end-10 w-96 h-96 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 start-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-full blur-3xl"></div>
           <div className="absolute inset-0 backdrop-blur-[1px]"></div>
         </div>
         
@@ -91,12 +100,12 @@ export default function ContactPage() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 mb-16">
             {/* Visit Us Card - Enhanced */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-xl border border-gray-100/80 hover:shadow-2xl transition-all duration-300 hover:bg-gradient-to-br hover:from-white hover:to-blue-50 group transform hover:-translate-y-1">
+            <div className="bg-white rounded-xl overflow-hidden shadow-card border border-gray-100/80 hover:shadow-card-hover transition-all duration-300 hover:bg-gradient-to-br hover:from-white hover:to-blue-50 group">
               <div className="h-2 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
               <div className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-full mr-4 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
-                    <MapPin className="w-6 h-6 text-blue-700 group-hover:text-white transition-all duration-300" />
+                  <div className="bg-blue-100 p-3 rounded-full ms-4 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                    <FaMapMarkerAlt className="w-6 h-6 text-blue-700 group-hover:text-white transition-all duration-300" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">
                     {language === 'en' ? 'Visit Us' : 'زورنا'}
@@ -121,18 +130,18 @@ export default function ContactPage() {
                   className="inline-flex items-center mt-4 text-blue-700 font-medium hover:text-blue-800 transition-colors group-hover:text-blue-900"
                 >
                   {language === 'en' ? 'View on map' : 'عرض على الخريطة'}
-                  <span className="ml-1 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  <span className="ms-1 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </a>
               </div>
             </div>
             
             {/* Call Us Card - Enhanced */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-xl border border-gray-100/80 hover:shadow-2xl transition-all duration-300 hover:bg-gradient-to-br hover:from-white hover:to-green-50 group transform hover:-translate-y-1">
+            <div className="bg-white rounded-xl overflow-hidden shadow-card border border-gray-100/80 hover:shadow-card-hover transition-all duration-300 hover:bg-gradient-to-br hover:from-white hover:to-green-50 group">
               <div className="h-2 bg-gradient-to-r from-green-500 to-emerald-500"></div>
               <div className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="bg-green-100 p-3 rounded-full mr-4 transition-all duration-300 group-hover:bg-green-500 group-hover:text-white">
-                    <Phone className="w-6 h-6 text-green-600 group-hover:text-white transition-all duration-300" />
+                  <div className="bg-green-100 p-3 rounded-full ms-4 transition-all duration-300 group-hover:bg-green-500 group-hover:text-white">
+                    <FaPhone className="w-6 h-6 text-green-600 group-hover:text-white transition-all duration-300" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">
                     {language === 'en' ? 'Call Us' : 'اتصل بنا'}
@@ -169,18 +178,18 @@ export default function ContactPage() {
                   className="inline-flex items-center mt-4 text-green-600 font-medium hover:text-green-700 transition-colors group-hover:text-green-800"
                 >
                   {language === 'en' ? 'Call now' : 'اتصل الآن'}
-                  <span className="ml-1 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  <span className="ms-1 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </a>
               </div>
             </div>
             
             {/* Email Card - Enhanced */}
-            <div className="bg-white rounded-xl overflow-hidden shadow-xl border border-gray-100/80 hover:shadow-2xl transition-all duration-300 hover:bg-gradient-to-br hover:from-white hover:to-orange-50 group transform hover:-translate-y-1">
+            <div className="bg-white rounded-xl overflow-hidden shadow-card border border-gray-100/80 hover:shadow-card-hover transition-all duration-300 hover:bg-gradient-to-br hover:from-white hover:to-orange-50 group">
               <div className="h-2 bg-gradient-to-r from-orange-500 to-red-500"></div>
               <div className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="bg-orange-100 p-3 rounded-full mr-4 transition-all duration-300 group-hover:bg-orange-500 group-hover:text-white">
-                    <Mail className="w-6 h-6 text-orange-600 group-hover:text-white transition-all duration-300" />
+                  <div className="bg-orange-100 p-3 rounded-full ms-4 transition-all duration-300 group-hover:bg-orange-500 group-hover:text-white">
+                    <FaEnvelope className="w-6 h-6 text-orange-600 group-hover:text-white transition-all duration-300" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">
                     {language === 'en' ? 'Email Us' : 'راسلنا'}
@@ -218,7 +227,7 @@ export default function ContactPage() {
                   className="inline-flex items-center mt-4 text-orange-600 font-medium hover:text-orange-700 transition-colors group-hover:text-orange-800"
                 >
                   {language === 'en' ? 'Email now' : 'أرسل الآن'}
-                  <span className="ml-1 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  <span className="ms-1 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </a>
               </div>
             </div>
@@ -227,9 +236,9 @@ export default function ContactPage() {
           {/* Contact Form Section - Enhanced */}
           <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
             {/* Contact Form */}
-            <div className="bg-white rounded-xl shadow-xl p-8 border border-gray-100/80 hover:shadow-2xl transition-all duration-500">
+            <div className={`bg-white/10 backdrop-blur-md p-12 rounded-3xl shadow-2xl shadow-black/20 transition-all duration-1000 ease-out ${isFormAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h3 className="text-2xl font-bold mb-6 text-gray-900 flex items-center">
-                <MessageSquare className="mr-3 text-blue-600 animate-pulse" />
+                <FaCommentDots className="me-3 text-blue-600 animate-pulse" />
                 {language === 'en' ? 'Send Us a Message' : 'أرسل لنا رسالة'}
               </h3>
               
@@ -247,7 +256,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 text-black hover:border-blue-300 transform hover:-translate-y-1"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 text-black hover:border-blue-300"
                       placeholder={language === 'en' ? 'Full name' : 'الاسم الكامل'}
                     />
                   </div>
@@ -264,7 +273,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 text-black hover:border-blue-300 transform hover:-translate-y-1"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 text-black hover:border-blue-300"
                       placeholder={language === 'en' ? 'Your email' : 'بريدك الإلكتروني'}
                     />
                   </div>
@@ -280,7 +289,7 @@ export default function ContactPage() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 text-black hover:border-blue-300 transform hover:-translate-y-1"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 text-black hover:border-blue-300"
                       placeholder={language === 'en' ? 'Your phone number' : 'رقم هاتفك'}
                       dir={language === 'ar' ? 'rtl' : 'ltr'}
                     />
@@ -297,7 +306,7 @@ export default function ContactPage() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 text-black hover:border-blue-300 transform hover:-translate-y-1"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-200 text-black hover:border-blue-300"
                       placeholder={language === 'en' ? 'How can we help?' : 'كيف يمكننا المساعدة؟'}
                     />
                   </div>
@@ -339,9 +348,9 @@ export default function ContactPage() {
                 {/* Submit Button - Enhanced */}
                 <button
                   type="submit"
-                  className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-800 transition-all duration-300 flex items-center justify-center transform hover:scale-105 hover:shadow-lg group"
+                  className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-800 transition-all duration-300 flex items-center justify-center shadow-btn-cta hover:shadow-btn-cta-hover group"
                 >
-                  <Send className="w-5 h-5 mr-2 transition-transform duration-300 group-hover:translate-x-1" />
+                  <FaPaperPlane className="w-5 h-5 ms-2 transition-transform duration-300 group-hover:translate-x-1" />
                   {language === 'en' ? 'Send Message' : 'إرسال رسالة'}
                 </button>
               </form>

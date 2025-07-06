@@ -3,7 +3,7 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslation } from 'react-i18next';
-import { Globe } from 'lucide-react';
+import { FaGlobe } from 'react-icons/fa';
 
 interface LanguageSwitcherProps {
   variant?: 'icon' | 'full' | 'minimal';
@@ -25,7 +25,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
         aria-label={t('nav.language')}
         className={`flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition-colors ${className}`}
       >
-        <Globe className="w-5 h-5 text-gray-600" />
+        <FaGlobe className="w-5 h-5 text-gray-600" />
       </button>
     );
   }
@@ -49,7 +49,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
         onClick={toggleLanguage}
         className="flex items-center space-x-2 px-4 py-2 rounded-xl hover:bg-gray-100 transition-colors"
       >
-        <Globe className="w-5 h-5 text-primary-600" />
+        <FaGlobe className="w-5 h-5 text-primary-600" />
         <span className="text-sm font-medium">
           {language === 'en' ? 'English' : 'العربية'}
         </span>
