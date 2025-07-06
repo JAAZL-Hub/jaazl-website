@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useAboutInfo } from '@/services/hooks';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { AboutInfo } from '@/services/types';
 import { FaTimes, FaAward, FaHeart, FaShieldAlt, FaEye, FaBolt, FaUsers } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
