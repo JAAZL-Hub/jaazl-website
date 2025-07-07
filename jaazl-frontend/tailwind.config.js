@@ -1,5 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  // Safelist to prevent Tailwind from purging important classes in production
+  safelist: [
+    // Preserve all text color classes
+    { pattern: /text-(.+)-(\d+)/, variants: ['hover', 'focus', 'group-hover'] },
+    { pattern: /bg-(.+)-(\d+)/, variants: ['hover', 'focus', 'group-hover'] },
+    { pattern: /border-(.+)-(\d+)/, variants: ['hover', 'focus', 'group-hover'] },
+    // Preserve gradient classes
+    { pattern: /from-(.+)-(\d+)/, variants: ['hover', 'focus'] },
+    { pattern: /to-(.+)-(\d+)/, variants: ['hover', 'focus'] },
+    { pattern: /via-(.+)-(\d+)/, variants: ['hover', 'focus'] },
+  ],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',

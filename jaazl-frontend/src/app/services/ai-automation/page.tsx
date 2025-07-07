@@ -5,16 +5,16 @@ import type { Industry } from '@/services/types';
 import ServicePageClient from '@/components/services/ServicePageClient';
 
 export const metadata: Metadata = {
-  title: 'AI & Industrial Automation Services | JAAZL',
-  description: 'Transform industrial operations with cutting-edge AI and automation solutions that increase efficiency, reduce costs, and drive innovation.',
-  keywords: ['artificial intelligence', 'industrial automation', 'predictive maintenance', 'process control', 'data analytics'],
+  title: 'AI & Industrial Automation | JAAZL',
+  description: 'Advanced AI-driven automation solutions for industrial processes to enhance efficiency, productivity, and quality control.',
+  keywords: ['industrial automation', 'AI solutions', 'process automation', 'robotics', 'smart manufacturing'],
 };
 
 export default function AIAutomationPage() {
   const service = engineeringServices.find(s => s.slug === 'ai-automation');
   const relatedIndustries = service?.relatedIndustries ? 
     service.relatedIndustries
-      .map((slug: string) => industries.find((industry: Industry) => industry.slug === slug))
+      .map((slug: string) => industries.find(industry => industry.slug === slug))
       .filter(Boolean) as Industry[] : [];
 
   if (!service) {

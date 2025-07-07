@@ -159,7 +159,7 @@ const Header: React.FC = () => {
                   {language === 'en' ? 'Services' : 'خدماتنا'}
                 </Link>
                 {isServicesDropdownOpen && (
-                  <div className={`absolute top-full start-1/2 -translate-x-1/2 pt-3 w-80 opacity-100 visible transition-all duration-200`}>
+                  <div className={`absolute top-full ${direction === 'rtl' ? 'right-0' : 'left-0'} pt-3 w-80 opacity-100 visible transition-all duration-200`}>
                     <div className="bg-white backdrop-blur-md rounded-xl shadow-card-hover border border-gray-200 overflow-hidden">
                       <div className="py-2">
                         {services.map((service) => (
@@ -190,7 +190,7 @@ const Header: React.FC = () => {
                   {language === 'en' ? 'Industries' : 'الصناعات'}
                 </Link>
                 {isIndustriesDropdownOpen && (
-                  <div className={`absolute top-full start-1/2 -translate-x-1/2 pt-3 w-80 opacity-100 visible transition-all duration-200`}>
+                  <div className={`absolute top-full ${direction === 'rtl' ? 'right-0' : 'left-0'} pt-3 w-80 opacity-100 visible transition-all duration-200`}>
                     <div className="bg-white backdrop-blur-md rounded-xl shadow-card-hover border border-gray-200 overflow-hidden">
                       <div className="grid grid-cols-2 gap-1 p-2">
                         {industries.map((industry) => (
