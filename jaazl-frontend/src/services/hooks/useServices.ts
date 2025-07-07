@@ -1,7 +1,14 @@
 import { useState, useEffect } from 'react';
-import { cmsService } from '../api/cmsService';
-import { Service, ServiceCategory } from '../types';
+import { Service, ServiceCategory, LocalizedContent } from '../types';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { engineeringServices as servicesData } from '../api/mockData/engineeringServices';
+import { serviceCategories as categoriesData } from '../api/mockData/serviceCategories';
+
+// Helper function to get localized content
+const getLocalizedContent = (content: LocalizedContent | undefined, language: string): string => {
+  if (!content) return '';
+  return language === 'en' ? content.en : content.ar;
+};
 
 export function useServiceCategories() {
   const [categories, setCategories] = useState<ServiceCategory[]>([]);
@@ -9,11 +16,12 @@ export function useServiceCategories() {
   const [error, setError] = useState<Error | null>(null);
   
   useEffect(() => {
-    const fetchData = async () => {
+    // Simulate async behavior but use mock data directly
+    const fetchData = () => {
       try {
         setIsLoading(true);
-        const data = await cmsService.getServiceCategories();
-        setCategories(data);
+        // Use mock data directly
+        setCategories(categoriesData);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch service categories'));
       } finally {
@@ -33,11 +41,13 @@ export function useServiceCategoryBySlug(slug: string) {
   const [error, setError] = useState<Error | null>(null);
   
   useEffect(() => {
-    const fetchData = async () => {
+    // Simulate async behavior but use mock data directly
+    const fetchData = () => {
       try {
         setIsLoading(true);
-        const data = await cmsService.getServiceCategoryBySlug(slug);
-        setCategory(data);
+        // Find category with matching slug from mock data
+        const foundCategory = categoriesData.find(cat => cat.slug === slug) || null;
+        setCategory(foundCategory);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch service category'));
       } finally {
@@ -59,11 +69,12 @@ export function useServices() {
   const [error, setError] = useState<Error | null>(null);
   
   useEffect(() => {
-    const fetchData = async () => {
+    // Simulate async behavior but use mock data directly
+    const fetchData = () => {
       try {
         setIsLoading(true);
-        const data = await cmsService.getServices();
-        setServices(data);
+        // Use mock data directly
+        setServices(servicesData);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch services'));
       } finally {
@@ -83,11 +94,13 @@ export function useServiceBySlug(slug: string) {
   const [error, setError] = useState<Error | null>(null);
   
   useEffect(() => {
-    const fetchData = async () => {
+    // Simulate async behavior but use mock data directly
+    const fetchData = () => {
       try {
         setIsLoading(true);
-        const data = await cmsService.getServiceBySlug(slug);
-        setService(data);
+        // Find service with matching slug from mock data
+        const foundService = servicesData.find(srv => srv.slug === slug) || null;
+        setService(foundService);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch service'));
       } finally {
@@ -109,11 +122,13 @@ export function useServicesByCategoryId(categoryId: string) {
   const [error, setError] = useState<Error | null>(null);
   
   useEffect(() => {
-    const fetchData = async () => {
+    // Simulate async behavior but use mock data directly
+    const fetchData = () => {
       try {
         setIsLoading(true);
-        const data = await cmsService.getServicesByCategoryId(categoryId);
-        setServices(data);
+        // Filter services by categoryId from mock data
+        const filteredServices = servicesData.filter(srv => srv.categoryId === categoryId);
+        setServices(filteredServices);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch services by category'));
       } finally {
@@ -137,19 +152,19 @@ export function useLocalizedServiceContent(service: Service | null) {
   
   return {
     ...service,
-    localizedName: cmsService.getLocalizedContent(service.name, language),
-    localizedShortDescription: cmsService.getLocalizedContent(service.shortDescription, language),
-    localizedFullDescription: cmsService.getLocalizedContent(service.fullDescription, language),
-    localizedImageAlt: cmsService.getLocalizedContent(service.image.altText, language),
+    localizedName: getLocalizedContent(service.name, language),
+    localizedShortDescription: getLocalizedContent(service.shortDescription, language),
+    localizedFullDescription: getLocalizedContent(service.fullDescription, language),
+    localizedImageAlt: service.image?.altText ? getLocalizedContent(service.image.altText, language) : '',
     features: service.features.map(feature => ({
       ...feature,
-      localizedTitle: cmsService.getLocalizedContent(feature.title, language),
-      localizedDescription: cmsService.getLocalizedContent(feature.description, language)
+      localizedTitle: getLocalizedContent(feature.title, language),
+      localizedDescription: getLocalizedContent(feature.description, language)
     })),
     meta: {
       ...service.meta,
-      localizedTitle: cmsService.getLocalizedContent(service.meta.title, language),
-      localizedDescription: cmsService.getLocalizedContent(service.meta.description, language)
+      localizedTitle: getLocalizedContent(service.meta?.title, language),
+      localizedDescription: getLocalizedContent(service.meta?.description, language)
     }
   };
 }

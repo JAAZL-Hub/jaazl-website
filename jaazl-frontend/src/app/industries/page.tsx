@@ -3,10 +3,14 @@
 import React from 'react';
 import { useIndustries } from '@/services/hooks';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { cmsService } from '@/services/api/cmsService';
 
 import Link from 'next/link';
 import Image from 'next/image';
+
+// Helper function to get localized content directly from data
+function getLocalizedContent<T extends { [key in 'en' | 'ar']: string }>(content: T, language: 'en' | 'ar'): string {
+  return content[language] || content.en;
+}
 
 export default function IndustriesPage() {
   const { industries = [], isLoading } = useIndustries();
@@ -66,19 +70,19 @@ export default function IndustriesPage() {
                 <div className="relative h-56">
                   <Image 
                     src={industry.image?.url || "/images/placeholder-industry.png"} 
-                    alt={cmsService.getLocalizedContent(industry.image?.altText, language) || 'Industry Image'}
+                    alt={industry.image?.altText ? getLocalizedContent(industry.image.altText, language) : 'Industry Image'}
                     className="w-full h-full object-cover object-center transform transition-transform duration-300 group-hover:scale-110"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
                   <h3 className="absolute bottom-4 left-4 text-2xl font-bold text-white">
-                    {cmsService.getLocalizedContent(industry.name, language)}
+                    {getLocalizedContent(industry.name, language)}
                   </h3>
                 </div>
                 <div className="p-6">
                   <p className="text-gray-600 mb-4 leading-relaxed h-20">
-                    {cmsService.getLocalizedContent(industry.shortDescription, language)}
+                    {getLocalizedContent(industry.shortDescription, language)}
                   </p>
                   <div className="inline-block text-blue-700 font-semibold group-hover:text-orange-600 transition-colors duration-300">
                     {language === 'en' ? 'Explore Solutions' : 'استكشاف الحلول'}

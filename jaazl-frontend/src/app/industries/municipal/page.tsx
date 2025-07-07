@@ -1,10 +1,12 @@
 import { Metadata } from 'next';
-import MainLayout from '@/components/layouts/MainLayout';
-import { getIndustry } from '@/services/api/cmsService';
+import MainLayout from '@/components/layout/MainLayout';
 import Image from 'next/image';
 import { FaCheck, FaCity, FaWater, FaTrash } from 'react-icons/fa';
 import Link from 'next/link';
-import { getRelatedServices } from '@/services/api/cmsService';
+import type { Service } from '@/services/types';
+import { industries } from '@/services/api/mockData/industries';
+import { engineeringServices } from '@/services/api/mockData/engineeringServices';
+
 
 export const metadata: Metadata = {
   title: 'Municipal Infrastructure Solutions | JAAZL',
@@ -12,10 +14,14 @@ export const metadata: Metadata = {
   keywords: ['municipal infrastructure', 'water treatment', 'waste management', 'smart cities', 'urban planning'],
 };
 
-export default async function MunicipalPage() {
-  const industry = await getIndustry('municipal');
-  const relatedServices = await getRelatedServices(industry.relatedServices);
-  const caseStudies = industry.caseStudies || [];
+export default function MunicipalPage() {
+  const industry = industries.find(ind => ind.slug === 'municipal');
+  const relatedServices = industry?.relatedServices ? 
+    industry.relatedServices
+      .map((slug: string) => engineeringServices.find((service: Service) => service.slug === slug))
+      .filter(Boolean) as Service[] : [];
+    
+  const caseStudies = industry?.caseStudies || [];
 
   if (!industry) {
     return null;
@@ -44,8 +50,8 @@ export default async function MunicipalPage() {
             <div className="md:w-1/2 mt-10 md:mt-0">
               <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-2xl">
                 <Image
-                  src={industry.image.url || '/images/team/placeholder.png'}
-                  alt={industry.image.altText.en}
+                  src={industry.imageSrc || '/images/team/placeholder.png'}
+                  alt={industry.name?.en || 'Industry'}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="rounded-lg"
@@ -277,8 +283,8 @@ export default async function MunicipalPage() {
                   <div className="md:flex">
                     <div className="md:w-1/3 relative h-48 md:h-auto">
                       <Image 
-                        src={caseStudy.image.url || '/images/team/placeholder.png'}
-                        alt={caseStudy.image.altText.en}
+                        src={caseStudy.imageSrc || '/images/team/placeholder.png'}
+                        alt={caseStudy.title?.en || 'Case Study'}
                         fill
                         style={{ objectFit: 'cover' }}
                       />
@@ -288,7 +294,7 @@ export default async function MunicipalPage() {
                       <p className="text-gray-600 mb-4">{caseStudy.description.en}</p>
                       <div className="border-t pt-4">
                         <h4 className="font-bold mb-2">Results:</h4>
-                        <p>{caseStudy.results.en}</p>
+                        <p>{caseStudy.outcome?.en || 'Successfully delivered project outcomes.'}</p>
                       </div>
                     </div>
                   </div>
@@ -313,8 +319,8 @@ export default async function MunicipalPage() {
                 <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
                   <div className="relative w-full h-48">
                     <Image
-                      src={service.image.url || '/images/team/placeholder.png'}
-                      alt={service.image.altText.en}
+                      src={service.imageSrc || '/images/team/placeholder.png'}
+                      alt={service.name?.en || 'Service'}
                       fill
                       style={{ objectFit: 'cover' }}
                     />

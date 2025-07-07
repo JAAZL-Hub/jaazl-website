@@ -1,10 +1,11 @@
 import { Metadata } from 'next';
 import MainLayout from '@/components/layout/MainLayout';
-import { cmsService } from '@/services/api/cmsService';
 import Image from 'next/image';
-import { FaCheck, FaLaptopCode, FaNetworkWired, FaCloudUploadAlt } from 'react-icons/fa';
+import { FaLaptopCode, FaNetworkWired, FaCloudUploadAlt } from 'react-icons/fa';
 import Link from 'next/link';
-import type { Service, Industry, Feature } from '@/services/types';
+import type { Industry, Feature } from '@/services/types';
+import { industries } from '@/services/api/mockData/industries';
+import { engineeringServices } from '@/services/api/mockData/engineeringServices';
 
 export const metadata: Metadata = {
   title: 'Industrial Digital Transformation | JAAZL',
@@ -12,16 +13,16 @@ export const metadata: Metadata = {
   keywords: ['digital transformation', 'IIoT', 'industrial IoT', 'industry 4.0', 'digital twins', 'cloud integration'],
 };
 
-export default async function DigitalTransformationPage() {
-  const service = await cmsService.getServiceBySlug('digital-transformation');
+export default function DigitalTransformationPage() {
+  const service = engineeringServices.find(s => s.slug === 'digital-transformation');
   
   if (!service) {
     return null;
   }
   const relatedIndustries = service?.relatedIndustries ? 
-    await Promise.all(service.relatedIndustries.map((id: string) => 
-      cmsService.getIndustryBySlug(id)
-    )).then(industries => industries.filter(Boolean) as Industry[]) : [];
+    service.relatedIndustries
+      .map((slug: string) => industries.find((industry: Industry) => industry.slug === slug))
+      .filter(Boolean) as Industry[] : [];
 
   // Service is now guaranteed to be non-null
 

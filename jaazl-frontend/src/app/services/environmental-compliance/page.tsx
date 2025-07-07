@@ -1,10 +1,11 @@
 import { Metadata } from 'next';
-import MainLayout from '@/components/layouts/MainLayout';
-import { getEngineeringService } from '@/services/api/cmsService';
+import MainLayout from '@/components/layout/MainLayout';
 import Image from 'next/image';
 import { FaCheck, FaLeaf, FaWater, FaRecycle } from 'react-icons/fa';
 import Link from 'next/link';
-import { getRelatedIndustries } from '@/services/api/cmsService';
+import type { Industry } from '@/services/types';
+import { engineeringServices } from '@/services/api/mockData/engineeringServices';
+import { industries } from '@/services/api/mockData/industries';
 
 export const metadata: Metadata = {
   title: 'Environmental Compliance & Sustainability Services | JAAZL',
@@ -12,9 +13,12 @@ export const metadata: Metadata = {
   keywords: ['environmental compliance', 'sustainability', 'emissions monitoring', 'waste management', 'resource optimization'],
 };
 
-export default async function EnvironmentalCompliancePage() {
-  const service = await getEngineeringService('environmental-compliance');
-  const relatedIndustries = await getRelatedIndustries(service.relatedIndustries || []);
+export default function EnvironmentalCompliancePage() {
+  const service = engineeringServices.find(s => s.slug === 'environmental-compliance');
+  const relatedIndustries = service?.relatedIndustries ? 
+    service.relatedIndustries
+      .map((slug: string) => industries.find((industry: Industry) => industry.slug === slug))
+      .filter(Boolean) as Industry[] : [];
 
   if (!service) {
     return null;
@@ -43,8 +47,8 @@ export default async function EnvironmentalCompliancePage() {
             <div className="md:w-1/2 mt-10 md:mt-0">
               <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-2xl">
                 <Image
-                  src={service.image.url || '/images/team/placeholder.png'}
-                  alt={service.image.altText.en}
+                  src={service.imageSrc || '/images/team/placeholder.png'}
+                  alt={'Environmental Compliance service'}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="rounded-lg"
@@ -107,7 +111,7 @@ export default async function EnvironmentalCompliancePage() {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1">Environmental Impact Assessment</h4>
-                    <p className="text-gray-600">Thorough analysis of your operations' environmental impact, identifying opportunities for improvement.</p>
+                    <p className="text-gray-600">Thorough analysis of your operations&apos; environmental impact, identifying opportunities for improvement.</p>
                   </div>
                 </div>
                 
@@ -202,8 +206,8 @@ export default async function EnvironmentalCompliancePage() {
                   <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
                     <div className="relative w-full h-48">
                       <Image
-                        src={industry.image.url || '/images/team/placeholder.png'}
-                        alt={industry.image.altText.en}
+                        src={industry.imageSrc || '/images/team/placeholder.png'}
+                        alt={industry.name.en}
                         fill
                         style={{ objectFit: 'cover' }}
                       />

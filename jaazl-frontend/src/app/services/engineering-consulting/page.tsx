@@ -1,10 +1,11 @@
 import { Metadata } from 'next';
-import MainLayout from '@/components/layouts/MainLayout';
-import { getEngineeringService } from '@/services/api/cmsService';
+import MainLayout from '@/components/layout/MainLayout';
 import Image from 'next/image';
 import { FaCheck } from 'react-icons/fa';
 import Link from 'next/link';
-import { getRelatedIndustries } from '@/services/api/cmsService';
+import type { Industry } from '@/services/types';
+import { industries } from '@/services/api/mockData/industries';
+import { engineeringServices } from '@/services/api/mockData/engineeringServices';
 
 export const metadata: Metadata = {
   title: 'Industrial Engineering Consulting Services | JAAZL',
@@ -12,13 +13,19 @@ export const metadata: Metadata = {
   keywords: ['industrial engineering', 'consulting', 'process optimization', 'facility design', 'technical specifications'],
 };
 
-export default async function EngineeringConsultingPage() {
-  const service = await getEngineeringService('engineering-consulting');
-  const relatedIndustries = await getRelatedIndustries(service.relatedIndustries);
-
+export default function EngineeringConsultingPage() {
+  const service = engineeringServices.find(s => s.slug === 'engineering-consulting');
+  
   if (!service) {
     return null;
   }
+  
+  const relatedIndustries = service?.relatedIndustries ? 
+    service.relatedIndustries
+      .map((slug: string) => industries.find((industry: Industry) => industry.slug === slug))
+      .filter(Boolean) as Industry[] : [];
+
+  // Service is now guaranteed to be non-null
 
   return (
     <MainLayout>
@@ -43,8 +50,8 @@ export default async function EngineeringConsultingPage() {
             <div className="md:w-1/2 mt-10 md:mt-0">
               <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-2xl">
                 <Image
-                  src={service.image.url || '/images/team/placeholder.png'}
-                  alt={service.image.altText.en}
+                  src={service.imageSrc || '/images/team/placeholder.png'}
+                  alt={'Engineering consulting service'}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="rounded-lg"
@@ -102,9 +109,9 @@ export default async function EngineeringConsultingPage() {
               >
                 <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
                   <div className="relative w-full h-48">
-                    <Image
-                      src={industry.image.url || '/images/team/placeholder.png'}
-                      alt={industry.image.altText.en}
+                    <Image 
+                      src={industry.imageSrc || '/images/team/placeholder.png'}
+                      alt={`${industry.name?.en || 'Industry'} image`}
                       fill
                       style={{ objectFit: 'cover' }}
                     />

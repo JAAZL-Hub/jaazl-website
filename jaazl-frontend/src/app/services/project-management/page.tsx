@@ -1,10 +1,16 @@
 import { Metadata } from 'next';
-import MainLayout from '@/components/layouts/MainLayout';
-import { getEngineeringService } from '@/services/api/cmsService';
+import MainLayout from '@/components/layout/MainLayout';
 import Image from 'next/image';
-import { FaCheck, FaCalendarAlt, FaExclamationTriangle, FaCheckCircle } from 'react-icons/fa';
+import { FaCalendarAlt, FaExclamationTriangle, FaCheckCircle } from 'react-icons/fa';
 import Link from 'next/link';
-import { getRelatedIndustries } from '@/services/api/cmsService';
+import type { Industry, LocalizedContent } from '@/services/types';
+import { industries } from '@/services/api/mockData/industries';
+import { engineeringServices } from '@/services/api/mockData/engineeringServices';
+
+// Helper function to get localized content
+const getLocalizedContent = (content: LocalizedContent, language: string): string => {
+  return language === 'en' ? content.en : content.ar;
+};
 
 export const metadata: Metadata = {
   title: 'Industrial Project Management Services | JAAZL',
@@ -12,9 +18,12 @@ export const metadata: Metadata = {
   keywords: ['project management', 'industrial projects', 'risk management', 'quality control', 'schedule management'],
 };
 
-export default async function ProjectManagementPage() {
-  const service = await getEngineeringService('project-management');
-  const relatedIndustries = await getRelatedIndustries(service.relatedIndustries);
+export default function ProjectManagementPage() {
+  const service = engineeringServices.find(s => s.slug === 'project-management');
+  const relatedIndustries = service?.relatedIndustries ? 
+    service.relatedIndustries
+      .map((slug: string) => industries.find((industry: Industry) => industry.slug === slug))
+      .filter(Boolean) as Industry[] : [];
 
   if (!service) {
     return null;
@@ -28,10 +37,10 @@ export default async function ProjectManagementPage() {
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 md:pr-8">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                {service.name.en}
+                {getLocalizedContent(service.name, 'en')}
               </h1>
               <p className="text-xl mb-8">
-                {service.shortDescription.en}
+                {getLocalizedContent(service.shortDescription, 'en')}
               </p>
               <Link 
                 href="/contact"
@@ -43,8 +52,8 @@ export default async function ProjectManagementPage() {
             <div className="md:w-1/2 mt-10 md:mt-0">
               <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-2xl">
                 <Image
-                  src={service.image.url || '/images/team/placeholder.png'}
-                  alt={service.image.altText.en}
+                  src={service.imageSrc || '/images/team/placeholder.png'}
+                  alt={'Project Management service'}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="rounded-lg"
@@ -83,8 +92,8 @@ export default async function ProjectManagementPage() {
                   <div className="text-primary text-3xl mb-4">
                     {icons[index]}
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{feature.title.en}</h3>
-                  <p className="text-gray-700">{feature.description.en}</p>
+                  <h3 className="text-xl font-bold mb-3">{getLocalizedContent(feature.title, 'en')}</h3>
+                  <p className="text-gray-700">{getLocalizedContent(feature.description, 'en')}</p>
                 </div>
               );
             })}
@@ -181,8 +190,8 @@ export default async function ProjectManagementPage() {
                 <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
                   <div className="relative w-full h-48">
                     <Image
-                      src={industry.image.url || '/images/team/placeholder.png'}
-                      alt={industry.image.altText.en}
+                      src={industry.imageSrc || '/images/team/placeholder.png'}
+                      alt={industry.name.en}
                       fill
                       style={{ objectFit: 'cover' }}
                     />

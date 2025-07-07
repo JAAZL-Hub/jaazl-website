@@ -58,7 +58,7 @@ export default function ContactPage() {
 
   // Extract contact details
   const officeContact = contacts?.find(c => c.type === 'office');
-  const address = officeContact ? officeContact.address[language] : '';
+  const address = officeContact?.address ? officeContact.address[language] : '';
   const email = officeContact?.email || '';
   const phone = officeContact?.phone || '';
 

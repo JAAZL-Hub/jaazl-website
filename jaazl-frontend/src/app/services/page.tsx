@@ -3,8 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import { useServiceCategories, useServices } from '@/services/hooks';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { cmsService } from '@/services/api/cmsService';
+import { LocalizedContent } from '@/services/types';
 import Link from 'next/link';
+// Helper function to get localized content
+const getLocalizedContent = (content: LocalizedContent | undefined, language: string): string => {
+  if (!content) return '';
+  return language === 'en' ? content.en : content.ar;
+};
 
 export default function ServicesPage() {
   const { categories = [], isLoading: categoriesLoading } = useServiceCategories();
@@ -75,7 +80,7 @@ export default function ServicesPage() {
                         : 'bg-white text-gray-700 hover:bg-gray-200 hover:shadow-md'
                     }`}
                   >
-                    {cmsService.getLocalizedContent(category.name, language)}
+                    {getLocalizedContent(category.name, language)}
                   </button>
                 ))}
               </div>
@@ -86,10 +91,10 @@ export default function ServicesPage() {
                   {/* Category Header */}
                   <div className="mb-12 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                      {cmsService.getLocalizedContent(activeCategoryData.name, language)}
+                      {getLocalizedContent(activeCategoryData.name, language)}
                     </h2>
                     <p className="max-w-3xl mx-auto text-lg text-gray-600">
-                      {cmsService.getLocalizedContent(activeCategoryData.description, language)}
+                      {getLocalizedContent(activeCategoryData.description, language)}
                     </p>
                   </div>
                   
@@ -103,10 +108,10 @@ export default function ServicesPage() {
                       >
                         <div className="p-8">
                           <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-800 transition-colors duration-300">
-                            {cmsService.getLocalizedContent(service.name, language)}
+                            {getLocalizedContent(service.name, language)}
                           </h3>
                           <p className="text-gray-600 min-h-[6rem] mb-5">
-                            {cmsService.getLocalizedContent(service.shortDescription, language)}
+                            {getLocalizedContent(service.shortDescription, language)}
                           </p>
                           <div className="inline-block text-blue-700 font-semibold group-hover:text-orange-600 transition-colors duration-300">
                             {language === 'en' ? 'Learn More' : 'اعرف المزيد'}

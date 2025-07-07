@@ -1,7 +1,13 @@
 import { useState, useEffect } from 'react';
-import { cmsService } from '../api/cmsService';
-import { AboutInfo } from '../types';
+import { AboutInfo, LocalizedContent } from '../types';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { aboutInfo as aboutInfoData } from '../api/mockData/aboutInfo';
+
+// Helper function to get localized content
+const getLocalizedContent = (content: LocalizedContent | undefined, language: string): string => {
+  if (!content) return '';
+  return language === 'en' ? content.en : content.ar;
+};
 
 export function useAboutInfo() {
   const [aboutInfo, setAboutInfo] = useState<AboutInfo | null>(null);
@@ -9,11 +15,12 @@ export function useAboutInfo() {
   const [error, setError] = useState<Error | null>(null);
   
   useEffect(() => {
-    const fetchData = async () => {
+    // Simulate async behavior but use mock data directly
+    const fetchData = () => {
       try {
         setIsLoading(true);
-        const data = await cmsService.getAboutInfo();
-        setAboutInfo(data);
+        // Use mock data directly
+        setAboutInfo(aboutInfoData);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch about information'));
       } finally {
@@ -35,25 +42,25 @@ export function useLocalizedAboutContent(aboutInfo: AboutInfo | null) {
   
   return {
     ...aboutInfo,
-    localizedHistory: cmsService.getLocalizedContent(aboutInfo.history, language),
-    localizedMission: cmsService.getLocalizedContent(aboutInfo.mission, language),
-    localizedVision: cmsService.getLocalizedContent(aboutInfo.vision, language),
+    localizedHistory: getLocalizedContent(aboutInfo.history, language),
+    localizedMission: getLocalizedContent(aboutInfo.mission, language),
+    localizedVision: getLocalizedContent(aboutInfo.vision, language),
     values: aboutInfo.values.map(value => ({
       ...value,
-      localizedTitle: cmsService.getLocalizedContent(value.title, language),
-      localizedDescription: cmsService.getLocalizedContent(value.description, language)
+      localizedTitle: getLocalizedContent(value.title, language),
+      localizedDescription: getLocalizedContent(value.description, language)
     })),
     team: aboutInfo.team.map(member => ({
       ...member,
-      localizedPosition: cmsService.getLocalizedContent(member.position, language),
-      localizedBio: cmsService.getLocalizedContent(member.bio, language),
-      localizedImageAlt: member.image ? cmsService.getLocalizedContent(member.image.altText, language) : ''
+      localizedPosition: getLocalizedContent(member.position, language),
+      localizedBio: getLocalizedContent(member.bio, language),
+      localizedImageAlt: member.image?.altText ? getLocalizedContent(member.image.altText, language) : ''
     })),
-    certificates: aboutInfo.certificates.map(certificate => ({
+    certifications: aboutInfo.certifications.map(certificate => ({
       ...certificate,
-      localizedName: cmsService.getLocalizedContent(certificate.name, language),
-      localizedDescription: cmsService.getLocalizedContent(certificate.description, language),
-      localizedImageAlt: cmsService.getLocalizedContent(certificate.image.altText, language)
+      localizedName: getLocalizedContent(certificate.name, language),
+      localizedDescription: getLocalizedContent(certificate.description, language),
+      localizedImageAlt: certificate.image?.altText ? getLocalizedContent(certificate.image.altText, language) : ''
     }))
   };
 }

@@ -14,28 +14,54 @@ export interface ServiceCategory {
   name: LocalizedContent;
   slug: string;
   description: LocalizedContent;
+  icon?: string;
+  color?: string;
+  gradient?: string;
 }
 
 export interface Service {
   id: string;
   name: LocalizedContent;
   slug: string;
+  categoryId: string; // ID of the service category this service belongs to
   shortDescription: LocalizedContent;
   fullDescription: LocalizedContent;
-  imageSrc: string;
-  benefits: Benefit[];
+  imageSrc?: string; // For backwards compatibility
+  image?: ImageAsset;
+  icon?: string;
+  benefits?: Benefit[];
   features: Feature[];
-  faqs: FAQ[];
+  faqs?: FAQ[];
   relatedIndustries: string[]; // Array of industry IDs
+  meta?: MetaData;
+}
+
+export interface ImageAsset {
+  id: string;
+  url: string;
+  altText?: LocalizedContent;
+  width?: number;
+  height?: number;
 }
 
 export interface CaseStudy {
   id: string;
   title: LocalizedContent;
   description: LocalizedContent;
-  imageSrc: string;
-  tags: string[];
+  imageSrc?: string; // For backwards compatibility
+  image?: ImageAsset;
+  tags?: string[];
   date?: string;
+  outcome?: LocalizedContent;
+  results?: LocalizedContent; // Alternative to outcome in some mock data
+  serviceId?: string; // ID of the related service
+  industryId?: string; // ID of the related industry
+}
+
+export interface MetaData {
+  title: LocalizedContent;
+  description: LocalizedContent;
+  keywords?: string[];
 }
 
 export interface Industry {
@@ -44,12 +70,16 @@ export interface Industry {
   slug: string;
   shortDescription: LocalizedContent;
   fullDescription: LocalizedContent;
-  imageSrc: string;
-  challenges: Challenge[];
-  solutions: Solution[];
+  imageSrc?: string; // For backwards compatibility
+  image?: ImageAsset;
+  icon?: string;
+  sector?: LocalizedContent;
+  meta?: MetaData;
+  challenges?: Challenge[];
+  solutions?: Solution[];
   caseStudies?: CaseStudy[];
   relatedServices: string[]; // Array of service IDs
-  isFeatured: boolean;
+  isFeatured?: boolean;
 }
 
 export interface Benefit {
@@ -93,25 +123,30 @@ export interface CoreValue {
 
 export interface TeamMember {
   id: string;
-  name: LocalizedContent;
+  name: string | LocalizedContent; // Allow both string and LocalizedContent for name
   position: LocalizedContent;
   bio: LocalizedContent;
-  imageSrc: string;
+  imageSrc?: string; // For backwards compatibility
+  image?: ImageAsset;
 }
 
 export interface Certification {
   id: string;
   name: LocalizedContent;
   description: LocalizedContent;
-  imageSrc: string;
+  imageSrc?: string; // For backwards compatibility
+  image?: ImageAsset;
+  year?: number; // Year of certification
 }
 
 export interface AboutInfo {
   mission: LocalizedContent;
   vision: LocalizedContent;
   history: LocalizedContent;
-  coreValues: CoreValue[];
-  leadership: TeamMember[];
+  values: CoreValue[]; // The values field from the mock data
+  coreValues?: CoreValue[]; // Keeping for backward compatibility
+  team: TeamMember[]; // The team field from the mock data
+  leadership?: TeamMember[]; // Keeping for backward compatibility
   certifications: Certification[];
 }
 
@@ -124,9 +159,16 @@ export interface SocialMedia {
 
 export interface Contact {
   id: string;
-  type: 'office' | 'social' | 'support';
-  name: LocalizedContent;
-  address: LocalizedContent;
+  type: 'office' | 'social' | 'support' | 'email' | 'phone' | 'address';
+  
+  // Fields for general contact types
+  value?: string; // For email, phone contacts
+  label?: LocalizedContent; // For email, phone contacts
+  icon?: string; // Icon name for the contact
+  
+  // Fields for office contacts
+  name?: LocalizedContent;
+  address?: LocalizedContent;
   phone?: string;
   email?: string;
   mapCoordinates?: { lat: number; lng: number };

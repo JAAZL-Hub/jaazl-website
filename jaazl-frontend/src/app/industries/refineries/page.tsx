@@ -1,10 +1,11 @@
 import { Metadata } from 'next';
-import MainLayout from '@/components/layouts/MainLayout';
-import { getIndustry } from '@/services/api/cmsService';
+import MainLayout from '@/components/layout/MainLayout';
 import Image from 'next/image';
 import { FaCheck, FaIndustry, FaChartLine, FaShieldAlt } from 'react-icons/fa';
 import Link from 'next/link';
-import { getRelatedServices } from '@/services/api/cmsService';
+import type { Service } from '@/services/types';
+import { industries } from '@/services/api/mockData/industries';
+import { engineeringServices } from '@/services/api/mockData/engineeringServices';
 
 export const metadata: Metadata = {
   title: 'Refinery Industry Solutions | JAAZL',
@@ -12,14 +13,19 @@ export const metadata: Metadata = {
   keywords: ['refinery solutions', 'refinery optimization', 'petroleum refining', 'refinery safety', 'refinery maintenance'],
 };
 
-export default async function RefineriesPage() {
-  const industry = await getIndustry('refineries');
-  const relatedServices = await getRelatedServices(industry.relatedServices);
-  const caseStudies = industry.caseStudies || [];
-
+export default function RefineriesPage() {
+  const industry = industries.find(ind => ind.slug === 'refineries');
+  
   if (!industry) {
     return null;
   }
+  
+  const relatedServices = industry?.relatedServices ? 
+    industry.relatedServices
+      .map((slug: string) => engineeringServices.find((service: Service) => service.slug === slug))
+      .filter(Boolean) as Service[] : [];
+    
+  const caseStudies = industry.caseStudies || [];
 
   return (
     <MainLayout>
@@ -44,8 +50,8 @@ export default async function RefineriesPage() {
             <div className="md:w-1/2 mt-10 md:mt-0">
               <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-2xl">
                 <Image
-                  src={industry.image.url || '/images/team/placeholder.png'}
-                  alt={industry.image.altText.en}
+                  src={industry.imageSrc || '/images/team/placeholder.png'}
+                  alt={'Refineries Industry'}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="rounded-lg"
@@ -235,19 +241,21 @@ export default async function RefineriesPage() {
                 <div key={caseStudy.id} className="bg-white rounded-lg shadow-md overflow-hidden">
                   <div className="md:flex">
                     <div className="md:w-1/3 relative h-48 md:h-auto">
-                      <Image 
-                        src={caseStudy.image.url || '/images/team/placeholder.png'}
-                        alt={caseStudy.image.altText.en}
+                      <Image
+                        src={caseStudy.imageSrc || '/images/team/placeholder.png'}
+                        alt={'Case Study'}
                         fill
                         style={{ objectFit: 'cover' }}
                       />
                     </div>
                     <div className="p-6 md:w-2/3">
-                      <h3 className="text-xl font-bold mb-3">{caseStudy.title.en}</h3>
-                      <p className="text-gray-600 mb-4">{caseStudy.description.en}</p>
+                      <h3 className="text-lg font-semibold mb-2">{caseStudy.title?.en || 'Case Study'}</h3>
+                      <div className="mb-4 text-gray-600">
+                        <p dangerouslySetInnerHTML={{ __html: caseStudy.description?.en || '' }}></p>
+                      </div>
                       <div className="border-t pt-4">
                         <h4 className="font-bold mb-2">Results:</h4>
-                        <p>{caseStudy.results.en}</p>
+                        <p>{caseStudy.outcome?.en || 'Successful implementation'}</p>
                       </div>
                     </div>
                   </div>
@@ -272,8 +280,8 @@ export default async function RefineriesPage() {
                 <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
                   <div className="relative w-full h-48">
                     <Image
-                      src={service.image.url || '/images/team/placeholder.png'}
-                      alt={service.image.altText.en}
+                      src={service.imageSrc || '/images/team/placeholder.png'}
+                      alt={service.name?.en || 'Service'}
                       fill
                       style={{ objectFit: 'cover' }}
                     />

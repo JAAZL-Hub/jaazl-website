@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { cmsService } from '../api/cmsService';
+import { industries as mockIndustries } from '../api/mockData/industries';
 import { Industry } from '../types';
 import { useLanguage } from '../../contexts/LanguageContext';
 
@@ -9,19 +9,15 @@ export function useIndustries() {
   const [error, setError] = useState<Error | null>(null);
   
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setIsLoading(true);
-        const data = await cmsService.getIndustries();
-        setIndustries(data);
-      } catch (err) {
-        setError(err instanceof Error ? err : new Error('Failed to fetch industries'));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    
-    fetchData();
+    try {
+      setIsLoading(true);
+      // Use mock data directly instead of API call
+      setIndustries(mockIndustries);
+    } catch (err) {
+      setError(err instanceof Error ? err : new Error('Failed to load industries'));
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
   
   return { industries, isLoading, error };
@@ -33,24 +29,24 @@ export function useIndustryBySlug(slug: string) {
   const [error, setError] = useState<Error | null>(null);
   
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setIsLoading(true);
-        const data = await cmsService.getIndustryBySlug(slug);
-        setIndustry(data);
-      } catch (err) {
-        setError(err instanceof Error ? err : new Error('Failed to fetch industry'));
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    
-    if (slug) {
-      fetchData();
+    try {
+      setIsLoading(true);
+      // Find industry by slug directly from mock data
+      const data = mockIndustries.find(i => i.slug === slug) || null;
+      setIndustry(data);
+    } catch (err) {
+      setError(err instanceof Error ? err : new Error('Failed to load industry'));
+    } finally {
+      setIsLoading(false);
     }
   }, [slug]);
   
   return { industry, isLoading, error };
+}
+
+// Direct function to get localized content
+function getLocalizedContent<T extends { [key in 'en' | 'ar']: string }>(content: T, language: 'en' | 'ar'): string {
+  return content[language] || content.en;
 }
 
 // Helper hook to get localized industry content
@@ -61,21 +57,21 @@ export function useLocalizedIndustryContent(industry: Industry | null) {
   
   return {
     ...industry,
-    localizedName: cmsService.getLocalizedContent(industry.name, language),
-    localizedShortDescription: cmsService.getLocalizedContent(industry.shortDescription, language),
-    localizedFullDescription: cmsService.getLocalizedContent(industry.fullDescription, language),
-    localizedImageAlt: cmsService.getLocalizedContent(industry.image.altText, language),
-    caseStudies: industry.caseStudies.map(caseStudy => ({
+    localizedName: getLocalizedContent(industry.name, language),
+    localizedShortDescription: getLocalizedContent(industry.shortDescription, language),
+    localizedFullDescription: getLocalizedContent(industry.fullDescription, language),
+    localizedImageAlt: industry.image?.altText ? getLocalizedContent(industry.image.altText, language) : '',
+    caseStudies: industry.caseStudies?.map(caseStudy => ({
       ...caseStudy,
-      localizedTitle: cmsService.getLocalizedContent(caseStudy.title, language),
-      localizedDescription: cmsService.getLocalizedContent(caseStudy.description, language),
-      localizedResults: cmsService.getLocalizedContent(caseStudy.results, language),
-      localizedImageAlt: cmsService.getLocalizedContent(caseStudy.image.altText, language),
-    })),
-    meta: {
+      localizedTitle: getLocalizedContent(caseStudy.title, language),
+      localizedDescription: getLocalizedContent(caseStudy.description, language),
+      localizedOutcome: caseStudy.outcome ? getLocalizedContent(caseStudy.outcome, language) : '',
+      localizedImageAlt: caseStudy.image?.altText ? getLocalizedContent(caseStudy.image.altText, language) : '',
+    })) || [],
+    meta: industry.meta ? {
       ...industry.meta,
-      localizedTitle: cmsService.getLocalizedContent(industry.meta.title, language),
-      localizedDescription: cmsService.getLocalizedContent(industry.meta.description, language)
-    }
+      localizedTitle: getLocalizedContent(industry.meta.title, language),
+      localizedDescription: getLocalizedContent(industry.meta.description, language)
+    } : undefined
   };
 }

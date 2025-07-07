@@ -98,7 +98,10 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
   team: [
     {
       id: 'team-1',
-      name: 'Eng. Ahmad',
+      name: {
+        en: 'Eng. Ahmad',
+        ar: 'المعندس أحمد'
+      },
       position: {
         en: 'Chief Executive Officer',
         ar: 'الرئيس التنفيذي'
@@ -120,7 +123,10 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
     },
     {
       id: 'team-2',
-      name: 'Eng. Someone',
+      name: {
+        en: 'Eng. Someone',
+        ar: 'المعندس شخص'
+      },
       position: {
         en: 'Director of Engineering',
         ar: 'مدير الهندسة'
@@ -142,7 +148,10 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
     },
     {
       id: 'team-3',
-      name: 'Dr. Someone',
+      name: {
+        en: 'Dr. Someone',
+        ar: 'دكتور شخص'
+      },
       position: {
         en: 'Director of Environmental Solutions',
         ar: 'مدير حلول البيئة'
@@ -164,7 +173,10 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
     },
     {
       id: 'team-4',
-      name: 'Eng. Abdullah',
+      name: {
+        en: 'Eng. Abdullah',
+        ar: 'المعندس عبد الله'
+      },
       position: {
         en: 'Director of Operations',
         ar: 'مدير العمليات'
@@ -185,7 +197,7 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
       }
     }
   ],
-  certificates: [
+  certifications: [
     {
       id: 'iso-9001',
       name: {
@@ -196,6 +208,7 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
         en: 'Quality Management System certification, demonstrating our commitment to consistent quality and customer satisfaction.',
         ar: 'شهادة نظام إدارة الجودة، توضح التزامنا بالجودة المتسقة ورضا العملاء.'
       },
+      imageSrc: '/images/certificates/placeholder.png',
       image: {
         id: 'iso-9001-image',
         url: '/images/certificates/placeholder.png',
@@ -218,6 +231,7 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
         en: 'Environmental Management System certification, reflecting our dedication to environmental responsibility.',
         ar: 'شهادة نظام الإدارة البيئية، تعكس تفانينا في المسؤولية البيئية.'
       },
+      imageSrc: '/images/certificates/placeholder.png',
       image: {
         id: 'iso-14001-image',
         url: '/images/certificates/placeholder.png',
@@ -240,6 +254,7 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
         en: 'Occupational Health and Safety Management System certification, underscoring our priority on workplace safety.',
         ar: 'شهادة نظام إدارة الصحة والسلامة المهنية، تؤكد أولويتنا على سلامة مكان العمل.'
       },
+      imageSrc: '/images/certificates/placeholder.png',
       image: {
         id: 'iso-45001-image',
         url: '/images/certificates/placeholder.png',

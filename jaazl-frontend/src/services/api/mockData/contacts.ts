@@ -64,7 +64,7 @@ export const contacts: Contact[] = [
   {
     id: 'social-linkedin',
     type: 'social',
-    value: 'https://www.linkedin.com/company/jaazl',
+    value: 'https://www.linkedin.com/company/jaazl-industrial-company',
     label: {
       en: 'LinkedIn',
       ar: 'لينكد إن'
@@ -74,7 +74,7 @@ export const contacts: Contact[] = [
   {
     id: 'social-x-twitter',
     type: 'social',
-    value: 'https://twitter.com/jaazl',
+    value: 'https://X.com/jaazl',
     label: {
       en: 'X',
       ar: 'X'
