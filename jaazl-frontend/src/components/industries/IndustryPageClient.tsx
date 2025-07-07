@@ -34,18 +34,20 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row items-center relative z-10 text-white">
             <div className="md:w-1/2 md:pr-8">
+              <div className="mb-4">
+                <Link href="/industries" className="inline-flex items-center text-white hover:text-gray-200 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
+                  </svg>
+                  <span>{language === 'en' ? 'Back to Industries' : 'العودة إلى الصناعات'}</span>
+                </Link>
+              </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 {getLocalizedContent(industry.name, 'en')}
               </h1>
               <p className="text-xl mb-8">
                 {getLocalizedContent(industry.shortDescription, 'en')}
               </p>
-              <Link 
-                href="/contact"
-                className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-lg transition duration-300"
-              >
-                Contact Us
-              </Link>
             </div>
             <div className="md:w-1/2 mt-10 md:mt-0">
               <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-2xl">
