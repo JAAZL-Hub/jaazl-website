@@ -46,7 +46,7 @@ const industries = [
   { name: { en: 'Refineries', ar: 'المصافي' }, path: '/industries/refineries' },
   { name: { en: 'Mining', ar: 'التعدين' }, path: '/industries/mining' },
   { name: { en: 'Municipal', ar: 'البلديات' }, path: '/industries/municipal' },
-  { name: { en: 'Power & Electricity', ar: 'الطاقة والكهرباء' }, path: '/industries/power-electricity' },
+  { name: { en: 'Power & Electricity', ar: 'الطاقة والكهرباء' }, path: '/industries/power' },
 ];
 
 const Header: React.FC = () => {
