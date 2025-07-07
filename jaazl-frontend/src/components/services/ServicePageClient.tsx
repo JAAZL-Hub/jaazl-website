@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import MainLayout from '@/components/layout/MainLayout';
 import Image from 'next/image';
 import { FaCheck } from 'react-icons/fa';
 import Link from 'next/link';
