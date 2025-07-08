@@ -13,8 +13,8 @@ interface ServicePageClientProps {
 }
 
 // Helper function to get localized content
-const getLocalizedContent = (content: LocalizedContent, language: string = 'en'): string => {
-  return language === 'en' ? content.en : content.ar;
+const getLocalizedContent = (content: LocalizedContent, currentLanguage: string): string => {
+  return currentLanguage === 'en' ? content.en : content.ar;
 };
 
 const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedIndustries }) => {
@@ -33,27 +33,27 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
         </div>
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row items-center relative z-10 text-white">
-            <div className="md:w-1/2 md:pr-8">
+            <div className="md:w-1/2 md:ps-8 md:pe-8">
               <div className="mb-4">
                 <Link href="/services" className="inline-flex items-center text-white hover:text-gray-200 transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 ${language === 'en' ? 'mr-2' : 'ml-2'}`} viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
                   </svg>
                   <span>{language === 'en' ? 'Back to Services' : 'العودة إلى الخدمات'}</span>
                 </Link>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                {getLocalizedContent(service.name, 'en')}
+                {getLocalizedContent(service.name, language)}
               </h1>
               <p className="text-xl mb-8 text-white"> 
-                {getLocalizedContent(service.shortDescription, 'en')}
+                {getLocalizedContent(service.shortDescription, language)}
               </p>
             </div>
             <div className="md:w-1/2 mt-10 md:mt-0">
               <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-2xl">
                 <Image
                   src={service.imageSrc || '/images/team/placeholder.png'}
-                  alt={getLocalizedContent(service.name, 'en')}
+                  alt={getLocalizedContent(service.name, language)}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="rounded-lg"
@@ -67,10 +67,10 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
       {/* Description Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold mb-8 text-center text-[#1E1E1E]">About Our {getLocalizedContent(service.name, 'en')}</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center text-[#1E1E1E]">{language === 'en' ? 'About Our' : 'حول'} {getLocalizedContent(service.name, language)}</h2>
           <div className="max-w-3xl mx-auto">
             <div className="prose prose-lg">
-              {getLocalizedContent(service.fullDescription, 'en').split('\n\n').map((paragraph, idx) => (
+              {getLocalizedContent(service.fullDescription, language).split('\n\n').map((paragraph, idx) => (
                 <p key={idx} className="mb-4 text-gray-800 font-medium ">
                   {paragraph}
                 </p>
@@ -84,15 +84,15 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
       {service.features && service.features.length > 0 && (
         <section className="py-16 bg-gray-100">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#1E1E1E]">Key Features</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Key Features' : 'الميزات الرئيسية'}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {service.features.map((feature) => (
                 <div key={feature.id} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
                   <div className="text-primary text-3xl mb-4">
                     <FaCheck className="text-gray-700"/>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-700">{getLocalizedContent(feature.title, 'en')}</h3>
-                  <p className="text-gray-700">{getLocalizedContent(feature.description, 'en')}</p>
+                  <h3 className="text-xl font-bold mb-3 text-gray-700">{getLocalizedContent(feature.title, language)}</h3>
+                  <p className="text-gray-700">{getLocalizedContent(feature.description, language)}</p>
                 </div>
               ))}
             </div>
@@ -104,12 +104,12 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
       {service.benefits && service.benefits.length > 0 && (
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#1E1E1E]">Benefits</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Benefits' : 'الفوائد'}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {service.benefits.map((benefit, index) => (
                 <div key={index} className="bg-gray-50 p-6 rounded-lg border-l-4 border-primary">
-                  <h3 className="text-xl font-bold mb-3 text-gray-700">{getLocalizedContent(benefit.title, 'en')}</h3>
-                  <p>{getLocalizedContent(benefit.description, 'en')}</p>
+                  <h3 className="text-xl font-bold mb-3 text-gray-700">{getLocalizedContent(benefit.title, language)}</h3>
+                  <p>{getLocalizedContent(benefit.description, language)}</p>
                 </div>
               ))}
             </div>
@@ -121,7 +121,7 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
       {relatedIndustries.length > 0 && (
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#1E1E1E]">Related Industries</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Related Industries' : 'الصناعات ذات الصلة'}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedIndustries.map((industry) => (
                 <Link 
@@ -160,8 +160,8 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
             <div className="max-w-3xl mx-auto">
               {service.faqs.map((faq, index) => (
                 <div key={index} className="mb-8 border-b border-gray-200 pb-6">
-                  <h3 className="text-xl font-bold mb-3 text-gray-700">{getLocalizedContent(faq.question, 'en')}</h3>
-                  <p className="text-gray-700">{getLocalizedContent(faq.answer, 'en')}</p>
+                  <h3 className={`text-lg font-bold mb-1 ${language === 'ar' ? 'text-right' : ''}`}>{getLocalizedContent(faq.question, language)}</h3>
+                  <p className={`text-sm text-gray-600 ${language === 'ar' ? 'text-right' : ''}`}>{getLocalizedContent(faq.answer, language)}</p>
                 </div>
               ))}
             </div>
