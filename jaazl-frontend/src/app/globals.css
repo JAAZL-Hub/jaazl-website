@@ -48,10 +48,15 @@ body {
   font-weight: 300; /* Light for normal text */
 }
 
+/* Increased paragraph font size for better readability */
+p {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.7;
+}
+
 h1, h2, h3, h4, h5, h6, .font-bold, .font-semibold, .font-medium, button, .btn, nav a {
   font-weight: 700; /* Bold for headings and UI elements */
 }
-
 
 /* Custom animations for the JAAZL homepage */
 @keyframes fadeIn {

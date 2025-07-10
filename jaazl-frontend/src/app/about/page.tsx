@@ -183,10 +183,10 @@ export default function AboutPage() {
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl text-center mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               {language === 'en' ? 'About JAAZL' : 'نبذة عن جازل'}
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            <p className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-3xl mx-auto">
               {language === 'en' 
                 ? 'Pioneering industrial solutions for a sustainable future in Saudi Arabia.'
                 : 'حلول صناعية رائدة لمستقبل مستدام في المملكة العربية السعودية.'
@@ -201,7 +201,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                 {language === 'en' ? 'Our History' : 'تاريخنا'}
               </h2>
               <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
@@ -225,16 +225,16 @@ export default function AboutPage() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               {language === 'en' ? 'Our Foundation' : 'أساسنا'}
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">{language === 'en' ? 'The principles that guide our every action and decision.' : 'المبادئ التي توجه كل عمل وقرار نتخذه.'}</p>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{language === 'en' ? 'The principles that guide our every action and decision.' : 'المبادئ التي توجه كل عمل وقرار نتخذه.'}</p>
           </div>
           
           <div className="flex justify-center mb-8 gap-4">
             <button
               onClick={() => setActiveTab('mission')}
-              className={`px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 ${activeTab === 'mission' 
+              className={`px-8 py-3 rounded-full font-semibold text-xl transition-all duration-300 ${activeTab === 'mission' 
                 ? 'bg-blue-600 text-white shadow-btn-primary' 
                 : 'bg-white text-gray-700 hover:bg-blue-100'}`}
             >
@@ -242,7 +242,7 @@ export default function AboutPage() {
             </button>
             <button
               onClick={() => setActiveTab('vision')}
-              className={`px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 ${activeTab === 'vision' 
+              className={`px-8 py-3 rounded-full font-semibold text-xl transition-all duration-300 ${activeTab === 'vision' 
                 ? 'bg-blue-600 text-white shadow-btn-primary' 
                 : 'bg-white text-gray-700 hover:bg-blue-100'}`}
             >
@@ -257,7 +257,7 @@ export default function AboutPage() {
                   <FaBolt className="h-8 w-8 text-blue-700" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{language === 'en' ? 'Our Mission' : 'مهمتنا'}</h3>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-3">{language === 'en' ? 'Our Mission' : 'مهمتنا'}</h3>
                   <div className="prose prose-xl text-gray-600 max-w-none" dangerouslySetInnerHTML={{ __html: localizedAbout.mission }} />
                 </div>
               </div>
@@ -268,7 +268,7 @@ export default function AboutPage() {
                   <FaEye className="h-8 w-8 text-blue-700" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{language === 'en' ? 'Our Vision' : 'رؤيتنا'}</h3>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-3">{language === 'en' ? 'Our Vision' : 'رؤيتنا'}</h3>
                   <div className="prose prose-xl text-gray-600 max-w-none" dangerouslySetInnerHTML={{ __html: localizedAbout.vision }} />
                 </div>
               </div>
@@ -281,10 +281,10 @@ export default function AboutPage() {
       <section className="py-24" ref={valuesRef} data-section-key="values">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               {language === 'en' ? 'Our Core Values' : 'قيمنا الأساسية'}
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">{language === 'en' ? 'The pillars of our culture and commitment to excellence.' : 'أركان ثقافتنا والتزامنا بالتميز.'}</p>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{language === 'en' ? 'The pillars of our culture and commitment to excellence.' : 'أركان ثقافتنا والتزامنا بالتميز.'}</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -308,7 +308,7 @@ export default function AboutPage() {
                   <div className="mb-6 transform transition-transform duration-300 group-hover:scale-110">
                     <ValueIcon className="w-10 h-10 text-blue-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{value.title}</h3>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4">{value.title}</h3>
                   <p className="text-gray-600 text-base leading-relaxed">{value.description}</p>
                 </div>
               );
@@ -321,10 +321,10 @@ export default function AboutPage() {
       <section className="py-24 bg-gray-50" ref={teamRef} data-section-key="team">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               {language === 'en' ? 'Our Leadership Team' : 'فريق القيادة'}
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">{language === 'en' ? 'Meet the experienced professionals driving our success.' : 'تعرف على المحترفين ذوي الخبرة الذين يقودون نجاحنا.'}</p>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{language === 'en' ? 'Meet the experienced professionals driving our success.' : 'تعرف على المحترفين ذوي الخبرة الذين يقودون نجاحنا.'}</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
@@ -346,11 +346,11 @@ export default function AboutPage() {
                     />
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                    <span className="text-white text-lg font-semibold">{language === 'en' ? 'View Profile' : 'عرض الملف الشخصي'}</span>
+                    <span className="text-white text-xl font-semibold">{language === 'en' ? 'View Profile' : 'عرض الملف الشخصي'}</span>
                   </div>
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">{member.name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">{member.name}</h3>
                   <p className="text-blue-600 font-medium mt-1">{member.position}</p>
                 </div>
               </div>
@@ -384,15 +384,15 @@ export default function AboutPage() {
                   </div>
                   
                   <div className="md:w-2/3 p-8">
-                    <h3 className="text-3xl font-bold text-gray-900">{activeMember.name}</h3>
-                    <p className="text-blue-700 text-xl font-medium mt-1">{getLocalizedValue(activeMember.position, language)}</p>
+                    <h3 className="text-4xl font-bold text-gray-900">{activeMember.name}</h3>
+                    <p className="text-blue-700 text-2xl font-medium mt-1">{getLocalizedValue(activeMember.position, language)}</p>
                     
                     <div className="prose prose-lg max-w-none text-gray-600 mt-6 leading-relaxed">
                       <p>{getLocalizedValue(activeMember.bio, language)}</p>
                     </div>
                     
                     <div className="mt-8 pt-6 border-t border-gray-200">
-                      <h4 className="font-semibold text-gray-900 mb-4 text-lg">{language === 'en' ? 'Areas of Expertise' : 'مجالات الخبرة'}</h4>
+                      <h4 className="font-semibold text-gray-900 mb-4 text-xl">{language === 'en' ? 'Areas of Expertise' : 'مجالات الخبرة'}</h4>
                       <div className="flex flex-wrap gap-3">
                         <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">{language === 'en' ? 'Industrial Engineering' : 'الهندسة الصناعية'}</span>
                         <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">{language === 'en' ? 'Process Optimization' : 'تحسين العمليات'}</span>
@@ -411,10 +411,10 @@ export default function AboutPage() {
       <section className="py-24" ref={certificatesRef} data-section-key="certificates">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               {language === 'en' ? 'Our Certifications & Accreditations' : 'شهاداتنا واعتماداتنا'}
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">{language === 'en' ? 'A testament to our unwavering commitment to quality, safety, and excellence.' : 'شهادة على التزامنا الراسخ بالجودة والسلامة والتميز.'}</p>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{language === 'en' ? 'A testament to our unwavering commitment to quality, safety, and excellence.' : 'شهادة على التزامنا الراسخ بالجودة والسلامة والتميز.'}</p>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -438,23 +438,23 @@ export default function AboutPage() {
                       <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                         <FaAward className="h-10 w-10 text-blue-800" />
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900">{certificate.name}</h3>
+                      <h3 className="text-2xl font-bold text-gray-900">{certificate.name}</h3>
                       <p className="text-gray-500 mt-2 line-clamp-2">{certificate.description}</p>
                       <div className="mt-auto pt-4">
-                        <span className="text-blue-600 font-semibold text-sm">{language === 'en' ? 'Click for details' : 'انقر للتفاصيل'}</span>
+                        <span className="text-blue-600 font-semibold text-base">{language === 'en' ? 'Click for details' : 'انقر للتفاصيل'}</span>
                       </div>
                     </div>
                     
                     {/* Card Back */}
                     <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8 rounded-2xl shadow-card-hover flex flex-col backface-hidden rotate-y-180">
-                      <h3 className="text-2xl font-bold mb-4">{certificate.name}</h3>
+                      <h3 className="text-3xl font-bold mb-4">{certificate.name}</h3>
                       <div className="space-y-3 text-left">
                         <p><span className="font-semibold">{language === 'en' ? 'Issued by: ' : 'صادرة عن: '}</span> {certificate.issuedBy || 'N/A'}</p>
                         <p><span className="font-semibold">{language === 'en' ? 'Valid until: ' : 'صالحة حتى: '}</span> {certificate.validUntil || 'N/A'}</p>
                         <p><span className="font-semibold">{language === 'en' ? 'Certificate ID: ' : 'رقم الشهادة: '}</span> {certificate.id || 'N/A'}</p>
                       </div>
                       <div className="mt-auto pt-4 border-t border-blue-400/50">
-                        <p className="text-sm text-blue-100">{language === 'en' ? 'Demonstrates our commitment to industry standards.' : 'توضح التزامنا بمعايير الصناعة.'}</p>
+                        <p className="text-base text-blue-100">{language === 'en' ? 'Demonstrates our commitment to industry standards.' : 'توضح التزامنا بمعايير الصناعة.'}</p>
                       </div>
                     </div>
                   </div>
@@ -468,16 +468,16 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-24 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             {language === 'en' ? 'Ready to Partner with Us?' : 'هل أنت مستعد للشراكة معنا؟'}
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             {language === 'en' 
               ? 'Let us help you achieve your industrial goals. Contact us today for a consultation and discover how JAAZL can elevate your business.'
               : 'دعنا نساعدك في تحقيق أهدافك الصناعية. اتصل بنا اليوم للحصول على استشارة واكتشف كيف يمكن لـ جازل الارتقاء بأعمالك.'
             }
           </p>
-          <Link href="/contact" className="inline-block bg-orange-500 text-white font-bold py-4 px-10 rounded-full text-lg hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <Link href="/contact" className="inline-block bg-orange-500 text-white font-bold py-4 px-10 rounded-full text-xl hover:bg-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
             {language === 'en' ? 'Contact Us' : 'اتصل بنا'}
           </Link>
         </div>

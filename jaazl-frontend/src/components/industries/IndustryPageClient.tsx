@@ -42,10 +42,10 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
                   <span>{language === 'en' ? 'Back to Industries' : 'العودة إلى الصناعات'}</span>
                 </Link>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-5xl md:text-5xl font-bold mb-6">
                 {getLocalizedContent(industry.name, language)}
               </h1>
-              <p className="text-xl mb-8">
+              <p className="text-2xl mb-8">
                 {getLocalizedContent(industry.shortDescription, language)}
               </p>
             </div>
@@ -67,7 +67,7 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
       {/* Description Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold mb-8 text-center text-[#1E1E1E]">{language === 'en' ? 'About' : 'حول'} {getLocalizedContent(industry.name, language)}</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center text-[#1E1E1E]">{language === 'en' ? 'About' : 'حول'} {getLocalizedContent(industry.name, language)}</h2>
           <div className="max-w-3xl mx-auto">
             <div className="prose prose-lg">
               {getLocalizedContent(industry.fullDescription, language).split('\n\n').map((paragraph, idx) => (
@@ -84,12 +84,12 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
       {industry.challenges && industry.challenges.length > 0 && (
         <section className="py-16 bg-gray-100">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Industry Challenges' : 'تحديات الصناعة'}</h2>
+            <h2 className="text-5xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Industry Challenges' : 'تحديات الصناعة'}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {industry.challenges.map((challenge, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                  <h3 className="text-xl font-bold mb-3 text-[#1E1E1E]">{getLocalizedContent(challenge.title, language)}</h3>
-                  <p className="text-gray-700">{getLocalizedContent(challenge.description, language)}</p>
+                  <h3 className="text-3xl font-bold mb-3 text-[#1E1E1E]">{getLocalizedContent(challenge.title, language)}</h3>
+                  <p className="text-gray-600 text-lg">{getLocalizedContent(challenge.description, language)}</p>
                 </div>
               ))}
             </div>
@@ -101,12 +101,12 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
       {industry.solutions && industry.solutions.length > 0 && (
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Our Solutions' : 'حلولنا'}</h2>
+            <h2 className="text-5xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Our Solutions' : 'حلولنا'}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {industry.solutions.map((solution, index) => (
                 <div key={index} className="bg-gray-50 p-6 rounded-lg border-l-4 border-primary">
-                  <h3 className="text-xl font-bold mb-3 text-[#1E1E1E]">{getLocalizedContent(solution.title, language)}</h3>
-                  <p className="text-gray-700">{getLocalizedContent(solution.description, language)}</p>
+                  <h3 className="text-3xl font-bold mb-3 text-[#1E1E1E]">{getLocalizedContent(solution.title, language)}</h3>
+                  <p className="text-gray-600 text-lg">{getLocalizedContent(solution.description, language)}</p>
                 </div>
               ))}
             </div>
@@ -118,7 +118,7 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
       {industry.caseStudies && industry.caseStudies.length > 0 && (
         <section className="py-16 bg-gray-100">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Case Studies' : 'دراسات الحالة'}</h2>
+            <h2 className="text-5xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Case Studies' : 'دراسات الحالة'}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {industry.caseStudies.map((caseStudy, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -133,8 +133,8 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
                     </div>
                   )}
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-3 text-[#1E1E1E]">{getLocalizedContent(caseStudy.title, language)}</h3>
-                    <p className="text-gray-700 mb-4">{getLocalizedContent(caseStudy.description, language)}</p>
+                    <h3 className="text-3xl font-bold mb-3 text-[#1E1E1E]">{getLocalizedContent(caseStudy.title, language)}</h3>
+                    <p className="text-gray-600 text-lg">{getLocalizedContent(caseStudy.description, language)}</p>
                     {caseStudy.results && (
                       <div className="mt-4">
                         <h4 className="font-bold text-lg mb-2 text-[#1E1E1E]">{language === 'en' ? 'Results:' : 'النتائج:'}</h4>
@@ -160,7 +160,7 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
       {relatedServices.length > 0 && (
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Related Services' : 'الخدمات ذات الصلة'}</h2>
+            <h2 className="text-5xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Related Services' : 'الخدمات ذات الصلة'}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedServices.map((service) => (
                 <Link 
@@ -178,10 +178,10 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition duration-300 text-gray-800">
+                      <h3 className="text-3xl font-bold mb-2 group-hover:text-primary transition duration-300 text-gray-800">
                         {getLocalizedContent(service.name, language)}
                       </h3>
-                      <p className="text-gray-800">{getLocalizedContent(service.shortDescription, language)}</p>
+                      <p className="text-gray-800 text-lg">{getLocalizedContent(service.shortDescription, language)}</p>
                     </div>
                   </div>
                 </Link>
@@ -194,7 +194,7 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-orange-500/90 to-red-600/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-4">
             {language === 'en' ? 'Ready to Partner with Us?' : 'هل أنت مستعد للشراكة معنا؟'}
           </h2>
           <p className="text-lg text-white/90 mb-8 max-w-3xl mx-auto">

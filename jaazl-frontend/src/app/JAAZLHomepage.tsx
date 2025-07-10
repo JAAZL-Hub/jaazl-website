@@ -132,14 +132,14 @@ const JAAZLHomepage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className={`transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
+              <h1 className="text-6xl lg:text-7xl font-bold leading-tight mb-8">
                 {language === 'en' ? (
                   <>
                     Industrial Solutions
                     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400">
                       Excellence
                     </span>
-                    <span className="block text-3xl lg:text-4xl text-blue-200 font-normal mt-4">
+                    <span className="block text-4xl lg:text-5xl text-blue-200 font-normal mt-4">
                       in Saudi Arabia&apos;s East
                     </span>
                   </>
@@ -149,14 +149,14 @@ const JAAZLHomepage: React.FC = () => {
                     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400">
                       متميزة
                     </span>
-                    <span className="block text-3xl lg:text-4xl text-blue-200 font-normal mt-4">
+                    <span className="block text-4xl lg:text-5xl text-blue-200 font-normal mt-4">
                       في المنطقة الشرقية
                     </span>
                   </>
                 )}
               </h1>
               
-              <p className="text-xl text-blue-100 mb-10 leading-relaxed max-w-2xl">
+              <p className="text-3xl text-blue-100 mb-10 leading-relaxed max-w-2xl">
                 {language === 'en' 
                   ? "Comprehensive engineering, environmental, and industrial solutions serving Jubail & Dammam with world-class technology and local expertise."
                   : "حلول هندسية وبيئية وصناعية شاملة في الجبيل والدمام مع شراكات تقنية عالمية وخبرة محلية."}
@@ -168,7 +168,7 @@ const JAAZLHomepage: React.FC = () => {
                   {language === 'en' ? 'Request Consultation' : 'اطلب استشارة'}
                   {React.createElement(getNavigationIcon('arrow-right'), { className: "mx-3 w-5 h-5 group-hover:translate-x-1 transition-transform" })}
                 </Link>
-                <Link href="#services" className="group border-2 border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                <Link href="#services" className="group border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex items-center justify-center">
                   {React.createElement(getMiscIcon('circle-ellipsis'), { className: "mx-3 w-5 h-5 group-hover:scale-110 transition-transform" })}
                   {language === 'en' ? 'Know More' : 'اعرف المزيد'}
                 </Link>
@@ -183,14 +183,14 @@ const JAAZLHomepage: React.FC = () => {
                     {services.map((service, index) => (
                       <div key={index} className={`group text-center p-6 rounded-2xl transition-all duration-500 cursor-pointer border border-white/10 hover:border-white/30 ${activeService === index ? 'bg-white/20 scale-105' : 'bg-white/5 hover:bg-white/15'}`} onClick={() => setActiveService(index)}>
                         <div className="text-orange-400 mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
-                        <p className="text-sm font-semibold text-white">{service.title}</p>
+                        <p className="text-base font-semibold text-white">{service.title}</p>
                         <div className="mt-2 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                       </div>
                     ))}
                   </div>
                   <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
-                    <h3 className="text-lg font-bold text-white mb-3">{services[activeService].title}</h3>
-                    <p className="text-blue-100 text-sm mb-4">{services[activeService].description}</p>
+                    <h3 className="text-xl font-bold text-white mb-3">{services[activeService].title}</h3>
+                    <p className="text-blue-100 text-base mb-4">{services[activeService].description}</p>
                     <div className="grid grid-cols-2 gap-2">
                       {services[activeService].features.slice(0, 2).map((feature, idx) => (
                         <div key={idx} className="flex items-center text-xs text-blue-200">
@@ -215,7 +215,7 @@ const JAAZLHomepage: React.FC = () => {
             <div className="inline-flex items-center px-4 py-2 bg-blue-50 text-blue-900 rounded-full font-medium mb-4">
               {React.createElement(getMiscIcon('cog'), { className: "w-4 h-4 mx-2" })}{language === 'en' ? 'Our Services' : 'خدماتنا'}
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">{language === 'en' ? 'Comprehensive Industrial Solutions' : 'حلول صناعية شاملة'}</h2>
+            <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">{language === 'en' ? 'Comprehensive Industrial Solutions' : 'حلول صناعية شاملة'}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">{language === 'en' ? "From advanced engineering to environmental solutions, we provide end-to-end services for Saudi Arabia's industrial sector." : "من الهندسة المتقدمة إلى الحلول البيئية، نقدم خدمات متكاملة للقطاع الصناعي في المملكة."}</p>
           </div>
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -225,9 +225,9 @@ const JAAZLHomepage: React.FC = () => {
                   <div className="flex items-start space-x-6">
                     <div className={`p-4 rounded-xl transition-all duration-300 ${activeService === index ? 'bg-blue-900 text-white scale-110' : 'bg-gray-100 text-gray-600 group-hover:bg-blue-100 group-hover:text-blue-900'}`}>{service.icon}</div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-900 transition-colors">{service.title}</h3>
+                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-blue-900 transition-colors">{service.title}</h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                      {activeService === index && (<div className="grid grid-cols-2 gap-3 animate-fadeIn">{service.features.map((feature, idx) => (<div key={idx} className="flex items-center text-sm text-blue-900">{React.createElement(getFeatureIcon('check-circle'), { className: "w-4 h-4 mx-2 text-green-500" })}<span className="font-medium">{feature}</span></div>))}</div>)}
+                      {activeService === index && (<div className="grid grid-cols-2 gap-3 animate-fadeIn">{service.features.map((feature, idx) => (<div key={idx} className="flex items-center text-base text-blue-900">{React.createElement(getFeatureIcon('check-circle'), { className: "w-4 h-4 mx-2 text-green-500" })}<span className="font-medium">{feature}</span></div>))}</div>)}
                     </div>
                   </div>
                 </div>
@@ -237,10 +237,10 @@ const JAAZLHomepage: React.FC = () => {
               <div className={`bg-gradient-to-br ${services[activeService].color} rounded-3xl p-10 text-white shadow-card-active transform transition-all duration-300`}>
                 <div className="mb-8">
                   <div className="text-orange-400 mb-6 p-4 bg-white/10 rounded-2xl w-fit">{services[activeService].icon}</div>
-                  <h3 className="text-3xl font-bold mb-4">{services[activeService].title}</h3>
-                  <p className="text-blue-100 mb-8 text-lg leading-relaxed">{services[activeService].description}</p>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">{services[activeService].title}</h3>
+                  <p className="text-blue-100 mb-8 text-xl leading-relaxed">{services[activeService].description}</p>
                 </div>
-                <div className="space-y-4 mb-8">{services[activeService].features.map((feature, index) => (<div key={index} className="flex items-center group">{React.createElement(getFeatureIcon('check-circle'), { className: "w-6 h-6 text-orange-400 mx-4 group-hover:scale-110 transition-transform" })}<span className="text-lg font-medium">{feature}</span></div>))}</div>
+                <div className="space-y-4 mb-8">{services[activeService].features.map((feature, index) => (<div key={index} className="flex items-center group">{React.createElement(getFeatureIcon('check-circle'), { className: "w-6 h-6 text-orange-400 mx-4 group-hover:scale-110 transition-transform" })}<span className="text-xl font-medium">{feature}</span></div>))}</div>
                 <div className="flex space-x-4">
                   <Link href={`/services/${activeService === 0 ? 'engineering-consulting' : activeService === 1 ? 'ai-automation' : 'chemical-solutions'}`} className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center group">{language === 'en' ? 'Learn More' : 'اعرف المزيد'}{React.createElement(getNavigationIcon('arrow-right'), { className: "mx-2 w-5 h-5 group-hover:translate-x-1 transition-transform" })}</Link>
                   <a href="/docs/JAAZL-Profile.pdf" target="_blank" rel="noopener noreferrer" className="border border-white/30 hover:bg-white/10 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center">{React.createElement(getMiscIcon('download'), { className: "mx-2 w-5 h-5" })}{language === 'en' ? 'Brochure' : 'الكتيب'}</a>
@@ -256,15 +256,15 @@ const JAAZLHomepage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-4 py-2 bg-orange-50 text-orange-900 rounded-full font-medium mb-4">{React.createElement(getIndustryIcon('factory'), { className: "w-4 h-4 mx-2" })}{language === 'en' ? 'Industries We Serve' : 'الصناعات التي نخدمها'}</div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">{language === 'en' ? 'Specialized Solutions for Key Sectors' : 'حلول متخصصة للقطاعات الرئيسية'}</h2>
+            <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">{language === 'en' ? 'Specialized Solutions for Key Sectors' : 'حلول متخصصة للقطاعات الرئيسية'}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">{language === 'en' ? "Delivering excellence across Saudi Arabia's most critical industrial sectors" : "تقديم التميز في أهم القطاعات الصناعية بالمملكة"}</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {industries.map((industry, index) => (
-              <div key={index} className="group bg-white p-8 rounded-2xl border border-gray-200 hover:shadow-card-hover transition-all duration-300 text-center cursor-pointer">
+              <div key={index} className="group bg-white p-4 md:p-6 lg:p-8 rounded-2xl border border-gray-200 hover:shadow-card-hover transition-all duration-300 text-center cursor-pointer">
                 <div className="text-gray-600 group-hover:text-blue-900 mb-6 flex justify-center transition-all duration-300 group-hover:scale-110">{industry.icon}</div>
-                <h3 className="font-bold text-gray-900 group-hover:text-blue-900 transition-colors text-lg mb-2">{industry.name[language]}</h3>
-                <p className="text-sm text-gray-500 group-hover:text-blue-600 transition-colors font-medium">{industry.projects}</p>
+                <h3 className="text-sm md:text-base lg:text-xl font-bold text-gray-900 group-hover:text-blue-900 transition-colors mb-2 text-center">{industry.name[language]}</h3>
+                <p className="text-base text-gray-500 group-hover:text-blue-600 transition-colors font-medium">{industry.projects}</p>
                 <div className="mt-4 h-1 bg-gradient-to-r from-blue-900 to-orange-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </div>
             ))}
@@ -277,8 +277,8 @@ const JAAZLHomepage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-4 py-2 bg-green-50 text-green-900 rounded-full font-medium mb-4">{React.createElement(getMiscIcon('building-2'), { className: "w-4 h-4 mx-2" })}{language === 'en' ? 'Our Clients' : 'عملاؤنا'}</div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">{language === 'en' ? 'Trusted by Industry Leaders' : 'موثوق به من قادة الصناعة'}</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">{language === 'en' ? "Serving Saudi Arabia's most prestigious industrial companies with world-class solutions" : "خدمة أرقى الشركات الصناعية في المملكة بحلول عالمية المستوى"}</p>
+            <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">{language === 'en' ? 'Trusted by Industry Leaders' : 'موثوق به من قادة الصناعة'}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{language === 'en' ? "Serving Saudi Arabia's most prestigious industrial companies with world-class solutions" : "خدمة أرقى الشركات الصناعية في المملكة بحلول عالمية المستوى"}</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-x-8 gap-y-12 items-center justify-center">
             {clients.map((client, index) => (
@@ -305,7 +305,7 @@ const JAAZLHomepage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full font-medium mb-4">{React.createElement(getFeatureIcon('award'), { className: "w-4 h-4 mx-2 text-orange-400" })}{language === 'en' ? "Why Choose JAAZL" : "لماذا تختار جازل"}</div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">{language === 'en' ? "Your Trusted Partner for Industrial Excellence" : "شريكك الموثوق للتميز الصناعي"}</h2>
+            <h2 className="text-5xl lg:text-6xl font-bold mb-6">{language === 'en' ? "Your Trusted Partner for Industrial Excellence" : "شريكك الموثوق للتميز الصناعي"}</h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">{language === 'en' ? "Combining global expertise with local knowledge to deliver unmatched industrial solutions." : "نجمع بين الخبرة العالمية والمعرفة المحلية لتقديم حلول صناعية لا مثيل لها."}</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -313,7 +313,7 @@ const JAAZLHomepage: React.FC = () => {
               <div key={index} className="group text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20 hover:shadow-card-hover">
                 <div className="text-orange-400 mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
                 <div className="inline-block px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs font-semibold mb-4">{feature.highlight}</div>
-                <h3 className="text-xl font-bold mb-4 group-hover:text-orange-300 transition-colors">{feature.title[language]}</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-orange-300 transition-colors">{feature.title[language]}</h3>
                 <p className="text-blue-100 leading-relaxed">{feature.description}</p>
                 <div className="mt-6 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
               </div>
@@ -327,11 +327,11 @@ const JAAZLHomepage: React.FC = () => {
         <div className="absolute inset-0"><div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-500/90 to-red-600/90"></div><div className="absolute top-20 left-20 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse"></div><div className="absolute bottom-20 right-20 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-8">{language === 'en' ? "Ready to Transform Your Industrial Operations?" : "هل أنت مستعد لتحويل عملياتك الصناعية؟"}</h2>
-            <p className="text-xl text-orange-100 mb-12 leading-relaxed">{language === 'en' ? "Get expert consultation and tailored solutions for your industrial challenges. Our team is ready to help you achieve operational excellence." : "احصل على استشارة الخبراء وحلول مصممة خصيصًا لتحدياتك الصناعية. فريقنا جاهز لمساعدتك."}</p>
+            <h2 className="text-5xl lg:text-7xl font-bold mb-8">{language === 'en' ? "Ready to Transform Your Industrial Operations?" : "هل أنت مستعد لتحويل عملياتك الصناعية؟"}</h2>
+            <p className="text-3xl text-orange-100 mb-12 leading-relaxed">{language === 'en' ? "Get expert consultation and tailored solutions for your industrial challenges. Our team is ready to help you achieve operational excellence." : "احصل على استشارة الخبراء وحلول مصممة خصيصًا لتحدياتك الصناعية. فريقنا جاهز لمساعدتك."}</p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <Link href="/contact" className="group bg-white text-orange-600 px-10 py-5 rounded-2xl font-bold transition-all duration-300 hover:bg-gray-50 shadow-btn-cta hover:shadow-btn-cta-hover transform hover:-translate-y-1 flex items-center justify-center text-lg">{React.createElement(getMiscIcon('calendar'), { className: "mx-3 w-6 h-6 group-hover:scale-110 transition-transform" })}{language === 'en' ? "Schedule Free Consultation" : "احجز استشارة مجانية"}{React.createElement(getNavigationIcon('arrow-right'), { className: "mx-3 w-6 h-6 group-hover:translate-x-1 transition-transform" })}</Link>
-              <a href="/docs/JAAZL-Profile.pdf" target="_blank" rel="noopener noreferrer" className="group border-2 border-white/30 hover:border-white text-white px-10 py-5 rounded-2xl font-bold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex items-center justify-center text-lg">{React.createElement(getMiscIcon('download'), { className: "mx-3 w-6 h-6 group-hover:scale-110 transition-transform" })}{language === 'en' ? "Download Company Profile" : "تحميل ملف الشركة"}</a>
+              <Link href="/contact" className="group bg-white text-orange-600 px-10 py-5 rounded-2xl font-bold transition-all duration-300 hover:bg-gray-50 shadow-btn-cta hover:shadow-btn-cta-hover transform hover:-translate-y-1 flex items-center justify-center text-xl">{React.createElement(getMiscIcon('calendar'), { className: "mx-3 w-6 h-6 group-hover:scale-110 transition-transform" })}{language === 'en' ? "Schedule Free Consultation" : "احجز استشارة مجانية"}{React.createElement(getNavigationIcon('arrow-right'), { className: "mx-3 w-6 h-6 group-hover:translate-x-1 transition-transform" })}</Link>
+              <a href="/docs/JAAZL-Profile.pdf" target="_blank" rel="noopener noreferrer" className="group border-2 border-white/30 hover:border-white text-white px-10 py-5 rounded-2xl font-bold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex items-center justify-center text-xl">{React.createElement(getMiscIcon('download'), { className: "mx-3 w-6 h-6 group-hover:scale-110 transition-transform" })}{language === 'en' ? "Download Company Profile" : "تحميل ملف الشركة"}</a>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className="grid md:grid-cols-3 gap-8">

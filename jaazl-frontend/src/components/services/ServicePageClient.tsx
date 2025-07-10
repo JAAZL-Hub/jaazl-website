@@ -42,10 +42,10 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
                   <span>{language === 'en' ? 'Back to Services' : 'العودة إلى الخدمات'}</span>
                 </Link>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h1 className="text-5xl md:text-5xl font-bold mb-6 text-white">
                 {getLocalizedContent(service.name, language)}
               </h1>
-              <p className="text-xl mb-8 text-white"> 
+              <p className="text-2xl mb-8 text-white"> 
                 {getLocalizedContent(service.shortDescription, language)}
               </p>
             </div>
@@ -67,7 +67,7 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
       {/* Description Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold mb-8 text-center text-[#1E1E1E]">{language === 'en' ? 'About Our' : 'حول'} {getLocalizedContent(service.name, language)}</h2>
+          <h2 className="text-4xl font-bold mb-8 text-center text-[#1E1E1E]">{language === 'en' ? 'About Our' : 'حول'} {getLocalizedContent(service.name, language)}</h2>
           <div className="max-w-3xl mx-auto">
             <div className="prose prose-lg">
               {getLocalizedContent(service.fullDescription, language).split('\n\n').map((paragraph, idx) => (
@@ -84,15 +84,15 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
       {service.features && service.features.length > 0 && (
         <section className="py-16 bg-gray-100">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Key Features' : 'الميزات الرئيسية'}</h2>
+            <h2 className="text-4xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Key Features' : 'الميزات الرئيسية'}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {service.features.map((feature) => (
                 <div key={feature.id} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                  <div className="text-primary text-3xl mb-4">
+                  <div className="text-primary text-4xl mb-4">
                     <FaCheck className="text-gray-700"/>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-700">{getLocalizedContent(feature.title, language)}</h3>
-                  <p className="text-gray-700">{getLocalizedContent(feature.description, language)}</p>
+                  <h3 className="text-2xl font-bold mb-3 text-gray-700">{getLocalizedContent(feature.title, language)}</h3>
+                  <p className="text-gray-700 text-lg">{getLocalizedContent(feature.description, language)}</p>
                 </div>
               ))}
             </div>
@@ -104,11 +104,11 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
       {service.benefits && service.benefits.length > 0 && (
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Benefits' : 'الفوائد'}</h2>
+            <h2 className="text-4xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Benefits' : 'الفوائد'}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {service.benefits.map((benefit, index) => (
                 <div key={index} className="bg-gray-50 p-6 rounded-lg border-l-4 border-primary">
-                  <h3 className="text-xl font-bold mb-3 text-gray-700">{getLocalizedContent(benefit.title, language)}</h3>
+                  <h3 className="text-2xl font-bold mb-3 text-gray-700">{getLocalizedContent(benefit.title, language)}</h3>
                   <p>{getLocalizedContent(benefit.description, language)}</p>
                 </div>
               ))}
@@ -121,7 +121,7 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
       {relatedIndustries.length > 0 && (
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Related Industries' : 'الصناعات ذات الصلة'}</h2>
+            <h2 className="text-4xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Related Industries' : 'الصناعات ذات الصلة'}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedIndustries.map((industry) => (
                 <Link 
@@ -139,10 +139,10 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2 text-gray-700 transition duration-300">
+                      <h3 className="text-2xl font-bold mb-2 text-gray-700 transition duration-300">
                         {getLocalizedContent(industry.name, 'en')}
                       </h3>
-                      <p className="text-gray-600">{getLocalizedContent(industry.shortDescription, 'en')}</p>
+                      <p className="text-gray-600 text-lg">{getLocalizedContent(industry.shortDescription, 'en')}</p>
                     </div>
                   </div>
                 </Link>
@@ -156,12 +156,12 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
       {service.faqs && service.faqs.length > 0 && (
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#1E1E1E]">Frequently Asked Questions</h2>
+            <h2 className="text-4xl font-bold mb-12 text-center text-[#1E1E1E]">Frequently Asked Questions</h2>
             <div className="max-w-3xl mx-auto">
               {service.faqs.map((faq, index) => (
                 <div key={index} className="mb-8 border-b border-gray-200 pb-6">
-                  <h3 className={`text-lg font-bold mb-1 ${language === 'ar' ? 'text-right' : ''}`}>{getLocalizedContent(faq.question, language)}</h3>
-                  <p className={`text-sm text-gray-600 ${language === 'ar' ? 'text-right' : ''}`}>{getLocalizedContent(faq.answer, language)}</p>
+                  <h3 className={`text-xl font-bold mb-1 ${language === 'ar' ? 'text-right' : ''}`}>{getLocalizedContent(faq.question, language)}</h3>
+                  <p className={`text-base text-gray-600 ${language === 'ar' ? 'text-right' : ''}`}>{getLocalizedContent(faq.answer, language)}</p>
                 </div>
               ))}
             </div>
@@ -172,16 +172,16 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-orange-500/90 to-red-600/90">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             {language === 'en' ? 'Ready to Partner with Us?' : 'هل أنت مستعد للشراكة معنا؟'}
           </h2>
-          <p className="text-lg text-white/90 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
             {language === 'en' 
               ? 'Let us help you achieve your industrial goals. Contact us today for a consultation and discover how JAAZL can elevate your business.'
               : 'دعنا نساعدك في تحقيق أهدافك الصناعية. اتصل بنا اليوم للحصول على استشارة واكتشف كيف يمكن لـ جازل الارتقاء بأعمالك.'
             }
           </p>
-          <Link href="/contact" className="inline-block bg-white text-orange-600 font-bold py-4 px-10 rounded-full text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <Link href="/contact" className="inline-block bg-white text-orange-600 font-bold py-4 px-10 rounded-full text-xl hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
             {language === 'en' ? 'Contact Us' : 'اتصل بنا'}
           </Link>
         </div>
