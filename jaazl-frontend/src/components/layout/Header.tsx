@@ -102,7 +102,6 @@ const Header: React.FC = () => {
   const navLinks = [
     { href: '/', text: { en: 'Home', ar: 'الرئيسية' } },
     { href: '/about', text: { en: 'About', ar: 'من نحن' } },
-    { href: '/services', text: { en: 'Services', ar: 'الخدمات' } },
     { href: '/contact', text: { en: 'Contact', ar: 'اتصل بنا' } },
   ];
   
@@ -118,7 +117,7 @@ const Header: React.FC = () => {
       <header className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${language === 'ar' ? 'rtl' : 'ltr'} ${
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-card border-b border-gray-200' : 'bg-gradient-to-r from-blue-900/80 to-indigo-900/80 backdrop-blur-sm'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:mx-12 xl:mx-16">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center group">

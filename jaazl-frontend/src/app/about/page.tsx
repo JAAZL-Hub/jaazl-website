@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useAboutInfo } from '@/services/hooks';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { FaTimes, FaAward, FaHeart, FaShieldAlt, FaEye, FaBolt, FaUsers } from 'react-icons/fa';
+import { FaTimes, FaAward, FaHeart, FaShieldAlt, FaEye, FaBolt, FaUsers, FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -58,36 +58,33 @@ interface AboutData {
   values: ValueItem[]; // maps to coreValues in AboutInfo
   team: TeamMember[];  // maps to leadership in AboutInfo
   certificates: Certificate[]; // maps to certifications in AboutInfo
-  issuedBy?: string;
-  validUntil?: string;
-  id?: string;
-  image?: ImageContent;
-}
-
-interface AboutData {
-  history: LocalizedContent;
-  mission: LocalizedContent;
-  vision: LocalizedContent;
-  values: ValueItem[];
-  team: TeamMember[];
-  certificates: Certificate[];
 }
 
 export default function AboutPage() {
-  const { aboutInfo } = useAboutInfo();
   const { language, direction } = useLanguage();
+  const { aboutInfo, isLoading } = useAboutInfo();
   
   // State for active tabs and modal
   const [activeTab, setActiveTab] = useState('mission');
   const [showModal, setShowModal] = useState(false);
   const [activeMember, setActiveMember] = useState<TeamMember | null>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
   
   // State for animations and card flips
-  const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
+  const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({
+    values: true,
+    team: true,
+    certificates: true
+  });
   const [flippedCards, setFlippedCards] = useState<{ [key: number]: boolean }>({});
+  const historyRef = useRef<HTMLDivElement>(null);
   const valuesRef = useRef<HTMLDivElement>(null);
   const teamRef = useRef<HTMLDivElement>(null);
   const certificatesRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
   
   // Function to handle scroll animations
   useEffect(() => {
@@ -103,7 +100,7 @@ export default function AboutPage() {
       { threshold: 0.1 }
     );
     
-    const sections = [valuesRef, teamRef, certificatesRef];
+    const sections = [historyRef, valuesRef, teamRef, certificatesRef];
     sections.forEach(ref => {
       if (ref.current) observer.observe(ref.current);
     });
@@ -120,23 +117,29 @@ export default function AboutPage() {
     history: aboutInfo.history,
     mission: aboutInfo.mission,
     vision: aboutInfo.vision,
-    values: aboutInfo.coreValues?.map(value => ({
+    values: aboutInfo.values?.map(value => ({
       icon: value.icon,
       title: value.title,
       description: value.description
     })) || [],
-    team: aboutInfo.leadership?.map(member => ({
+    team: aboutInfo.team?.map(member => ({
       id: member.id,
       name: typeof member.name === 'string' ? member.name : (member.name.en || ''),
       position: member.position,
       bio: member.bio,
-      image: member.imageSrc ? { url: member.imageSrc, altText: typeof member.name === 'object' ? member.name : { en: member.name, ar: member.name } } : undefined
+      image: member.image ? { 
+        url: member.image.url, 
+        altText: member.image.altText || { en: '', ar: '' } 
+      } : undefined
     })) || [],
     certificates: aboutInfo.certifications?.map(cert => ({
       id: cert.id,
       name: cert.name,
       description: cert.description,
-      image: cert.imageSrc ? { url: cert.imageSrc, altText: cert.name } : undefined,
+      image: cert.image ? { 
+        url: cert.image.url, 
+        altText: cert.image.altText || { en: '', ar: '' } 
+      } : undefined,
       issuedBy: '',  // Add default values for optional properties
       validUntil: ''
     })) || []
@@ -174,22 +177,34 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="bg-white" dir={direction}>
-      {/* Hero Section */}
-      <section className="relative pt-40 pb-28 bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/30"></div>
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    <div className="min-h-screen bg-white overflow-x-hidden" dir={direction}>
+      {/* Enhanced Hero Section */}
+      <section className="relative min-h-[60vh] bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 text-white overflow-hidden flex items-center">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-slate-900/95 to-blue-900/90"></div>
+          <div className="absolute top-32 sm:top-28 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-orange-500/5 rounded-full blur-3xl"></div>
+        </div>
         
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl text-center mx-auto">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              {language === 'en' ? 'About JAAZL' : 'نبذة عن جازل'}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 md:pt-32 w-full">
+          <div className={`text-center transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <h1 className="text-6xl lg:text-7xl font-bold leading-tight mb-6">
+              {language === 'en' ? (
+                <>
+                  About <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400">JAAZL</span>
+                </>
+              ) : (
+                <>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400">جازل</span> نبذة عن
+                </>
+              )}
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            <p className="text-2xl md:text-3xl text-blue-200 mb-8 max-w-3xl mx-auto">
               {language === 'en' 
-                ? 'Pioneering industrial solutions for a sustainable future in Saudi Arabia.'
-                : 'حلول صناعية رائدة لمستقبل مستدام في المملكة العربية السعودية.'
+                ? 'Pioneering industrial solutions for a sustainable future.'
+                : 'حلول صناعية رائدة لمستقبل مستدام.'
               }
             </p>
           </div>
@@ -197,71 +212,56 @@ export default function AboutPage() {
       </section>
 
       {/* History Section */}
-      <section className="py-24">
+      <section className="py-24 bg-gray-50" ref={historyRef} data-section-key="history">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="order-2 md:order-1">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                {language === 'en' ? 'Our History' : 'تاريخنا'}
-              </h2>
-              <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
-                <p>{localizedAbout.history}</p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              <span className="relative inline-block">
+                <span className="absolute inset-x-0 bottom-0 h-3 bg-orange-200/50"></span>
+                <span className="relative">{language === 'en' ? 'Our Story' : 'قصتنا'}</span>
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              {language === 'en' ? 'Learn about our journey, mission, and vision for the future.' : 'تعرف على رحلتنا ومهمتنا ورؤيتنا للمستقبل.'}
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* History Card */}
+            <div className={`bg-white p-8 rounded-2xl shadow-card border-t-4 border-blue-600 hover:shadow-card-hover transition-all duration-700 ${isVisible.history ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`} style={{ transitionDelay: '100ms' }}>
+              <div className="flex items-center justify-center mb-6 w-16 h-16 rounded-full bg-blue-100 text-blue-600">
+                <FaUsers className="w-8 h-8" />
               </div>
+              <h3 className="text-2xl font-bold mb-4 text-blue-900">
+                {language === 'en' ? 'Our History' : 'تاريخنا'}
+              </h3>
+              <div className="text-gray-700 prose" dangerouslySetInnerHTML={{ __html: localizedAbout.history }}></div>
             </div>
-            <div className="order-1 md:order-2">
-              <Image 
-                src="https://placehold.co/600x450/0B2346/FFFFFF?text=JAAZL+HQ"
-                alt={language === 'en' ? 'JAAZL headquarters' : 'مقر جازل'}
-                width={600}
-                height={450}
-                className="rounded-2xl shadow-card hover:shadow-card-hover w-full h-auto transition-all duration-500"
-              />
+            
+            {/* Mission Card */}
+            <div className={`bg-white p-8 rounded-2xl shadow-card border-t-4 border-blue-600 hover:shadow-card-hover transition-all duration-700 ${isVisible.history ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`} style={{ transitionDelay: '300ms' }}>
+              <div className="flex items-center justify-center mb-6 w-16 h-16 rounded-full bg-blue-100 text-blue-600">
+                <FaBolt className="w-8 h-8" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-blue-900">
+                {language === 'en' ? 'Our Mission' : 'مهمتنا'}
+              </h3>
+              <div className="text-gray-700 prose" dangerouslySetInnerHTML={{ __html: localizedAbout.mission }}></div>
+            </div>
+            
+            {/* Vision Card */}
+            <div className={`bg-white p-8 rounded-2xl shadow-card border-t-4 border-blue-600 hover:shadow-card-hover transition-all duration-700 ${isVisible.history ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`} style={{ transitionDelay: '500ms' }}>
+              <div className="flex items-center justify-center mb-6 w-16 h-16 rounded-full bg-blue-100 text-blue-600">
+                <FaEye className="w-8 h-8" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-blue-900">
+                {language === 'en' ? 'Our Vision' : 'رؤيتنا'}
+              </h3>
+              <div className="text-gray-700 prose" dangerouslySetInnerHTML={{ __html: localizedAbout.vision }}></div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Mission & Vision Tabs Section */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              {language === 'en' ? 'Our Foundation' : 'أساسنا'}
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">{language === 'en' ? 'The principles that guide our every action and decision.' : 'المبادئ التي توجه كل عمل وقرار نتخذه.'}</p>
-          </div>
-          
-          <div className="flex justify-center mb-8 gap-4">
-            <button
-              onClick={() => setActiveTab('mission')}
-              className={`px-8 py-3 rounded-full font-semibold text-xl transition-all duration-300 ${activeTab === 'mission' 
-                ? 'bg-blue-600 text-white shadow-btn-primary' 
-                : 'bg-white text-gray-700 hover:bg-blue-100'}`}
-            >
-              {language === 'en' ? 'Mission' : 'المهمة'}
-            </button>
-            <button
-              onClick={() => setActiveTab('vision')}
-              className={`px-8 py-3 rounded-full font-semibold text-xl transition-all duration-300 ${activeTab === 'vision' 
-                ? 'bg-blue-600 text-white shadow-btn-primary' 
-                : 'bg-white text-gray-700 hover:bg-blue-100'}`}
-            >
-              {language === 'en' ? 'Vision' : 'الرؤية'}
-            </button>
-          </div>
-          
-          <div className="bg-white p-10 rounded-2xl shadow-card relative overflow-hidden min-h-[320px]">
-            <div className={`transition-all duration-700 ease-in-out ${activeTab === 'mission' ? 'opacity-100' : 'opacity-0 absolute'}`}>
-              <div className="flex flex-col sm:flex-row items-start gap-6">
-                                <div className="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center">
-                  <FaBolt className="h-8 w-8 text-blue-700" />
-                </div>
-                <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-3">{language === 'en' ? 'Our Mission' : 'مهمتنا'}</h3>
-                  <div className="prose prose-xl text-gray-600 max-w-none" dangerouslySetInnerHTML={{ __html: localizedAbout.mission }} />
-                </div>
-              </div>
-            </div>
             <div className={`transition-all duration-700 ease-in-out ${activeTab === 'vision' ? 'opacity-100' : 'opacity-0 absolute'}`}>
               <div className="flex flex-col sm:flex-row items-start gap-6">
                                 <div className="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center">
@@ -273,9 +273,6 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
       {/* Values Section */}
       <section className="py-24" ref={valuesRef} data-section-key="values">
@@ -302,14 +299,21 @@ export default function AboutPage() {
               return (
                 <div 
                   key={index} 
-                  className={`bg-white p-8 rounded-2xl shadow-card border-t-4 border-blue-600 hover:shadow-card-hover transition-all duration-500 ${isVisible.values ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
+                  className={`bg-white p-8 rounded-2xl shadow-card border-t-4 border-blue-600 hover:shadow-card-hover transition-all duration-700 ${isVisible.values ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                  style={{ transitionDelay: `${index * 150}ms` }}
                 >
-                  <div className="mb-6 transform transition-transform duration-300 group-hover:scale-110">
+                  <div className={`mb-6 transform transition-all duration-500 ${isVisible.values ? 'rotate-0 scale-100' : '-rotate-45 scale-0'}`} 
+                       style={{ transitionDelay: `${(index * 150) + 300}ms` }}>
                     <ValueIcon className="w-10 h-10 text-blue-600" />
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                  <p className="text-gray-600 text-base leading-relaxed">{value.description}</p>
+                  <h3 className={`text-3xl font-bold text-gray-900 mb-4 transition-all duration-500 ${isVisible.values ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`} 
+                      style={{ transitionDelay: `${(index * 150) + 450}ms` }}>
+                    {value.title}
+                  </h3>
+                  <p className={`text-gray-600 text-base leading-relaxed transition-all duration-500 ${isVisible.values ? 'opacity-100' : 'opacity-0'}`}
+                     style={{ transitionDelay: `${(index * 150) + 600}ms` }}>
+                    {value.description}
+                  </p>
                 </div>
               );
             })}
@@ -331,8 +335,8 @@ export default function AboutPage() {
             {localizedAbout.team.map((member, index) => (
               <div 
                 key={index} 
-                className={`bg-white rounded-2xl shadow-card overflow-hidden group cursor-pointer transition-all duration-500 hover:shadow-card-hover ${isVisible.team ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                style={{ transitionDelay: `${index * 100}ms` }}
+                className={`bg-white rounded-2xl shadow-card overflow-hidden group cursor-pointer transition-all duration-700 hover:shadow-card-hover hover:scale-105 ${isVisible.team ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}`}
+                style={{ transitionDelay: `${index * 150}ms` }}
                 onClick={() => { setActiveMember(member as TeamMember); setShowModal(true); }}
               >
                 <div className="h-72 overflow-hidden relative">

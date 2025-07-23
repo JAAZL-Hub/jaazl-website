@@ -124,12 +124,12 @@ const JAAZLHomepage: React.FC = () => {
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-slate-900/95 to-blue-900/90"></div>
-          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-32 sm:top-28 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-orange-500/5 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 md:pt-32">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className={`transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
               <h1 className="text-6xl lg:text-7xl font-bold leading-tight mb-8">
@@ -181,7 +181,7 @@ const JAAZLHomepage: React.FC = () => {
                 <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
                   <div className="grid grid-cols-2 gap-6 mb-8">
                     {services.map((service, index) => (
-                      <div key={index} className={`group text-center p-6 rounded-2xl transition-all duration-500 cursor-pointer border border-white/10 hover:border-white/30 ${activeService === index ? 'bg-white/20 scale-105' : 'bg-white/5 hover:bg-white/15'}`} onClick={() => setActiveService(index)}>
+                      <div key={index} className={`group text-center p-4 sm:p-6 rounded-2xl transition-all duration-500 cursor-pointer border border-white/10 hover:border-white/30 ${activeService === index ? 'bg-white/20 scale-105' : 'bg-white/5 hover:bg-white/15'}`} onClick={() => setActiveService(index)}>
                         <div className="text-orange-400 mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
                         <p className="text-base font-semibold text-white">{service.title}</p>
                         <div className="mt-2 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
