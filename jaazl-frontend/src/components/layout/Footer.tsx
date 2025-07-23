@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-4 mb-8">
+            <div className="flex items-center gap-4 mb-8">
               <div className="w-14 h-14 flex items-center justify-center">
                 <Image 
                   src="/images/JAAZL-Logo 2.png" 
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
                 ? "Leading industrial solutions provider in Saudi Arabia's Eastern Province, delivering excellence through innovation, expertise, and world-class partnerships."
                 : "شركة رائدة في تقديم الحلول الصناعية في المنطقة الشرقية بالمملكة العربية السعودية، نقدم التميز من خلال الابتكار والخبرة والشراكات العالمية."}
             </p>
-            <div className="flex space-x-4">
+            <div className="flex gap-4">
               <a href="https://www.linkedin.com/company/jaazl" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 hover:bg-secondary-500 rounded-xl flex items-center justify-center transition-all duration-300 shadow-card hover:shadow-btn-secondary">{React.createElement(getSocialIcon('linkedin'), { className: "w-5 h-5" })}</a>
               <a href="https://twitter.com/jaazl" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 hover:bg-secondary-500 rounded-xl flex items-center justify-center transition-all duration-300 shadow-card hover:shadow-btn-secondary">{React.createElement(getSocialIcon('twitter'), { className: "w-5 h-5" })}</a>
               <a href="https://facebook.com/jaazl" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 hover:bg-secondary-500 rounded-xl flex items-center justify-center transition-all duration-300 shadow-card hover:shadow-btn-secondary">{React.createElement(getSocialIcon('facebook'), { className: "w-5 h-5" })}</a>
@@ -151,7 +151,7 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
               © {new Date().getFullYear()} JAAZL Industrial Company. {language === 'en' ? 'All rights reserved.' : 'جميع الحقوق محفوظة.'}
             </p>
-            <div className="flex space-x-6 text-gray-400">
+            <div className="flex gap-6 text-gray-400">
               <Link href="/privacy" className="hover:text-white transition-colors text-sm">{language === 'en' ? 'Privacy Policy' : 'سياسة الخصوصية'}</Link>
               <Link href="/terms" className="hover:text-white transition-colors text-sm">{language === 'en' ? 'Terms of Service' : 'شروط الخدمة'}</Link>
             </div>

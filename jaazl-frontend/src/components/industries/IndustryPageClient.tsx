@@ -20,7 +20,7 @@ const getLocalizedContent = (content: LocalizedContent, currentLanguage: string)
 const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relatedServices }) => {
   const { language } = useLanguage();
   return (
-    <> 
+    <div dir={language === 'ar' ? 'rtl' : 'ltr'}> 
       {/* Hero Section - Premium Design */}
       <section className="relative pt-36 pb-24 overflow-hidden">
         {/* Glass Morphism Background Effects */}
@@ -33,10 +33,10 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
         </div>
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row items-center relative z-10 text-white">
-            <div className="md:w-1/2 md:ps-8 md:pe-8">
+            <div className="md:w-1/2 md:px-8">
               <div className="mb-4">
                 <Link href="/industries" className="inline-flex items-center text-white hover:text-gray-200 transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 ${language === 'en' ? 'mr-2' : 'ml-2'}`} viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 me-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
                   </svg>
                   <span>{language === 'en' ? 'Back to Industries' : 'العودة إلى الصناعات'}</span>
@@ -104,7 +104,7 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
             <h2 className="text-5xl font-bold mb-12 text-center text-[#1E1E1E]">{language === 'en' ? 'Our Solutions' : 'حلولنا'}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {industry.solutions.map((solution, index) => (
-                <div key={index} className="bg-gray-50 p-6 rounded-lg border-l-4 border-primary">
+                <div key={index} className="bg-gray-50 p-6 rounded-lg border-s-4 border-primary">
                   <h3 className="text-3xl font-bold mb-3 text-[#1E1E1E]">{getLocalizedContent(solution.title, language)}</h3>
                   <p className="text-gray-600 text-lg">{getLocalizedContent(solution.description, language)}</p>
                 </div>
@@ -138,7 +138,7 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
                     {caseStudy.results && (
                       <div className="mt-4">
                         <h4 className="font-bold text-lg mb-2 text-[#1E1E1E]">{language === 'en' ? 'Results:' : 'النتائج:'}</h4>
-                        <ul className="list-disc pl-6">
+                        <ul className="list-disc ps-6">
                           {Array.isArray(caseStudy.results) ? 
                             caseStudy.results.map((result: LocalizedContent, idx: number) => (
                               <li key={idx} className="mb-1 text-gray-800">{getLocalizedContent(result, language)}</li>
@@ -208,7 +208,7 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
           </Link>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

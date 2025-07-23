@@ -96,3 +96,293 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #475569;
 }
+
+/* RTL Support */
+/* Base RTL layout adjustments */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Only reverse horizontal flex layouts, not all flex */
+[dir="rtl"] .flex:not(.flex-col):not(.flex-column) {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+/* Preserve original flex direction for columns and grids */
+[dir="rtl"] .flex-col,
+[dir="rtl"] .flex-column,
+[dir="rtl"] .grid {
+  flex-direction: column;
+}
+
+/* Fix specific flex items that should not reverse */
+[dir="rtl"] .justify-between {
+  justify-content: space-between;
+}
+
+[dir="rtl"] .justify-center {
+  justify-content: center;
+}
+
+[dir="rtl"] .items-center {
+  align-items: center;
+}
+
+/* Gap utility works correctly in RTL, no changes needed for gap-* */
+
+/* Margin and padding adjustments for RTL */
+[dir="rtl"] .ml-auto {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+[dir="rtl"] .mr-auto {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Text alignment utilities for RTL */
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+/* Border radius adjustments for RTL */
+[dir="rtl"] .rounded-l-none {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+
+[dir="rtl"] .rounded-r-none {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+/* Transform adjustments for RTL */
+[dir="rtl"] .translate-x-1 {
+  transform: translateX(-0.25rem);
+}
+
+[dir="rtl"] .group-hover\:translate-x-1 {
+  transform: translateX(-0.25rem);
+}
+
+/* Position adjustments for RTL */
+[dir="rtl"] .left-0 {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .right-0 {
+  right: auto;
+  left: 0;
+}
+
+/* Specific RTL fixes for dropdowns */
+[dir="rtl"] .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+/* Arabic font optimizations */
+[dir="rtl"] {
+  font-family: 'ManifaPro2', 'Almarai', 'Tajawal', sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* Better Arabic text rendering */
+[dir="rtl"] p,
+[dir="rtl"] span,
+[dir="rtl"] div {
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "liga", "kern";
+  font-feature-settings: "liga", "kern";
+}
+
+/* Enhanced Spacing System */
+/* Consistent section spacing */
+.section-spacing {
+  @apply py-24;
+}
+
+.section-spacing-sm {
+  @apply py-16 md:py-20;
+}
+
+.section-spacing-lg {
+  @apply py-32 md:py-40;
+}
+
+/* Container consistency */
+.container-custom {
+  @apply container mx-auto px-6;
+}
+
+/* Card spacing and shadows */
+.card-base {
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid rgb(229 231 235);
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-color: rgb(147 197 253);
+  transform: translateY(-4px);
+}
+
+.card-interactive {
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid rgb(229 231 235);
+  transition: all 0.3s ease;
+}
+
+/* Icon container spacing */
+.icon-container {
+  @apply flex items-center justify-center mb-6;
+}
+
+.icon-container-sm {
+  @apply flex items-center justify-center mb-4;
+}
+
+/* Text spacing improvements */
+.text-section {
+  @apply mb-16 text-center;
+}
+
+.text-section h2 {
+  @apply text-4xl md:text-5xl font-bold text-gray-900 mb-4;
+}
+
+.text-section p {
+  @apply text-xl text-gray-600 max-w-3xl mx-auto;
+}
+
+/* Grid spacing consistency */
+.grid-cards {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.grid-cards-2 {
+  @apply grid md:grid-cols-2 gap-8;
+}
+
+.grid-cards-4 {
+  @apply grid md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+/* Button spacing */
+.btn-spacing {
+  @apply py-4 px-8 rounded-full font-bold transition-all duration-300;
+}
+
+.btn-spacing-lg {
+  @apply py-4 px-10 rounded-full font-bold text-xl transition-all duration-300;
+}
+
+/* Modal improvements */
+.modal-backdrop {
+  @apply fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4;
+}
+
+.modal-content {
+  @apply bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl;
+}
+
+/* Responsive spacing utilities */
+@media (max-width: 768px) {
+  .section-spacing {
+    @apply py-16;
+  }
+  
+  .text-section h2 {
+    @apply text-3xl;
+  }
+  
+  .text-section p {
+    @apply text-lg;
+  }
+}
+
+/* Focus states for accessibility */
+.focus-visible:focus-visible {
+  @apply outline-2 outline-blue-500 outline-offset-2;
+}
+
+/* Improved hover states */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+/* Footer specific RTL fixes */
+[dir="rtl"] footer .grid {
+  direction: rtl;
+}
+
+[dir="rtl"] footer .flex-col {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+[dir="rtl"] footer .justify-center {
+  justify-content: center;
+}
+
+[dir="rtl"] footer .justify-start {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] footer .text-center {
+  text-align: center;
+}
+
+[dir="rtl"] footer .text-start {
+  text-align: right;
+}
+
+/* Dropdown positioning fixes */
+[dir="rtl"] .dropdown-menu,
+[dir="rtl"] .absolute.left-0 {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .absolute.right-0 {
+  right: auto;
+  left: 0;
+}
+
+/* Header dropdown specific fixes */
+[dir="rtl"] .relative .absolute {
+  left: auto;
+  right: 0;
+}
+
+/* Mobile menu positioning */
+[dir="rtl"] .fixed.end-0 {
+  right: 0;
+  left: auto;
+}
+
+[dir="rtl"] .fixed.start-0 {
+  left: 0;
+  right: auto;
+}

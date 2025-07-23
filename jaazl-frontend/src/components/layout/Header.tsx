@@ -121,7 +121,7 @@ const Header: React.FC = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center group">
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center gap-3">
                 <div className="relative">
                   <div className="w-12 h-12 flex items-center justify-center group-hover:scale-105 transition-all duration-300">
                     <Image 
@@ -158,7 +158,7 @@ const Header: React.FC = () => {
                   {language === 'en' ? 'Services' : 'خدماتنا'}
                 </Link>
                 {isServicesDropdownOpen && (
-                  <div className={`absolute top-full ${direction === 'rtl' ? 'right-0' : 'left-0'} pt-3 w-80 opacity-100 visible transition-all duration-200`}>
+                  <div className={`absolute top-full ${direction === 'rtl' ? 'right-0' : 'left-0'} pt-3 w-80 max-w-[calc(100vw-2rem)] opacity-100 visible transition-all duration-200 z-50`}>
                     <div className="bg-white backdrop-blur-md rounded-xl shadow-card-hover border border-gray-200 overflow-hidden">
                       <div className="py-2">
                         {services.map((service) => (
@@ -189,7 +189,7 @@ const Header: React.FC = () => {
                   {language === 'en' ? 'Industries' : 'الصناعات'}
                 </Link>
                 {isIndustriesDropdownOpen && (
-                  <div className={`absolute top-full ${direction === 'rtl' ? 'right-0' : 'left-0'} pt-3 w-80 opacity-100 visible transition-all duration-200`}>
+                  <div className={`absolute top-full ${direction === 'rtl' ? 'right-0' : 'left-0'} pt-3 w-80 max-w-[calc(100vw-2rem)] opacity-100 visible transition-all duration-200 z-50`}>
                     <div className="bg-white backdrop-blur-md rounded-xl shadow-card-hover border border-gray-200 overflow-hidden">
                       <div className="grid grid-cols-2 gap-1 p-2">
                         {industries.map((industry) => (

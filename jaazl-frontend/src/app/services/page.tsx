@@ -40,7 +40,7 @@ export default function ServicesPage() {
   const activeCategoryData = categories.find(c => c.id === activeCategory);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Hero Section */}
       <section className="relative pt-36 pb-24 overflow-hidden text-white bg-gradient-to-br from-blue-900 via-slate-900 to-indigo-900">
         <div className="absolute inset-0 bg-grid-white/[0.05]"></div>

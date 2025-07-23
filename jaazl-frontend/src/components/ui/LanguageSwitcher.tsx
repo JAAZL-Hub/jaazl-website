@@ -47,7 +47,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
     <div className={`relative ${className}`}>
       <button 
         onClick={toggleLanguage}
-        className="flex items-center space-x-2 px-4 py-2 rounded-xl hover:bg-gray-100 transition-colors"
+        className="flex items-center gap-2 px-4 py-2 rounded-xl hover:bg-gray-100 transition-colors"
       >
         <FaGlobe className="w-5 h-5 text-primary-600" />
         <span className="text-sm font-medium">

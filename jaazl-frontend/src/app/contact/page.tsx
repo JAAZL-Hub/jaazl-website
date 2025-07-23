@@ -71,7 +71,7 @@ export default function ContactPage() {
   
   
   return (
-    <div className="bg-gradient-to-br from-white to-gray-50 min-h-screen">
+    <div className="bg-gradient-to-br from-white to-gray-50 min-h-screen" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Hero Section - Premium Design */}
       <section className="relative pt-36 pb-24 overflow-hidden">
         {/* Glass Morphism Background Effects */}
@@ -83,18 +83,15 @@ export default function ContactPage() {
           <div className="absolute inset-0 backdrop-blur-[1px]"></div>
         </div>
         
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl">
-            {/* Title with Gradient Text Effect */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">
-              {language === 'en' ? 'Contact Us' : 'اتصل بنا'}
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl">
-              {language === 'en' 
-                ? 'Get in touch with our expert team to discuss your industrial solutions needs' 
-                : 'تواصل مع فريق الخبراء لدينا لمناقشة احتياجاتك من الحلول الصناعية'}
-            </p>
-          </div>
+        <div className="container mx-auto px-6 relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+            {language === 'en' ? 'Contact Us' : 'اتصل بنا'}
+          </h1>
+          <p className="text-xl md:text-2xl text-blue-200 mb-10 max-w-3xl mx-auto">
+            {language === 'en' 
+              ? 'Get in touch with our expert team to discuss your industrial solutions needs and discover how JAAZL can transform your operations.' 
+              : 'تواصل مع فريق الخبراء لدينا لمناقشة احتياجاتك من الحلول الصناعية واكتشف كيف يمكن لـ جازل تحويل عملياتك.'}
+          </p>
         </div>
       </section>
       

@@ -3,7 +3,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FaChevronRight, FaHome } from 'react-icons/fa';
+import { FaChevronRight, FaChevronLeft, FaHome } from 'react-icons/fa';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface BreadcrumbItem {
   label: string;
@@ -18,6 +19,7 @@ interface BreadcrumbsProps {
 
 const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items = [], showHome = true }) => {
   const pathname = usePathname();
+  const { direction } = useLanguage();
   
   // Generate breadcrumbs based on current path if no items provided
   const breadcrumbs: BreadcrumbItem[] = React.useMemo(() => {
@@ -51,7 +53,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items = [], showHome = true }
   return (
     <nav aria-label="Breadcrumb" className="bg-gray-50 py-3 border-b border-gray-200/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ol className="flex flex-wrap items-center space-x-2 text-sm">
+        <ol className="flex flex-wrap items-center gap-2 text-sm">
           {/* Home link */}
           {showHome && (
             <>
@@ -67,7 +69,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items = [], showHome = true }
               {/* Separator after home */}
               {(breadcrumbs.length > 0 || items.length > 0) && (
                 <li className="text-gray-400">
-                  <FaChevronRight className="w-4 h-4" />
+                  {direction === 'rtl' ? <FaChevronLeft className="w-4 h-4" /> : <FaChevronRight className="w-4 h-4" />}
                 </li>
               )}
             </>
@@ -91,7 +93,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items = [], showHome = true }
               {/* Separator between items */}
               {index < breadcrumbs.length - 1 && (
                 <li className="text-gray-400">
-                  <FaChevronRight className="w-4 h-4" />
+                  {direction === 'rtl' ? <FaChevronLeft className="w-4 h-4" /> : <FaChevronRight className="w-4 h-4" />}
                 </li>
               )}
             </React.Fragment>
