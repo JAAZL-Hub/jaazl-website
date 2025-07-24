@@ -207,10 +207,10 @@ export default function ContactPage() {
                     <>
                       <p>
                         <a 
-                          href="mailto:aalmodhayan@jaazl.com" 
+                          href="mailto:sales@jaazl.com" 
                           className="font-medium hover:text-blue-700 transition-colors"
                         >
-                          aalmodhayan@jaazl.com
+                          sales@jaazl.com
                         </a>
                       </p>
                       <p>{language === 'en' ? 'We reply within 24 hours' : 'نرد خلال ٢٤ ساعة'}</p>
@@ -218,7 +218,7 @@ export default function ContactPage() {
                   )}
                 </div>
                 <a 
-                  href={`mailto:${email || 'aalmodhayan@jaazl.com'}`}
+                  href={`mailto:${email || 'sales@jaazl.com'}`}
                   className="inline-flex items-center mt-4 text-orange-600 font-medium hover:text-orange-700 transition-colors group-hover:text-orange-800"
                 >
                   {language === 'en' ? 'Email now' : 'أرسل الآن'}
