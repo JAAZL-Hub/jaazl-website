@@ -121,22 +121,18 @@ const Header: React.FC = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center group">
-              <div className="flex items-center gap-3">
-                <div className="relative">
-                  <div className="w-12 h-12 flex items-center justify-center group-hover:scale-105 transition-all duration-300">
-                    <Image 
-                      src="/images/JAAZL-Logo 2.png" 
-                      alt="JAAZL Logo" 
-                      width={48} 
-                      height={48} 
-                      className="object-contain" 
-                    />
-                  </div>
-                </div>
-                <div>
-                  <h1 className={`text-xl font-bold ${scrolled ? 'text-blue-900' : 'text-white'} ${scrolled ? 'group-hover:text-blue-700' : 'group-hover:text-blue-100'} transition-colors`}>{language === 'en' ? 'JAAZL' : 'جازل'}</h1>
-                  <p className={`text-xs ${scrolled ? 'text-blue-700' : 'text-blue-200'} font-medium`}>{language === 'en' ? 'Industrial Solutions' : 'الحلول الصناعية'}</p>
-                </div>
+              <div className="w-32 h-12 flex items-center justify-center group-hover:scale-105 transition-all duration-300">
+                <Image 
+                  src="/images/JAAZL-Logo.svg" 
+                  alt="JAAZL Logo" 
+                  width={128} 
+                  height={48} 
+                  className={`object-contain transition-all duration-300 ${
+                    scrolled 
+                      ? 'brightness-100 contrast-100' 
+                      : 'brightness-0 invert'
+                  }`}
+                />
               </div>
             </Link>
 

@@ -3,10 +3,17 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+// import dynamic from 'next/dynamic';
 
 import { useLanguage } from '@/contexts/LanguageContext';
 // Import the icon mapping utility instead of individual icons
 import { getFeatureIcon, getIndustryIcon, getNavigationIcon, getMiscIcon, getContactIcon } from '@/utils/iconMapping';
+
+// Dynamic imports for better code splitting (commented out until used)
+// const ClientLogos = dynamic(() => import('@/components/common/ClientLogos'), {
+//   loading: () => <div className="animate-pulse h-32 bg-gray-200 rounded-lg" />,
+//   ssr: false
+// });
 
 
 
@@ -131,7 +138,7 @@ const JAAZLHomepage: React.FC = () => {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 md:pt-32">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className={`transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <div className={`transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${language === 'ar' ? 'lg:order-2' : ''}`}>
               <h1 className="text-6xl lg:text-7xl font-bold leading-tight mb-8">
                 {language === 'en' ? (
                   <>
@@ -163,12 +170,12 @@ const JAAZLHomepage: React.FC = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 mb-12">
-                <Link href="/contact" className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:from-orange-600 hover:to-orange-700 shadow-btn-secondary hover:shadow-btn-secondary-hover transform hover:-translate-y-1 flex items-center justify-center">
+                <Link href="/contact" className={`group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:from-orange-600 hover:to-orange-700 shadow-btn-secondary hover:shadow-btn-secondary-hover transform hover:-translate-y-1 flex items-center justify-center ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
                   {React.createElement(getContactIcon('message-circle'), { className: "mx-3 w-5 h-5 group-hover:scale-110 transition-transform" })}
                   {language === 'en' ? 'Request Consultation' : 'اطلب استشارة'}
-                  {React.createElement(getNavigationIcon('arrow-right'), { className: "mx-3 w-5 h-5 group-hover:translate-x-1 transition-transform" })}
+                  {React.createElement(getNavigationIcon(language === 'ar' ? 'arrow-left' : 'arrow-right'), { className: `mx-3 w-5 h-5 transition-transform ${language === 'ar' ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'}` })}
                 </Link>
-                <Link href="#services" className="group border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                <Link href="#services" className={`group border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex items-center justify-center ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
                   {React.createElement(getMiscIcon('circle-ellipsis'), { className: "mx-3 w-5 h-5 group-hover:scale-110 transition-transform" })}
                   {language === 'en' ? 'Know More' : 'اعرف المزيد'}
                 </Link>
@@ -176,7 +183,7 @@ const JAAZLHomepage: React.FC = () => {
             </div>
             
             {/* Enhanced Hero Visual */}
-            <div className={`relative transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+            <div className={`relative transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${language === 'ar' ? 'lg:order-1' : ''}`}>
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
                   <div className="grid grid-cols-2 gap-6 mb-8">
@@ -184,7 +191,7 @@ const JAAZLHomepage: React.FC = () => {
                       <div key={index} className={`group text-center p-4 sm:p-6 rounded-2xl transition-all duration-500 cursor-pointer border border-white/10 hover:border-white/30 ${activeService === index ? 'bg-white/20 scale-105' : 'bg-white/5 hover:bg-white/15'}`} onClick={() => setActiveService(index)}>
                         <div className="text-orange-400 mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
                         <p className="text-base font-semibold text-white">{service.title}</p>
-                        <div className="mt-2 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                        <div className={`mt-2 h-1 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${language === 'ar' ? 'bg-gradient-to-l from-blue-500 to-orange-500' : 'bg-gradient-to-r from-blue-500 to-orange-500'}`}></div>
                       </div>
                     ))}
                   </div>
@@ -193,7 +200,7 @@ const JAAZLHomepage: React.FC = () => {
                     <p className="text-blue-100 text-base mb-4">{services[activeService].description}</p>
                     <div className="grid grid-cols-2 gap-2">
                       {services[activeService].features.slice(0, 2).map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-xs text-blue-200">
+                        <div key={idx} className={`flex items-center text-xs text-blue-200 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
                           {React.createElement(getFeatureIcon('check-circle'), { className: "w-3 h-3 mx-1 text-green-400" })}{feature}
                         </div>
                       ))}

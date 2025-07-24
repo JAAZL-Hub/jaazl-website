@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
-/* Custom Font Definitions */
+/* Custom Font Definitions with Performance Optimizations */
 @font-face {
   font-family: 'ManifaPro2';
   src: url('/Fonts/manifa-pro-2-bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  font-display: swap; /* Prevents invisible text during font swap */
+  font-feature-settings: 'kern' 1; /* Enable kerning for better typography */
+  font-variant: normal;
 }
 
 @font-face {
@@ -14,8 +16,16 @@
   src: url('/Fonts/Manifa-Pro-2-Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  font-display: swap; /* Prevents invisible text during font swap */
+  font-feature-settings: 'kern' 1; /* Enable kerning for better typography */
+  font-variant: normal;
 }
+
+/* Font preload hints - Add to head for critical fonts */
+/*
+<link rel="preload" href="/Fonts/manifa-pro-2-bold.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="/Fonts/Manifa-Pro-2-Light.otf" as="font" type="font/otf" crossorigin>
+*/
 
 :root {
   --background: #ffffff;
@@ -40,6 +50,12 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  /* Performance optimizations */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* Prevent layout shifts */
+  min-height: 100vh;
 }
 
 /* Typography styling */

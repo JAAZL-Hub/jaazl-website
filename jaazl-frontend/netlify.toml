@@ -1,5 +1,5 @@
 [build]
-  command = "next build"
+  command = "npm run build"
   publish = ".next"
 
 [[plugins]]
@@ -9,6 +9,7 @@
 [build.environment]
   NEXT_PUBLIC_SITE_URL = "https://jaazl.com"
   NODE_VERSION = "22.17.0"
+  NEXT_PRIVATE_TARGET = "server"
 
 # Form notifications settings
 [forms]
@@ -18,7 +19,46 @@
       to = "aalmodhayan@jaazl.com"
       subject = "New contact form submission from JAAZL website"
 
-# Redirect for form success
+# Performance and Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache static assets for better performance
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/Fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Preload critical resources for homepage
+[[headers]]
+  for = "/"
+  [headers.values]
+    Link = '''</Fonts/manifa-pro-2-bold.otf>; rel=preload; as=font; type=font/otf; crossorigin,
+              </Fonts/Manifa-Pro-2-Light.otf>; rel=preload; as=font; type=font/otf; crossorigin,
+              </images/JAAZL-Logo 2.png>; rel=preload; as=image'''
+
+# Redirects
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
 [[redirects]]
   from = "/thank-you"
   to = "/thank-you"

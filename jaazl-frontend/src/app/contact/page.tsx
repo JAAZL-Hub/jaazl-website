@@ -72,19 +72,14 @@ export default function ContactPage() {
   
   return (
     <div className="bg-gradient-to-br from-white to-gray-50 min-h-screen" dir={language === 'ar' ? 'rtl' : 'ltr'}>
-      {/* Hero Section - Premium Design */}
-      <section className="relative pt-36 pb-24 overflow-hidden">
-        {/* Glass Morphism Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-slate-800 to-indigo-900">
-          <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:30px_30px]"></div>
-          <div className="absolute top-20 start-10 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 end-10 w-96 h-96 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 start-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute inset-0 backdrop-blur-[1px]"></div>
-        </div>
+      {/* Hero Section */}
+      <section className="relative pt-36 pb-24 overflow-hidden text-white bg-gradient-to-br from-blue-900 via-slate-800 to-indigo-900">
+        <div className="absolute inset-0 bg-grid-white/[0.05]"></div>
+        <div className="absolute top-20 left-10 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
         
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             {language === 'en' ? 'Contact Us' : 'اتصل بنا'}
           </h1>
           <p className="text-xl md:text-2xl text-blue-200 mb-10 max-w-3xl mx-auto">
