@@ -2,12 +2,12 @@ import { AboutInfo } from '../../types';
 
 export const aboutInfo: AboutInfo = {
   history: {
-    en: `JAAZL was established in 2010 as a specialized industrial solutions provider, focused on bringing innovative engineering approaches to traditional industrial challenges. Over the years, we have expanded our services and expertise, growing from a small engineering consultancy into a comprehensive industrial solutions company with capabilities across engineering, environmental, chemical, and electromechanical domains.
+    en: `JAAZL was established in 2021 as a specialized industrial solutions provider, focused on bringing innovative engineering approaches to traditional industrial challenges. Over the years, we have expanded our services and expertise, growing from a small engineering consultancy into a comprehensive industrial solutions company with capabilities across engineering, environmental, chemical, and electromechanical domains.
 
 Throughout our journey, we have maintained a commitment to excellence, safety, and sustainability, developing long-term relationships with clients across the oil and gas, petrochemical, refinery, and mining sectors. Our growth has been driven by a focus on solving complex industrial challenges through innovative thinking and technical expertise.
 
 Today, JAAZL stands as a trusted partner to many leading industrial organizations, known for delivering reliable, efficient, and sustainable solutions that address the evolving needs of the industrial sector.`,
-    ar: `تأسست جازل في عام 2010 كمزود متخصص للحلول الصناعية، مع التركيز على جلب نهج هندسي مبتكر للتحديات الصناعية التقليدية. على مر السنين، قمنا بتوسيع خدماتنا وخبراتنا، والنمو من شركة استشارات هندسية صغيرة إلى شركة حلول صناعية شاملة مع قدرات في مجالات الهندسة والبيئة والكيمياء والكهروميكانيك.
+    ar: `تأسست جازل في عام 2021 كمزود متخصص للحلول الصناعية، مع التركيز على جلب نهج هندسي مبتكر للتحديات الصناعية التقليدية. على مر السنين، قمنا بتوسيع خدماتنا وخبراتنا، والنمو من شركة استشارات هندسية صغيرة إلى شركة حلول صناعية شاملة مع قدرات في مجالات الهندسة والبيئة والكيمياء والكهروميكانيك.
 
 طوال رحلتنا، حافظنا على الالتزام بالتميز والسلامة والاستدامة، وطورنا علاقات طويلة الأمد مع العملاء في قطاعات النفط والغاز والبتروكيماويات والمصافي والتعدين. كان نمونا مدفوعًا بالتركيز على حل التحديات الصناعية المعقدة من خلال التفكير المبتكر والخبرة التقنية.
 
@@ -124,31 +124,6 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
     {
       id: 'team-2',
       name: {
-        en: 'Mr. Faisal Aldossary',
-        ar: 'المهندس فيصل الدوسري'
-      },
-      position: {
-        en: 'Director',
-        ar: 'عضو مجلس الإدارة'
-      },
-      bio: {
-        en: 'Mr. Faisal Aldossary serves as a Director at JAAZL, bringing over 15 years of strategic leadership and business development expertise. His vision and guidance have been instrumental in expanding our service offerings and strengthening client relationships across various industrial sectors.',
-        ar: 'يشغل السيد فيصل الدوسري منصب عضو مجلس الإدارة في جازل، حيث يجلب أكثر من 15 عامًا من الخبرة في القيادة الاستراتيجية وتطوير الأعمال. كانت رؤيته وتوجيهاته محورية في توسيع عروض خدماتنا وتعزيز علاقات العملاء عبر مختلف القطاعات الصناعية.'
-      },
-      image: {
-        id: 'faisal-aldossary-image',
-        url: '/images/team/Faisal Aldossary.jpg',
-        altText: {
-          en: 'Mr. Faisal Aldossary, Director',
-          ar: 'السيد فيصل الدوسري، عضو مجلس الإدارة'
-        },
-        width: 400,
-        height: 500
-      }
-    },
-    {
-      id: 'team-3',
-      name: {
         en: 'Eng. Ratnakar Prabhu',
         ar: 'المهندس راتناكار برابهو'
       },
@@ -172,7 +147,7 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
       }
     },
     {
-      id: 'team-4',
+      id: 'team-3',
       name: {
         en: 'Eng. Mohammed Aldossary',
         ar: 'المهندس محمد الدوسري'
@@ -195,7 +170,32 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
         width: 400,
         height: 500
       }
-    }
+    },
+    {
+      id: 'team-4',
+      name: {
+        en: 'Eng. Faisal Aldossary',
+        ar: 'المهندس فيصل الدوسري'
+      },
+      position: {
+        en: 'Director',
+        ar: 'مدير'
+      },
+      bio: {
+        en: 'Eng. Faisal Aldossary serves as a Director at JAAZL, bringing over 10 years of strategic leadership and business development expertise. His vision and guidance have been instrumental in expanding our service offerings and strengthening client relationships across various industrial sectors.',
+        ar: 'يشغل المهندس فيصل الدوسري منصب مدير في جازل، حيث يجلب أكثر من 10 عامًا من الخبرة في القيادة الاستراتيجية وتطوير الأعمال. كانت رؤيته وتوجيهاته محورية في توسيع عروض خدماتنا وتعزيز علاقات العملاء عبر مختلف القطاعات الصناعية.'
+      },
+      image: {
+        id: 'faisal-aldossary-image',
+        url: '/images/team/Faisal Aldossary.jpg',
+        altText: {
+          en: 'Mr. Faisal Aldossary, Director',
+          ar: 'السيد فيصل الدوسري، عضو مجلس الإدارة'
+        },
+        width: 400,
+        height: 500
+      }
+    },
   ],
   certifications: [
     {

@@ -136,17 +136,17 @@ const JAAZLHomepage: React.FC = () => {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-orange-500/5 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 md:pt-32">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-28 pb-16 sm:pb-20 md:pt-32">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className={`transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${language === 'ar' ? 'lg:order-2' : ''}`}>
-              <h1 className="text-6xl lg:text-7xl font-bold leading-tight mb-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 sm:mb-8">
                 {language === 'en' ? (
                   <>
                     Industrial Solutions
                     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400">
                       Excellence
                     </span>
-                    <span className="block text-4xl lg:text-5xl text-blue-200 font-normal mt-4">
+                    <span className="block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-blue-200 font-normal mt-2 sm:mt-4">
                       in Saudi Arabia
                     </span>
                   </>
@@ -156,20 +156,20 @@ const JAAZLHomepage: React.FC = () => {
                     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400">
                       متميزة
                     </span>
-                    <span className="block text-4xl lg:text-5xl text-blue-200 font-normal mt-4">
+                    <span className="block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-blue-200 font-normal mt-2 sm:mt-4">
                       في السعودية
                     </span>
                   </>
                 )}
               </h1>
               
-              <p className="text-3xl text-blue-100 mb-10 leading-relaxed max-w-2xl">
+              <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-blue-100 mb-8 sm:mb-10 leading-relaxed max-w-2xl">
                 {language === 'en' 
                   ? "Comprehensive engineering, environmental, and industrial solutions serving Jubail & Dammam with world-class technology and local expertise."
                   : "حلول هندسية وبيئية وصناعية شاملة في الجبيل والدمام مع شراكات تقنية عالمية وخبرة محلية."}
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-8 sm:mb-12">
                 <Link href="/contact" className={`group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:from-orange-600 hover:to-orange-700 shadow-btn-secondary hover:shadow-btn-secondary-hover transform hover:-translate-y-1 flex items-center justify-center ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
                   {React.createElement(getContactIcon('message-circle'), { className: "mx-3 w-5 h-5 group-hover:scale-110 transition-transform" })}
                   {language === 'en' ? 'Request Consultation' : 'اطلب استشارة'}
@@ -183,21 +183,21 @@ const JAAZLHomepage: React.FC = () => {
             </div>
             
             {/* Enhanced Hero Visual */}
-            <div className={`relative transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${language === 'ar' ? 'lg:order-1' : ''}`}>
+            <div className={`relative transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${language === 'ar' ? 'lg:order-1' : ''} mt-8 lg:mt-0`}>
               <div className="relative">
-                <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
-                  <div className="grid grid-cols-2 gap-6 mb-8">
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-white/20 shadow-2xl">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-6 sm:mb-8">
                     {services.map((service, index) => (
-                      <div key={index} className={`group text-center p-4 sm:p-6 rounded-2xl transition-all duration-500 cursor-pointer border border-white/10 hover:border-white/30 ${activeService === index ? 'bg-white/20 scale-105' : 'bg-white/5 hover:bg-white/15'}`} onClick={() => setActiveService(index)}>
-                        <div className="text-orange-400 mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
-                        <p className="text-base font-semibold text-white">{service.title}</p>
+                      <div key={index} className={`group text-center p-2 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 cursor-pointer border border-white/10 hover:border-white/30 ${activeService === index ? 'bg-white/20 scale-105' : 'bg-white/5 hover:bg-white/15'}`} onClick={() => setActiveService(index)}>
+                        <div className="text-orange-400 mb-2 sm:mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                        <p className="text-xs sm:text-sm lg:text-base font-semibold text-white">{service.title}</p>
                         <div className={`mt-2 h-1 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${language === 'ar' ? 'bg-gradient-to-l from-blue-500 to-orange-500' : 'bg-gradient-to-r from-blue-500 to-orange-500'}`}></div>
                       </div>
                     ))}
                   </div>
-                  <div className="bg-white/10 rounded-2xl p-6 border border-white/20">
-                    <h3 className="text-xl font-bold text-white mb-3">{services[activeService].title}</h3>
-                    <p className="text-blue-100 text-base mb-4">{services[activeService].description}</p>
+                  <div className="bg-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20">
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{services[activeService].title}</h3>
+                    <p className="text-blue-100 text-sm sm:text-base mb-3 sm:mb-4">{services[activeService].description}</p>
                     <div className="grid grid-cols-2 gap-2">
                       {services[activeService].features.slice(0, 2).map((feature, idx) => (
                         <div key={idx} className={`flex items-center text-xs text-blue-200 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
@@ -207,8 +207,8 @@ const JAAZLHomepage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-2xl rotate-12 opacity-80 animate-bounce"></div>
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl -rotate-12 opacity-80 animate-pulse"></div>
+                <div className={`absolute -top-2 sm:-top-4 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-xl sm:rounded-2xl rotate-12 opacity-80 animate-bounce ${language === 'ar' ? '-left-2 sm:-left-4' : '-right-2 sm:-right-4'}`}></div>
+                <div className={`absolute -bottom-2 sm:-bottom-4 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl sm:rounded-2xl -rotate-12 opacity-80 animate-pulse ${language === 'ar' ? '-right-2 sm:-right-4' : '-left-2 sm:-left-4'}`}></div>
               </div>
             </div>
           </div>

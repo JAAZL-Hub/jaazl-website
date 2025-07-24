@@ -117,11 +117,11 @@ const Header: React.FC = () => {
       <header className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${language === 'ar' ? 'rtl' : 'ltr'} ${
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-card border-b border-gray-200' : 'bg-gradient-to-r from-blue-900/80 to-indigo-900/80 backdrop-blur-sm'
       }`}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:mx-12 xl:mx-16">
-          <div className="flex justify-between items-center h-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`flex justify-between items-center h-16 sm:h-20 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
             {/* Logo */}
-            <Link href="/" className="flex items-center group">
-              <div className="w-32 h-12 flex items-center justify-center group-hover:scale-105 transition-all duration-300">
+            <Link href="/" className="flex items-center group flex-shrink-0">
+              <div className="w-24 h-8 sm:w-32 sm:h-12 flex items-center justify-center group-hover:scale-105 transition-all duration-300">
                 <Image 
                   src="/images/JAAZL-Logo.svg" 
                   alt="JAAZL Logo" 
@@ -208,16 +208,40 @@ const Header: React.FC = () => {
             </nav>
 
             {/* Mobile Menu Button */}
-            <button type="button" className={`lg:hidden p-2 ${scrolled ? 'text-gray-800' : 'text-white'}`} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-expanded={isMenuOpen}>
-              {isMenuOpen ? <FaTimes className="w-7 h-7" /> : <FaBars className="w-7 h-7" />}
+            <button type="button" className={`lg:hidden p-2 flex-shrink-0 ${scrolled ? 'text-gray-800' : 'text-white'}`} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-expanded={isMenuOpen}>
+              {isMenuOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </header>
 
       {/* Enhanced Mobile Menu */}
-      <div className={`fixed inset-y-0 ${direction === 'rtl' ? 'start-0' : 'end-0'} w-full bg-blue-900/95 backdrop-blur-md z-50 transform transition-all duration-300 lg:hidden ${isMenuOpen ? 'translate-x-0' : direction === 'rtl' ? 'translate-x-full' : '-translate-x-full'} overflow-y-auto`}>
-        <div className="pt-24 px-6 pb-8 space-y-2 max-h-screen overflow-y-auto">
+      <div className={`fixed inset-y-0 ${language === 'ar' ? 'left-0' : 'right-0'} w-full bg-blue-900/95 backdrop-blur-md z-40 transform transition-all duration-300 lg:hidden ${isMenuOpen ? 'translate-x-0' : language === 'ar' ? '-translate-x-full' : 'translate-x-full'} overflow-y-auto`}>
+        <div className="relative">
+          {/* Mobile Menu Header */}
+          <div className={`flex items-center justify-between p-6 border-b border-white/10`}>
+            <Link href="/" onClick={() => setIsMenuOpen(false)} className="flex items-center">
+              <div className="w-24 h-8 flex items-center justify-center">
+                <Image 
+                  src="/images/JAAZL-Logo.svg" 
+                  alt="JAAZL Logo" 
+                  width={96} 
+                  height={32} 
+                  className="object-contain brightness-0 invert"
+                />
+              </div>
+            </Link>
+            {/* Close Button */}
+            <button 
+              onClick={() => setIsMenuOpen(false)}
+              className="p-2 text-white hover:text-orange-400 transition-colors"
+              aria-label="Close menu"
+            >
+              <FaTimes className="w-6 h-6" />
+            </button>
+          </div>
+        </div>
+        <div className="px-6 pb-8 space-y-2 max-h-screen overflow-y-auto">
           {navLinks.map(link => (
             <Link key={link.href} href={link.href} className="block text-xl font-medium py-3 border-b border-white/10" onClick={() => setIsMenuOpen(false)}>{link.text[language]}</Link>
           ))}
