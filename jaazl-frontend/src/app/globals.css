@@ -47,6 +47,15 @@
   }
 }
 
+/* Override dark mode for hero sections to maintain consistent gradient */
+.hero-section {
+  background: unset !important;
+}
+
+.hero-section .absolute.inset-0 {
+  background: unset !important;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -113,18 +122,27 @@ html {
   background: #475569;
 }
 
-/* RTL Support */
-/* Base RTL layout adjustments */
+/* RTL Support - Clean and Targeted */
+/* Base RTL text alignment */
 [dir="rtl"] {
   text-align: right;
 }
 
-/* Only reverse horizontal flex layouts, not all flex */
-[dir="rtl"] .flex:not(.flex-col):not(.flex-column) {
+/* Essential RTL flex adjustments */
+[dir="rtl"] .lg\:flex-row-reverse {
   flex-direction: row-reverse;
 }
 
+
+/* Only reverse specific flex layouts that need RTL adjustment */
 [dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+/* Specific elements that should reverse in RTL */
+[dir="rtl"] .nav-items,
+[dir="rtl"] .breadcrumb-items,
+[dir="rtl"] .button-group {
   flex-direction: row-reverse;
 }
 
@@ -401,4 +419,224 @@ html {
 [dir="rtl"] .fixed.start-0 {
   left: 0;
   right: auto;
+}
+
+/* Add these additional RTL styles to your existing globals.css */
+
+/* Service page RTL handled by component logic */
+
+/* Arabic Typography Enhancements */
+.font-arabic {
+  font-family: 'ManifaPro2', 'Segoe UI', 'Arial Unicode MS', 'Tahoma', sans-serif !important;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.6;
+}
+
+/* Improve Arabic text rendering */
+[dir="rtl"] .font-arabic {
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "liga", "kern";
+  font-feature-settings: "liga", "kern";
+}
+
+/* RTL Flexbox Specific Adjustments */
+[dir="rtl"] .lg\:flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+/* RTL Padding and Margin Fixes */
+[dir="rtl"] .lg\:pr-12 {
+  padding-right: 0 !important;
+  padding-left: 3rem !important;
+}
+
+[dir="rtl"] .lg\:pl-12 {
+  padding-left: 0 !important;
+  padding-right: 3rem !important;
+}
+
+[dir="rtl"] .ml-2 {
+  margin-left: 0 !important;
+  margin-right: 0.5rem !important;
+}
+
+[dir="rtl"] .mr-2 {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+/* RTL Border Fixes */
+[dir="rtl"] .border-l-4 {
+  border-left: none !important;
+  border-right: 4px solid !important;
+}
+
+[dir="rtl"] .border-r-4 {
+  border-right: 4px solid !important;
+  border-left: none !important;
+}
+
+/* RTL Text Alignment - Keep Simple */
+
+/* Prose RTL Support */
+.prose-rtl {
+  text-align: right;
+  direction: rtl;
+}
+
+.prose-rtl p {
+  text-align: right;
+  text-align-last: right;
+  direction: rtl;
+}
+
+.prose-rtl h1,
+.prose-rtl h2,
+.prose-rtl h3,
+.prose-rtl h4,
+.prose-rtl h5,
+.prose-rtl h6 {
+  text-align: right;
+  direction: rtl;
+}
+
+/* RTL Icon and Arrow Adjustments */
+[dir="rtl"] .rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* RTL Link Styling */
+[dir="rtl"] .inline-flex.items-center {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+/* Simplified RTL typography - avoid conflicts */
+
+/* RTL Grid and Card Adjustments */
+[dir="rtl"] .group:hover h3 {
+  text-align: right;
+}
+
+/* RTL Animation Support */
+[dir="rtl"] .hover\:-translate-y-1:hover {
+  transform: translateY(-0.25rem);
+}
+
+[dir="rtl"] .transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Simplified modal support */
+
+/* Remove overly broad selector */
+
+[dir="rtl"] .text-center {
+  text-align: center !important;
+}
+
+/* RTL List Adjustments */
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+/* RTL Image Container Adjustments */
+[dir="rtl"] .relative img {
+  text-align: initial;
+}
+
+/* RTL Responsive Adjustments */
+@media (max-width: 1024px) {
+  [dir="rtl"] .lg\:pr-12,
+  [dir="rtl"] .lg\:pl-12 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  [dir="rtl"] .lg\:flex-row-reverse {
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .md\:flex-row-reverse {
+    flex-direction: column !important;
+  }
+  
+  /* Mobile RTL handled by component */
+}
+
+/* RTL Focus States */
+[dir="rtl"] .focus-visible:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* RTL Button and Interactive Elements */
+[dir="rtl"] button,
+[dir="rtl"] .btn {
+  text-align: center;
+}
+
+[dir="rtl"] .inline-block {
+  text-align: center;
+}
+
+/* RTL Shadow and Transform Consistency */
+[dir="rtl"] .shadow-lg,
+[dir="rtl"] .shadow-xl,
+[dir="rtl"] .shadow-2xl {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Remove gradient direction changes - keep backgrounds consistent */
+
+/* Fix hero background in RTL mode - ensure it overrides body background */
+#hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 50%, #1e3a8a 100%) !important;
+}
+
+/* Ensure hero gradient works in both LTR and RTL modes */
+[dir="rtl"] #hero,
+[dir="ltr"] #hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 50%, #1e3a8a 100%) !important;
+}
+
+/* RTL Navigation Breadcrumb */
+[dir="rtl"] .breadcrumb {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .breadcrumb svg {
+  transform: rotate(180deg);
+}
+
+/* Specific fixes for ManifaPro2 font in RTL */
+[dir="rtl"].font-arabic h1,
+[dir="rtl"].font-arabic h2,
+[dir="rtl"].font-arabic h3 {
+  font-family: 'ManifaPro2', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+[dir="rtl"].font-arabic p,
+[dir="rtl"].font-arabic span {
+  font-family: 'ManifaPro2', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+/* Font smoothing handled by body */
+
+
+/* RTL Image object-fit consistency */
+[dir="rtl"] img[style*="object-fit"] {
+  object-fit: cover;
 }

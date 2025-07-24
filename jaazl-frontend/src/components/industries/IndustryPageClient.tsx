@@ -19,44 +19,64 @@ const getLocalizedContent = (content: LocalizedContent, currentLanguage: string)
 
 const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relatedServices }) => {
   const { language } = useLanguage();
+  const isRTL = language === 'ar';
+  
   return (
-    <div dir={language === 'ar' ? 'rtl' : 'ltr'}> 
+    <div className={`industry-page-content ${isRTL ? 'rtl' : 'ltr'}`} dir={isRTL ? 'rtl' : 'ltr'}>
       {/* Hero Section - Premium Design */}
-      <section className="relative pt-36 pb-24 overflow-hidden">
+      <section className="hero-section relative pt-36 pb-24 overflow-hidden">
         {/* Glass Morphism Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-slate-800 to-indigo-900">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-cyan-900 to-blue-900">
           <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:30px_30px]"></div>
           <div className="absolute top-20 start-10 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 end-10 w-96 h-96 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 start-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-full blur-3xl"></div>
           <div className="absolute inset-0 backdrop-blur-[1px]"></div>
         </div>
+        
         <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row items-center relative z-10 text-white">
-            <div className="md:w-1/2 md:px-8">
-              <div className="mb-4">
-                <Link href="/industries" className="inline-flex items-center text-white hover:text-gray-200 transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 me-2" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
-                  </svg>
-                  <span>{language === 'en' ? 'Back to Industries' : 'العودة إلى الصناعات'}</span>
+          <div className={`flex flex-col lg:flex-row items-center relative z-10 text-white ${isRTL ? 'lg:flex-row-reverse' : ''}`}>
+            {/* Text Content */}
+            <div className={`lg:w-1/2 w-full ${isRTL ? 'lg:pl-12' : 'lg:pr-12'} ${isRTL ? 'text-right' : 'text-left'}`}>
+              <div className="mb-6">
+                <Link 
+                  href="/industries" 
+                  className={`inline-flex items-center text-white hover:text-gray-200 transition-colors ${isRTL ? 'flex-row-reverse' : ''}`}
+                >
+                  {isRTL ? (
+                    <>
+                      <span className="font-arabic">العودة إلى الصناعات</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 rotate-180" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
+                      </svg>
+                    </>
+                  ) : (
+                    <>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
+                      </svg>
+                      <span>Back to Industries</span>
+                    </>
+                  )}
                 </Link>
               </div>
-              <h1 className="text-5xl md:text-5xl font-bold mb-6">
+              <h1 className={`text-4xl lg:text-6xl font-bold mb-6 text-white leading-tight ${isRTL ? 'font-arabic' : ''}`}>
                 {getLocalizedContent(industry.name, language)}
               </h1>
-              <p className="text-2xl mb-8">
+              <p className={`text-xl lg:text-2xl mb-8 text-white leading-relaxed ${isRTL ? 'font-arabic' : ''}`}> 
                 {getLocalizedContent(industry.shortDescription, language)}
               </p>
             </div>
-            <div className="md:w-1/2 mt-10 md:mt-0">
-              <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-2xl">
+            
+            {/* Image */}
+            <div className={`lg:w-1/2 w-full mt-10 lg:mt-0 ${isRTL ? 'lg:pr-12' : 'lg:pl-12'}`}>
+              <div className="relative w-full h-96 rounded-xl overflow-hidden shadow-2xl">
                 <Image
                   src={industry.image?.url || '/images/industries/oil-gas-industry.jpg'}
                   alt={industry.image?.altText ? getLocalizedContent(industry.image.altText, language) : getLocalizedContent(industry.name, language)}
                   fill
                   style={{ objectFit: 'cover' }}
-                  className="rounded-lg"
+                  className="rounded-xl"
                 />
               </div>
             </div>
@@ -138,7 +158,7 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
                     {caseStudy.results && (
                       <div className="mt-4">
                         <h4 className="font-bold text-lg mb-2 text-[#1E1E1E]">{language === 'en' ? 'Results:' : 'النتائج:'}</h4>
-                        <ul className="list-disc ps-6">
+                        <ul className="list-disc pl-6">
                           {Array.isArray(caseStudy.results) ? 
                             caseStudy.results.map((result: LocalizedContent, idx: number) => (
                               <li key={idx} className="mb-1 text-gray-800">{getLocalizedContent(result, language)}</li>
