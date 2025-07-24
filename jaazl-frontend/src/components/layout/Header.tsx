@@ -10,33 +10,52 @@ import {
 } from 'react-icons/fa';
 
 // Data for mega menus
-const services = [
-  { 
-    name: { en: 'Engineering & AI', ar: 'الهندسة والذكاء الاصطناعي' },
-    // FIX: Changed the path to match the service's actual slug
-    path: '/services/engineering-consulting', 
-    id: 'engineering-consulting', 
-    description: { en: 'Digitalization and AI-powered solutions.', ar: 'حلول الرقمنة والذكاء الاصطناعي.' },
+const serviceCategories = {
+  engineering: {
+    name: { en: 'Engineering & AI Solutions', ar: 'حلول الهندسة والذكاء الاصطناعي' },
+    services: [
+      { name: { en: 'Industrial Engineering Consulting', ar: 'استشارات الهندسة الصناعية' }, path: '/services/engineering-consulting' },
+      { name: { en: 'AI & Industrial Automation', ar: 'الذكاء الاصطناعي والأتمتة الصناعية' }, path: '/services/ai-automation' },
+      { name: { en: 'Industrial Digital Transformation', ar: 'التحول الرقمي الصناعي' }, path: '/services/digital-transformation' },
+      { name: { en: 'Industrial Project Management', ar: 'إدارة المشاريع الصناعية' }, path: '/services/project-management' },
+      { name: { en: 'Industrial System Integration', ar: 'تكامل الأنظمة الصناعية' }, path: '/services/system-integration' },
+      { name: { en: 'Technical Training & Development', ar: 'التدريب والتطوير التقني' }, path: '/services/technical-training' }
+    ]
   },
-  { 
-    name: { en: 'AI & Automation', ar: 'الذكاء الاصطناعي والأتمتة' },
-    path: '/services/ai-automation', 
-    id: 'ai-automation', 
-    description: { en: 'AI-powered industrial automation.', ar: 'الأتمتة الصناعية المدعومة بالذكاء الاصطناعي.' },
+  environmental: {
+    name: { en: 'Environmental Solutions', ar: 'الحلول البيئية' },
+    services: [
+      { name: { en: 'Environmental Compliance & Sustainability', ar: 'الامتثال البيئي والاستدامة' }, path: '/services/environmental-compliance' },
+      { name: { en: 'Environmental Monitoring & Assessment', ar: 'المراقبة والتقييم البيئي' }, path: '/services/environmental-monitoring' },
+      { name: { en: 'Industrial Waste Management', ar: 'إدارة النفايات الصناعية' }, path: '/services/waste-management' },
+      { name: { en: 'Zero Liquid Discharge Systems', ar: 'أنظمة التفريغ السائل الصفري' }, path: '/services/zero-liquid-discharge' },
+      { name: { en: 'Spent Caustic Treatment', ar: 'معالجة الصودا الكاوية المستهلكة' }, path: '/services/spent-caustic-treatment' },
+      { name: { en: 'Oily Water & Hydrocarbon Treatment', ar: 'معالجة المياه الزيتية والهيدروكربونية' }, path: '/services/oily-water-treatment' }
+    ]
   },
-  { 
+  chemicals: {
     name: { en: 'Chemical Solutions', ar: 'الحلول الكيميائية' },
-    path: '/services/chemical-solutions',
-    id: 'chemical-solutions', 
-    description: { en: 'Specialty chemicals and waste management.', ar: 'كيماويات متخصصة وإدارة النفايات.' },
+    services: [
+      { name: { en: 'Specialized Industrial Chemicals', ar: 'المواد الكيميائية الصناعية المتخصصة' }, path: '/services/specialized-chemicals' },
+      { name: { en: 'Process Optimization Chemicals', ar: 'كيماويات تحسين العمليات' }, path: '/services/process-chemicals' },
+      { name: { en: 'Chemical Laboratory Services', ar: 'خدمات المختبرات الكيميائية' }, path: '/services/laboratory-services' },
+      { name: { en: 'Bulk Industrial Chemicals Supply', ar: 'توريد المواد الكيميائية الصناعية بالجملة' }, path: '/services/bulk-chemicals-supply' },
+      { name: { en: 'Local Chemical Manufacturing & Blending', ar: 'التصنيع والخلط الكيميائي المحلي' }, path: '/services/chemical-blending' },
+      { name: { en: 'Off-Spec & By-Products Management', ar: 'إدارة المنتجات غير المطابقة والمنتجات الثانوية' }, path: '/services/offspec-management' }
+    ]
   },
-  { 
-    name: { en: 'Electromechanical', ar: 'الكهروميكانيكية' },
-    path: '/services/electromechanical',
-    id: 'electromechanical-services', 
-    description: { en: 'MEI services and turnkey EPC projects.', ar: 'خدمات MEI ومشاريع EPC متكاملة.' },
-  },
-];
+  electromechanical: {
+    name: { en: 'Electromechanical Services', ar: 'الخدمات الكهروميكانيكية' },
+    services: [
+      { name: { en: 'Industrial Electromechanical Systems', ar: 'أنظمة كهروميكانيكية صناعية' }, path: '/services/electromechanical-systems' },
+      { name: { en: 'Industrial Power Systems', ar: 'أنظمة الطاقة الصناعية' }, path: '/services/power-systems' },
+      { name: { en: 'Industrial Automation & Controls', ar: 'أتمتة وضوابط صناعية' }, path: '/services/automation-controls' },
+      { name: { en: 'Shutdown & Turnaround Solutions', ar: 'حلول الإغلاق والصيانة الدورية' }, path: '/services/shutdown-turnaround' },
+      { name: { en: 'Industrial Fabrication Services', ar: 'خدمات التصنيع الصناعي' }, path: '/services/fabrication-services' },
+      { name: { en: 'Prefabricated Tanks & Storage Solutions', ar: 'حلول الخزانات والتخزين مسبقة التصنيع' }, path: '/services/prefabricated-tanks' }
+    ]
+  }
+};
 
 
 
@@ -54,6 +73,7 @@ const Header: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isServicesDropdownOpen, setServicesDropdownOpen] = useState<boolean>(false);
   const [isIndustriesDropdownOpen, setIndustriesDropdownOpen] = useState<boolean>(false);
+  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState<boolean>(false);
   const pathname = usePathname();
   const { language, toggleLanguage, direction } = useLanguage();
@@ -140,30 +160,56 @@ const Header: React.FC = () => {
             <nav className={`hidden lg:flex items-center gap-4 ${scrolled ? 'bg-gray-100/50' : 'bg-white/5'} border ${scrolled ? 'border-gray-200' : 'border-white/10'} rounded-full p-1 shadow-card backdrop-blur-sm`}>
               <NavLink href="/">{language === 'en' ? 'Home' : 'الرئيسية'}</NavLink>
               
-              {/* Services Mega Menu (FIXED HOVER) */}
+              {/* Services Two-Level Mega Menu */}
               <div
                 onMouseEnter={() => setServicesDropdownOpen(true)}
-                onMouseLeave={() => setServicesDropdownOpen(false)}
+                onMouseLeave={() => {
+                  setServicesDropdownOpen(false);
+                  setHoveredCategory(null);
+                }}
                 className="relative group"
               >
                 <Link 
                   href="/services"
-                  onClick={() => setServicesDropdownOpen(prev => !prev)}
                   className={`flex items-center text-lg font-medium ${!scrolled ? 'text-white hover:text-white/80' : pathname.startsWith('/services') ? 'text-blue-900' : 'text-gray-800 hover:text-blue-900'} transition-colors`}
                 >
                   {language === 'en' ? 'Services' : 'خدماتنا'}
                 </Link>
                 {isServicesDropdownOpen && (
-                  <div className={`absolute top-full ${direction === 'rtl' ? 'right-0' : 'left-0'} pt-3 w-80 max-w-[calc(100vw-2rem)] opacity-100 visible transition-all duration-200 z-50`}>
-                    <div className="bg-white backdrop-blur-md rounded-xl shadow-card-hover border border-gray-200 overflow-hidden">
+                  <div className={`absolute top-full ${direction === 'rtl' ? 'right-0' : 'left-0'} pt-3 w-64 max-w-[calc(100vw-2rem)] opacity-100 visible transition-all duration-200 z-50`}>
+                    <div className="bg-white backdrop-blur-md rounded-xl shadow-card-hover border border-gray-200 overflow-visible">
                       <div className="py-2">
-                        {services.map((service) => (
-                          <Link key={service.id} href={service.path} className="block p-3 hover:bg-gray-100 transition-colors">
-                            <div>
-                              <h4 className="font-medium text-gray-800 text-sm">{service.name[language]}</h4>
-                              <p className="text-xs text-gray-600">{service.description[language]}</p>
+                        {Object.entries(serviceCategories).map(([categoryKey, category]) => (
+                          <div 
+                            key={categoryKey} 
+                            className="relative group/category"
+                          >
+                            <div className="px-4 py-3 hover:bg-gray-50 transition-colors cursor-pointer">
+                              <h3 className="font-medium text-gray-800 text-sm flex items-center justify-between">
+                                {category.name[language]}
+                                <span className={`text-gray-400 text-xs ${direction === 'rtl' ? 'rotate-180' : ''}`}>→</span>
+                              </h3>
                             </div>
-                          </Link>
+                            <div 
+                              className={`absolute top-0 ${direction === 'rtl' ? 'right-full mr-2' : 'left-full ml-2'} w-72 bg-white backdrop-blur-md rounded-xl shadow-lg border border-gray-200 overflow-visible opacity-0 invisible group-hover/category:opacity-100 group-hover/category:visible transition-all duration-200`}
+                              style={{ zIndex: 9999 }}
+                            >
+                              <div className="py-2">
+                                <div className="px-4 py-2 bg-blue-50 border-b border-blue-100">
+                                  <h4 className="font-semibold text-blue-900 text-sm">{category.name[language]}</h4>
+                                </div>
+                                {category.services.map((service) => (
+                                  <Link 
+                                    key={service.path} 
+                                    href={service.path} 
+                                    className="block px-4 py-2 hover:bg-gray-100 transition-colors"
+                                  >
+                                    <span className="font-medium text-gray-700 text-sm">{service.name[language]}</span>
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -251,8 +297,24 @@ const Header: React.FC = () => {
               <span>{language === 'en' ? 'Services' : 'الخدمات'}</span>
             </button>
             {activeDropdown === 'services' && (
-              <div className="ps-4 mt-2 space-y-2 border-s-2 border-orange-500">
-                {services.map(s => <Link key={s.id} href={s.path} className="block py-2 text-blue-200 hover:text-white" onClick={() => setIsMenuOpen(false)}>{s.name[language]}</Link>)}
+              <div className="ps-4 mt-2 space-y-3 border-s-2 border-orange-500">
+                {Object.entries(serviceCategories).map(([categoryKey, category]) => (
+                  <div key={categoryKey}>
+                    <h4 className="text-orange-300 font-medium text-sm mb-2">{category.name[language]}</h4>
+                    <div className="space-y-1 ps-2">
+                      {category.services.map((service) => (
+                        <Link 
+                          key={service.path} 
+                          href={service.path} 
+                          className="block py-1 text-blue-200 hover:text-white text-sm" 
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {service.name[language]}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             )}
           </div>
