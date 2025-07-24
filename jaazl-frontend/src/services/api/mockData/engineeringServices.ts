@@ -238,7 +238,7 @@ We understand that digital transformation is a journey, not a destination. Our t
     icon: 'refresh-cw',
     image: {
       id: 'digital-transformation-image',
-      url: '/images/team/placeholder.png',
+      url: '/images/services/digital-transformation.webp',
       altText: {
         en: 'Industrial digital transformation',
         ar: 'التحول الرقمي الصناعي'
@@ -324,7 +324,7 @@ Our team brings extensive experience across various industrial sectors, allowing
     icon: 'clipboard-check',
     image: {
       id: 'project-management-image',
-      url: '/images/team/placeholder.png',
+      url: '/images/services/project-management.webp',
       altText: {
         en: 'Industrial project management',
         ar: 'إدارة المشاريع الصناعية'
@@ -410,7 +410,7 @@ From conducting thorough environmental impact assessments to implementing contin
     icon: 'leaf',
     image: {
       id: 'environmental-compliance-image',
-      url: '/images/team/placeholder.png',
+      url: '/images/services/environmental-compliance.jpg',
       altText: {
         en: 'Environmental compliance and sustainability',
         ar: 'الامتثال البيئي والاستدامة'
@@ -496,7 +496,7 @@ Beyond product development, we provide comprehensive application support, includ
     icon: 'droplet',
     image: {
       id: 'specialized-chemicals-image',
-      url: '/images/team/placeholder.png',
+      url: '/images/services/environmental-compliance.jpg',
       altText: {
         en: 'Specialized industrial chemicals',
         ar: 'المواد الكيميائية الصناعية المتخصصة'
@@ -582,7 +582,7 @@ We emphasize energy efficiency, reliability, and maintainability in all our desi
     icon: 'cpu',
     image: {
       id: 'electromechanical-systems-image',
-      url: '/images/team/placeholder.png',
+      url: '/images/services/ai-automation.jpg',
       altText: {
         en: 'Industrial electromechanical systems',
         ar: 'أنظمة كهروميكانيكية صناعية'

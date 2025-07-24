@@ -99,23 +99,23 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
     {
       id: 'team-1',
       name: {
-        en: 'Eng. Ahmad',
-        ar: 'المعندس أحمد'
+        en: 'Eng. Ahmad Alghamdi',
+        ar: 'المهندس أحمد الغامدي'
       },
       position: {
         en: 'Chief Executive Officer',
         ar: 'الرئيس التنفيذي'
       },
       bio: {
-        en: 'Eng. Ahmad brings over 30 years of experience in industrial engineering and business leadership. With a Ph.D. in Chemical Engineering and an MBA, he has led multiple successful projects in the oil and gas sector before founding JAAZL in 2021.',
-        ar: 'يجلب الدكتور اسم شخص أكثر من 30 عامًا من الخبرة في الهندسة الصناعية والقيادة التجارية. بشهادة الدكتوراه في الهندسة الكيميائية وماجستير إدارة الأعمال، قاد العديد من المشاريع الناجحة في قطاع النفط والغاز قبل تأسيس جازل في عام 2021.'
+        en: 'Eng. Ahmad Alghamdi brings over 30 years of experience in industrial engineering and business leadership. With extensive expertise in Chemical Engineering and business management, he has led multiple successful projects in the petrochemical sector before founding JAAZL in 2021.',
+        ar: 'يجلب المهندس أحمد الغامدي أكثر من 30 عامًا من الخبرة في الهندسة الصناعية والقيادة التجارية. بخبرة واسعة في الهندسة الكيميائية وإدارة الأعمال، قاد العديد من المشاريع الناجحة في قطاع البيتروكيماويات قبل تأسيس جازل في عام 2021.'
       },
       image: {
-        id: 'ahmed-image',
-        url: '/images/team/placeholder.png',
+        id: 'ahmad-alghamdi-image',
+        url: '/images/team/Ahmad Alghamdi.jpg',
         altText: {
-          en: 'Eng. Ahmad, CEO',
-          ar: 'المعندس أحمد ، الرئيس التنفيذي'
+          en: 'Eng. Ahmad Alghamdi, CEO',
+          ar: 'المهندس أحمد الغامدي، الرئيس التنفيذي'
         },
         width: 400,
         height: 500
@@ -124,23 +124,23 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
     {
       id: 'team-2',
       name: {
-        en: 'Eng. Someone',
-        ar: 'المعندس شخص'
+        en: 'Mr. Faisal Aldossary',
+        ar: 'المهندس فيصل الدوسري'
       },
       position: {
-        en: 'Director of Engineering',
-        ar: 'مدير الهندسة'
+        en: 'Director',
+        ar: 'عضو مجلس الإدارة'
       },
       bio: {
-        en: 'Eng. Someone leads our engineering department with 15 years of expertise in process design and optimization. Her innovative approaches to industrial challenges have resulted in significant efficiency improvements for our clients.',
-        ar: 'تقود المهندس اسم شخص قسم الهندسة لدينا بخبرة 15 عامًا في تصميم وتحسين العمليات. أدت نهجها المبتكرة للتحديات الصناعية إلى تحسينات كبيرة في الكفاءة لعملائنا.'
+        en: 'Mr. Faisal Aldossary serves as a Director at JAAZL, bringing over 15 years of strategic leadership and business development expertise. His vision and guidance have been instrumental in expanding our service offerings and strengthening client relationships across various industrial sectors.',
+        ar: 'يشغل السيد فيصل الدوسري منصب عضو مجلس الإدارة في جازل، حيث يجلب أكثر من 15 عامًا من الخبرة في القيادة الاستراتيجية وتطوير الأعمال. كانت رؤيته وتوجيهاته محورية في توسيع عروض خدماتنا وتعزيز علاقات العملاء عبر مختلف القطاعات الصناعية.'
       },
       image: {
-        id: 'sarah-image',
-        url: '/images/team/placeholder.png',
+        id: 'faisal-aldossary-image',
+        url: '/images/team/Faisal Aldossary.jpg',
         altText: {
-          en: 'Eng. Someone, Director of Engineering',
-          ar: 'المهندس اسم شخص، مدير الهندسة'
+          en: 'Mr. Faisal Aldossary, Director',
+          ar: 'السيد فيصل الدوسري، عضو مجلس الإدارة'
         },
         width: 400,
         height: 500
@@ -149,23 +149,23 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
     {
       id: 'team-3',
       name: {
-        en: 'Dr. Someone',
-        ar: 'دكتور شخص'
+        en: 'Eng. Ratnakar Prabhu',
+        ar: 'المهندس راتناكار برابهو'
       },
       position: {
-        en: 'Director of Environmental Solutions',
-        ar: 'مدير حلول البيئة'
+        en: 'General Manager',
+        ar: 'مدير عام'
       },
       bio: {
-        en: 'Dr. Someone specializes in environmental engineering with a focus on sustainable industrial practices. His team develops comprehensive solutions for waste management, emissions reduction, and environmental compliance.',
-        ar: 'يتخصص الدكتور اسم شخص في الهندسة البيئية مع التركيز على الممارسات الصناعية المستدامة. يطور فريقه حلولًا شاملة لإدارة النفايات وتقليل الانبعاثات والامتثال البيئي.'
+        en: 'Eng. Ratnakar Prabhu serves as General Manager at JAAZL, overseeing daily operations and project execution across all service divisions. With extensive experience in industrial engineering and operations management, he ensures seamless delivery of our comprehensive solutions to clients.',
+        ar: 'يشغل المهندس راتناكار برابهو منصب المدير العام في جازل، حيث يشرف على العمليات اليومية وتنفيذ المشاريع عبر جميع أقسام الخدمات. بخبرة واسعة في الهندسة الصناعية وإدارة العمليات، يضمن التسليم السلس لحلولنا الشاملة للعملاء.'
       },
       image: {
-        id: 'someone-image',
-        url: '/images/team/placeholder.png',
+        id: 'ratnakar-prabhu-image',
+        url: '/images/team/Ratnakar Prabhu.jpeg',
         altText: {
-          en: 'Dr. Someone, Director of Environmental Solutions',
-          ar: 'الدكتور اسم شخص، مدير الحلول البيئية'
+          en: 'Eng. Ratnakar Prabhu, General Manager',
+          ar: 'المهندس راتناكار برابهو، المدير العام'
         },
         width: 400,
         height: 500
@@ -174,23 +174,23 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
     {
       id: 'team-4',
       name: {
-        en: 'Eng. Abdullah',
-        ar: 'المعندس عبد الله'
+        en: 'Eng. Mohammed Aldossary',
+        ar: 'المهندس محمد الدوسري'
       },
       position: {
-        en: 'Director of Operations',
-        ar: 'مدير العمليات'
+        en: 'Chief Operating Officer',
+        ar: 'مدير العمليات التنفيذي'
       },
       bio: {
-        en: 'Eng. Abdullah brings 12 years of experience in industrial operations management and process optimization. His expertise in implementing lean methodologies has helped many clients achieve significant improvements in operational efficiency.',
-        ar: 'يجلب المهندس عبد الله 12 عامًا من الخبرة في إدارة العمليات الصناعية وتحسين العمليات. ساعدت خبرته في تنفيذ منهجيات التصنيع المرشد العديد من العملاء في تحقيق تحسينات كبيرة في كفاءة العمليات.'
+        en: 'Eng. Mohammed Aldossary brings 25+ years of experience in industrial operations management and process optimization. His expertise in implementing lean methodologies has helped many clients achieve significant improvements in operational efficiency.',
+        ar: 'يجلب المهندس محمد الدوسري أكثر من 25 عامًا من الخبرة في إدارة العمليات الصناعية وتحسين العمليات. ساعدت خبرته في تنفيذ منهجيات التصنيع المرشد العديد من العملاء في تحقيق تحسينات كبيرة في كفاءة العمليات.'
       },
       image: {
-        id: 'abdullah-image',
-        url: '/images/team/placeholder.png',
+        id: 'mohammed-aldossary-image',
+        url: '/images/team/Mohammed Aldossary.jpg',
         altText: {
-          en: 'Eng. Abdullah, Director of Operations',
-          ar: 'المهندس عبد الله، مدير العمليات'
+          en: 'Eng. Mohammed Aldossary, Chief Operating Officer',
+          ar: 'المهندس محمد الدوسري، مدير العمليات التنفيذي'
         },
         width: 400,
         height: 500

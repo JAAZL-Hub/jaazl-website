@@ -140,7 +140,7 @@ const JAAZLHomepage: React.FC = () => {
                       Excellence
                     </span>
                     <span className="block text-4xl lg:text-5xl text-blue-200 font-normal mt-4">
-                      in Saudi Arabia&apos;s East
+                      in Saudi Arabia
                     </span>
                   </>
                 ) : (
@@ -150,7 +150,7 @@ const JAAZLHomepage: React.FC = () => {
                       متميزة
                     </span>
                     <span className="block text-4xl lg:text-5xl text-blue-200 font-normal mt-4">
-                      في المنطقة الشرقية
+                      في السعودية
                     </span>
                   </>
                 )}

@@ -69,7 +69,7 @@ export default function IndustriesPage() {
               >
                 <div className="relative h-56">
                   <Image 
-                    src={industry.image?.url || "/images/placeholder-industry.png"} 
+                    src={industry.image?.url || "/images/industries/oil-gas-industry.jpg"} 
                     alt={industry.image?.altText ? getLocalizedContent(industry.image.altText, language) : 'Industry Image'}
                     className="w-full h-full object-cover object-center transform transition-transform duration-300 group-hover:scale-110"
                     fill
