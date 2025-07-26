@@ -257,7 +257,7 @@ We understand that digital transformation is a journey, not a destination. Our t
       },
       keywords: ['digital transformation', 'IIoT', 'industrial IoT', 'industry 4.0', 'digital twins', 'cloud integration']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'power', 'manufacturing']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'power', 'mining']
   },
   {
     id: 'project-management',
@@ -343,7 +343,7 @@ Our team brings extensive experience across various industrial sectors, allowing
       },
       keywords: ['project management', 'industrial projects', 'risk management', 'quality control', 'schedule management']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'power']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'power']
   },
   {
     id: 'environmental-compliance',
@@ -429,7 +429,7 @@ From conducting thorough environmental impact assessments to implementing contin
       },
       keywords: ['environmental compliance', 'sustainability', 'emissions monitoring', 'waste reduction', 'resource optimization']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'power']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'power']
   },
   {
     id: 'specialized-chemicals',
@@ -515,7 +515,7 @@ Beyond product development, we provide comprehensive application support, includ
       },
       keywords: ['industrial chemicals', 'custom formulations', 'process chemicals', 'chemical optimization', 'technical support']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'water-treatment']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'water-treatment']
   },
   {
     id: 'electromechanical-systems',
@@ -601,7 +601,7 @@ We emphasize energy efficiency, reliability, and maintainability in all our desi
       },
       keywords: ['electromechanical systems', 'power distribution', 'control systems', 'industrial automation', 'preventive maintenance']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'power']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'power']
   },
   {
     id: 'system-integration',
@@ -687,7 +687,7 @@ Through careful planning and execution, we deliver integration solutions that re
       },
       keywords: ['system integration', 'industrial systems', 'technology integration', 'legacy modernization', 'data harmonization']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'manufacturing', 'power', 'water-treatment']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'mining', 'power', 'water-treatment']
   },
   {
     id: 'technical-training',
@@ -773,7 +773,7 @@ Through structured learning programs and continuous development initiatives, we 
       },
       keywords: ['technical training', 'workforce development', 'industrial training', 'competency assessment', 'skills enhancement']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'power', 'mining']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'power', 'mining']
   },
   {
     id: 'environmental-monitoring',
@@ -859,7 +859,7 @@ Through continuous monitoring and assessment, we help identify potential environ
       },
       keywords: ['environmental monitoring', 'compliance reporting', 'risk assessment', 'environmental protection', 'sustainability']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'manufacturing', 'power']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'power']
   },
   {
     id: 'waste-management',
@@ -945,7 +945,7 @@ Through innovative treatment technologies and sustainable disposal practices, we
       },
       keywords: ['waste management', 'industrial waste', 'waste treatment', 'circular economy', 'sustainability']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'mining', 'municipal']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'power', 'municipal']
   },
   {
     id: 'process-chemicals',
@@ -1031,7 +1031,7 @@ Through extensive research and development, we continuously innovate to provide 
       },
       keywords: ['process chemicals', 'catalysts', 'specialty additives', 'process optimization', 'chemical formulations']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'water-treatment']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'water-treatment']
   },
   {
     id: 'laboratory-services',
@@ -1117,7 +1117,7 @@ Through rigorous quality assurance protocols and accredited testing procedures, 
       },
       keywords: ['laboratory services', 'chemical analysis', 'quality control', 'analytical testing', 'method development']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'water-treatment', 'mining']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'power', 'water-treatment']
   },
   {
     id: 'power-systems',
@@ -1203,7 +1203,7 @@ Through advanced monitoring and predictive maintenance strategies, we help ensur
       },
       keywords: ['power systems', 'electrical distribution', 'load management', 'power quality', 'industrial electrical']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'power', 'mining']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'power', 'mining']
   },
   {
     id: 'automation-controls',
@@ -1289,7 +1289,7 @@ Through intelligent automation and control strategies, we help transform manual 
       },
       keywords: ['industrial automation', 'PLC programming', 'SCADA systems', 'process control', 'HMI development']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'power', 'water-treatment']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'power', 'water-treatment']
   },
   {
     id: 'zero-liquid-discharge',
@@ -1375,7 +1375,7 @@ Through innovative design and proven technologies, our ZLD systems help industri
       },
       keywords: ['zero liquid discharge', 'ZLD', 'water recovery', 'wastewater treatment', 'environmental compliance']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'mining', 'power']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'mining', 'power']
   },
   {
     id: 'spent-caustic-treatment',
@@ -1461,7 +1461,7 @@ Through innovative treatment approaches, we help convert waste caustic streams i
       },
       keywords: ['spent caustic treatment', 'hazardous waste', 'chemical recovery', 'wet air oxidation', 'environmental treatment']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries']
   },
   {
     id: 'oily-water-treatment',
@@ -1547,7 +1547,7 @@ Through innovative treatment approaches and proven technologies, we help industr
       },
       keywords: ['oily water treatment', 'hydrocarbon removal', 'produced water', 'DAF systems', 'wastewater treatment']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'mining']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'mining']
   },
   {
     id: 'bulk-chemicals-supply',
@@ -1633,7 +1633,7 @@ Through our extensive supplier network and local manufacturing partnerships, we 
       },
       keywords: ['bulk chemicals', 'industrial chemicals supply', 'chemical procurement', 'quality assurance', 'supply chain management']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'mining', 'water-treatment']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'mining', 'water-treatment']
   },
   {
     id: 'chemical-blending',
@@ -1719,7 +1719,7 @@ Through local manufacturing capabilities and strategic raw material sourcing, we
       },
       keywords: ['chemical manufacturing', 'custom blending', 'local production', 'specialty chemicals', 'formulation development']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'water-treatment', 'mining']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'water-treatment', 'mining']
   },
   {
     id: 'offspec-management',
@@ -1805,7 +1805,7 @@ Through strategic partnerships with reprocessors, recyclers, and end-users, we c
       },
       keywords: ['off-spec management', 'by-products recovery', 'waste to value', 'circular economy', 'industrial waste']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'mining']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'mining']
   },
   {
     id: 'shutdown-turnaround',
@@ -1891,7 +1891,7 @@ Through proven project management methodologies and extensive industry experienc
       },
       keywords: ['shutdown services', 'turnaround management', 'industrial maintenance', 'project management', 'safety management']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'power']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'power']
   },
   {
     id: 'fabrication-services',
@@ -1977,7 +1977,7 @@ Through advanced fabrication technologies and experienced personnel, we deliver 
       },
       keywords: ['industrial fabrication', 'structural steel', 'pressure vessels', 'custom components', 'manufacturing services']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'power', 'construction']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'power', 'construction']
   },
   {
     id: 'prefabricated-tanks',
@@ -2063,6 +2063,6 @@ We provide complete project management from initial design and engineering to ma
       },
       keywords: ['prefabricated tanks', 'storage solutions', 'bolted steel tanks', 'glass-fused tanks', 'fire protection tanks']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'power', 'municipal', 'water-treatment']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'power', 'municipal', 'water-treatment']
   }
 ];
