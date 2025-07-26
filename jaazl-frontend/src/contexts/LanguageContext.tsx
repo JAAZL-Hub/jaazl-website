@@ -32,13 +32,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   const [direction, setDirection] = useState<Direction>('ltr');
   
   // Use optional chaining and error handling for i18n
-  let i18n: any = null;
-  try {
-    const translation = useTranslation();
-    i18n = translation?.i18n;
-  } catch (error) {
-    console.warn('i18n not yet initialized:', error);
-  }
+  const translation = useTranslation();
+  const i18n = translation?.i18n;
 
   // Initialize language from localStorage or default to browser language
   useEffect(() => {

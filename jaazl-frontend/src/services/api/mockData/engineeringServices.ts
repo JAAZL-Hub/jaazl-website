@@ -496,7 +496,7 @@ Beyond product development, we provide comprehensive application support, includ
     icon: 'droplet',
     image: {
       id: 'specialized-chemicals-image',
-      url: '/images/services/environmental-compliance.jpg',
+      url: '/images/services/engineering-consulting.jpg',
       altText: {
         en: 'Specialized industrial chemicals',
         ar: 'المواد الكيميائية الصناعية المتخصصة'
@@ -668,7 +668,7 @@ Through careful planning and execution, we deliver integration solutions that re
     icon: 'network',
     image: {
       id: 'system-integration-image',
-      url: '/images/services/system-integration.jpg',
+      url: '/images/services/digital-transformation.webp',
       altText: {
         en: 'Industrial system integration',
         ar: 'تكامل الأنظمة الصناعية'
@@ -754,7 +754,7 @@ Through structured learning programs and continuous development initiatives, we 
     icon: 'graduation-cap',
     image: {
       id: 'technical-training-image',
-      url: '/images/services/technical-training.jpg',
+      url: '/images/services/project-management.webp',
       altText: {
         en: 'Technical training and development',
         ar: 'التدريب والتطوير التقني'
@@ -840,7 +840,7 @@ Through continuous monitoring and assessment, we help identify potential environ
     icon: 'eye',
     image: {
       id: 'environmental-monitoring-image',
-      url: '/images/services/environmental-monitoring.jpg',
+      url: '/images/services/environmental-compliance.jpg',
       altText: {
         en: 'Environmental monitoring and assessment',
         ar: 'المراقبة والتقييم البيئي'
@@ -926,7 +926,7 @@ Through innovative treatment technologies and sustainable disposal practices, we
     icon: 'trash-2',
     image: {
       id: 'waste-management-image',
-      url: '/images/services/waste-management.jpg',
+      url: '/images/services/environmental-compliance.jpg',
       altText: {
         en: 'Industrial waste management',
         ar: 'إدارة النفايات الصناعية'
@@ -1012,7 +1012,7 @@ Through extensive research and development, we continuously innovate to provide 
     icon: 'beaker',
     image: {
       id: 'process-chemicals-image',
-      url: '/images/services/process-chemicals.jpg',
+      url: '/images/services/engineering-consulting.jpg',
       altText: {
         en: 'Process optimization chemicals',
         ar: 'كيماويات تحسين العمليات'
@@ -1098,7 +1098,7 @@ Through rigorous quality assurance protocols and accredited testing procedures, 
     icon: 'flask',
     image: {
       id: 'laboratory-services-image',
-      url: '/images/services/laboratory-services.jpg',
+      url: '/images/services/engineering-consulting.jpg',
       altText: {
         en: 'Chemical laboratory services',
         ar: 'خدمات المختبرات الكيميائية'
@@ -1184,7 +1184,7 @@ Through advanced monitoring and predictive maintenance strategies, we help ensur
     icon: 'battery',
     image: {
       id: 'power-systems-image',
-      url: '/images/services/power-systems.jpg',
+      url: '/images/services/ai-automation.jpg',
       altText: {
         en: 'Industrial power systems',
         ar: 'أنظمة الطاقة الصناعية'
@@ -1270,7 +1270,7 @@ Through intelligent automation and control strategies, we help transform manual 
     icon: 'settings',
     image: {
       id: 'automation-controls-image',
-      url: '/images/services/automation-controls.jpg',
+      url: '/images/services/ai-automation.jpg',
       altText: {
         en: 'Industrial automation and controls',
         ar: 'أتمتة وضوابط صناعية'
@@ -1700,7 +1700,7 @@ Through local manufacturing capabilities and strategic raw material sourcing, we
     icon: 'beaker',
     image: {
       id: 'chemical-blending-image',
-      url: '/images/services/environmental-compliance.jpg',
+      url: '/images/services/engineering-consulting.jpg',
       altText: {
         en: 'Chemical blending and manufacturing facility',
         ar: 'مرفق خلط وتصنيع كيميائي'
@@ -1786,7 +1786,7 @@ Through strategic partnerships with reprocessors, recyclers, and end-users, we c
     icon: 'recycle',
     image: {
       id: 'offspec-management-image',
-      url: '/images/services/environmental-compliance.jpg',
+      url: '/images/services/engineering-consulting.jpg',
       altText: {
         en: 'Off-spec products management facility',
         ar: 'مرفق إدارة المنتجات غير المطابقة'
