@@ -73,7 +73,7 @@ const Header: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isServicesDropdownOpen, setServicesDropdownOpen] = useState<boolean>(false);
   const [isIndustriesDropdownOpen, setIndustriesDropdownOpen] = useState<boolean>(false);
-  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
+  const [, setHoveredCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState<boolean>(false);
   const pathname = usePathname();
   const { language, toggleLanguage, direction } = useLanguage();
