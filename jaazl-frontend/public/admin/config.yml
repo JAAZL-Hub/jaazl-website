@@ -1,0 +1,206 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Local backend for development (comment out when deploying)
+local_backend: true
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+locale: "en"
+
+# Enable editorial workflow (drafts, review, publish)
+editorial_workflow: true
+
+collections:
+  # Service Categories Collection
+  - name: "serviceCategories"
+    label: "Service Categories"
+    folder: "content/serviceCategories"
+    create: true
+    slug: "{{slug}}"
+    i18n:
+      structure: multiple_folders
+      locales: [en, ar]
+    fields:
+      - { label: "Name", name: "name", widget: "string", i18n: true }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", i18n: true }
+      - { label: "Order", name: "order", widget: "number", default: 1 }
+
+  # Services Collection
+  - name: "services"
+    label: "Services"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    i18n:
+      structure: multiple_folders
+      locales: [en, ar]
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Category", name: "category", widget: "relation", collection: "serviceCategories", value_field: "slug", search_fields: ["name"] }
+      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
+      - { label: "Icon", name: "icon", widget: "image", required: false }
+      - { label: "Description", name: "description", widget: "markdown", i18n: true }
+      - { label: "Meta Description", name: "metaDescription", widget: "text", i18n: true, required: false }
+      - { label: "Order", name: "order", widget: "number", default: 1 }
+
+  # Industries Collection
+  - name: "industries"
+    label: "Industries"
+    folder: "content/industries"
+    create: true
+    slug: "{{slug}}"
+    i18n:
+      structure: multiple_folders
+      locales: [en, ar]
+    fields:
+      - { label: "Name", name: "name", widget: "string", i18n: true }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
+      - { label: "Icon", name: "icon", widget: "image", required: false }
+      - { label: "Description", name: "description", widget: "markdown", i18n: true }
+      - { label: "Meta Description", name: "metaDescription", widget: "text", i18n: true, required: false }
+      - { label: "Order", name: "order", widget: "number", default: 1 }
+
+  # Contact Information Collection
+  - name: "contactInfo"
+    label: "Contact Information"
+    folder: "content/contactInfo"
+    create: true
+    slug: "{{slug}}"
+    i18n:
+      structure: multiple_folders
+      locales: [en, ar]
+    fields:
+      - { label: "Type", name: "type", widget: "string" }
+      - { label: "Address", name: "address", widget: "text", i18n: true }
+      - { label: "Phone", name: "phone", widget: "string" }
+      - { label: "Email", name: "email", widget: "string" }
+      - { label: "Latitude", name: "latitude", widget: "number", required: false }
+      - { label: "Longitude", name: "longitude", widget: "number", required: false }
+
+  # Pages Collection (for general content pages)
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    i18n:
+      structure: multiple_folders
+      locales: [en, ar]
+    fields:
+      - { label: "Title", name: "title", widget: "string", i18n: true }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
+      - { label: "Meta Description", name: "metaDescription", widget: "text", i18n: true, required: false }
+      - label: "Sections"
+        name: "sections"
+        widget: "list"
+        i18n: true
+        fields:
+          - { label: "Section Type", name: "type", widget: "select", options: ["hero", "features", "cta", "text", "gallery", "testimonials", "contact"] }
+          - { label: "Title", name: "title", widget: "string", required: false, i18n: true }
+          - { label: "Content", name: "content", widget: "markdown", required: false, i18n: true }
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string", i18n: true }
+          - label: "Button"
+            name: "button"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Text", name: "text", widget: "string", i18n: true }
+              - { label: "URL", name: "url", widget: "string" }
+
+  # Navigation Collection (for header and footer menus)
+  - name: "navigation"
+    label: "Navigation"
+    files:
+      - name: "header"
+        label: "Header Navigation"
+        file: "content/navigation/header.yml"
+        i18n: true
+        fields:
+          - label: "Menu Items"
+            name: "items"
+            widget: "list"
+            i18n: true
+            fields:
+              - { label: "Label", name: "label", widget: "string", i18n: true }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Order", name: "order", widget: "number", default: 1 }
+              - label: "Sub Items"
+                name: "items"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Label", name: "label", widget: "string", i18n: true }
+                  - { label: "URL", name: "url", widget: "string" }
+                  - { label: "Order", name: "order", widget: "number", default: 1 }
+      
+      - name: "footer"
+        label: "Footer Navigation"
+        file: "content/navigation/footer.yml"
+        i18n: true
+        fields:
+          - label: "Column 1"
+            name: "column1"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", i18n: true }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                i18n: true
+                fields:
+                  - { label: "Label", name: "label", widget: "string", i18n: true }
+                  - { label: "URL", name: "url", widget: "string" }
+          
+          - label: "Column 2"
+            name: "column2"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", i18n: true }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                i18n: true
+                fields:
+                  - { label: "Label", name: "label", widget: "string", i18n: true }
+                  - { label: "URL", name: "url", widget: "string" }
+          
+          - label: "Column 3"
+            name: "column3"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", i18n: true }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                i18n: true
+                fields:
+                  - { label: "Label", name: "label", widget: "string", i18n: true }
+                  - { label: "URL", name: "url", widget: "string" }
+
+  # Site Settings Collection (for global settings)
+  - name: "settings"
+    label: "Settings"
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "content/settings/general.yml"
+        i18n: true
+        fields:
+          - { label: "Site Title", name: "siteTitle", widget: "string", i18n: true }
+          - { label: "Site Description", name: "siteDescription", widget: "text", i18n: true }
+          - { label: "Site Logo", name: "logo", widget: "image" }
+          - { label: "Favicon", name: "favicon", widget: "image" }
+          - { label: "Default OG Image", name: "ogImage", widget: "image", required: false }

@@ -1,24 +1,30 @@
 import { useState, useEffect } from 'react';
-import { industries as mockIndustries } from '../api/mockData/industries';
 import { Industry } from '../types';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { getContent, getContentBySlug } from '../../utils/content';
 
 export function useIndustries() {
   const [industries, setIndustries] = useState<Industry[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+  const { language } = useLanguage();
   
   useEffect(() => {
-    try {
-      setIsLoading(true);
-      // Use mock data directly instead of API call
-      setIndustries(mockIndustries);
-    } catch (err) {
-      setError(err instanceof Error ? err : new Error('Failed to load industries'));
-    } finally {
-      setIsLoading(false);
-    }
-  }, []);
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+        // Use content utility to fetch from markdown files
+        const fetchedIndustries = await getContent<Industry>('industries', language);
+        setIndustries(fetchedIndustries);
+      } catch (err) {
+        setError(err instanceof Error ? err : new Error('Failed to load industries'));
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    
+    fetchData();
+  }, [language]); // Re-fetch when language changes
   
   return { industries, isLoading, error };
 }
@@ -27,19 +33,26 @@ export function useIndustryBySlug(slug: string) {
   const [industry, setIndustry] = useState<Industry | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+  const { language } = useLanguage();
   
   useEffect(() => {
-    try {
-      setIsLoading(true);
-      // Find industry by slug directly from mock data
-      const data = mockIndustries.find(i => i.slug === slug) || null;
-      setIndustry(data);
-    } catch (err) {
-      setError(err instanceof Error ? err : new Error('Failed to load industry'));
-    } finally {
-      setIsLoading(false);
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+        // Use content utility to fetch industry by slug
+        const foundIndustry = await getContentBySlug<Industry>('industries', slug, language);
+        setIndustry(foundIndustry);
+      } catch (err) {
+        setError(err instanceof Error ? err : new Error('Failed to load industry'));
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    
+    if (slug) {
+      fetchData();
     }
-  }, [slug]);
+  }, [slug, language]); // Re-fetch when slug or language changes
   
   return { industry, isLoading, error };
 }

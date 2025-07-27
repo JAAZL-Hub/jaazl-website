@@ -3,6 +3,7 @@ import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import MainLayout from '@/components/layout/MainLayout'
 import '@/i18n' // Import i18n configuration to ensure it's loaded
+import Script from 'next/script'
 
 // ManifaPro2 font is loaded via @font-face in globals.css
 
@@ -42,6 +43,22 @@ export default function RootLayout({
             {children}
           </MainLayout>
         </LanguageProvider>
+        
+        {/* Netlify Identity Widget */}
+        <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" strategy="afterInteractive" />
+        <Script id="netlify-identity-redirect">
+          {`
+          if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+              if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                  document.location.href = "/admin/";
+                });
+              }
+            });
+          }
+          `}
+        </Script>
       </body>
     </html>
   )

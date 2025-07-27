@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Service, ServiceCategory, LocalizedContent } from '../types';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { engineeringServices as servicesData } from '../api/mockData/engineeringServices';
-import { serviceCategories as categoriesData } from '../api/mockData/serviceCategories';
+import { getContent, getContentBySlug } from '../../utils/content';
 
 // Helper function to get localized content
 const getLocalizedContent = (content: LocalizedContent | undefined, language: string): string => {
@@ -14,14 +13,15 @@ export function useServiceCategories() {
   const [categories, setCategories] = useState<ServiceCategory[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+  const { language } = useLanguage();
   
   useEffect(() => {
-    // Simulate async behavior but use mock data directly
-    const fetchData = () => {
+    const fetchData = async () => {
       try {
         setIsLoading(true);
-        // Use mock data directly
-        setCategories(categoriesData);
+        // Use content utility to fetch from markdown files
+        const fetchedCategories = await getContent<ServiceCategory>('serviceCategories', language);
+        setCategories(fetchedCategories);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch service categories'));
       } finally {
@@ -30,7 +30,7 @@ export function useServiceCategories() {
     };
     
     fetchData();
-  }, []);
+  }, [language]); // Re-fetch when language changes
   
   return { categories, isLoading, error };
 }
@@ -39,14 +39,14 @@ export function useServiceCategoryBySlug(slug: string) {
   const [category, setCategory] = useState<ServiceCategory | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+  const { language } = useLanguage();
   
   useEffect(() => {
-    // Simulate async behavior but use mock data directly
-    const fetchData = () => {
+    const fetchData = async () => {
       try {
         setIsLoading(true);
-        // Find category with matching slug from mock data
-        const foundCategory = categoriesData.find(cat => cat.slug === slug) || null;
+        // Use content utility to fetch from markdown files by slug
+        const foundCategory = await getContentBySlug<ServiceCategory>('serviceCategories', slug, language);
         setCategory(foundCategory);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch service category'));
@@ -58,7 +58,7 @@ export function useServiceCategoryBySlug(slug: string) {
     if (slug) {
       fetchData();
     }
-  }, [slug]);
+  }, [slug, language]); // Re-fetch when slug or language changes
   
   return { category, isLoading, error };
 }
@@ -67,14 +67,15 @@ export function useServices() {
   const [services, setServices] = useState<Service[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+  const { language } = useLanguage();
   
   useEffect(() => {
-    // Simulate async behavior but use mock data directly
-    const fetchData = () => {
+    const fetchData = async () => {
       try {
         setIsLoading(true);
-        // Use mock data directly
-        setServices(servicesData);
+        // Use content utility to fetch from markdown files
+        const fetchedServices = await getContent<Service>('services', language);
+        setServices(fetchedServices);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch services'));
       } finally {
@@ -83,7 +84,7 @@ export function useServices() {
     };
     
     fetchData();
-  }, []);
+  }, [language]); // Re-fetch when language changes
   
   return { services, isLoading, error };
 }
@@ -92,14 +93,14 @@ export function useServiceBySlug(slug: string) {
   const [service, setService] = useState<Service | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+  const { language } = useLanguage();
   
   useEffect(() => {
-    // Simulate async behavior but use mock data directly
-    const fetchData = () => {
+    const fetchData = async () => {
       try {
         setIsLoading(true);
-        // Find service with matching slug from mock data
-        const foundService = servicesData.find(srv => srv.slug === slug) || null;
+        // Use content utility to fetch service by slug
+        const foundService = await getContentBySlug<Service>('services', slug, language);
         setService(foundService);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch service'));
@@ -111,7 +112,7 @@ export function useServiceBySlug(slug: string) {
     if (slug) {
       fetchData();
     }
-  }, [slug]);
+  }, [slug, language]); // Re-fetch when slug or language changes
   
   return { service, isLoading, error };
 }
@@ -120,14 +121,16 @@ export function useServicesByCategoryId(categoryId: string) {
   const [services, setServices] = useState<Service[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+  const { language } = useLanguage();
   
   useEffect(() => {
-    // Simulate async behavior but use mock data directly
-    const fetchData = () => {
+    const fetchData = async () => {
       try {
         setIsLoading(true);
-        // Filter services by categoryId from mock data
-        const filteredServices = servicesData.filter(srv => srv.categoryId === categoryId);
+        // Use content utility to fetch services and filter by category
+        const allServices = await getContent<Service>('services', language);
+        // Filter services by categoryId
+        const filteredServices = allServices.filter(service => service.categoryId === categoryId);
         setServices(filteredServices);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch services by category'));
@@ -139,7 +142,7 @@ export function useServicesByCategoryId(categoryId: string) {
     if (categoryId) {
       fetchData();
     }
-  }, [categoryId]);
+  }, [categoryId, language]); // Re-fetch when categoryId or language changes
   
   return { services, isLoading, error };
 }

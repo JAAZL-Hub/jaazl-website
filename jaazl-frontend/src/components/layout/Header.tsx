@@ -66,9 +66,6 @@ const industries = [
   { name: { en: 'Mining', ar: 'التعدين' }, path: '/industries/mining' },
   { name: { en: 'Municipal', ar: 'البلديات' }, path: '/industries/municipal' },
   { name: { en: 'Power & Electricity', ar: 'الطاقة والكهرباء' }, path: '/industries/power' },
-  { name: { en: 'Manufacturing', ar: 'التصنيع' }, path: '/industries/manufacturing' },
-  { name: { en: 'Water & Wastewater Treatment', ar: 'معالجة المياه ومياه الصرف الصحي' }, path: '/industries/water-treatment' },
-  // { name: { en: 'Healthcare Facilities', ar: 'المنشآت الصحية' }, path: '/industries/healthcare' },
 ];
 
 const Header: React.FC = () => {
