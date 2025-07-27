@@ -127,18 +127,18 @@ const JAAZLHomepage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Enhanced Hero Section */}
-      <section id="hero" className="relative min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 text-white overflow-hidden flex items-center">
+      <section id="hero" className="relative min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 text-white overflow-hidden flex items-center" dir={language === 'ar' ? 'rtl' : 'ltr'}>
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-slate-900/95 to-blue-900/90"></div>
-          <div className="absolute top-32 sm:top-28 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className={`absolute top-32 sm:top-28 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse ${language === 'ar' ? 'right-10' : 'left-10'}`}></div>
+          <div className={`absolute bottom-20 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000 ${language === 'ar' ? 'left-10' : 'right-10'}`}></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-orange-500/5 rounded-full blur-3xl"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-28 pb-16 sm:pb-20 md:pt-32">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            <div className={`transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${language === 'ar' ? 'lg:order-2' : ''}`}>
+          <div className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center ${language === 'ar' ? 'lg:grid-flow-col-dense' : ''}`}>
+            <div className={`transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${language === 'ar' ? 'lg:col-start-2' : ''}`}>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 sm:mb-8">
                 {language === 'en' ? (
                   <>
@@ -170,20 +170,24 @@ const JAAZLHomepage: React.FC = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-8 sm:mb-12">
-                <Link href="/contact" className={`group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:from-orange-600 hover:to-orange-700 shadow-btn-secondary hover:shadow-btn-secondary-hover transform hover:-translate-y-1 flex items-center justify-center ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
-                  {React.createElement(getContactIcon('message-circle'), { className: "mx-3 w-5 h-5 group-hover:scale-110 transition-transform" })}
+                <Link href="/contact" className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:from-orange-600 hover:to-orange-700 shadow-btn-secondary hover:shadow-btn-secondary-hover transform hover:-translate-y-1 flex items-center justify-center">
+                  {language === 'en' && React.createElement(getContactIcon('message-circle'), { className: "mr-3 w-5 h-5 group-hover:scale-110 transition-transform" })}
                   {language === 'en' ? 'Request Consultation' : 'اطلب استشارة'}
-                  {React.createElement(getNavigationIcon(language === 'ar' ? 'arrow-left' : 'arrow-right'), { className: `mx-3 w-5 h-5 transition-transform ${language === 'ar' ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'}` })}
+                  {language === 'ar' && React.createElement(getContactIcon('message-circle'), { className: "ml-3 w-5 h-5 group-hover:scale-110 transition-transform" })}
+                  {React.createElement(getNavigationIcon(language === 'ar' ? 'arrow-left' : 'arrow-right'), { 
+                    className: `${language === 'ar' ? 'mr-3' : 'ml-3'} w-5 h-5 transition-transform ${language === 'ar' ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'}` 
+                  })}
                 </Link>
-                <Link href="#services" className={`group border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex items-center justify-center ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
-                  {React.createElement(getMiscIcon('circle-ellipsis'), { className: "mx-3 w-5 h-5 group-hover:scale-110 transition-transform" })}
+                <Link href="#services" className="group border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                  {language === 'en' && React.createElement(getMiscIcon('circle-ellipsis'), { className: "mr-3 w-5 h-5 group-hover:scale-110 transition-transform" })}
                   {language === 'en' ? 'Know More' : 'اعرف المزيد'}
+                  {language === 'ar' && React.createElement(getMiscIcon('circle-ellipsis'), { className: "ml-3 w-5 h-5 group-hover:scale-110 transition-transform" })}
                 </Link>
               </div>
             </div>
             
             {/* Enhanced Hero Visual */}
-            <div className={`relative transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${language === 'ar' ? 'lg:order-1' : ''} mt-8 lg:mt-0`}>
+            <div className={`relative transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${language === 'ar' ? 'lg:col-start-1' : ''} mt-8 lg:mt-0`}>
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-white/20 shadow-2xl">
                   <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-6 sm:mb-8">
@@ -196,19 +200,33 @@ const JAAZLHomepage: React.FC = () => {
                     ))}
                   </div>
                   <div className="bg-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20">
-                    <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">{services[activeService].title}</h3>
-                    <p className="text-blue-100 text-sm sm:text-base mb-3 sm:mb-4">{services[activeService].description}</p>
+                    <h3 className={`text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 ${language === 'ar' ? 'text-right' : 'text-left'}`}>{services[activeService].title}</h3>
+                    <p className={`text-blue-100 text-sm sm:text-base mb-3 sm:mb-4 ${language === 'ar' ? 'text-right' : 'text-left'}`}>{services[activeService].description}</p>
                     <div className="grid grid-cols-2 gap-2">
                       {services[activeService].features.slice(0, 2).map((feature, idx) => (
-                        <div key={idx} className={`flex items-center text-xs text-blue-200 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
-                          {React.createElement(getFeatureIcon('check-circle'), { className: "w-3 h-3 mx-1 text-green-400" })}{feature}
+                        <div key={idx} className={`flex items-center text-xs text-blue-200 ${language === 'ar' ? 'flex-row-reverse justify-end' : 'justify-start'}`}>
+                          {language === 'en' && React.createElement(getFeatureIcon('check-circle'), { className: "w-3 h-3 mr-1 text-green-400" })}
+                          <span>{feature}</span>
+                          {language === 'ar' && React.createElement(getFeatureIcon('check-circle'), { className: "w-3 h-3 ml-1 text-green-400" })}
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
-                <div className={`absolute -top-2 sm:-top-4 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-xl sm:rounded-2xl rotate-12 opacity-80 animate-bounce ${language === 'ar' ? '-left-2 sm:-left-4' : '-right-2 sm:-right-4'}`}></div>
-                <div className={`absolute -bottom-2 sm:-bottom-4 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl sm:rounded-2xl -rotate-12 opacity-80 animate-pulse ${language === 'ar' ? '-right-2 sm:-right-4' : '-left-2 sm:-left-4'}`}></div>
+                <div 
+                  className={`absolute -top-2 sm:-top-4 w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-xl sm:rounded-2xl rotate-12 opacity-80 animate-bounce`}
+                  style={{
+                    [language === 'ar' ? 'left' : 'right']: '-0.5rem',
+                    [language === 'ar' ? 'right' : 'left']: 'auto'
+                  }}
+                ></div>
+                <div 
+                  className={`absolute -bottom-2 sm:-bottom-4 w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl sm:rounded-2xl -rotate-12 opacity-80 animate-pulse`}
+                  style={{
+                    [language === 'ar' ? 'right' : 'left']: '-0.5rem',
+                    [language === 'ar' ? 'left' : 'right']: 'auto'
+                  }}
+                ></div>
               </div>
             </div>
           </div>

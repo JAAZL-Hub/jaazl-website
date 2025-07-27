@@ -99,7 +99,7 @@ export default function ContactPage() {
               <div className="h-2 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
               <div className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 p-3 rounded-full ms-4 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                  <div className="mr-2 ml-2 bg-blue-100 p-3 rounded-full ms-4 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
                     <FaMapMarkerAlt className="w-6 h-6 text-blue-700 group-hover:text-white transition-all duration-300" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">
@@ -113,8 +113,8 @@ export default function ContactPage() {
                     </>
                   ) : (
                     <>
-                      <p>{language === 'en' ? '123 Industrial Ave,' : '١٢٣ شارع الصناعي،'}</p>
-                      <p>{language === 'en' ? 'Dammam, Saudi Arabia' : 'الدمام، المملكة العربية السعودية'}</p>
+                      <p>{language === 'en' ? 'Industrial Area 1' : 'المنطقة الصناعية الأولى'}</p>
+                      <p>{language === 'en' ? 'Jubail, Saudi Arabia' : 'الجبيل، المملكة العربية السعودية'}</p>
                     </>
                   )}
                 </div>
@@ -135,7 +135,7 @@ export default function ContactPage() {
               <div className="h-2 bg-gradient-to-r from-green-500 to-emerald-500"></div>
               <div className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="bg-green-100 p-3 rounded-full ms-4 transition-all duration-300 group-hover:bg-green-500 group-hover:text-white">
+                  <div className="mr-2 ml-2 bg-green-100 p-3 rounded-full ms-4 transition-all duration-300 group-hover:bg-green-500 group-hover:text-white">
                     <FaPhone className="w-6 h-6 text-green-600 group-hover:text-white transition-all duration-300" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">
@@ -170,7 +170,7 @@ export default function ContactPage() {
                 </div>
                 <a 
                   href={`tel:${phone || '+966131234567'}`} 
-                  className="inline-flex items-center mt-4 text-green-600 font-medium hover:text-green-700 transition-colors group-hover:text-green-800"
+                  className="mr-2 ml-2 inline-flex items-center mt-4 text-green-600 font-medium hover:text-green-700 transition-colors group-hover:text-green-800"
                 >
                   {language === 'en' ? 'Call now' : 'اتصل الآن'}
                   <span className="ms-1 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -183,7 +183,7 @@ export default function ContactPage() {
               <div className="h-2 bg-gradient-to-r from-orange-500 to-red-500"></div>
               <div className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="bg-orange-100 p-3 rounded-full ms-4 transition-all duration-300 group-hover:bg-orange-500 group-hover:text-white">
+                  <div className="mr-2 ml-2 bg-orange-100 p-3 rounded-full ms-4 transition-all duration-300 group-hover:bg-orange-500 group-hover:text-white">
                     <FaEnvelope className="w-6 h-6 text-orange-600 group-hover:text-white transition-all duration-300" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900">
@@ -207,10 +207,10 @@ export default function ContactPage() {
                     <>
                       <p>
                         <a 
-                          href="mailto:sales@jaazl.com" 
+                          href="mailto:info@jaazl.com" 
                           className="font-medium hover:text-blue-700 transition-colors"
                         >
-                          sales@jaazl.com
+                          info@jaazl.com
                         </a>
                       </p>
                       <p>{language === 'en' ? 'We reply within 24 hours' : 'نرد خلال ٢٤ ساعة'}</p>
@@ -218,8 +218,8 @@ export default function ContactPage() {
                   )}
                 </div>
                 <a 
-                  href={`mailto:${email || 'sales@jaazl.com'}`}
-                  className="inline-flex items-center mt-4 text-orange-600 font-medium hover:text-orange-700 transition-colors group-hover:text-orange-800"
+                  href={`mailto:${email || 'info@jaazl.com'}`}
+                  className="mr-2 ml-2 inline-flex items-center mt-4 text-orange-600 font-medium hover:text-orange-700 transition-colors group-hover:text-orange-800"
                 >
                   {language === 'en' ? 'Email now' : 'أرسل الآن'}
                   <span className="ms-1 transform transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -358,7 +358,7 @@ export default function ContactPage() {
                   type="submit"
                   className="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-800 transition-all duration-300 flex items-center justify-center shadow-btn-cta hover:shadow-btn-cta-hover group"
                 >
-                  <FaPaperPlane className="w-5 h-5 ms-2 transition-transform duration-300 group-hover:translate-x-1" />
+                  <FaPaperPlane className="w-5 h-5 ms-2 mr-2 ml-2 transition-transform duration-300 group-hover:translate-x-1 " />
                   {language === 'en' ? 'Send Message' : 'إرسال رسالة'}
                 </button>
               </form>
