@@ -99,23 +99,23 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
     {
       id: 'team-1',
       name: {
-        en: 'Eng. Ahmad Alghamdi',
-        ar: 'المهندس أحمد الغامدي'
+        en: 'Eng. Ahmad Alkhlaif',
+        ar: 'المهندس أحمد الخليف'
       },
       position: {
         en: 'Chief Executive Officer',
-        ar: 'الرئيس التنفيذي'
+        ar: 'الرئيس التنفيذي ورئيس مجلس الإدارة'
       },
       bio: {
-        en: 'Eng. Ahmad Alghamdi brings over 30 years of experience in industrial engineering and business leadership. With extensive expertise in Chemical Engineering and business management, he has led multiple successful projects in the petrochemical sector before founding JAAZL in 2021.',
-        ar: 'يجلب المهندس أحمد الغامدي أكثر من 30 عامًا من الخبرة في الهندسة الصناعية والقيادة التجارية. بخبرة واسعة في الهندسة الكيميائية وإدارة الأعمال، قاد العديد من المشاريع الناجحة في قطاع البيتروكيماويات قبل تأسيس جازل في عام 2021.'
+        en: 'Eng. Ahmad Alkhlaif brings over 30 years of experience in industrial engineering and business leadership. With extensive expertise in Chemical Engineering and business management, he has led multiple successful projects in the petrochemical sector before founding JAAZL in 2021.',
+        ar: 'يجلب المهندس أحمد الخليف أكثر من 30 عامًا من الخبرة في الهندسة الصناعية والقيادة التجارية. بخبرة واسعة في الهندسة الكيميائية وإدارة الأعمال، قاد العديد من المشاريع الناجحة في قطاع البيتروكيماويات قبل تأسيس جازل في عام 2021.'
       },
       image: {
         id: 'ahmad-alghamdi-image',
         url: '/images/team/Ahmad Alghamdi.jpg',
         altText: {
-          en: 'Eng. Ahmad Alghamdi, CEO',
-          ar: 'المهندس أحمد الغامدي، الرئيس التنفيذي'
+          en: 'Eng. Ahmad Alkhlaif, CEO',
+          ar: 'المهندس أحمد الخليف، الرئيس التنفيذي'
         },
         width: 400,
         height: 500
