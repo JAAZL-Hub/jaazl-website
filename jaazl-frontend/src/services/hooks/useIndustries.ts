@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Industry } from '../types';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { getContent, getContentBySlug } from '../../utils/content';
+import { industries as mockIndustries } from '../api/mockData/industries';
 
 export function useIndustries() {
   const [industries, setIndustries] = useState<Industry[]>([]);
@@ -13,9 +13,8 @@ export function useIndustries() {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        // Use content utility to fetch from markdown files
-        const fetchedIndustries = await getContent<Industry>('industries', language);
-        setIndustries(fetchedIndustries);
+        // Use mock data
+        setIndustries(mockIndustries);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to load industries'));
       } finally {
@@ -39,8 +38,8 @@ export function useIndustryBySlug(slug: string) {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        // Use content utility to fetch industry by slug
-        const foundIndustry = await getContentBySlug<Industry>('industries', slug, language);
+        // Find industry by slug from mock data
+        const foundIndustry = mockIndustries.find(ind => ind.slug === slug) || null;
         setIndustry(foundIndustry);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to load industry'));

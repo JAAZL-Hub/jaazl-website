@@ -155,8 +155,8 @@ const jsonLd = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Engineering Consulting & AI',
-          description: 'Advanced engineering solutions including digitalization, decarbonization, process optimization, and applied AI technologies for industrial facilities.',
+          name: 'Technical Consultancy & AI',
+          description: 'Advanced engineering solutions including process safety, reliability engineering, sustainability & energy management, applied AI & digital solutions, and process engineering.',
           provider: {
             '@type': 'Organization',
             name: 'JAAZL Industrial Company',
@@ -169,8 +169,8 @@ const jsonLd = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Environmental Solutions',
-          description: 'Comprehensive water and wastewater treatment solutions including RO systems, ZLD, brine treatment, and industrial water management.',
+          name: 'Water & Wastewater Treatment',
+          description: 'Complete water solutions including cooling/boiler water treatment, reverse osmosis systems, ion exchange systems, and waste water treatment with MBR, MBBR, CGI, MLD & ZLD technologies.',
           provider: {
             '@type': 'Organization',
             name: 'JAAZL Industrial Company',
@@ -183,8 +183,8 @@ const jsonLd = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Chemical Solutions',
-          description: 'Specialty chemicals for water treatment, bulk chemicals, local manufacturing, and comprehensive waste management services.',
+          name: 'Specialty & Bulk Chemicals',
+          description: 'Comprehensive chemical solutions for industrial excellence, including drilling & production chemicals, water treatment systems, mining & fertilizer chemicals, and bulk commodity chemicals.',
           provider: {
             '@type': 'Organization',
             name: 'JAAZL Industrial Company',
@@ -198,13 +198,27 @@ const jsonLd = {
         itemOffered: {
           '@type': 'Service',
           name: 'Electromechanical Services',
-          description: 'Complete MEI services, fabrication, EPC projects, and shutdown & turnaround solutions for industrial facilities.',
+          description: 'Complete engineering solutions for industrial infrastructure including mechanical engineering services, electrical & instrumentation, and turnaround & construction services.',
           provider: {
             '@type': 'Organization',
             name: 'JAAZL Industrial Company',
           },
           areaServed: 'Eastern Province, Saudi Arabia',
           category: 'Electromechanical Services',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Material Supplies',
+          description: 'API & Aramco approved materials including pipes & fittings, valves & actuators, raw materials & metals, and storage & infrastructure solutions.',
+          provider: {
+            '@type': 'Organization',
+            name: 'JAAZL Industrial Company',
+          },
+          areaServed: 'Eastern Province, Saudi Arabia',
+          category: 'Material Supplies',
         },
       },
     ],

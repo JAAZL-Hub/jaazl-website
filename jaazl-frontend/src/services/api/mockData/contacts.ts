@@ -4,7 +4,7 @@ export const contacts: Contact[] = [
   {
     id: 'email-general',
     type: 'email',
-    value: 'info@jaazl.com',
+    value: 'sales@jaazl.com',
     label: {
       en: 'General Inquiries',
       ar: 'الاستفسارات العامة'
@@ -14,17 +14,17 @@ export const contacts: Contact[] = [
   {
     id: 'email-support',
     type: 'email',
-    value: 'support@jaazl.com',
+    value: 'info@jaazl.com',
     label: {
-      en: 'Technical Support',
-      ar: 'الدعم الفني'
+      en: 'Information',
+      ar: 'المعلومات'
     },
     icon: 'help-circle'
   },
   {
     id: 'phone-main',
     type: 'phone',
-    value: '+966 12 345 6789',
+    value: '+966 55 510 9268',
     label: {
       en: 'Main Office',
       ar: 'المكتب الرئيسي'
@@ -32,19 +32,9 @@ export const contacts: Contact[] = [
     icon: 'phone'
   },
   {
-    id: 'phone-support',
-    type: 'phone',
-    value: '+966 12 345 6700',
-    label: {
-      en: 'Customer Support',
-      ar: 'دعم العملاء'
-    },
-    icon: 'headphones'
-  },
-  {
     id: 'address-hq',
     type: 'address',
-    value: 'Industrial Area 1, Building 5, Jubail, Saudi Arabia',
+    value: 'JAAZL Industrial Company, Jubail Industrial Area 1, Saudi Arabia',
     label: {
       en: 'Headquarters',
       ar: 'المقر الرئيسي'
@@ -54,7 +44,7 @@ export const contacts: Contact[] = [
   {
     id: 'address-branch',
     type: 'address',
-    value: 'Industrial Area 1, Building 5, Jubail, Saudi Arabia',
+    value: 'JAAZL Industrial Company, Jubail Industrial Area 1, Saudi Arabia',
     label: {
       en: 'Jubail Office',
       ar: 'مكتب الجبيل' 

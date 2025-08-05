@@ -2,49 +2,49 @@ import { ServiceCategory } from '../../types';
 
 export const serviceCategories: ServiceCategory[] = [
   {
-    id: 'engineering',
-    slug: 'engineering',
+    id: 'chemicals',
+    slug: 'chemicals',
     name: {
-      en: 'Engineering Consulting & AI',
-      ar: 'الاستشارات الهندسية والذكاء الاصطناعي'
+      en: 'Specialty & Bulk Chemicals',
+      ar: 'الكيماويات المتخصصة والسائبة'
     },
     description: {
-      en: 'Advanced engineering services leveraging AI and automation for industrial applications, from concept to implementation.',
-      ar: 'خدمات هندسية متقدمة تستفيد من الذكاء الاصطناعي والأتمتة للتطبيقات الصناعية، من المفهوم إلى التنفيذ.'
+      en: 'Comprehensive chemical solutions for industrial excellence, including drilling & production chemicals, water treatment systems, mining & fertilizer chemicals, and bulk commodity chemicals.',
+      ar: 'حلول كيميائية شاملة للتميز الصناعي، تشمل كيماويات الحفر والإنتاج وأنظمة معالجة المياه وكيماويات التعدين والأسمدة والكيماويات السائبة.'
     },
-    icon: 'cpu',
-    color: 'blue',
-    gradient: 'service-blue'
+    icon: 'flask-conical',
+    color: 'purple',
+    gradient: 'service-purple'
   },
   {
     id: 'environmental',
     slug: 'environmental',
     name: {
-      en: 'Environmental Solutions',
-      ar: 'الحلول البيئية'
+      en: 'Water & Wastewater Treatment',
+      ar: 'معالجة المياه ومياه الصرف الصحي'
     },
     description: {
-      en: 'Sustainable environmental services for industrial operations, focusing on compliance, efficiency, and ecological responsibility.',
-      ar: 'خدمات بيئية مستدامة للعمليات الصناعية، مع التركيز على الامتثال والكفاءة والمسؤولية البيئية.'
+      en: 'Complete water solutions including cooling/boiler water treatment, reverse osmosis systems, ion exchange systems, and waste water treatment with MBR, MBBR, CGI, MLD & ZLD technologies.',
+      ar: 'حلول مياه شاملة تشمل معالجة مياه التبريد/الغلايات وأنظمة التناضح العكسي وأنظمة تبادل الأيونات ومعالجة مياه الصرف بتقنيات MBR وMBBR وCGI وMLD وZLD.'
     },
-    icon: 'leaf',
-    color: 'green',
+    icon: 'droplet',
+    color: 'blue',
     gradient: 'service-cyan'
   },
   {
-    id: 'chemicals',
-    slug: 'chemicals',
+    id: 'engineering',
+    slug: 'engineering',
     name: {
-      en: 'Chemical Solutions',
-      ar: 'الحلول الكيميائية'
+      en: 'Technical Consultancy & AI',
+      ar: 'الاستشارات التقنية والذكاء الاصطناعي'
     },
     description: {
-      en: 'Specialized chemical solutions for industrial processes, ensuring optimal performance and safety in demanding environments.',
-      ar: 'حلول كيميائية متخصصة للعمليات الصناعية، تضمن الأداء الأمثل والسلامة في البيئات الصعبة.'
+      en: 'Advanced engineering solutions including process safety, reliability engineering, sustainability & energy management, applied AI & digital solutions, and process engineering.',
+      ar: 'حلول هندسية متقدمة تشمل سلامة العمليات وهندسة الموثوقية وإدارة الاستدامة والطاقة والذكاء الاصطناعي التطبيقي والحلول الرقمية وهندسة العمليات.'
     },
-    icon: 'flask-conical',
-    color: 'purple',
-    gradient: 'service-purple'
+    icon: 'cpu',
+    color: 'indigo',
+    gradient: 'service-blue'
   },
   {
     id: 'electromechanical',
@@ -54,11 +54,26 @@ export const serviceCategories: ServiceCategory[] = [
       ar: 'الخدمات الكهروميكانيكية'
     },
     description: {
-      en: 'Comprehensive electromechanical services including installation, maintenance, and optimization of industrial equipment.',
-      ar: 'خدمات كهروميكانيكية شاملة تشمل تركيب وصيانة وتحسين المعدات الصناعية.'
+      en: 'Complete engineering solutions for industrial infrastructure including mechanical engineering services, electrical & instrumentation, and turnaround & construction services.',
+      ar: 'حلول هندسية شاملة للبنية التحتية الصناعية تشمل خدمات الهندسة الميكانيكية والكهربائية والأجهزة وخدمات الصيانة والإنشاءات.'
     },
     icon: 'zap',
     color: 'orange',
     gradient: 'service-orange'
+  },
+  {
+    id: 'materials',
+    slug: 'materials',
+    name: {
+      en: 'Material Supplies',
+      ar: 'إمدادات المواد'
+    },
+    description: {
+      en: 'API & Aramco approved materials including pipes & fittings, valves & actuators, raw materials & metals, and storage & infrastructure solutions.',
+      ar: 'مواد معتمدة من API وأرامكو تشمل الأنابيب والتجهيزات والصمامات والمحركات والمواد الخام والمعادن وحلول التخزين والبنية التحتية.'
+    },
+    icon: 'package',
+    color: 'gray',
+    gradient: 'service-gray'
   }
 ];

@@ -2,24 +2,24 @@ import { AboutInfo } from '../../types';
 
 export const aboutInfo: AboutInfo = {
   history: {
-    en: `JAAZL was established in 2021 as a specialized industrial solutions provider, focused on bringing innovative engineering approaches to traditional industrial challenges. Over the years, we have expanded our services and expertise, growing from a small engineering consultancy into a comprehensive industrial solutions company with capabilities across engineering, environmental, chemical, and electromechanical domains.
+    en: `JAAZL was established in 2021 as a specialized industrial solutions provider, located in Jubail Industrial Area 1, Saudi Arabia. Since our establishment, JAAZL has emerged as a trusted partner for industrial excellence across Saudi Arabia. Our journey began with a clear vision: to provide world-class industrial solutions that support the Kingdom's economic diversification and sustainability goals.
 
-Throughout our journey, we have maintained a commitment to excellence, safety, and sustainability, developing long-term relationships with clients across the oil and gas, petrochemical, refinery, and mining sectors. Our growth has been driven by a focus on solving complex industrial challenges through innovative thinking and technical expertise.
+We have developed into a comprehensive industrial solutions company with capabilities across five main service categories: Specialty & Bulk Chemicals, Water & Wastewater Treatment, Technical Consultancy & AI, Electromechanical Services, and Material Supplies. Our approach provides end-to-end solutions from concept to commissioning.
 
-Today, JAAZL stands as a trusted partner to many leading industrial organizations, known for delivering reliable, efficient, and sustainable solutions that address the evolving needs of the industrial sector.`,
-    ar: `تأسست جازل في عام 2021 كمزود متخصص للحلول الصناعية، مع التركيز على جلب نهج هندسي مبتكر للتحديات الصناعية التقليدية. على مر السنين، قمنا بتوسيع خدماتنا وخبراتنا، والنمو من شركة استشارات هندسية صغيرة إلى شركة حلول صناعية شاملة مع قدرات في مجالات الهندسة والبيئة والكيمياء والكهروميكانيك.
+With 25+ years of collective experience and 45+ projects completed, JAAZL serves major industrial sectors including Oil & Gas, Petrochemicals, Refineries, Mining & Minerals, Municipal, Power & Electricity, Manufacturing, and Food & Beverages. We are committed to transforming Saudi Arabia's industrial landscape through innovative solutions, advanced technologies, and sustainable practices that align with Vision 2030.`,
+    ar: `تأسست جازل في عام 2021 كمزود متخصص للحلول الصناعية، وتقع في الجبيل المنطقة الصناعية الأولى، المملكة العربية السعودية. منذ تأسيسنا، برزت جازل كشريك موثوق للتميز الصناعي عبر المملكة العربية السعودية. بدأت رحلتنا برؤية واضحة: تقديم حلول صناعية عالمية المستوى تدعم أهداف التنويع الاقتصادي والاستدامة في المملكة.
 
-طوال رحلتنا، حافظنا على الالتزام بالتميز والسلامة والاستدامة، وطورنا علاقات طويلة الأمد مع العملاء في قطاعات النفط والغاز والبتروكيماويات والمصافي والتعدين. كان نمونا مدفوعًا بالتركيز على حل التحديات الصناعية المعقدة من خلال التفكير المبتكر والخبرة التقنية.
+تطورنا إلى شركة حلول صناعية شاملة مع قدرات عبر خمس فئات خدمات رئيسية: المواد الكيميائية المتخصصة والسائبة، ومعالجة المياه والصرف الصحي، والاستشارات التقنية والذكاء الاصطناعي، والخدمات الكهروميكانيكية، وإمدادات المواد. نهجنا يوفر حلولاً شاملة من المفهوم إلى التشغيل.
 
-اليوم، تقف جازل كشريك موثوق للعديد من المؤسسات الصناعية الرائدة، المعروفة بتقديم حلول موثوقة وفعالة ومستدامة تلبي الاحتياجات المتطورة للقطاع الصناعي.`
+مع خبرة جماعية تزيد عن 25 عاماً وإكمال أكثر من 45 مشروعاً، تخدم جازل القطاعات الصناعية الرئيسية بما في ذلك النفط والغاز، والبتروكيماويات، والمصافي، والتعدين والمعادن، والبلديات، والطاقة والكهرباء، والتصنيع، والأغذية والمشروبات. نحن ملتزمون بتحويل المشهد الصناعي السعودي من خلال الحلول المبتكرة والتقنيات المتقدمة والممارسات المستدامة المتماشية مع رؤية 2030.`
   },
   mission: {
-    en: `Our mission at JAAZL is to transform industrial operations through innovative engineering solutions, expert consulting, and cutting-edge technologies. We strive to enhance operational efficiency, safety, and sustainability for our clients while maintaining the highest standards of technical excellence and professional integrity.`,
-    ar: `مهمتنا في جازل هي تحويل العمليات الصناعية من خلال حلول هندسية مبتكرة واستشارات خبيرة وتقنيات متطورة. نسعى جاهدين لتحسين الكفاءة التشغيلية والسلامة والاستدامة لعملائنا مع الحفاظ على أعلى معايير التميز التقني والنزاهة المهنية.`
+    en: `Transforming industry through innovative engineering, expert consulting, and tech for safe, efficient, sustainable operations.`,
+    ar: `تحويل الصناعة من خلال الهندسة المبتكرة والاستشارات الخبيرة والتقنيات للعمليات الآمنة والفعالة والمستدامة.`
   },
   vision: {
-    en: `Our vision is to be the leading provider of integrated industrial solutions in the region, recognized for our innovation, expertise, and commitment to sustainable industrial practices. We aim to set new standards for excellence in the industrial sector, driving positive change through technology and knowledge.`,
-    ar: `رؤيتنا هي أن نكون المزود الرائد للحلول الصناعية المتكاملة في المنطقة، معترف بنا لابتكارنا وخبرتنا والتزامنا بالممارسات الصناعية المستدامة. نهدف إلى وضع معايير جديدة للتميز في القطاع الصناعي، مما يدفع التغيير الإيجابي من خلال التكنولوجيا والمعرفة.`
+    en: `To lead in integrated industrial solutions through innovation, expertise, and commitment to sustainable excellence.`,
+    ar: `القيادة في الحلول الصناعية المتكاملة من خلال الابتكار والخبرة والالتزام بالتميز المستدام.`
   },
   values: [
     {
@@ -107,8 +107,8 @@ Today, JAAZL stands as a trusted partner to many leading industrial organization
         ar: 'الرئيس التنفيذي ورئيس مجلس الإدارة'
       },
       bio: {
-        en: 'Eng. Ahmad Alkhlaif brings over 30 years of experience in industrial engineering and business leadership. With extensive expertise in Chemical Engineering and business management, he has led multiple successful projects in the petrochemical sector before founding JAAZL in 2021.',
-        ar: 'يجلب المهندس أحمد الخليف أكثر من 30 عامًا من الخبرة في الهندسة الصناعية والقيادة التجارية. بخبرة واسعة في الهندسة الكيميائية وإدارة الأعمال، قاد العديد من المشاريع الناجحة في قطاع البيتروكيماويات قبل تأسيس جازل في عام 2021.'
+        en: '"At JAAZL Industrial Company, we are committed to transforming Saudi Arabia\'s industrial landscape through innovative solutions, advanced technologies, and sustainable practices that align with Vision 2030." - Eng. Ahmad Alkhlaif brings over 25 years of experience in industrial engineering and business leadership, founding JAAZL in 2021 with a clear vision to provide world-class industrial solutions.',
+        ar: '"في شركة جازل الصناعية، نحن ملتزمون بتحويل المشهد الصناعي السعودي من خلال الحلول المبتكرة والتقنيات المتقدمة والممارسات المستدامة المتماشية مع رؤية 2030." - يجلب المهندس أحمد الخليف أكثر من 25 عامًا من الخبرة في الهندسة الصناعية والقيادة التجارية، حيث أسس جازل في عام 2021 برؤية واضحة لتقديم حلول صناعية عالمية المستوى.'
       },
       image: {
         id: 'ahmad-alghamdi-image',

@@ -8,8 +8,73 @@ import Script from 'next/script'
 // ManifaPro2 font is loaded via @font-face in globals.css
 
 export const metadata: Metadata = {
-  title: 'JAAZL Industrial Company - Industrial Solutions Excellence',
-  description: 'Leading industrial solutions provider in Saudi Arabia\'s Eastern Province',
+  title: {
+    default: 'JAAZL Industrial Company - Your Ideal Industrial Solutions Partner',
+    template: '%s | JAAZL Industrial Company'
+  },
+  description: 'Leading industrial solutions provider in Saudi Arabia. Comprehensive chemicals, water treatment, technical consultancy & AI, electromechanical services, and material supplies. Located in Jubail Industrial Area 1.',
+  keywords: [
+    'JAAZL Industrial Company',
+    'Industrial Solutions Saudi Arabia',
+    'Jubail Industrial',
+    'Specialty Chemicals',
+    'Water Treatment',
+    'Technical Consultancy',
+    'AI Solutions',
+    'Electromechanical Services',
+    'Material Supplies',
+    'Oil & Gas',
+    'Petrochemicals',
+    'Refineries',
+    'Vision 2030',
+    'API Approved',
+    'Aramco Approved'
+  ],
+  authors: [{ name: 'JAAZL Industrial Company' }],
+  creator: 'JAAZL Industrial Company',
+  publisher: 'JAAZL Industrial Company',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    alternateLocale: ['ar_SA'],
+    url: 'https://jaazl.com',
+    siteName: 'JAAZL Industrial Company',
+    title: 'JAAZL Industrial Company - Your Ideal Industrial Solutions Partner',
+    description: 'Leading industrial solutions provider in Saudi Arabia. Comprehensive chemicals, water treatment, technical consultancy & AI, electromechanical services, and material supplies.',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'JAAZL Industrial Company - Industrial Solutions Excellence',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'JAAZL Industrial Company - Your Ideal Industrial Solutions Partner',
+    description: 'Leading industrial solutions provider in Saudi Arabia. Comprehensive industrial solutions across 6 main service categories.',
+    images: ['/images/og-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://jaazl.com',
+    languages: {
+      'en-US': 'https://jaazl.com',
+      'ar-SA': 'https://jaazl.com',
+    },
+  },
+  category: 'Industrial Solutions',
 }
 
 export default function RootLayout({
@@ -36,6 +101,22 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="theme-color" content="#1e3a8a" />
         <meta name="color-scheme" content="light" />
+        
+        {/* PWA Meta Tags */}
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="application-name" content="JAAZL Industrial Company" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="JAAZL" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-TileColor" content="#1e3a8a" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        
+        {/* Additional SEO Meta Tags */}
+        <meta name="robots" content="index,follow" />
+        <meta name="googlebot" content="index,follow" />
+        <link rel="canonical" href="https://jaazl.com" />
       </head>
       <body>
         <LanguageProvider>

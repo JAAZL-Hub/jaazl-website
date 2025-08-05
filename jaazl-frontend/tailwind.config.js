@@ -18,6 +18,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // RTL and Direction utilities
+      direction: {
+        'ltr': 'ltr',
+        'rtl': 'rtl',
+      },
       animation: {
         'fadeIn': 'fadeIn 0.3s ease-in-out',
         'expandDown': 'expandDown 0.3s ease-in-out',

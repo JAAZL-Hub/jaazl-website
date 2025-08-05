@@ -9,21 +9,21 @@ import {
   FaBars, FaTimes, FaGlobe, FaChevronDown, FaChevronUp
 } from 'react-icons/fa';
 
-// Data for mega menus
+// Data for mega menus - Updated to match catalogue sequence
 const serviceCategories = {
-  engineering: {
-    name: { en: 'Engineering & AI Solutions', ar: 'حلول الهندسة والذكاء الاصطناعي' },
+  chemicals: {
+    name: { en: 'Specialty & Bulk Chemicals', ar: 'الكيماويات المتخصصة والسائبة' },
     services: [
-      { name: { en: 'Industrial Engineering Consulting', ar: 'استشارات الهندسة الصناعية' }, path: '/services/engineering-consulting' },
-      { name: { en: 'AI & Industrial Automation', ar: 'الذكاء الاصطناعي والأتمتة الصناعية' }, path: '/services/ai-automation' },
-      { name: { en: 'Industrial Digital Transformation', ar: 'التحول الرقمي الصناعي' }, path: '/services/digital-transformation' },
-      { name: { en: 'Industrial Project Management', ar: 'إدارة المشاريع الصناعية' }, path: '/services/project-management' },
-      { name: { en: 'Industrial System Integration', ar: 'تكامل الأنظمة الصناعية' }, path: '/services/system-integration' },
-      { name: { en: 'Technical Training & Development', ar: 'التدريب والتطوير التقني' }, path: '/services/technical-training' }
+      { name: { en: 'Specialized Industrial Chemicals', ar: 'المواد الكيميائية الصناعية المتخصصة' }, path: '/services/specialized-chemicals' },
+      { name: { en: 'Process Optimization Chemicals', ar: 'كيماويات تحسين العمليات' }, path: '/services/process-chemicals' },
+      { name: { en: 'Chemical Laboratory Services', ar: 'خدمات المختبرات الكيميائية' }, path: '/services/laboratory-services' },
+      { name: { en: 'Bulk Industrial Chemicals Supply', ar: 'توريد المواد الكيميائية الصناعية بالجملة' }, path: '/services/bulk-chemicals-supply' },
+      { name: { en: 'Local Chemical Manufacturing & Blending', ar: 'التصنيع والخلط الكيميائي المحلي' }, path: '/services/chemical-blending' },
+      { name: { en: 'Off-Spec & By-Products Management', ar: 'إدارة المنتجات غير المطابقة والمنتجات الثانوية' }, path: '/services/offspec-management' }
     ]
   },
   environmental: {
-    name: { en: 'Environmental Solutions', ar: 'الحلول البيئية' },
+    name: { en: 'Water & Wastewater Treatment', ar: 'معالجة المياه ومياه الصرف الصحي' },
     services: [
       { name: { en: 'Environmental Compliance & Sustainability', ar: 'الامتثال البيئي والاستدامة' }, path: '/services/environmental-compliance' },
       { name: { en: 'Environmental Monitoring & Assessment', ar: 'المراقبة والتقييم البيئي' }, path: '/services/environmental-monitoring' },
@@ -33,15 +33,15 @@ const serviceCategories = {
       { name: { en: 'Oily Water & Hydrocarbon Treatment', ar: 'معالجة المياه الزيتية والهيدروكربونية' }, path: '/services/oily-water-treatment' }
     ]
   },
-  chemicals: {
-    name: { en: 'Chemical Solutions', ar: 'الحلول الكيميائية' },
+  engineering: {
+    name: { en: 'Technical Consultancy & AI', ar: 'الاستشارات التقنية والذكاء الاصطناعي' },
     services: [
-      { name: { en: 'Specialized Industrial Chemicals', ar: 'المواد الكيميائية الصناعية المتخصصة' }, path: '/services/specialized-chemicals' },
-      { name: { en: 'Process Optimization Chemicals', ar: 'كيماويات تحسين العمليات' }, path: '/services/process-chemicals' },
-      { name: { en: 'Chemical Laboratory Services', ar: 'خدمات المختبرات الكيميائية' }, path: '/services/laboratory-services' },
-      { name: { en: 'Bulk Industrial Chemicals Supply', ar: 'توريد المواد الكيميائية الصناعية بالجملة' }, path: '/services/bulk-chemicals-supply' },
-      { name: { en: 'Local Chemical Manufacturing & Blending', ar: 'التصنيع والخلط الكيميائي المحلي' }, path: '/services/chemical-blending' },
-      { name: { en: 'Off-Spec & By-Products Management', ar: 'إدارة المنتجات غير المطابقة والمنتجات الثانوية' }, path: '/services/offspec-management' }
+      { name: { en: 'Industrial Engineering Consulting', ar: 'استشارات الهندسة الصناعية' }, path: '/services/engineering-consulting' },
+      { name: { en: 'AI & Industrial Automation', ar: 'الذكاء الاصطناعي والأتمتة الصناعية' }, path: '/services/ai-automation' },
+      { name: { en: 'Industrial Digital Transformation', ar: 'التحول الرقمي الصناعي' }, path: '/services/digital-transformation' },
+      { name: { en: 'Industrial Project Management', ar: 'إدارة المشاريع الصناعية' }, path: '/services/project-management' },
+      { name: { en: 'Industrial System Integration', ar: 'تكامل الأنظمة الصناعية' }, path: '/services/system-integration' },
+      { name: { en: 'Technical Training & Development', ar: 'التدريب والتطوير التقني' }, path: '/services/technical-training' }
     ]
   },
   electromechanical: {
@@ -54,18 +54,32 @@ const serviceCategories = {
       { name: { en: 'Industrial Fabrication Services', ar: 'خدمات التصنيع الصناعي' }, path: '/services/fabrication-services' },
       { name: { en: 'Prefabricated Tanks & Storage Solutions', ar: 'حلول الخزانات والتخزين مسبقة التصنيع' }, path: '/services/prefabricated-tanks' }
     ]
+  },
+  materials: {
+    name: { en: 'Material Supplies', ar: 'إمدادات المواد' },
+    services: [
+      { name: { en: 'Bulk Industrial Chemicals Supply', ar: 'توريد المواد الكيميائية الصناعية بالجملة' }, path: '/services/bulk-chemicals-supply' },
+      { name: { en: 'Prefabricated Tanks & Storage Solutions', ar: 'حلول الخزانات والتخزين مسبقة التصنيع' }, path: '/services/prefabricated-tanks' },
+      { name: { en: 'Industrial Fabrication Services', ar: 'خدمات التصنيع الصناعي' }, path: '/services/fabrication-services' },
+      { name: { en: 'Industrial Power Systems', ar: 'أنظمة الطاقة الصناعية' }, path: '/services/power-systems' },
+      { name: { en: 'Industrial Automation & Controls', ar: 'أتمتة وضوابط صناعية' }, path: '/services/automation-controls' },
+      { name: { en: 'Off-Spec & By-Products Management', ar: 'إدارة المنتجات غير المطابقة والمنتجات الثانوية' }, path: '/services/offspec-management' }
+    ]
   }
 };
 
 
 
+// Industries - Updated to match catalogue sequence and content
 const industries = [
   { name: { en: 'Oil & Gas', ar: 'النفط والغاز' }, path: '/industries/oil-gas' },
   { name: { en: 'Petrochemicals', ar: 'البتروكيماويات' }, path: '/industries/petrochemicals' },
   { name: { en: 'Refineries', ar: 'المصافي' }, path: '/industries/refineries' },
-  { name: { en: 'Mining', ar: 'التعدين' }, path: '/industries/mining' },
+  { name: { en: 'Mining & Minerals', ar: 'التعدين والمعادن' }, path: '/industries/mining' },
   { name: { en: 'Municipal', ar: 'البلديات' }, path: '/industries/municipal' },
   { name: { en: 'Power & Electricity', ar: 'الطاقة والكهرباء' }, path: '/industries/power' },
+  { name: { en: 'Manufacturing', ar: 'التصنيع' }, path: '/industries/manufacturing' },
+  { name: { en: 'Food & Beverages', ar: 'الأغذية والمشروبات' }, path: '/industries/food-beverages' },
 ];
 
 const Header: React.FC = () => {

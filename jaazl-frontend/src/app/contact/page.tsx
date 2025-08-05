@@ -159,7 +159,7 @@ export default function ContactPage() {
                     </>
                   ) : (
                     <>
-                      <p className="font-medium">+966 13 123 4567</p>
+                      <p className="font-medium">+966 55 510 9268</p>
                       <p>
                         {language === 'en' 
                           ? 'Sunday - Thursday: 8am to 4pm'
@@ -169,7 +169,7 @@ export default function ContactPage() {
                   )}
                 </div>
                 <a 
-                  href={`tel:${phone || '+966131234567'}`} 
+                  href={`tel:${phone || '+966555109268'}`} 
                   className="mr-2 ml-2 inline-flex items-center mt-4 text-green-600 font-medium hover:text-green-700 transition-colors group-hover:text-green-800"
                 >
                   {language === 'en' ? 'Call now' : 'اتصل الآن'}
@@ -207,10 +207,10 @@ export default function ContactPage() {
                     <>
                       <p>
                         <a 
-                          href="mailto:info@jaazl.com" 
+                          href="mailto:sales@jaazl.com" 
                           className="font-medium hover:text-blue-700 transition-colors"
                         >
-                          info@jaazl.com
+                          sales@jaazl.com
                         </a>
                       </p>
                       <p>{language === 'en' ? 'We reply within 24 hours' : 'نرد خلال ٢٤ ساعة'}</p>
@@ -218,7 +218,7 @@ export default function ContactPage() {
                   )}
                 </div>
                 <a 
-                  href={`mailto:${email || 'info@jaazl.com'}`}
+                  href={`mailto:${email || 'sales@jaazl.com'}`}
                   className="mr-2 ml-2 inline-flex items-center mt-4 text-orange-600 font-medium hover:text-orange-700 transition-colors group-hover:text-orange-800"
                 >
                   {language === 'en' ? 'Email now' : 'أرسل الآن'}

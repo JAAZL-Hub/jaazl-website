@@ -337,18 +337,86 @@ html {
   @apply bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl;
 }
 
-/* Responsive spacing utilities */
+/* Enhanced Mobile Optimizations */
 @media (max-width: 768px) {
   .section-spacing {
-    @apply py-16;
+    @apply py-12;
   }
   
   .text-section h2 {
-    @apply text-3xl;
+    @apply text-2xl md:text-3xl;
   }
   
   .text-section p {
-    @apply text-lg;
+    @apply text-base md:text-lg;
+  }
+  
+  /* Mobile-specific padding and margins */
+  .container-custom {
+    @apply px-4;
+  }
+  
+  /* Touch targets for mobile */
+  button, .btn, a[role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Mobile navigation improvements */
+  .mobile-nav-item {
+    @apply py-4 px-6 text-lg;
+  }
+  
+  /* Mobile form improvements */
+  input, textarea, select {
+    @apply text-base; /* Prevent zoom on iOS */
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .hero-text {
+    @apply text-2xl;
+  }
+  
+  .service-card {
+    @apply p-4;
+  }
+  
+  .grid-cards {
+    @apply grid-cols-1 gap-4;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .grid-cards {
+    @apply md:grid-cols-2;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .section-spacing {
+    @apply py-16;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .section-spacing {
+    @apply py-20;
+  }
+  
+  .grid-cards {
+    @apply lg:grid-cols-3;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .section-spacing {
+    @apply py-24;
   }
 }
 

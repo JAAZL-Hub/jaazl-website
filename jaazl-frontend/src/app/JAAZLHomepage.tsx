@@ -48,49 +48,60 @@ const JAAZLHomepage: React.FC = () => {
     setIsLoaded(true);
   }, []);
 
-  // Initialize services with icon mapping utility
+  // Initialize services with icon mapping utility - Updated to match catalogue sequence
   const services = [
     {
-      icon: React.createElement(getMiscIcon('cog'), { className: "w-8 h-8" }),
-      title: language === 'en' ? "Engineering Consulting & AI" : "الاستشارات الهندسية والذكاء الاصطناعي",
-      description: language === 'en' ? "Advanced engineering solutions including digitalization, decarbonization, process optimization, and applied AI technologies." : "حلول هندسية متطورة تشمل الرقمنة وتقليل الكربون وتحسين العمليات وتقنيات الذكاء الاصطناعي التطبيقي.",
-      features: language === 'en' ? ["Digital Twin Technology", "Process Optimization", "Safety & Risk Analysis", "Automation Solutions", "Applied AI", "Decarbonization"] : ["تقنية التوأم الرقمي", "تحسين العمليات", "تحليل السلامة والمخاطر", "حلول الأتمتة", "الذكاء الاصطناعي التطبيقي", "تقليل الكربون"],
-      color: "from-blue-600 to-blue-800",
-      gradient: "bg-gradient-to-br from-blue-50 to-blue-100"
-    },
-    {
-      icon: React.createElement(getIndustryIcon('droplets'), { className: "w-8 h-8" }),
-      title: language === 'en' ? "Water & Wastewater Treatment" : "معالجة المياه والصرف الصحي",
-      description: language === 'en' ? "Comprehensive water and wastewater treatment solutions including RO systems, ZLD, and industrial water management." : "حلول شاملة لمعالجة المياه والمياه العادمة تشمل أنظمة التناضح العكسي والتفريغ السائل الصفري وإدارة المياه الصناعية.",
-      features: language === 'en' ? ["Water Treatment", "Zero Liquid Discharge", "Brine Treatment", "SmartOps AI Platform", "Desalination", "Specialty Chemicals"] : ["معالجة المياه", "التفريغ السائل الصفري", "معالجة المحلول الملحي", "منصة الذكاء الاصطناعي", "تحلية المياه", "المواد الكيميائية المتخصصة"],
-      color: "from-cyan-600 to-blue-700",
-      gradient: "bg-gradient-to-br from-cyan-50 to-blue-100"
-    },
-    {
       icon: React.createElement(getIndustryIcon('flask-conical'), { className: "w-8 h-8" }),
-      title: language === 'en' ? "Chemical Solutions" : "الحلول الكيميائية",
-      description: language === 'en' ? "800+ specialty chemicals portfolio for water treatment, bulk chemicals, local manufacturing, and waste management." : "محفظة تضم أكثر من 800 مادة كيميائية متخصصة لمعالجة المياه والمواد الكيميائية السائبة والتصنيع المحلي وإدارة النفايات.",
+      title: language === 'en' ? "Specialty & Bulk Chemicals" : "الكيماويات المتخصصة والسائبة",
+      description: language === 'en' ? "Comprehensive chemical solutions for industrial excellence, including drilling & production chemicals, water treatment systems, mining & fertilizer chemicals, and bulk commodity chemicals." : "حلول كيميائية شاملة للتميز الصناعي، تشمل كيماويات الحفر والإنتاج وأنظمة معالجة المياه وكيماويات التعدين والأسمدة والكيماويات السائبة.",
       features: language === 'en' ? ["Specialty Chemicals", "Bulk Chemicals", "Local Manufacturing", "Waste Management", "Process Chemicals", "API Approved"] : ["المواد الكيميائية المتخصصة", "المواد الكيميائية السائبة", "التصنيع المحلي", "إدارة النفايات", "مواد كيميائية للعمليات", "معتمد من API"],
       color: "from-purple-600 to-indigo-700",
       gradient: "bg-gradient-to-br from-purple-50 to-indigo-100"
     },
     {
+      icon: React.createElement(getIndustryIcon('droplets'), { className: "w-8 h-8" }),
+      title: language === 'en' ? "Water & Wastewater Treatment" : "معالجة المياه ومياه الصرف الصحي",
+      description: language === 'en' ? "Complete water solutions including cooling/boiler water treatment, reverse osmosis systems, ion exchange systems, and waste water treatment with MBR, MBBR, CGI, MLD & ZLD technologies." : "حلول مياه شاملة تشمل معالجة مياه التبريد/الغلايات وأنظمة التناضح العكسي وأنظمة تبادل الأيونات ومعالجة مياه الصرف بتقنيات MBR وMBBR وCGI وMLD وZLD.",
+      features: language === 'en' ? ["Water Treatment", "Zero Liquid Discharge", "Brine Treatment", "SmartOps AI Platform", "Desalination", "Specialty Chemicals"] : ["معالجة المياه", "التفريغ السائل الصفري", "معالجة المحلول الملحي", "منصة الذكاء الاصطناعي", "تحلية المياه", "المواد الكيميائية المتخصصة"],
+      color: "from-cyan-600 to-blue-700",
+      gradient: "bg-gradient-to-br from-cyan-50 to-blue-100"
+    },
+    {
+      icon: React.createElement(getMiscIcon('cog'), { className: "w-8 h-8" }),
+      title: language === 'en' ? "Technical Consultancy & AI" : "الاستشارات التقنية والذكاء الاصطناعي",
+      description: language === 'en' ? "Advanced engineering solutions including process safety, reliability engineering, sustainability & energy management, applied AI & digital solutions, and process engineering." : "حلول هندسية متقدمة تشمل سلامة العمليات وهندسة الموثوقية وإدارة الاستدامة والطاقة والذكاء الاصطناعي التطبيقي والحلول الرقمية وهندسة العمليات.",
+      features: language === 'en' ? ["Digital Twin Technology", "Process Optimization", "Safety & Risk Analysis", "Automation Solutions", "Applied AI", "Decarbonization"] : ["تقنية التوأم الرقمي", "تحسين العمليات", "تحليل السلامة والمخاطر", "حلول الأتمتة", "الذكاء الاصطناعي التطبيقي", "تقليل الكربون"],
+      color: "from-blue-600 to-blue-800",
+      gradient: "bg-gradient-to-br from-blue-50 to-blue-100"
+    },
+    {
       icon: React.createElement(getFeatureIcon('zap'), { className: "w-8 h-8" }),
       title: language === 'en' ? "Electromechanical Services" : "الخدمات الكهروميكانيكية",
-      description: language === 'en' ? "Complete MEI services, fabrication, EPC projects, and shutdown & turnaround solutions for industrial facilities." : "خدمات MEI كاملة والتصنيع ومشاريع EPC وحلول الإغلاق والصيانة الدورية للمنشآت الصناعية.",
-      features: language === 'en' ? ["MEI Services", "Fabrication", "EPC Projects", "Turnaround Solutions", "Instrumentation", "Equipment Rentals"] : ["خدمات MEI", "التصنيع", "مشاريع EPC", "حلول الصيانة الدورية", "الأجهزة والمعدات", "تأجير المعدات"],
+      description: language === 'en' ? "Complete engineering solutions for industrial infrastructure including mechanical engineering services, electrical & instrumentation, and turnaround & construction services." : "حلول هندسية شاملة للبنية التحتية الصناعية تشمل خدمات الهندسة الميكانيكية والكهربائية والأجهزة وخدمات الصيانة والإنشاءات.",
+      features: language === 'en' ? ["Trading", "Fabrication", "MEI Services", "Turnaround Solutions", "Instrumentation", "Equipment Rentals"] : ["خدمات MEI", "التصنيع", "مشاريع EPC", "حلول الصيانة الدورية", "الأجهزة والمعدات", "تأجير المعدات"],
       color: "from-emerald-600 to-teal-800",
       gradient: "bg-gradient-to-br from-emerald-50 to-teal-100"
+    },
+    {
+      icon: React.createElement(getMiscIcon('package'), { className: "w-8 h-8" }),
+      title: language === 'en' ? "Material Supplies" : "إمدادات المواد",
+      description: language === 'en' ? "API & Aramco approved materials including pipes & fittings, valves & actuators, raw materials & metals, and storage & infrastructure solutions." : "مواد معتمدة من API وأرامكو تشمل الأنابيب والتجهيزات والصمامات والمحركات والمواد الخام والمعادن وحلول التخزين والبنية التحتية.",
+      features: language === 'en' ? ["API Approved Materials", "Aramco Certified", "Pipes & Fittings", "Valves & Actuators", "Raw Materials", "Storage Solutions"] : ["مواد معتمدة من API", "معتمد من أرامكو", "أنابيب وتجهيزات", "صمامات ومحركات", "مواد خام", "حلول التخزين"],
+      color: "from-gray-600 to-gray-800",
+      gradient: "bg-gradient-to-br from-gray-50 to-gray-100"
     }
   ];
 
+  // Industries - Updated to match catalogue sequence
   const industries = [
     { icon: React.createElement(getIndustryIcon('droplet'), { className: "w-8 h-8" }), name: {en: "Oil & Gas", ar: "النفط والغاز"}, projects: {en: "150+ Projects", ar: "150+ مشروع"} },
     { icon: React.createElement(getIndustryIcon('factory'), { className: "w-8 h-8" }), name: {en: "Petrochemicals", ar: "البتروكيماويات"}, projects: {en: "200+ Projects", ar: "200+ مشروع"} },
     { icon: React.createElement(getIndustryIcon('filter'), { className: "w-8 h-8" }), name: {en: "Refineries", ar: "المصافي"}, projects: {en: "80+ Projects", ar: "80+ مشروع"} },
-    { icon: React.createElement(getIndustryIcon('hammer'), { className: "w-8 h-8" }), name: {en: "Mining", ar: "التعدين"}, projects: {en: "60+ Projects", ar: "60+ مشروع"} },
+    { icon: React.createElement(getIndustryIcon('hammer'), { className: "w-8 h-8" }), name: {en: "Mining & Minerals", ar: "التعدين والمعادن"}, projects: {en: "60+ Projects", ar: "60+ مشروع"} },
     { icon: React.createElement(getIndustryIcon('building'), { className: "w-8 h-8" }), name: {en: "Municipal", ar: "البلديات"}, projects: {en: "120+ Projects", ar: "120+ مشروع"} },
-    { icon: React.createElement(getIndustryIcon('power'), { className: "w-8 h-8" }), name: {en: "Power & Electricity", ar: "الطاقة"}, projects: {en: "95+ Projects", ar: "95+ مشروع"} }
+    { icon: React.createElement(getIndustryIcon('power'), { className: "w-8 h-8" }), name: {en: "Power & Electricity", ar: "الطاقة والكهرباء"}, projects: {en: "95+ Projects", ar: "95+ مشروع"} },
+    { icon: React.createElement(getMiscIcon('cog'), { className: "w-8 h-8" }), name: {en: "Manufacturing", ar: "التصنيع"}, projects: {en: "75+ Projects", ar: "75+ مشروع"} },
+    { icon: React.createElement(getMiscIcon('utensils'), { className: "w-8 h-8" }), name: {en: "Food & Beverages", ar: "الأغذية والمشروبات"}, projects: {en: "40+ Projects", ar: "40+ مشروع"} }
   ];
 
   
@@ -202,8 +213,8 @@ const JAAZLHomepage: React.FC = () => {
                   <div className="bg-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20">
                     <h3 className={`text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 ${language === 'ar' ? 'text-right' : 'text-left'}`}>{services[activeService].title}</h3>
                     <p className={`text-blue-100 text-sm sm:text-base mb-3 sm:mb-4 ${language === 'ar' ? 'text-right' : 'text-left'}`}>{services[activeService].description}</p>
-                    <div className="grid grid-cols-2 gap-2">
-                      {services[activeService].features.slice(0, 2).map((feature, idx) => (
+                    <div className="grid grid-cols-3 gap-3">
+                      {services[activeService].features.slice(0, 3).map((feature, idx) => (
                         <div key={idx} className={`flex items-center text-xs text-blue-200 ${language === 'ar' ? 'flex-row-reverse justify-end' : 'justify-start'}`}>
                           {language === 'en' && React.createElement(getFeatureIcon('check-circle'), { className: "w-3 h-3 mr-1 text-green-400" })}
                           <span>{feature}</span>
@@ -284,7 +295,7 @@ const JAAZLHomepage: React.FC = () => {
             <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">{language === 'en' ? 'Specialized Solutions for Key Sectors' : 'حلول متخصصة للقطاعات الرئيسية'}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">{language === 'en' ? "Delivering excellence across Saudi Arabia's most critical industrial sectors" : "تقديم التميز في أهم القطاعات الصناعية بالمملكة"}</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8">
             {industries.map((industry, index) => (
               <div key={index} className="group bg-white p-4 md:p-6 lg:p-8 rounded-2xl border border-gray-200 hover:shadow-card-hover transition-all duration-300 text-center cursor-pointer">
                 <div className="text-gray-600 group-hover:text-blue-900 mb-6 flex justify-center transition-all duration-300 group-hover:scale-110">{industry.icon}</div>

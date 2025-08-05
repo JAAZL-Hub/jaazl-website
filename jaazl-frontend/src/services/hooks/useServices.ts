@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Service, ServiceCategory, LocalizedContent } from '../types';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { getContent, getContentBySlug } from '../../utils/content';
+import { serviceCategories as mockServiceCategories } from '../api/mockData/serviceCategories';
+import { engineeringServices as mockServices } from '../api/mockData/engineeringServices';
 
 // Helper function to get localized content
 const getLocalizedContent = (content: LocalizedContent | undefined, language: string): string => {
@@ -19,9 +20,8 @@ export function useServiceCategories() {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        // Use content utility to fetch from markdown files
-        const fetchedCategories = await getContent<ServiceCategory>('serviceCategories', language);
-        setCategories(fetchedCategories);
+        // Use mock data
+        setCategories(mockServiceCategories);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch service categories'));
       } finally {
@@ -45,8 +45,8 @@ export function useServiceCategoryBySlug(slug: string) {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        // Use content utility to fetch from markdown files by slug
-        const foundCategory = await getContentBySlug<ServiceCategory>('serviceCategories', slug, language);
+        // Find category by slug from mock data
+        const foundCategory = mockServiceCategories.find(cat => cat.slug === slug) || null;
         setCategory(foundCategory);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch service category'));
@@ -73,9 +73,8 @@ export function useServices() {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        // Use content utility to fetch from markdown files
-        const fetchedServices = await getContent<Service>('services', language);
-        setServices(fetchedServices);
+        // Use mock data
+        setServices(mockServices);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch services'));
       } finally {
@@ -99,8 +98,8 @@ export function useServiceBySlug(slug: string) {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        // Use content utility to fetch service by slug
-        const foundService = await getContentBySlug<Service>('services', slug, language);
+        // Find service by slug from mock data
+        const foundService = mockServices.find(svc => svc.slug === slug) || null;
         setService(foundService);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch service'));
@@ -127,10 +126,8 @@ export function useServicesByCategoryId(categoryId: string) {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        // Use content utility to fetch services and filter by category
-        const allServices = await getContent<Service>('services', language);
-        // Filter services by categoryId
-        const filteredServices = allServices.filter(service => service.categoryId === categoryId);
+        // Filter services by categoryId from mock data
+        const filteredServices = mockServices.filter(service => service.categoryId === categoryId);
         setServices(filteredServices);
       } catch (err) {
         setError(err instanceof Error ? err : new Error('Failed to fetch services by category'));

@@ -8,8 +8,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // Helper function to get localized content directly from data
-function getLocalizedContent<T extends { [key in 'en' | 'ar']: string }>(content: T, language: 'en' | 'ar'): string {
-  return content[language] || content.en;
+function getLocalizedContent<T extends { [key in 'en' | 'ar']?: string }>(content: T | undefined, language: 'en' | 'ar'): string {
+  if (!content) return '';
+  return content[language] || content.en || '';
 }
 
 export default function IndustriesPage() {

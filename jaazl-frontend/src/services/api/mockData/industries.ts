@@ -614,83 +614,55 @@ With experience across municipal water systems, industrial water treatment, and 
     ]
   },
   {
-    id: 'healthcare',
-    slug: 'healthcare',
+    id: 'food-beverages',
+    slug: 'food-beverages', 
     name: {
-      en: 'Healthcare Facilities',
-      ar: 'المنشآت الصحية'
+      en: 'Food & Beverages',
+      ar: 'الأغذية والمشروبات'
     },
     shortDescription: {
-      en: 'Specialized solutions for healthcare facilities, focusing on safety, efficiency, and patient comfort.',
-      ar: 'حلول متخصصة للمنشآت الصحية، مع التركيز على السلامة والكفاءة وراحة المرضى.'
+      en: 'Food-grade solutions for processing, quality control, and sanitation in food and beverage operations.',
+      ar: 'حلول درجة غذائية للمعالجة ومراقبة الجودة والتطهير في عمليات الأغذية والمشروبات.'
     },
     fullDescription: {
-      en: `JAAZL delivers targeted services for healthcare facilities, addressing unique challenges in building systems, environmental control, energy efficiency, and patient safety. Our engineering expertise helps optimize facility operations, ensure compliance with healthcare regulations, and implement solutions that enhance both operational efficiency and patient experience.
+      en: `JAAZL delivers specialized services for the food and beverage industry, focusing on food safety, quality assurance, and operational efficiency. Our solutions ensure compliance with food safety regulations while optimizing production processes.
 
-We offer services ranging from HVAC system design and optimization to medical gas system maintenance, water quality management, and energy conservation solutions. Our team understands the critical requirements of healthcare environments and works to improve facility performance while maintaining the highest standards of safety and reliability.
+We provide water treatment for CIP chemicals and food-grade fluids, sanitation solutions, microbiological control systems, and quality assurance protocols. Our operations support includes heat exchanger optimization and comprehensive water & wastewater treatment.
 
-With experience across hospitals, clinics, research facilities, and specialized care centers, we deliver tailored solutions that support healthcare providers in delivering quality care while managing operational costs effectively.`,
-      ar: `تقدم جازل خدمات مستهدفة للمرافق الصحية، لمعالجة التحديات الفريدة في أنظمة المباني والتحكم البيئي وكفاءة الطاقة وسلامة المرضى. تساعد خبرتنا الهندسية على تحسين عمليات المرافق وضمان الامتثال للوائح الرعاية الصحية وتنفيذ حلول تعزز كلاً من الكفاءة التشغيلية وتجربة المرضى.
+With experience in food processing facilities, we deliver tailored solutions that maintain the highest food safety standards, improve production efficiency, and ensure regulatory compliance in food and beverage manufacturing.`,
+      ar: `تقدم جازل خدمات متخصصة لصناعة الأغذية والمشروبات، مع التركيز على سلامة الغذاء وضمان الجودة والكفاءة التشغيلية. تضمن حلولنا الامتثال للوائح سلامة الغذاء مع تحسين عمليات الإنتاج.
 
-نقدم خدمات تتراوح من تصميم وتحسين أنظمة التدفئة والتهوية وتكييف الهواء إلى صيانة أنظمة الغازات الطبية وإدارة جودة المياه وحلول الحفاظ على الطاقة. يتفهم فريقنا المتطلبات الحرجة للبيئات الصحية ويعمل على تحسين أداء المنشآت مع الحفاظ على أعلى معايير السلامة والموثوقية.
+نقدم معالجة المياه لكيماويات CIP والسوائل الغذائية وحلول التطهير وأنظمة التحكم الميكروبيولوجي وبروتوكولات ضمان الجودة. يشمل دعم العمليات لدينا تحسين المبادلات الحرارية ومعالجة شاملة للمياه ومياه الصرف.
 
-بفضل الخبرة في المستشفيات والعيادات ومرافق البحث ومراكز الرعاية المتخصصة، نقدم حلولاً مخصصة تدعم مقدمي الرعاية الصحية في تقديم رعاية عالية الجودة مع إدارة تكاليف التشغيل بفعالية.`
+بفضل الخبرة في منشآت معالجة الأغذية، نقدم حلولًا مخصصة تحافظ على أعلى معايير سلامة الغذاء وتحسن كفاءة الإنتاج وتضمن الامتثال التنظيمي في تصنيع الأغذية والمشروبات.`
     },
     sector: {
-      en: 'Healthcare',
-      ar: 'الرعاية الصحية'
+      en: 'Food Industry',
+      ar: 'الصناعات الغذائية'
     },
-    icon: 'activity',
+    icon: 'utensils',
     image: {
-      id: 'healthcare-image',
-      url: '/images/industries/power-generation-industry.jpg',
+      id: 'food-beverages-image',
+      url: '/images/industries/f&b-industry.jpg',
       altText: {
-        en: 'Modern healthcare facility',
-        ar: 'منشأة صحية حديثة'
+        en: 'Food and beverage processing facility',
+        ar: 'منشأة معالجة الأغذية والمشروبات'
       },
       width: 800,
       height: 600
     },
     meta: {
       title: {
-        en: 'Healthcare Facility Solutions | JAAZL',
-        ar: 'حلول المنشآت الصحية | جازل'
+        en: 'Food & Beverage Industry Solutions | JAAZL',
+        ar: 'حلول صناعة الأغذية والمشروبات | جازل'
       },
       description: {
-        en: 'Specialized engineering and technical solutions for modern healthcare facilities, ensuring safety, efficiency, and optimal patient environments.',
-        ar: 'حلول هندسية وتقنية متخصصة للمرافق الصحية الحديثة، تضمن السلامة والكفاءة وبيئات مثالية للمرضى.'
+        en: 'Food-grade chemical solutions, sanitation systems, and quality control for food and beverage processing.',
+        ar: 'حلول كيميائية درجة غذائية وأنظمة تطهير ومراقبة جودة لمعالجة الأغذية والمشروبات.'
       },
-      keywords: ['healthcare facilities', 'hospital engineering', 'medical facilities', 'patient safety', 'healthcare infrastructure']
+      keywords: ['food processing', 'beverage industry', 'food safety', 'sanitation solutions', 'CIP chemicals']
     },
-    relatedServices: ['engineering-consulting', 'environmental-compliance', 'electromechanical-systems'],
-    caseStudies: [
-      {
-        id: 'healthcare-case-1',
-        title: {
-          en: 'Hospital Energy Efficiency Upgrade',
-          ar: 'ترقية كفاءة الطاقة في المستشفى'
-        },
-        description: {
-          en: 'Comprehensive energy system modernization for a major hospital facility, including HVAC optimization, lighting upgrades, and building automation system implementation.',
-          ar: 'تحديث شامل لنظام الطاقة لمنشأة مستشفى كبيرة، بما في ذلك تحسين التدفئة والتهوية وتكييف الهواء، وترقيات الإضاءة، وتنفيذ نظام أتمتة المباني.'
-        },
-        image: {
-          id: 'healthcare-case-image',
-          url: '/images/industries/power-generation-industry.jpg',
-          altText: {
-            en: 'Hospital energy systems',
-            ar: 'أنظمة الطاقة في المستشفى'
-          },
-          width: 600,
-          height: 400
-        },
-        results: {
-          en: '32% reduction in energy consumption, 40% decrease in maintenance costs, and improved patient comfort metrics across all departments.',
-          ar: 'تخفيض استهلاك الطاقة بنسبة 32٪، وانخفاض تكاليف الصيانة بنسبة 40٪، وتحسين مقاييس راحة المرضى في جميع الأقسام.'
-        },
-        serviceId: 'electromechanical-systems',
-        industryId: 'healthcare'
-      }
-    ]
+    relatedServices: ['chemicals', 'environmental'],
+    caseStudies: []
   }
 ];
