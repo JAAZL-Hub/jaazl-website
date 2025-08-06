@@ -1,5 +1,21 @@
 import { Industry } from '../../types';
 
+  // okay, look, i have some changes, the services should be 6 in this sequence (Water, chemical,
+  // consulting, technologies, material, electromech) and each one has to has 3 services, update the
+  // header, homepage, services page. next the industries should be 9 in this sequence (oil, petro,
+  // refin, miningg, fertlizers, power, manufactureing, f&b, municipal), also update all pages that needs     
+  //  to update according to these new changes. in the homepage industries the text are not fit in the        
+  // cards, make a fixed size to the cards size that can hold the text and the icon, we have 9
+  // industries, maybe we can use slider.
+  // suggested tasks:
+    //  ☐ Update service categories to 6 categories in new sequence
+    //  ☐ Update header navigation with new service structure
+    //  ☐ Update services page with new structure
+    //  ☐ Update industries to 9 industries in new sequence
+    //  ☐ Add fertilizers industry page
+    //  ☐ Update homepage industries section with fixed card sizes and slider
+    //  ☐ Update all relevant pages with new structure
+    //  ☐ Test all changes
 export const industries: Industry[] = [
   {
     id: 'oil-gas',
