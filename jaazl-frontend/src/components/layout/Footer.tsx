@@ -15,17 +15,22 @@ const Footer: React.FC = () => {
   const { language, toggleLanguage } = useLanguage();
 
   const servicesLinks = [
+    { text: { en: 'Zero Liquid Discharge', ar: 'التفريغ السائل الصفري' }, path: '/services/zero-liquid-discharge' },
+    { text: { en: 'Specialized Chemicals', ar: 'المواد الكيميائية المتخصصة' }, path: '/services/specialized-chemicals' },
     { text: { en: 'Engineering Consulting', ar: 'الاستشارات الهندسية' }, path: '/services/engineering-consulting' },
     { text: { en: 'AI & Automation', ar: 'الذكاء الاصطناعي والأتمتة' }, path: '/services/ai-automation' },
-    { text: { en: 'Digital Transformation', ar: 'التحول الرقمي' }, path: '/services/digital-transformation' },
-    { text: { en: 'Project Management', ar: 'إدارة المشاريع' }, path: '/services/project-management' },
   ];
 
   const industriesLinks = [
     { text: { en: 'Oil & Gas', ar: 'النفط والغاز' }, path: '/industries/oil-gas' },
     { text: { en: 'Petrochemicals', ar: 'البتروكيماويات' }, path: '/industries/petrochemicals' },
     { text: { en: 'Refineries', ar: 'المصافي' }, path: '/industries/refineries' },
-    { text: { en: 'Mining', ar: 'التعدين' }, path: '/industries/mining' },
+    { text: { en: 'Mining & Minerals', ar: 'التعدين والمعادن' }, path: '/industries/mining' },
+    { text: { en: 'Fertilizers', ar: 'الأسمدة' }, path: '/industries/fertilizers' },
+    { text: { en: 'Power & Electricity', ar: 'الطاقة والكهرباء' }, path: '/industries/power' },
+    { text: { en: 'Manufacturing', ar: 'التصنيع' }, path: '/industries/manufacturing' },
+    { text: { en: 'Food & Beverages', ar: 'الأغذية والمشروبات' }, path: '/industries/food-beverages' },
+    { text: { en: 'Municipal', ar: 'البلديات' }, path: '/industries/municipal' },
   ];
   
   const quickLinks = [

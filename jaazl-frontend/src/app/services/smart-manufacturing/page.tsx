@@ -5,13 +5,13 @@ import type { Industry } from '@/services/types';
 import ServicePageClient from '@/components/services/ServicePageClient';
 
 export const metadata: Metadata = {
-  title: 'Pipes & Fittings | JAAZL',
-  description: 'High-quality industrial pipes and fittings for various applications and industry standards.',
-  keywords: ['industrial pipes', 'fittings', 'pipe systems', 'industrial materials'],
+  title: 'Smart Manufacturing Solutions | JAAZL',
+  description: 'Intelligent manufacturing systems with IoT, AI, and advanced analytics for Industry 4.0 transformation.',
+  keywords: ['smart manufacturing', 'industry 4.0', 'IoT manufacturing', 'digital transformation', 'manufacturing automation'],
 };
 
-export default function PipesFittingsPage() {
-  const service = engineeringServices.find(s => s.slug === 'pipes-fittings');
+export default function SmartManufacturingPage() {
+  const service = engineeringServices.find(s => s.slug === 'smart-manufacturing');
   const relatedIndustries = service?.relatedIndustries ? 
     service.relatedIndustries
       .map((slug: string) => industries.find(industry => industry.slug === slug))

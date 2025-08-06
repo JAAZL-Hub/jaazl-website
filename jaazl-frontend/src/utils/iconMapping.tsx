@@ -60,7 +60,13 @@ import {
   FaUsers,
   FaDownload,
   FaPlayCircle,
-  FaEllipsisH
+  FaEllipsisH,
+  FaRobot,
+  FaMicrochip,
+  FaCubes,
+  FaClipboardList,
+  FaMobile,
+  FaBox
 } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
@@ -126,7 +132,13 @@ export type MiscIconName =
   | 'users'
   | 'download'
   | 'play-circle'
-  | 'circle-ellipsis';
+  | 'circle-ellipsis'
+  | 'robot'
+  | 'microchip'
+  | 'cubes'
+  | 'clipboard-list'
+  | 'smartphone'
+  | 'package';
 
 // Combined type for all icon names
 export type IconName =
@@ -320,6 +332,18 @@ export const getMiscIcon = (iconName: MiscIconName | string): React.ComponentTyp
       return FaPlayCircle;
     case 'circle-ellipsis':
       return FaEllipsisH;
+    case 'robot':
+      return FaRobot;
+    case 'microchip':
+      return FaMicrochip;
+    case 'cubes':
+      return FaCubes;
+    case 'clipboard-list':
+      return FaClipboardList;
+    case 'smartphone':
+      return FaMobile;
+    case 'package':
+      return FaBox;
     default:
       return FaFileAlt;
   }

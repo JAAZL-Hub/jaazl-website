@@ -5,13 +5,13 @@ import type { Industry } from '@/services/types';
 import ServicePageClient from '@/components/services/ServicePageClient';
 
 export const metadata: Metadata = {
-  title: 'Pipes & Fittings | JAAZL',
-  description: 'High-quality industrial pipes and fittings for various applications and industry standards.',
-  keywords: ['industrial pipes', 'fittings', 'pipe systems', 'industrial materials'],
+  title: 'Process Safety Management Services | JAAZL',
+  description: 'Comprehensive process safety management for industrial operations, risk assessment, and safety system implementation.',
+  keywords: ['process safety', 'risk assessment', 'safety management', 'hazard analysis', 'industrial safety'],
 };
 
-export default function PipesFittingsPage() {
-  const service = engineeringServices.find(s => s.slug === 'pipes-fittings');
+export default function ProcessSafetyPage() {
+  const service = engineeringServices.find(s => s.slug === 'process-safety');
   const relatedIndustries = service?.relatedIndustries ? 
     service.relatedIndustries
       .map((slug: string) => industries.find(industry => industry.slug === slug))

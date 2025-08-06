@@ -48,47 +48,55 @@ const JAAZLHomepage: React.FC = () => {
     setIsLoaded(true);
   }, []);
 
-  // Initialize services with icon mapping utility - Updated to match catalogue sequence
+  // Initialize services with icon mapping utility - Updated to match 6-category sequence: Water, Chemical, Consulting, Technologies, Material, Electromech
   const services = [
-    {
-      icon: React.createElement(getIndustryIcon('flask-conical'), { className: "w-8 h-8" }),
-      title: language === 'en' ? "Specialty & Bulk Chemicals" : "الكيماويات المتخصصة والسائبة",
-      description: language === 'en' ? "Comprehensive chemical solutions for industrial excellence, including drilling & production chemicals, water treatment systems, mining & fertilizer chemicals, and bulk commodity chemicals." : "حلول كيميائية شاملة للتميز الصناعي، تشمل كيماويات الحفر والإنتاج وأنظمة معالجة المياه وكيماويات التعدين والأسمدة والكيماويات السائبة.",
-      features: language === 'en' ? ["Specialty Chemicals", "Bulk Chemicals", "Local Manufacturing", "Waste Management", "Process Chemicals", "API Approved"] : ["المواد الكيميائية المتخصصة", "المواد الكيميائية السائبة", "التصنيع المحلي", "إدارة النفايات", "مواد كيميائية للعمليات", "معتمد من API"],
-      color: "from-violet-600 to-purple-700",
-      gradient: "bg-gradient-to-br from-violet-50 to-purple-100"
-    },
     {
       icon: React.createElement(getIndustryIcon('droplets'), { className: "w-8 h-8" }),
       title: language === 'en' ? "Water & Wastewater Treatment" : "معالجة المياه ومياه الصرف الصحي",
       description: language === 'en' ? "Complete water solutions including cooling/boiler water treatment, reverse osmosis systems, ion exchange systems, and waste water treatment with MBR, MBBR, CGI, MLD & ZLD technologies." : "حلول مياه شاملة تشمل معالجة مياه التبريد/الغلايات وأنظمة التناضح العكسي وأنظمة تبادل الأيونات ومعالجة مياه الصرف بتقنيات MBR وMBBR وCGI وMLD وZLD.",
-      features: language === 'en' ? ["Water Treatment", "Zero Liquid Discharge", "Brine Treatment", "SmartOps AI Platform", "Desalination", "Specialty Chemicals"] : ["معالجة المياه", "التفريغ السائل الصفري", "معالجة المحلول الملحي", "منصة الذكاء الاصطناعي", "تحلية المياه", "المواد الكيميائية المتخصصة"],
+      features: language === 'en' ? ["Zero Liquid Discharge", "Industrial Waste Management", "Oily Water Treatment", "Water Recycling", "Desalination", "SmartOps AI Platform"] : ["التفريغ السائل الصفري", "إدارة النفايات الصناعية", "معالجة المياه الزيتية", "إعادة تدوير المياه", "تحلية المياه", "منصة الذكاء الاصطناعي"],
       color: "from-blue-600 to-cyan-700",
       gradient: "bg-gradient-to-br from-blue-50 to-cyan-100"
     },
     {
-      icon: React.createElement(getMiscIcon('cog'), { className: "w-8 h-8" }),
+      icon: React.createElement(getIndustryIcon('flask-conical'), { className: "w-8 h-8" }),
+      title: language === 'en' ? "Specialty & Bulk Chemicals" : "الكيماويات المتخصصة والسائبة",
+      description: language === 'en' ? "Comprehensive chemical solutions for industrial excellence, including drilling & production chemicals, water treatment systems, mining & fertilizer chemicals, and bulk commodity chemicals." : "حلول كيميائية شاملة للتميز الصناعي، تشمل كيماويات الحفر والإنتاج وأنظمة معالجة المياه وكيماويات التعدين والأسمدة والكيماويات السائبة.",
+      features: language === 'en' ? ["Specialized Chemicals", "Bulk Chemical Supply", "Chemical Blending", "Drilling Chemicals", "Process Chemicals", "API Approved"] : ["المواد الكيميائية المتخصصة", "توريد الكيماويات بالجملة", "الخلط الكيميائي", "كيماويات الحفر", "كيماويات العمليات", "معتمد من API"],
+      color: "from-violet-600 to-purple-700",
+      gradient: "bg-gradient-to-br from-violet-50 to-purple-100"
+    },
+    {
+      icon: React.createElement(getMiscIcon('robot'), { className: "w-8 h-8" }),
       title: language === 'en' ? "Technical Consultancy & AI" : "الاستشارات التقنية والذكاء الاصطناعي",
       description: language === 'en' ? "Advanced engineering solutions including process safety, reliability engineering, sustainability & energy management, applied AI & digital solutions, and process engineering." : "حلول هندسية متقدمة تشمل سلامة العمليات وهندسة الموثوقية وإدارة الاستدامة والطاقة والذكاء الاصطناعي التطبيقي والحلول الرقمية وهندسة العمليات.",
-      features: language === 'en' ? ["Digital Twin Technology", "Process Optimization", "Safety & Risk Analysis", "Automation Solutions", "Applied AI", "Decarbonization"] : ["تقنية التوأم الرقمي", "تحسين العمليات", "تحليل السلامة والمخاطر", "حلول الأتمتة", "الذكاء الاصطناعي التطبيقي", "تقليل الكربون"],
+      features: language === 'en' ? ["Engineering Consulting", "Process Safety Management", "Reliability Engineering", "Digital Twin Technology", "Applied AI", "Decarbonization"] : ["الاستشارات الهندسية", "إدارة سلامة العمليات", "هندسة الموثوقية", "تقنية التوأم الرقمي", "الذكاء الاصطناعي التطبيقي", "تقليل الكربون"],
       color: "from-indigo-600 to-blue-700",
       gradient: "bg-gradient-to-br from-indigo-50 to-blue-100"
+    },
+    {
+      icon: React.createElement(getMiscIcon('microchip'), { className: "w-8 h-8" }),
+      title: language === 'en' ? "Digital Technologies & Automation" : "التقنيات الرقمية والأتمتة",
+      description: language === 'en' ? "Cutting-edge digital transformation solutions including AI & industrial automation, digital transformation strategies, and advanced technology integration for industrial operations." : "حلول تحول رقمي متطورة تشمل الذكاء الاصطناعي والأتمتة الصناعية واستراتيجيات التحول الرقمي وتكامل التقنيات المتقدمة للعمليات الصناعية.",
+      features: language === 'en' ? ["AI & Automation", "Digital Transformation", "Smart Manufacturing", "Industry 4.0", "IoT Integration", "Predictive Maintenance"] : ["الذكاء الاصطناعي والأتمتة", "التحول الرقمي", "التصنيع الذكي", "الصناعة 4.0", "تكامل إنترنت الأشياء", "الصيانة التنبؤية"],
+      color: "from-green-600 to-emerald-700",
+      gradient: "bg-gradient-to-br from-green-50 to-emerald-100"
+    },
+    {
+      icon: React.createElement(getMiscIcon('cubes'), { className: "w-8 h-8" }),
+      title: language === 'en' ? "Material Supplies" : "إمدادات المواد",
+      description: language === 'en' ? "API & Aramco approved materials including pipes & fittings, valves & actuators, raw materials & metals, and storage & infrastructure solutions." : "مواد معتمدة من API وأرامكو تشمل الأنابيب والتجهيزات والصمامات والمحركات والمواد الخام والمعادن وحلول التخزين والبنية التحتية.",
+      features: language === 'en' ? ["API Approved Materials", "Pipes & Fittings", "Valves & Actuators", "Aramco Certified", "Raw Materials", "Storage Solutions"] : ["مواد معتمدة من API", "أنابيب وتجهيزات", "صمامات ومحركات", "معتمد من أرامكو", "مواد خام", "حلول التخزين"],
+      color: "from-slate-600 to-gray-700",
+      gradient: "bg-gradient-to-br from-slate-50 to-gray-100"
     },
     {
       icon: React.createElement(getFeatureIcon('zap'), { className: "w-8 h-8" }),
       title: language === 'en' ? "Electromechanical Services" : "الخدمات الكهروميكانيكية",
       description: language === 'en' ? "Complete engineering solutions for industrial infrastructure including mechanical engineering services, electrical & instrumentation, and turnaround & construction services." : "حلول هندسية شاملة للبنية التحتية الصناعية تشمل خدمات الهندسة الميكانيكية والكهربائية والأجهزة وخدمات الصيانة والإنشاءات.",
-      features: language === 'en' ? ["Trading", "Fabrication", "MEI Services", "Turnaround Solutions", "Instrumentation", "Equipment Rentals"] : ["خدمات MEI", "التصنيع", "مشاريع EPC", "حلول الصيانة الدورية", "الأجهزة والمعدات", "تأجير المعدات"],
+      features: language === 'en' ? ["Electromechanical Systems", "Shutdown & Turnaround", "Fabrication Services", "MEI Services", "Instrumentation", "Equipment Rentals"] : ["الأنظمة الكهروميكانيكية", "الإغلاق والصيانة الدورية", "خدمات التصنيع", "خدمات MEI", "الأجهزة والمعدات", "تأجير المعدات"],
       color: "from-orange-600 to-red-700",
       gradient: "bg-gradient-to-br from-orange-50 to-red-100"
-    },
-    {
-      icon: React.createElement(getMiscIcon('package'), { className: "w-8 h-8" }),
-      title: language === 'en' ? "Material Supplies" : "إمدادات المواد",
-      description: language === 'en' ? "API & Aramco approved materials including pipes & fittings, valves & actuators, raw materials & metals, and storage & infrastructure solutions." : "مواد معتمدة من API وأرامكو تشمل الأنابيب والتجهيزات والصمامات والمحركات والمواد الخام والمعادن وحلول التخزين والبنية التحتية.",
-      features: language === 'en' ? ["API Approved Materials", "Aramco Certified", "Pipes & Fittings", "Valves & Actuators", "Raw Materials", "Storage Solutions"] : ["مواد معتمدة من API", "معتمد من أرامكو", "أنابيب وتجهيزات", "صمامات ومحركات", "مواد خام", "حلول التخزين"],
-      color: "from-slate-600 to-gray-700",
-      gradient: "bg-gradient-to-br from-slate-50 to-gray-100"
     }
   ];
 
@@ -98,10 +106,11 @@ const JAAZLHomepage: React.FC = () => {
     { icon: React.createElement(getIndustryIcon('factory'), { className: "w-8 h-8" }), name: {en: "Petrochemicals", ar: "البتروكيماويات"}, projects: {en: "200+ Projects", ar: "200+ مشروع"} },
     { icon: React.createElement(getIndustryIcon('filter'), { className: "w-8 h-8" }), name: {en: "Refineries", ar: "المصافي"}, projects: {en: "80+ Projects", ar: "80+ مشروع"} },
     { icon: React.createElement(getIndustryIcon('hammer'), { className: "w-8 h-8" }), name: {en: "Mining & Minerals", ar: "التعدين والمعادن"}, projects: {en: "60+ Projects", ar: "60+ مشروع"} },
-    { icon: React.createElement(getIndustryIcon('building'), { className: "w-8 h-8" }), name: {en: "Municipal", ar: "البلديات"}, projects: {en: "120+ Projects", ar: "120+ مشروع"} },
+    { icon: React.createElement(getIndustryIcon('seedling'), { className: "w-8 h-8" }), name: {en: "Fertilizers", ar: "الأسمدة"}, projects: {en: "35+ Projects", ar: "35+ مشروع"} },
     { icon: React.createElement(getIndustryIcon('power'), { className: "w-8 h-8" }), name: {en: "Power & Electricity", ar: "الطاقة والكهرباء"}, projects: {en: "95+ Projects", ar: "95+ مشروع"} },
     { icon: React.createElement(getMiscIcon('cog'), { className: "w-8 h-8" }), name: {en: "Manufacturing", ar: "التصنيع"}, projects: {en: "75+ Projects", ar: "75+ مشروع"} },
-    { icon: React.createElement(getMiscIcon('utensils'), { className: "w-8 h-8" }), name: {en: "Food & Beverages", ar: "الأغذية والمشروبات"}, projects: {en: "40+ Projects", ar: "40+ مشروع"} }
+    { icon: React.createElement(getMiscIcon('utensils'), { className: "w-8 h-8" }), name: {en: "Food & Beverages", ar: "الأغذية والمشروبات"}, projects: {en: "40+ Projects", ar: "40+ مشروع"} },
+    { icon: React.createElement(getIndustryIcon('building'), { className: "w-8 h-8" }), name: {en: "Municipal", ar: "البلديات"}, projects: {en: "120+ Projects", ar: "120+ مشروع"} }
   ];
 
   
@@ -117,13 +126,13 @@ const JAAZLHomepage: React.FC = () => {
       icon: React.createElement(getMiscIcon('map-pin'), { className: "w-8 h-8" }),
       title: { en: "Local Expertise", ar: "خبرة محلية" },
       description: language === 'en' ? "Deep understanding of Eastern Province industrial requirements and Saudi regulatory compliance." : "فهم عميق لمتطلبات المنطقة الشرقية الصناعية والامتثال للوائح السعودية.",
-      highlight: language === 'en' ? "Jubail HQ" : "مقر الجبيل"
+      highlight: language === 'en' ? "Jubail HQ" : "المقر الجبيل"
     },
     {
       icon: React.createElement(getMiscIcon('users'), { className: "w-8 h-8" }),
       title: { en: "Expert Team", ar: "فريق من الخبراء" },
       description: language === 'en' ? "Highly qualified engineers and technical specialists with international and local experience." : "مهندسون مؤهلون تأهيلاً عالياً ومتخصصون تقنيون ذوو خبرة دولية ومحلية.",
-      highlight: language === 'en' ? "23+ Years Experience" : "خبرة 23+ عام"
+      highlight: language === 'en' ? "25+ Years Experience" : "خبرة 25+ عام"
     },
     {
       icon: React.createElement(getFeatureIcon('shield'), { className: "w-8 h-8" }),
@@ -138,7 +147,7 @@ const JAAZLHomepage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Enhanced Hero Section */}
-      <section id="hero" className="relative min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 text-white overflow-hidden flex items-center" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+      <section id="hero" className="relative h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 text-white overflow-hidden flex items-center" dir={language === 'ar' ? 'rtl' : 'ltr'}>
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-slate-900/95 to-blue-900/90"></div>
@@ -147,17 +156,17 @@ const JAAZLHomepage: React.FC = () => {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-orange-500/5 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-28 pb-16 sm:pb-20 md:pt-32">
-          <div className={`grid lg:grid-cols-2 gap-8 lg:gap-16 items-center ${language === 'ar' ? 'lg:grid-flow-col-dense' : ''}`}>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full hero-responsive-container">
+          <div className={`grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 items-center ${language === 'ar' ? 'lg:grid-flow-col-dense' : ''}`}>
             <div className={`transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${language === 'ar' ? 'lg:col-start-2' : ''}`}>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 sm:mb-8">
+              <h1 className="hero-heading font-bold leading-tight hero-heading-margin">
                 {language === 'en' ? (
                   <>
                     Industrial Solutions
                     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400">
                       Excellence
                     </span>
-                    <span className="block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-blue-200 font-normal mt-2 sm:mt-4">
+                    <span className="block hero-subtitle text-blue-200 font-normal hero-subtitle-margin">
                       in Saudi Arabia
                     </span>
                   </>
@@ -167,20 +176,20 @@ const JAAZLHomepage: React.FC = () => {
                     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-400">
                       متميزة
                     </span>
-                    <span className="block text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-blue-200 font-normal mt-2 sm:mt-4">
+                    <span className="block hero-subtitle text-blue-200 font-normal hero-subtitle-margin">
                       في السعودية
                     </span>
                   </>
                 )}
               </h1>
               
-              <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-blue-100 mb-8 sm:mb-10 leading-relaxed max-w-2xl">
+              <p className="hero-description text-blue-100 hero-description-margin leading-relaxed max-w-2xl">
                 {language === 'en' 
                   ? "Comprehensive engineering, environmental, and industrial solutions serving Jubail & Dammam with world-class technology and local expertise."
                   : "حلول هندسية وبيئية وصناعية شاملة في الجبيل والدمام مع شراكات تقنية عالمية وخبرة محلية."}
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-8 sm:mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                 <Link href="/contact" className="group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:from-orange-600 hover:to-orange-700 shadow-btn-secondary hover:shadow-btn-secondary-hover transform hover:-translate-y-1 flex items-center justify-center">
                   {language === 'en' && React.createElement(getContactIcon('message-circle'), { className: "mr-3 w-5 h-5 group-hover:scale-110 transition-transform" })}
                   {language === 'en' ? 'Request Consultation' : 'اطلب استشارة'}
@@ -198,24 +207,24 @@ const JAAZLHomepage: React.FC = () => {
             </div>
             
             {/* Enhanced Hero Visual */}
-            <div className={`relative transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${language === 'ar' ? 'lg:col-start-1' : ''} mt-8 lg:mt-0`}>
+            <div className={`relative transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${language === 'ar' ? 'lg:col-start-1' : ''} hero-visual-margin`}>
               <div className="relative">
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-white/20 shadow-2xl">
-                  <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-6 sm:mb-8">
+                <div className="bg-white/10 backdrop-blur-lg hero-visual-container border border-white/20 shadow-2xl">
+                  <div className="grid grid-cols-2 hero-services-grid hero-services-margin">
                     {services.map((service, index) => (
-                      <div key={index} className={`group text-center p-2 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 cursor-pointer border border-white/10 hover:border-white/30 ${activeService === index ? 'bg-white/20 scale-105' : 'bg-white/5 hover:bg-white/15'}`} onClick={() => setActiveService(index)}>
+                      <div key={index} className={`group text-center hero-service-card transition-all duration-500 cursor-pointer border border-white/10 hover:border-white/30 ${activeService === index ? 'bg-white/20 scale-105' : 'bg-white/5 hover:bg-white/15'}`} onClick={() => setActiveService(index)}>
                         <div className="text-white mb-2 sm:mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
-                        <p className="text-xs sm:text-sm lg:text-base font-semibold text-white">{service.title}</p>
+                        <p className="hero-service-title font-semibold text-white">{service.title}</p>
                         <div className={`mt-2 h-1 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${language === 'ar' ? 'bg-gradient-to-l from-blue-500 to-orange-500' : 'bg-gradient-to-r from-blue-500 to-orange-500'}`}></div>
                       </div>
                     ))}
                   </div>
-                  <div className="bg-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-white/20">
-                    <h3 className={`text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 ${language === 'ar' ? 'text-right' : 'text-left'}`}>{services[activeService].title}</h3>
-                    <p className={`text-blue-100 text-sm sm:text-base mb-3 sm:mb-4 ${language === 'ar' ? 'text-right' : 'text-left'}`}>{services[activeService].description}</p>
+                  <div className="bg-white/10 hero-visual-bottom border border-white/20">
+                    <h3 className={`hero-active-title font-bold text-white hero-active-title-margin ${language === 'ar' ? 'text-right' : 'text-left'}`}>{services[activeService].title}</h3>
+                    <p className={`text-blue-100 hero-active-description hero-active-description-margin ${language === 'ar' ? 'text-right' : 'text-left'}`}>{services[activeService].description}</p>
                     <div className="grid grid-cols-3 gap-3">
                       {services[activeService].features.slice(0, 3).map((feature, idx) => (
-                        <div key={idx} className={`flex items-center text-xs text-blue-200 ${language === 'ar' ? 'flex-row-reverse justify-end' : 'justify-start'}`}>
+                        <div key={idx} className={`flex items-center hero-feature-text text-blue-200 ${language === 'ar' ? 'flex-row-reverse justify-end' : 'justify-start'}`}>
                           {language === 'en' && React.createElement(getFeatureIcon('check-circle'), { className: "w-3 h-3 mr-1 text-green-400" })}
                           <span>{feature}</span>
                           {language === 'ar' && React.createElement(getFeatureIcon('check-circle'), { className: "w-3 h-3 ml-1 text-green-400" })}
@@ -244,13 +253,284 @@ const JAAZLHomepage: React.FC = () => {
         </div>
       </section>
 
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          /* HERO CONTAINER SPACING */
+          .hero-responsive-container {
+            padding-top: calc(4rem + 0.5rem); /* 64px header + 8px spacing */
+            padding-bottom: 0.5rem;
+          }
+          
+          @media (min-width: 375px) {
+            .hero-responsive-container {
+              padding-top: calc(4rem + 0.75rem); /* 64px header + 12px spacing */
+              padding-bottom: 0.75rem;
+            }
+          }
+          
+          @media (min-width: 480px) {
+            .hero-responsive-container {
+              padding-top: calc(4rem + 1rem); /* 64px header + 16px spacing */
+              padding-bottom: 1rem;
+            }
+          }
+          
+          @media (min-width: 640px) {
+            .hero-responsive-container {
+              padding-top: calc(5rem + 1.5rem); /* 80px header + 24px spacing */
+              padding-bottom: 1.5rem;
+            }
+          }
+          
+          @media (min-width: 768px) {
+            .hero-responsive-container {
+              padding-top: calc(5rem + 2rem); /* 80px header + 32px spacing */
+              padding-bottom: 2rem;
+            }
+          }
+          
+          @media (min-width: 1024px) {
+            .hero-responsive-container {
+              padding-top: calc(5rem + 3rem); /* 80px header + 48px spacing */
+              padding-bottom: 3rem;
+            }
+          }
+          
+          @media (min-width: 1280px) {
+            .hero-responsive-container {
+              padding-top: calc(5rem + 4rem); /* 80px header + 64px spacing */
+              padding-bottom: 4rem;
+            }
+          }
+          
+          @media (min-width: 1440px) {
+            .hero-responsive-container {
+              padding-top: calc(5rem + 5rem); /* 80px header + 80px spacing */
+              padding-bottom: 5rem;
+            }
+          }
+
+          /* TYPOGRAPHY SCALING */
+          .hero-heading {
+            font-size: 1.5rem; /* 24px */
+            line-height: 1.2;
+          }
+          
+          .hero-subtitle {
+            font-size: 0.875rem; /* 14px */
+          }
+          
+          .hero-description {
+            font-size: 0.75rem; /* 12px */
+          }
+          
+          @media (min-width: 375px) {
+            .hero-heading { font-size: 1.75rem; } /* 28px */
+            .hero-subtitle { font-size: 1rem; } /* 16px */
+            .hero-description { font-size: 0.875rem; } /* 14px */
+          }
+          
+          @media (min-width: 480px) {
+            .hero-heading { font-size: 2rem; } /* 32px */
+            .hero-subtitle { font-size: 1.125rem; } /* 18px */
+            .hero-description { font-size: 1rem; } /* 16px */
+          }
+          
+          @media (min-width: 640px) {
+            .hero-heading { font-size: 2.5rem; } /* 40px */
+            .hero-subtitle { font-size: 1.25rem; } /* 20px */
+            .hero-description { font-size: 1.125rem; } /* 18px */
+          }
+          
+          @media (min-width: 768px) {
+            .hero-heading { font-size: 3rem; } /* 48px */
+            .hero-subtitle { font-size: 1.5rem; } /* 24px */
+            .hero-description { font-size: 1.25rem; } /* 20px */
+          }
+          
+          @media (min-width: 1024px) {
+            .hero-heading { font-size: 3.5rem; } /* 56px */
+            .hero-subtitle { font-size: 1.75rem; } /* 28px */
+            .hero-description { font-size: 1.375rem; } /* 22px */
+          }
+          
+          @media (min-width: 1280px) {
+            .hero-heading { font-size: 4rem; } /* 64px */
+            .hero-subtitle { font-size: 2rem; } /* 32px */
+            .hero-description { font-size: 1.5rem; } /* 24px */
+          }
+          
+          @media (min-width: 1440px) {
+            .hero-heading { font-size: 4.5rem; } /* 72px */
+            .hero-subtitle { font-size: 2.25rem; } /* 36px */
+            .hero-description { font-size: 1.75rem; } /* 28px */
+          }
+
+          /* MARGINS */
+          .hero-heading-margin { margin-bottom: 0.5rem; }
+          .hero-subtitle-margin { margin-top: 0.25rem; }
+          .hero-description-margin { margin-bottom: 0.75rem; }
+          .hero-visual-margin { margin-top: 1rem; }
+          
+          @media (min-width: 640px) {
+            .hero-heading-margin { margin-bottom: 0.75rem; }
+            .hero-subtitle-margin { margin-top: 0.5rem; }
+            .hero-description-margin { margin-bottom: 1rem; }
+            .hero-visual-margin { margin-top: 0; }
+          }
+          
+          @media (min-width: 1024px) {
+            .hero-heading-margin { margin-bottom: 1rem; }
+            .hero-subtitle-margin { margin-top: 0.75rem; }
+            .hero-description-margin { margin-bottom: 1.5rem; }
+          }
+
+          /* VISUAL COMPONENT */
+          .hero-visual-container {
+            border-radius: 1rem;
+            padding: 0.75rem;
+          }
+          
+          .hero-services-grid {
+            gap: 0.5rem;
+          }
+          
+          .hero-services-margin {
+            margin-bottom: 0.75rem;
+          }
+          
+          .hero-service-card {
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+          }
+          
+          .hero-service-title {
+            font-size: 0.625rem; /* 10px */
+            line-height: 1.2;
+          }
+          
+          .hero-visual-bottom {
+            border-radius: 0.75rem;
+            padding: 0.75rem;
+          }
+          
+          .hero-active-title {
+            font-size: 0.75rem; /* 12px */
+          }
+          
+          .hero-active-title-margin {
+            margin-bottom: 0.25rem;
+          }
+          
+          .hero-active-description {
+            font-size: 0.625rem; /* 10px */
+          }
+          
+          .hero-active-description-margin {
+            margin-bottom: 0.5rem;
+          }
+          
+          .hero-feature-text {
+            font-size: 0.5rem; /* 8px */
+          }
+          
+          @media (min-width: 480px) {
+            .hero-visual-container { padding: 1rem; }
+            .hero-services-grid { gap: 0.75rem; }
+            .hero-services-margin { margin-bottom: 1rem; }
+            .hero-service-card { padding: 0.75rem; }
+            .hero-service-title { font-size: 0.75rem; } /* 12px */
+            .hero-visual-bottom { padding: 1rem; }
+            .hero-active-title { font-size: 0.875rem; } /* 14px */
+            .hero-active-description { font-size: 0.75rem; } /* 12px */
+            .hero-feature-text { font-size: 0.625rem; } /* 10px */
+          }
+          
+          @media (min-width: 640px) {
+            .hero-visual-container { 
+              border-radius: 1.5rem; 
+              padding: 1.25rem; 
+            }
+            .hero-services-grid { gap: 1rem; }
+            .hero-services-margin { margin-bottom: 1.25rem; }
+            .hero-service-card { 
+              padding: 1rem;
+              border-radius: 0.75rem;
+            }
+            .hero-service-title { font-size: 0.875rem; } /* 14px */
+            .hero-visual-bottom { 
+              border-radius: 1rem;
+              padding: 1.25rem; 
+            }
+            .hero-active-title { font-size: 1rem; } /* 16px */
+            .hero-active-description { font-size: 0.875rem; } /* 14px */
+            .hero-feature-text { font-size: 0.75rem; } /* 12px */
+          }
+          
+          @media (min-width: 1024px) {
+            .hero-visual-container { 
+              border-radius: 2rem; 
+              padding: 1.5rem; 
+            }
+            .hero-services-grid { gap: 1.25rem; }
+            .hero-services-margin { margin-bottom: 1.5rem; }
+            .hero-service-card { 
+              padding: 1.25rem;
+              border-radius: 1rem;
+            }
+            .hero-service-title { font-size: 1rem; } /* 16px */
+            .hero-visual-bottom { 
+              border-radius: 1.25rem;
+              padding: 1.5rem; 
+            }
+            .hero-active-title { font-size: 1.125rem; } /* 18px */
+            .hero-active-description { font-size: 1rem; } /* 16px */
+            .hero-feature-text { font-size: 0.875rem; } /* 14px */
+          }
+
+          /* HEIGHT-BASED OVERRIDES */
+          @media (max-height: 800px) {
+            .hero-responsive-container {
+              padding-top: calc(4rem + 0.5rem) !important;
+              padding-bottom: 0.5rem !important;
+            }
+            .hero-heading { font-size: 2rem !important; }
+            .hero-subtitle { font-size: 1rem !important; }
+            .hero-description { font-size: 0.875rem !important; }
+          }
+          
+          @media (max-height: 700px) {
+            .hero-responsive-container {
+              padding-top: calc(4rem + 0.25rem) !important;
+              padding-bottom: 0.25rem !important;
+            }
+            .hero-heading { font-size: 1.75rem !important; }
+            .hero-subtitle { font-size: 0.875rem !important; }
+            .hero-description { font-size: 0.75rem !important; }
+            .hero-visual-container { padding: 0.75rem !important; }
+          }
+          
+          @media (max-height: 600px) {
+            .hero-responsive-container {
+              padding-top: calc(4rem + 0.25rem) !important;
+              padding-bottom: 0.25rem !important;
+            }
+            .hero-heading { font-size: 1.5rem !important; }
+            .hero-subtitle { font-size: 0.75rem !important; }
+            .hero-description { font-size: 0.625rem !important; }
+            .hero-visual-container { padding: 0.5rem !important; }
+            .hero-service-card { padding: 0.5rem !important; }
+          }
+        `
+      }} />
+
       {/* Enhanced Services Section */}
       <section id="services" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-50 text-blue-900 rounded-full font-medium mb-4">
+            {/* <div className="inline-flex items-center px-4 py-2 bg-blue-50 text-blue-900 rounded-full font-medium mb-4">
               {React.createElement(getMiscIcon('cog'), { className: "w-4 h-4 mx-2" })}{language === 'en' ? 'Our Services' : 'خدماتنا'}
-            </div>
+            </div> */}
             <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">{language === 'en' ? 'Comprehensive Industrial Solutions' : 'حلول صناعية شاملة'}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">{language === 'en' ? "From advanced engineering to environmental solutions, we provide end-to-end services for Saudi Arabia's industrial sector." : "من الهندسة المتقدمة إلى الحلول البيئية، نقدم خدمات متكاملة للقطاع الصناعي في المملكة."}</p>
           </div>
@@ -278,7 +558,7 @@ const JAAZLHomepage: React.FC = () => {
                 </div>
                 <div className="space-y-4 mb-8">{services[activeService].features.map((feature, index) => (<div key={index} className="flex items-center group">{React.createElement(getFeatureIcon('check-circle'), { className: "w-6 h-6 text-white mx-4 group-hover:scale-110 transition-transform" })}<span className="text-xl font-medium">{feature}</span></div>))}</div>
                 <div className="flex gap-4">
-                  <Link href={`/services/${activeService === 0 ? 'engineering-consulting' : activeService === 1 ? 'ai-automation' : 'chemical-solutions'}`} className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center group">{language === 'en' ? 'Learn More' : 'اعرف المزيد'}{React.createElement(getNavigationIcon('arrow-right'), { className: "mx-2 w-5 h-5 group-hover:translate-x-1 transition-transform" })}</Link>
+                  <Link href={`/services/${activeService === 0 ? 'zero-liquid-discharge' : activeService === 1 ? 'specialized-chemicals' : activeService === 2 ? 'engineering-consulting' : activeService === 3 ? 'ai-automation' : activeService === 4 ? 'api-materials' : 'electromechanical-systems'}`} className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center group">{language === 'en' ? 'Learn More' : 'اعرف المزيد'}{React.createElement(getNavigationIcon('arrow-right'), { className: "mx-2 w-5 h-5 group-hover:translate-x-1 transition-transform" })}</Link>
                   <a href="/docs/JAAZL-Profile.pdf" target="_blank" rel="noopener noreferrer" className="border border-white/30 hover:bg-white/10 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center">{React.createElement(getMiscIcon('download'), { className: "mx-2 w-5 h-5" })}{language === 'en' ? 'Brochure' : 'الكتيب'}</a>
                 </div>
               </div>
@@ -291,20 +571,57 @@ const JAAZLHomepage: React.FC = () => {
       <section id="industries" className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 bg-orange-50 text-orange-900 rounded-full font-medium mb-4">{React.createElement(getIndustryIcon('factory'), { className: "w-4 h-4 mx-2" })}{language === 'en' ? 'Industries We Serve' : 'الصناعات التي نخدمها'}</div>
+            {/* <div className="inline-flex items-center px-4 py-2 bg-orange-50 text-orange-900 rounded-full font-medium mb-4">{React.createElement(getIndustryIcon('factory'), { className: "w-4 h-4 mx-2" })}{language === 'en' ? 'Industries We Serve' : 'الصناعات التي نخدمها'}</div> */}
             <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">{language === 'en' ? 'Specialized Solutions for Key Sectors' : 'حلول متخصصة للقطاعات الرئيسية'}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">{language === 'en' ? "Delivering excellence across Saudi Arabia's most critical industrial sectors" : "تقديم التميز في أهم القطاعات الصناعية بالمملكة"}</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8">
-            {industries.map((industry, index) => (
-              <div key={index} className="group bg-white p-4 md:p-6 lg:p-8 rounded-2xl border border-gray-200 hover:shadow-card-hover transition-all duration-300 text-center cursor-pointer">
-                <div className="text-gray-600 group-hover:text-blue-900 mb-6 flex justify-center transition-all duration-300 group-hover:scale-110">{industry.icon}</div>
-                <h3 className="text-sm md:text-base lg:text-xl font-bold text-gray-900 group-hover:text-blue-900 transition-colors mb-2 text-center">{industry.name[language]}</h3>
-                <p className="text-base text-gray-500 group-hover:text-blue-600 transition-colors font-medium">{industry.projects[language]}</p>
-                <div className="mt-4 h-1 bg-gradient-to-r from-blue-900 to-orange-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-              </div>
-            ))}
+          {/* Industries Slider */}
+          <div className="relative overflow-hidden">
+            <div 
+              className="flex space-x-8" 
+              style={{
+                width: `${(industries.length * 320)}px`,
+                animation: `slideAnimation ${industries.length * 4}s infinite linear`
+              }}
+            >
+              {[...industries, ...industries].map((industry, index) => (
+                <div 
+                  key={index} 
+                  className="group bg-white p-6 rounded-2xl border border-gray-200 hover:shadow-card-hover transition-all duration-300 text-center cursor-pointer flex-shrink-0"
+                  style={{
+                    width: '280px',
+                    height: '200px'
+                  }}
+                >
+                  <div className="text-gray-600 group-hover:text-blue-900 mb-4 flex justify-center transition-all duration-300 group-hover:scale-110">
+                    {industry.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-900 transition-colors mb-2 text-center line-clamp-2" style={{ minHeight: '3.5rem' }}>
+                    {industry.name[language]}
+                  </h3>
+                  <p className="text-sm text-gray-500 group-hover:text-blue-600 transition-colors font-medium">
+                    {industry.projects[language]}
+                  </p>
+                  <div className="mt-4 h-1 bg-gradient-to-r from-blue-900 to-orange-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </div>
+              ))}
+            </div>
           </div>
+          
+          <style dangerouslySetInnerHTML={{
+            __html: `
+              @keyframes slideAnimation {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-${industries.length * 320}px); }
+              }
+              .line-clamp-2 {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+              }
+            `
+          }} />
         </div>
       </section>
 
@@ -312,7 +629,7 @@ const JAAZLHomepage: React.FC = () => {
       <section id="clients" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 bg-green-50 text-green-900 rounded-full font-medium mb-4">{React.createElement(getMiscIcon('building-2'), { className: "w-4 h-4 mx-2" })}{language === 'en' ? 'Our Clients' : 'عملاؤنا'}</div>
+            {/* <div className="inline-flex items-center px-4 py-2 bg-green-50 text-green-900 rounded-full font-medium mb-4">{React.createElement(getMiscIcon('building-2'), { className: "w-4 h-4 mx-2" })}{language === 'en' ? 'Our Clients' : 'عملاؤنا'}</div> */}
             <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">{language === 'en' ? 'Trusted by Industry Leaders' : 'موثوق به من قادة الصناعة'}</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">{language === 'en' ? "Serving Saudi Arabia's most prestigious industrial companies with world-class solutions" : "خدمة أرقى الشركات الصناعية في المملكة بحلول عالمية المستوى"}</p>
           </div>
@@ -323,8 +640,8 @@ const JAAZLHomepage: React.FC = () => {
                   <Image 
                     src={client.logo} 
                     alt={client.logoAlt} 
-                    layout="fill" 
-                    objectFit="contain" 
+                    fill
+                    style={{ objectFit: 'contain' }}
                     className="transition-transform duration-300 group-hover:grayscale-0 grayscale"
                   />
                 </div>
@@ -340,7 +657,7 @@ const JAAZLHomepage: React.FC = () => {
         <div className="absolute inset-0"><div className="absolute top-20 left-20 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl"></div><div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full font-medium mb-4">{React.createElement(getFeatureIcon('award'), { className: "w-4 h-4 mx-2 text-yellow-300" })}{language === 'en' ? "Why Choose JAAZL" : "لماذا تختار جازل"}</div>
+            {/* <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full font-medium mb-4">{React.createElement(getFeatureIcon('award'), { className: "w-4 h-4 mx-2 text-yellow-300" })}{language === 'en' ? "Why Choose JAAZL" : "لماذا تختار جازل"}</div> */}
             <h2 className="text-5xl lg:text-6xl font-bold mb-6">{language === 'en' ? "Your Trusted Partner for Industrial Excellence" : "شريكك الموثوق للتميز الصناعي"}</h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">{language === 'en' ? "Combining global expertise with local knowledge to deliver unmatched industrial solutions." : "نجمع بين الخبرة العالمية والمعرفة المحلية لتقديم حلول صناعية لا مثيل لها."}</p>
           </div>

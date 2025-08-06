@@ -26,7 +26,7 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
       {/* Hero Section - Premium Design */}
       <section className="hero-section relative pt-36 pb-24 overflow-hidden">
         {/* Glass Morphism Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-cyan-900 to-blue-900">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-cyan-600 to-blue-700">
           <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:30px_30px]"></div>
           <div className="absolute top-20 start-10 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 end-10 w-96 h-96 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>

@@ -5,13 +5,13 @@ import type { Industry } from '@/services/types';
 import ServicePageClient from '@/components/services/ServicePageClient';
 
 export const metadata: Metadata = {
-  title: 'Pipes & Fittings | JAAZL',
-  description: 'High-quality industrial pipes and fittings for various applications and industry standards.',
-  keywords: ['industrial pipes', 'fittings', 'pipe systems', 'industrial materials'],
+  title: 'Reliability Engineering Services | JAAZL',
+  description: 'Advanced reliability engineering for equipment optimization, maintenance strategy, and operational performance improvement.',
+  keywords: ['reliability engineering', 'maintenance strategy', 'equipment optimization', 'RCM analysis', 'asset management'],
 };
 
-export default function PipesFittingsPage() {
-  const service = engineeringServices.find(s => s.slug === 'pipes-fittings');
+export default function ReliabilityEngineeringPage() {
+  const service = engineeringServices.find(s => s.slug === 'reliability-engineering');
   const relatedIndustries = service?.relatedIndustries ? 
     service.relatedIndustries
       .map((slug: string) => industries.find(industry => industry.slug === slug))

@@ -9,17 +9,9 @@ import {
   FaBars, FaTimes, FaGlobe, FaChevronDown, FaChevronUp
 } from 'react-icons/fa';
 
-// Data for mega menus - Updated to match catalogue sequence
+// Data for mega menus - Updated to 6 categories in new sequence: Water, Chemical, Consulting, Technologies, Material, Electromech
 const serviceCategories = {
-  chemicals: {
-    name: { en: 'Specialty & Bulk Chemicals', ar: 'الكيماويات المتخصصة والسائبة' },
-    services: [
-      { name: { en: 'Specialized Industrial Chemicals', ar: 'المواد الكيميائية الصناعية المتخصصة' }, path: '/services/specialized-chemicals' },
-      { name: { en: 'Bulk Industrial Chemicals Supply', ar: 'توريد المواد الكيميائية الصناعية بالجملة' }, path: '/services/bulk-chemicals-supply' },
-      { name: { en: 'Local Chemical Manufacturing & Blending', ar: 'التصنيع والخلط الكيميائي المحلي' }, path: '/services/chemical-blending' }
-    ]
-  },
-  environmental: {
+  water: {
     name: { en: 'Water & Wastewater Treatment', ar: 'معالجة المياه ومياه الصرف الصحي' },
     services: [
       { name: { en: 'Zero Liquid Discharge Systems', ar: 'أنظمة التفريغ السائل الصفري' }, path: '/services/zero-liquid-discharge' },
@@ -27,44 +19,61 @@ const serviceCategories = {
       { name: { en: 'Oily Water & Hydrocarbon Treatment', ar: 'معالجة المياه الزيتية والهيدروكربونية' }, path: '/services/oily-water-treatment' }
     ]
   },
-  engineering: {
+  chemical: {
+    name: { en: 'Specialty & Bulk Chemicals', ar: 'الكيماويات المتخصصة والسائبة' },
+    services: [
+      { name: { en: 'Specialized Industrial Chemicals', ar: 'المواد الكيميائية الصناعية المتخصصة' }, path: '/services/specialized-chemicals' },
+      { name: { en: 'Bulk Industrial Chemicals Supply', ar: 'توريد المواد الكيميائية الصناعية بالجملة' }, path: '/services/bulk-chemicals-supply' },
+      { name: { en: 'Local Chemical Manufacturing & Blending', ar: 'التصنيع والخلط الكيميائي المحلي' }, path: '/services/chemical-blending' }
+    ]
+  },
+  consulting: {
     name: { en: 'Technical Consultancy & AI', ar: 'الاستشارات التقنية والذكاء الاصطناعي' },
     services: [
       { name: { en: 'Industrial Engineering Consulting', ar: 'استشارات الهندسة الصناعية' }, path: '/services/engineering-consulting' },
-      { name: { en: 'AI & Industrial Automation', ar: 'الذكاء الاصطناعي والأتمتة الصناعية' }, path: '/services/ai-automation' },
-      { name: { en: 'Industrial Digital Transformation', ar: 'التحول الرقمي الصناعي' }, path: '/services/digital-transformation' }
+      { name: { en: 'Process Safety Management', ar: 'إدارة سلامة العمليات' }, path: '/services/process-safety' },
+      { name: { en: 'Reliability Engineering', ar: 'هندسة الموثوقية' }, path: '/services/reliability-engineering' }
     ]
   },
-  electromechanical: {
-    name: { en: 'Electromechanical Services', ar: 'الخدمات الكهروميكانيكية' },
+  technologies: {
+    name: { en: 'Digital Technologies & Automation', ar: 'التقنيات الرقمية والأتمتة' },
     services: [
-      { name: { en: 'Industrial Electromechanical Systems', ar: 'أنظمة كهروميكانيكية صناعية' }, path: '/services/electromechanical-systems' },
-      { name: { en: 'Shutdown & Turnaround Solutions', ar: 'حلول الإغلاق والصيانة الدورية' }, path: '/services/shutdown-turnaround' },
-      { name: { en: 'Industrial Fabrication Services', ar: 'خدمات التصنيع الصناعي' }, path: '/services/fabrication-services' }
+      { name: { en: 'AI & Industrial Automation', ar: 'الذكاء الاصطناعي والأتمتة الصناعية' }, path: '/services/ai-automation' },
+      { name: { en: 'Industrial Digital Transformation', ar: 'التحول الرقمي الصناعي' }, path: '/services/digital-transformation' },
+      { name: { en: 'Smart Manufacturing Solutions', ar: 'حلول التصنيع الذكي' }, path: '/services/smart-manufacturing' }
     ]
   },
-  materials: {
+  material: {
     name: { en: 'Material Supplies', ar: 'إمدادات المواد' },
     services: [
       { name: { en: 'API Approved Materials', ar: 'مواد معتمدة من API' }, path: '/services/api-materials' },
       { name: { en: 'Pipes & Fittings', ar: 'أنابيب وتجهيزات' }, path: '/services/pipes-fittings' },
       { name: { en: 'Valves & Actuators', ar: 'صمامات ومحركات' }, path: '/services/valves-actuators' }
     ]
+  },
+  electromech: {
+    name: { en: 'Electromechanical Services', ar: 'الخدمات الكهروميكانيكية' },
+    services: [
+      { name: { en: 'Industrial Electromechanical Systems', ar: 'أنظمة كهروميكانيكية صناعية' }, path: '/services/electromechanical-systems' },
+      { name: { en: 'Shutdown & Turnaround Solutions', ar: 'حلول الإغلاق والصيانة الدورية' }, path: '/services/shutdown-turnaround' },
+      { name: { en: 'Industrial Fabrication Services', ar: 'خدمات التصنيع الصناعي' }, path: '/services/fabrication-services' }
+    ]
   }
 };
 
 
 
-// Industries - Updated to match catalogue sequence and content
+// Industries - Updated to 9 industries in new sequence: oil, petro, refin, mining, fertilizers, power, manufacturing, f&b, municipal
 const industries = [
   { name: { en: 'Oil & Gas', ar: 'النفط والغاز' }, path: '/industries/oil-gas' },
   { name: { en: 'Petrochemicals', ar: 'البتروكيماويات' }, path: '/industries/petrochemicals' },
   { name: { en: 'Refineries', ar: 'المصافي' }, path: '/industries/refineries' },
   { name: { en: 'Mining & Minerals', ar: 'التعدين والمعادن' }, path: '/industries/mining' },
-  { name: { en: 'Municipal', ar: 'البلديات' }, path: '/industries/municipal' },
+  { name: { en: 'Fertilizers', ar: 'الأسمدة' }, path: '/industries/fertilizers' },
   { name: { en: 'Power & Electricity', ar: 'الطاقة والكهرباء' }, path: '/industries/power' },
   { name: { en: 'Manufacturing', ar: 'التصنيع' }, path: '/industries/manufacturing' },
   { name: { en: 'Food & Beverages', ar: 'الأغذية والمشروبات' }, path: '/industries/food-beverages' },
+  { name: { en: 'Municipal', ar: 'البلديات' }, path: '/industries/municipal' },
 ];
 
 const Header: React.FC = () => {

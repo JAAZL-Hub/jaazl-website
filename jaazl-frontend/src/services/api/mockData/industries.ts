@@ -1,21 +1,5 @@
 import { Industry } from '../../types';
 
-  // okay, look, i have some changes, the services should be 6 in this sequence (Water, chemical,
-  // consulting, technologies, material, electromech) and each one has to has 3 services, update the
-  // header, homepage, services page. next the industries should be 9 in this sequence (oil, petro,
-  // refin, miningg, fertlizers, power, manufactureing, f&b, municipal), also update all pages that needs     
-  //  to update according to these new changes. in the homepage industries the text are not fit in the        
-  // cards, make a fixed size to the cards size that can hold the text and the icon, we have 9
-  // industries, maybe we can use slider.
-  // suggested tasks:
-    //  ☐ Update service categories to 6 categories in new sequence
-    //  ☐ Update header navigation with new service structure
-    //  ☐ Update services page with new structure
-    //  ☐ Update industries to 9 industries in new sequence
-    //  ☐ Add fertilizers industry page
-    //  ☐ Update homepage industries section with fixed card sizes and slider
-    //  ☐ Update all relevant pages with new structure
-    //  ☐ Test all changes
 export const industries: Industry[] = [
   {
     id: 'oil-gas',
@@ -66,7 +50,7 @@ With experience across refineries, processing facilities, and distribution netwo
       },
       keywords: ['oil and gas solutions', 'petroleum industry', 'energy sector', 'refinery services']
     },
-    relatedServices: ['engineering-consulting', 'ai-automation'],
+    relatedServices: ['zero-liquid-discharge', 'oily-water-treatment', 'waste-management', 'engineering-consulting', 'process-safety', 'reliability-engineering', 'api-materials', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems', 'shutdown-turnaround'],
     caseStudies: [
       {
         id: 'oil-gas-case-1',
@@ -93,6 +77,33 @@ With experience across refineries, processing facilities, and distribution netwo
           ar: 'زيادة بنسبة 15٪ في سعة الإنتاجية، وتخفيض بنسبة 12٪ في استهلاك الطاقة، وانخفاض بنسبة 30٪ في التوقف غير المخطط.'
         },
         serviceId: 'engineering-consulting',
+        industryId: 'oil-gas'
+      },
+      {
+        id: 'oil-gas-case-2',
+        title: {
+          en: 'Zero Liquid Discharge Implementation at Gas Processing Facility',
+          ar: 'تنفيذ نظام التفريغ السائل الصفري في منشأة معالجة الغاز'
+        },
+        description: {
+          en: 'Complete implementation of zero liquid discharge system for a major gas processing facility, achieving full wastewater treatment and water recovery while meeting stringent environmental regulations.',
+          ar: 'تنفيذ كامل لنظام التفريغ السائل الصفري لمنشأة معالجة غاز كبرى، مما حقق معالجة كاملة لمياه الصرف واستعادة المياه مع تلبية اللوائح البيئية الصارمة.'
+        },
+        image: {
+          id: 'oil-gas-zld-case-image',
+          url: '/images/industries/oil-gas-industry.jpg',
+          altText: {
+            en: 'Zero liquid discharge system at gas facility',
+            ar: 'نظام التفريغ السائل الصفري في منشأة الغاز'
+          },
+          width: 600,
+          height: 400
+        },
+        results: {
+          en: '95% water recovery rate, complete elimination of liquid waste discharge, and 40% reduction in freshwater consumption.',
+          ar: 'معدل استعادة مياه بنسبة 95٪، والقضاء الكامل على تصريف النفايات السائلة، وتخفيض بنسبة 40٪ في استهلاك المياه العذبة.'
+        },
+        serviceId: 'zero-liquid-discharge',
         industryId: 'oil-gas'
       }
     ]
@@ -146,7 +157,7 @@ Our team combines technical expertise with practical industry knowledge to deliv
       },
       keywords: ['petrochemical solutions', 'chemical processing', 'process optimization', 'chemical production']
     },
-    relatedServices: ['engineering-consulting', 'ai-automation'],
+    relatedServices: ['specialized-chemicals', 'bulk-chemicals-supply', 'chemical-blending', 'engineering-consulting', 'process-safety', 'reliability-engineering', 'ai-automation', 'api-materials', 'pipes-fittings', 'valves-actuators'],
     caseStudies: [
       {
         id: 'petrochemical-case-1',
@@ -173,6 +184,33 @@ Our team combines technical expertise with practical industry knowledge to deliv
           ar: 'تحسن بنسبة 25٪ في اتساق المنتج، وتخفيض بنسبة 18٪ في هدر المواد الخام، وزيادة بنسبة 20٪ في إنتاجية الإنتاج.'
         },
         serviceId: 'ai-automation',
+        industryId: 'petrochemicals'
+      },
+      {
+        id: 'petrochemical-case-2',
+        title: {
+          en: 'Specialized Chemical Supply Chain Optimization',
+          ar: 'تحسين سلسلة توريد المواد الكيميائية المتخصصة'
+        },
+        description: {
+          en: 'Implementation of integrated chemical supply and blending systems for a petrochemical complex, including custom chemical formulations and automated blending processes.',
+          ar: 'تنفيذ أنظمة متكاملة لتوريد وخلط المواد الكيميائية لمجمع بتروكيماويات، تشمل تركيبات كيميائية مخصصة وعمليات خلط آلية.'
+        },
+        image: {
+          id: 'petrochemical-supply-case-image',
+          url: '/images/industries/petrochemicals-industry.jpg',
+          altText: {
+            en: 'Chemical supply and blending facility',
+            ar: 'منشأة توريد وخلط المواد الكيميائية'
+          },
+          width: 600,
+          height: 400
+        },
+        results: {
+          en: '30% reduction in raw material costs, 45% improvement in chemical blending accuracy, and 20% decrease in inventory holding costs.',
+          ar: 'تخفيض تكاليف المواد الخام بنسبة 30٪، وتحسين دقة خلط المواد الكيميائية بنسبة 45٪، وانخفاض تكاليف الاحتفاظ بالمخزون بنسبة 20٪.'
+        },
+        serviceId: 'chemical-blending',
         industryId: 'petrochemicals'
       }
     ]
@@ -226,8 +264,63 @@ With expertise across all refinery units from crude distillation to final produc
       },
       keywords: ['refinery solutions', 'oil processing', 'refinery optimization', 'petroleum refining']
     },
-    relatedServices: ['engineering-consulting', 'ai-automation'],
-    caseStudies: []
+    relatedServices: ['oily-water-treatment', 'waste-management', 'engineering-consulting', 'process-safety', 'reliability-engineering', 'api-materials', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems', 'shutdown-turnaround', 'fabrication-services'],
+    caseStudies: [
+      {
+        id: 'refineries-case-1',
+        title: {
+          en: 'Distillation Column Process Safety Enhancement',
+          ar: 'تعزيز سلامة عمليات برج التقطير'
+        },
+        description: {
+          en: 'Implementation of comprehensive process safety management system for critical distillation units, including HAZOP studies, safety instrumented systems, and emergency response procedures.',
+          ar: 'تنفيذ نظام شامل لإدارة سلامة العمليات لوحدات التقطير الحرجة، بما في ذلك دراسات HAZOP وأنظمة الأجهزة الآمنة وإجراءات الاستجابة للطوارئ.'
+        },
+        image: {
+          id: 'refineries-safety-case-image',
+          url: '/images/industries/refineries-industry.jpg',
+          altText: {
+            en: 'Refinery safety systems',
+            ar: 'أنظمة السلامة في المصفاة'
+          },
+          width: 600,
+          height: 400
+        },
+        results: {
+          en: '85% reduction in safety incidents, 50% faster emergency response time, and full compliance with international safety standards.',
+          ar: 'تخفيض الحوادث الأمنية بنسبة 85٪، وتحسين وقت الاستجابة للطوارئ بنسبة 50٪، والامتثال الكامل للمعايير الأمنية الدولية.'
+        },
+        serviceId: 'process-safety',
+        industryId: 'refineries'
+      },
+      {
+        id: 'refineries-case-2',
+        title: {
+          en: 'Oily Water Treatment System for Refinery',
+          ar: 'نظام معالجة المياه الزيتية للمصفاة'
+        },
+        description: {
+          en: 'Design and implementation of advanced oily water treatment system for a major refinery, achieving efficient hydrocarbon separation and water recovery for reuse.',
+          ar: 'تصميم وتنفيذ نظام متقدم لمعالجة المياه الزيتية لمصفاة كبرى، مما حقق فصل فعال للهيدروكربونات واستعادة المياه لإعادة الاستخدام.'
+        },
+        image: {
+          id: 'refineries-water-case-image',
+          url: '/images/industries/refineries-industry.jpg',
+          altText: {
+            en: 'Refinery water treatment system',
+            ar: 'نظام معالجة المياه في المصفاة'
+          },
+          width: 600,
+          height: 400
+        },
+        results: {
+          en: '90% hydrocarbon recovery rate, 75% water recycling efficiency, and 60% reduction in wastewater discharge.',
+          ar: 'معدل استعادة الهيدروكربونات بنسبة 90٪، وكفاءة إعادة تدوير المياه بنسبة 75٪، وتخفيض تصريف مياه الصرف بنسبة 60٪.'
+        },
+        serviceId: 'oily-water-treatment',
+        industryId: 'refineries'
+      }
+    ]
   },
   {
     id: 'mining',
@@ -278,7 +371,7 @@ With expertise in both open-pit and underground mining operations, we deliver pr
       },
       keywords: ['mining solutions', 'mineral processing', 'mining engineering', 'environmental management']
     },
-    relatedServices: ['engineering-consulting', 'ai-automation'],
+    relatedServices: ['waste-management', 'engineering-consulting', 'reliability-engineering', 'ai-automation', 'digital-transformation', 'api-materials', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems', 'fabrication-services'],
     caseStudies: [
       {
         id: 'mining-case-1',
@@ -306,6 +399,140 @@ With expertise in both open-pit and underground mining operations, we deliver pr
         },
         serviceId: 'environmental-compliance',
         industryId: 'mining'
+      },
+      {
+        id: 'mining-case-2',
+        title: {
+          en: 'Industrial Waste Management for Mining Complex',
+          ar: 'إدارة النفايات الصناعية لمجمع التعدين'
+        },
+        description: {
+          en: 'Development and implementation of comprehensive waste management system for a large mining operation, including hazardous waste treatment, tailings management, and environmental rehabilitation.',
+          ar: 'تطوير وتنفيذ نظام شامل لإدارة النفايات لعملية تعدين كبيرة، بما في ذلك معالجة النفايات الخطرة وإدارة المخلفات والتأهيل البيئي.'
+        },
+        image: {
+          id: 'mining-waste-case-image',
+          url: '/images/industries/mining-industry.jpg',
+          altText: {
+            en: 'Mining waste management system',
+            ar: 'نظام إدارة نفايات التعدين'
+          },
+          width: 600,
+          height: 400
+        },
+        results: {
+          en: '80% reduction in hazardous waste generation, 95% containment of tailings materials, and successful rehabilitation of 200 hectares of mining land.',
+          ar: 'تخفيض توليد النفايات الخطرة بنسبة 80٪، واحتواء مواد المخلفات بنسبة 95٪، والتأهيل الناجح لـ 200 هكتار من أراضي التعدين.'
+        },
+        serviceId: 'waste-management',
+        industryId: 'mining'
+      }
+    ]
+  },
+  {
+    id: 'fertilizers',
+    slug: 'fertilizers',
+    name: {
+      en: 'Fertilizers',
+      ar: 'الأسمدة'
+    },
+    shortDescription: {
+      en: 'Specialized solutions for fertilizer manufacturing, including chemical processing, environmental compliance, and automation systems.',
+      ar: 'حلول متخصصة لتصنيع الأسمدة، تشمل المعالجة الكيميائية والامتثال البيئي وأنظمة الأتمتة.'
+    },
+    fullDescription: {
+      en: `JAAZL delivers comprehensive services for the fertilizer industry, addressing challenges in chemical processing, environmental management, and production optimization. Our solutions help optimize fertilizer manufacturing processes while ensuring compliance with environmental regulations and safety standards.
+
+We provide specialized chemical handling systems for ammonia, phosphoric acid, and other fertilizer components, along with environmental monitoring and waste management solutions. Our automation services include process control systems and production optimization strategies.
+
+With expertise in fertilizer production facilities, we deliver integrated solutions that improve production efficiency, ensure environmental compliance, and enhance operational safety in fertilizer manufacturing operations.`,
+      ar: `تقدم جازل خدمات شاملة لصناعة الأسمدة، لمعالجة التحديات في المعالجة الكيميائية والإدارة البيئية وتحسين الإنتاج. تساعد حلولنا على تحسين عمليات تصنيع الأسمدة مع ضمان الامتثال للوائح البيئية ومعايير السلامة.
+
+نقدم أنظمة متخصصة للتعامل مع المواد الكيميائية للأمونيا وحمض الفوسفوريك ومكونات الأسمدة الأخرى، إلى جانب حلول المراقبة البيئية وإدارة النفايات. تشمل خدمات الأتمتة لدينا أنظمة التحكم في العمليات واستراتيجيات تحسين الإنتاج.
+
+بفضل الخبرة في منشآت إنتاج الأسمدة، نقدم حلولاً متكاملة تحسن كفاءة الإنتاج وتضمن الامتثال البيئي وتعزز السلامة التشغيلية في عمليات تصنيع الأسمدة.`
+    },
+    sector: {
+      en: 'Chemical',
+      ar: 'الكيميائية'
+    },
+    icon: 'flask',
+    image: {
+      id: 'fertilizers-image',
+      url: '/images/industries/fertilizers-industry.jpg',
+      altText: {
+        en: 'Fertilizer manufacturing facility',
+        ar: 'منشأة تصنيع الأسمدة'
+      },
+      width: 800,
+      height: 600
+    },
+    meta: {
+      title: {
+        en: 'Fertilizer Industry Solutions | JAAZL',
+        ar: 'حلول صناعة الأسمدة | جازل'
+      },
+      description: {
+        en: 'Specialized chemical processing, environmental compliance, and automation solutions for fertilizer manufacturing.',
+        ar: 'معالجة كيميائية متخصصة وامتثال بيئي وحلول أتمتة لتصنيع الأسمدة.'
+      },
+      keywords: ['fertilizer industry', 'chemical processing', 'ammonia handling', 'phosphoric acid', 'environmental compliance']
+    },
+    relatedServices: ['specialized-chemicals', 'bulk-chemicals-supply', 'chemical-blending', 'waste-management', 'engineering-consulting', 'process-safety', 'reliability-engineering', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems'],
+    caseStudies: [
+      {
+        id: 'fertilizers-case-1',
+        title: {
+          en: 'Ammonia Processing System Optimization',
+          ar: 'تحسين نظام معالجة الأمونيا'
+        },
+        description: {
+          en: 'Implementation of advanced process control systems and safety measures for a major fertilizer production facility, improving efficiency while ensuring environmental compliance.',
+          ar: 'تنفيذ أنظمة تحكم عمليات متقدمة وإجراءات أمان لمنشأة إنتاج أسمدة كبرى، مما يحسن الكفاءة مع ضمان الامتثال البيئي.'
+        },
+        image: {
+          id: 'fertilizers-case-image',
+          url: '/images/industries/fertilizers-industry.jpg',
+          altText: {
+            en: 'Ammonia processing system',
+            ar: 'نظام معالجة الأمونيا'
+          },
+          width: 600,
+          height: 400
+        },
+        results: {
+          en: '22% improvement in production efficiency, 30% reduction in emissions, and 25% decrease in chemical waste generation.',
+          ar: 'تحسن بنسبة 22٪ في كفاءة الإنتاج، وتخفيض بنسبة 30٪ في الانبعاثات، وانخفاض بنسبة 25٪ في توليد النفايات الكيميائية.'
+        },
+        serviceId: 'specialized-chemicals',
+        industryId: 'fertilizers'
+      },
+      {
+        id: 'fertilizers-case-2',
+        title: {
+          en: 'Reliability Engineering for Fertilizer Production Line',
+          ar: 'هندسة الموثوقية لخط إنتاج الأسمدة'
+        },
+        description: {
+          en: 'Implementation of comprehensive reliability engineering program for critical fertilizer production equipment, including predictive maintenance systems and root cause analysis.',
+          ar: 'تنفيذ برنامج شامل لهندسة الموثوقية لمعدات إنتاج الأسمدة الحرجة، بما في ذلك أنظمة الصيانة التنبؤية وتحليل السبب الجذري.'
+        },
+        image: {
+          id: 'fertilizers-reliability-case-image',
+          url: '/images/industries/fertilizers-industry.jpg',
+          altText: {
+            en: 'Fertilizer production reliability systems',
+            ar: 'أنظمة موثوقية إنتاج الأسمدة'
+          },
+          width: 600,
+          height: 400
+        },
+        results: {
+          en: '50% reduction in unplanned downtime, 35% improvement in equipment availability, and 25% decrease in maintenance costs.',
+          ar: 'تخفيض التوقف غير المخطط بنسبة 50٪، وتحسين توفر المعدات بنسبة 35٪، وانخفاض تكاليف الصيانة بنسبة 25٪.'
+        },
+        serviceId: 'reliability-engineering',
+        industryId: 'fertilizers'
       }
     ]
   },
@@ -358,7 +585,7 @@ With expertise in urban systems engineering, we deliver integrated solutions tha
       },
       keywords: ['municipal solutions', 'urban infrastructure', 'water treatment', 'waste management']
     },
-    relatedServices: ['engineering-consulting', 'ai-automation'],
+    relatedServices: ['zero-liquid-discharge', 'waste-management', 'engineering-consulting', 'ai-automation', 'digital-transformation', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems'],
     caseStudies: [
       {
         id: 'municipal-case-1',
@@ -385,6 +612,33 @@ With expertise in urban systems engineering, we deliver integrated solutions tha
           ar: 'تخفيض فقد المياه بنسبة 45٪، وتحسين مقاييس جودة المياه بنسبة 30٪، وانخفاض في تكاليف التشغيل بنسبة 25٪.'
         },
         serviceId: 'environmental-compliance',
+        industryId: 'municipal'
+      },
+      {
+        id: 'municipal-case-2',
+        title: {
+          en: 'Smart City Infrastructure Implementation',
+          ar: 'تنفيذ البنية التحتية للمدينة الذكية'
+        },
+        description: {
+          en: 'Development of integrated smart city infrastructure for a major municipality, including IoT sensors, data analytics platforms, and automated municipal services management.',
+          ar: 'تطوير البنية التحتية المتكاملة للمدينة الذكية لبلدية كبرى، بما في ذلك أجهزة استشعار إنترنت الأشياء ومنصات تحليل البيانات وإدارة الخدمات البلدية الآلية.'
+        },
+        image: {
+          id: 'municipal-smart-case-image',
+          url: '/images/industries/municipal-industry.jpg',
+          altText: {
+            en: 'Smart city infrastructure systems',
+            ar: 'أنظمة البنية التحتية للمدينة الذكية'
+          },
+          width: 600,
+          height: 400
+        },
+        results: {
+          en: '60% improvement in service response time, 35% reduction in energy consumption, and 40% increase in citizen satisfaction scores.',
+          ar: 'تحسين وقت الاستجابة للخدمات بنسبة 60٪، وتخفيض استهلاك الطاقة بنسبة 35٪، وزيادة درجات رضا المواطنين بنسبة 40٪.'
+        },
+        serviceId: 'digital-transformation',
         industryId: 'municipal'
       }
     ]
@@ -438,7 +692,7 @@ With experience across conventional and renewable generation, transmission netwo
       },
       keywords: ['power solutions', 'electricity generation', 'energy distribution', 'renewable energy', 'smart grid']
     },
-    relatedServices: ['engineering-consulting', 'ai-automation'],
+    relatedServices: ['engineering-consulting', 'ai-automation', 'digital-transformation', 'smart-manufacturing', 'electromechanical-systems', 'process-safety', 'reliability-engineering', 'shutdown-turnaround', 'fabrication-services', 'api-materials', 'valves-actuators'],
     caseStudies: [
       {
         id: 'power-case-1',
@@ -465,6 +719,33 @@ With experience across conventional and renewable generation, transmission netwo
           ar: 'تخفيض مدة انقطاع التيار بنسبة 40٪، وتحسين إدارة الحمل الذروة بنسبة 25٪، والتكامل الناجح لمصادر الطاقة المتجددة بنسبة 30٪.'
         },
         serviceId: 'engineering-consulting',
+        industryId: 'power'
+      },
+      {
+        id: 'power-case-2',
+        title: {
+          en: 'Power Plant Electromechanical Systems Upgrade',
+          ar: 'ترقية الأنظمة الكهروميكانيكية لمحطة الطاقة'
+        },
+        description: {
+          en: 'Complete overhaul of electromechanical systems for a thermal power plant, including power distribution upgrades, automation systems integration, and reliability improvements.',
+          ar: 'إصلاح شامل للأنظمة الكهروميكانيكية لمحطة طاقة حرارية، بما في ذلك ترقية توزيع الطاقة وتكامل أنظمة الأتمتة وتحسينات الموثوقية.'
+        },
+        image: {
+          id: 'power-electromech-case-image',
+          url: '/images/industries/power-generation-industry.jpg',
+          altText: {
+            en: 'Power plant electromechanical systems',
+            ar: 'الأنظمة الكهروميكانيكية لمحطة الطاقة'
+          },
+          width: 600,
+          height: 400
+        },
+        results: {
+          en: '30% improvement in plant efficiency, 45% reduction in maintenance requirements, and 99.8% system availability achievement.',
+          ar: 'تحسين كفاءة المحطة بنسبة 30٪، وتخفيض متطلبات الصيانة بنسبة 45٪، وتحقيق توفر النظام بنسبة 99.8٪.'
+        },
+        serviceId: 'electromechanical-systems',
         industryId: 'power'
       }
     ]
@@ -499,7 +780,7 @@ With experience across diverse manufacturing industries including automotive, el
     icon: 'layers',
     image: {
       id: 'manufacturing-image',
-      url: '/images/industries/petrochemicals-industry.jpg',
+      url: '/images/industries/manufacturing-industry.jpg',
       altText: {
         en: 'Modern manufacturing facility',
         ar: 'منشأة تصنيع حديثة'
@@ -518,7 +799,7 @@ With experience across diverse manufacturing industries including automotive, el
       },
       keywords: ['manufacturing solutions', 'industrial automation', 'quality control', 'production optimization', 'smart factory']
     },
-    relatedServices: ['engineering-consulting', 'ai-automation', 'digital-transformation'],
+    relatedServices: ['engineering-consulting', 'ai-automation', 'digital-transformation', 'smart-manufacturing', 'electromechanical-systems', 'process-safety', 'reliability-engineering', 'shutdown-turnaround', 'fabrication-services', 'api-materials', 'valves-actuators'],
     caseStudies: [
       {
         id: 'manufacturing-case-1',
@@ -545,6 +826,33 @@ With experience across diverse manufacturing industries including automotive, el
           ar: 'زيادة بنسبة 35٪ في كفاءة الإنتاج، وتخفيض بنسبة 40٪ في وقت التوقف غير المخطط له، وتحسين بنسبة 25٪ في مقاييس جودة المنتج.'
         },
         serviceId: 'ai-automation',
+        industryId: 'manufacturing'
+      },
+      {
+        id: 'manufacturing-case-2',
+        title: {
+          en: 'Industrial Fabrication Services for Manufacturing Equipment',
+          ar: 'خدمات التصنيع الصناعي لمعدات التصنيع'
+        },
+        description: {
+          en: 'Custom fabrication and installation of specialized manufacturing equipment, including structural steel frameworks, process skids, and precision-machined components.',
+          ar: 'تصنيع وتركيب مخصص لمعدات التصنيع المتخصصة، بما في ذلك إطارات الفولاذ الهيكلي وهياكل العمليات والمكونات المُشغلة بدقة.'
+        },
+        image: {
+          id: 'manufacturing-fabrication-case-image',
+          url: '/images/industries/petrochemicals-industry.jpg',
+          altText: {
+            en: 'Custom manufacturing equipment fabrication',
+            ar: 'تصنيع معدات التصنيع المخصص'
+          },
+          width: 600,
+          height: 400
+        },
+        results: {
+          en: '50% faster equipment installation, 20% cost reduction in equipment procurement, and 100% compliance with manufacturing specifications.',
+          ar: 'تسريع تركيب المعدات بنسبة 50٪، وتخفيض تكاليف شراء المعدات بنسبة 20٪، والامتثال بنسبة 100٪ لمواصفات التصنيع.'
+        },
+        serviceId: 'fabrication-services',
         industryId: 'manufacturing'
       }
     ]
@@ -598,7 +906,62 @@ With experience in food processing facilities, we deliver tailored solutions tha
       },
       keywords: ['food processing', 'beverage industry', 'food safety', 'sanitation solutions', 'CIP chemicals']
     },
-    relatedServices: ['chemicals', 'environmental'],
-    caseStudies: []
+    relatedServices: ['specialized-chemicals', 'bulk-chemicals-supply', 'chemical-blending', 'zero-liquid-discharge', 'waste-management', 'oily-water-treatment', 'engineering-consulting', 'process-safety', 'shutdown-turnaround', 'electromechanical-systems'],
+    caseStudies: [
+      {
+        id: 'food-beverages-case-1',
+        title: {
+          en: 'Food Safety and CIP Chemical System Implementation',
+          ar: 'تنفيذ نظام سلامة الغذاء وكيماويات CIP'
+        },
+        description: {
+          en: 'Design and implementation of comprehensive food-grade chemical systems for a major dairy processing facility, including CIP chemical supply, sanitation protocols, and microbiological control systems.',
+          ar: 'تصميم وتنفيذ أنظمة كيميائية شاملة بدرجة غذائية لمنشأة معالجة ألبان كبرى، بما في ذلك توريد كيماويات CIP وبروتوكولات التطهير وأنظمة التحكم الميكروبيولوجي.'
+        },
+        image: {
+          id: 'food-safety-case-image',
+          url: '/images/industries/f&b-industry.jpg',
+          altText: {
+            en: 'Food safety and CIP chemical systems',
+            ar: 'أنظمة سلامة الغذاء وكيماويات CIP'
+          },
+          width: 600,
+          height: 400
+        },
+        results: {
+          en: '99.9% food safety compliance rate, 40% reduction in cleaning time, and 30% decrease in chemical consumption.',
+          ar: 'معدل امتثال لسلامة الغذاء بنسبة 99.9٪، وتخفيض وقت التنظيف بنسبة 40٪، وانخفاض استهلاك المواد الكيميائية بنسبة 30٪.'
+        },
+        serviceId: 'specialized-chemicals',
+        industryId: 'food-beverages'
+      },
+      {
+        id: 'food-beverages-case-2',
+        title: {
+          en: 'Beverage Production Line Shutdown and Turnaround',
+          ar: 'إغلاق وصيانة دورية لخط إنتاج المشروبات'
+        },
+        description: {
+          en: 'Complete shutdown and turnaround management for a beverage bottling facility, including equipment maintenance, system upgrades, and safety inspections within a tight schedule.',
+          ar: 'إدارة إغلاق وصيانة دورية كاملة لمنشأة تعبئة المشروبات، بما في ذلك صيانة المعدات وترقية الأنظمة والفحوصات الأمنية ضمن جدول زمني ضيق.'
+        },
+        image: {
+          id: 'beverage-shutdown-case-image',
+          url: '/images/industries/f&b-industry.jpg',
+          altText: {
+            en: 'Beverage production line maintenance',
+            ar: 'صيانة خط إنتاج المشروبات'
+          },
+          width: 600,
+          height: 400
+        },
+        results: {
+          en: '95% of planned maintenance completed on schedule, 25% reduction in shutdown duration, and 100% safety compliance achievement.',
+          ar: 'إتمام 95٪ من الصيانة المخططة في الموعد المحدد، وتخفيض مدة الإغلاق بنسبة 25٪، وتحقيق الامتثال الأمني بنسبة 100٪.'
+        },
+        serviceId: 'shutdown-turnaround',
+        industryId: 'food-beverages'
+      }
+    ]
   }
 ];
