@@ -55,44 +55,44 @@ const JAAZLHomepage: React.FC = () => {
       title: language === 'en' ? "Specialty & Bulk Chemicals" : "الكيماويات المتخصصة والسائبة",
       description: language === 'en' ? "Comprehensive chemical solutions for industrial excellence, including drilling & production chemicals, water treatment systems, mining & fertilizer chemicals, and bulk commodity chemicals." : "حلول كيميائية شاملة للتميز الصناعي، تشمل كيماويات الحفر والإنتاج وأنظمة معالجة المياه وكيماويات التعدين والأسمدة والكيماويات السائبة.",
       features: language === 'en' ? ["Specialty Chemicals", "Bulk Chemicals", "Local Manufacturing", "Waste Management", "Process Chemicals", "API Approved"] : ["المواد الكيميائية المتخصصة", "المواد الكيميائية السائبة", "التصنيع المحلي", "إدارة النفايات", "مواد كيميائية للعمليات", "معتمد من API"],
-      color: "from-purple-600 to-indigo-700",
-      gradient: "bg-gradient-to-br from-purple-50 to-indigo-100"
+      color: "from-violet-600 to-purple-700",
+      gradient: "bg-gradient-to-br from-violet-50 to-purple-100"
     },
     {
       icon: React.createElement(getIndustryIcon('droplets'), { className: "w-8 h-8" }),
       title: language === 'en' ? "Water & Wastewater Treatment" : "معالجة المياه ومياه الصرف الصحي",
       description: language === 'en' ? "Complete water solutions including cooling/boiler water treatment, reverse osmosis systems, ion exchange systems, and waste water treatment with MBR, MBBR, CGI, MLD & ZLD technologies." : "حلول مياه شاملة تشمل معالجة مياه التبريد/الغلايات وأنظمة التناضح العكسي وأنظمة تبادل الأيونات ومعالجة مياه الصرف بتقنيات MBR وMBBR وCGI وMLD وZLD.",
       features: language === 'en' ? ["Water Treatment", "Zero Liquid Discharge", "Brine Treatment", "SmartOps AI Platform", "Desalination", "Specialty Chemicals"] : ["معالجة المياه", "التفريغ السائل الصفري", "معالجة المحلول الملحي", "منصة الذكاء الاصطناعي", "تحلية المياه", "المواد الكيميائية المتخصصة"],
-      color: "from-cyan-600 to-blue-700",
-      gradient: "bg-gradient-to-br from-cyan-50 to-blue-100"
+      color: "from-blue-600 to-cyan-700",
+      gradient: "bg-gradient-to-br from-blue-50 to-cyan-100"
     },
     {
       icon: React.createElement(getMiscIcon('cog'), { className: "w-8 h-8" }),
       title: language === 'en' ? "Technical Consultancy & AI" : "الاستشارات التقنية والذكاء الاصطناعي",
       description: language === 'en' ? "Advanced engineering solutions including process safety, reliability engineering, sustainability & energy management, applied AI & digital solutions, and process engineering." : "حلول هندسية متقدمة تشمل سلامة العمليات وهندسة الموثوقية وإدارة الاستدامة والطاقة والذكاء الاصطناعي التطبيقي والحلول الرقمية وهندسة العمليات.",
       features: language === 'en' ? ["Digital Twin Technology", "Process Optimization", "Safety & Risk Analysis", "Automation Solutions", "Applied AI", "Decarbonization"] : ["تقنية التوأم الرقمي", "تحسين العمليات", "تحليل السلامة والمخاطر", "حلول الأتمتة", "الذكاء الاصطناعي التطبيقي", "تقليل الكربون"],
-      color: "from-blue-600 to-blue-800",
-      gradient: "bg-gradient-to-br from-blue-50 to-blue-100"
+      color: "from-indigo-600 to-blue-700",
+      gradient: "bg-gradient-to-br from-indigo-50 to-blue-100"
     },
     {
       icon: React.createElement(getFeatureIcon('zap'), { className: "w-8 h-8" }),
       title: language === 'en' ? "Electromechanical Services" : "الخدمات الكهروميكانيكية",
       description: language === 'en' ? "Complete engineering solutions for industrial infrastructure including mechanical engineering services, electrical & instrumentation, and turnaround & construction services." : "حلول هندسية شاملة للبنية التحتية الصناعية تشمل خدمات الهندسة الميكانيكية والكهربائية والأجهزة وخدمات الصيانة والإنشاءات.",
       features: language === 'en' ? ["Trading", "Fabrication", "MEI Services", "Turnaround Solutions", "Instrumentation", "Equipment Rentals"] : ["خدمات MEI", "التصنيع", "مشاريع EPC", "حلول الصيانة الدورية", "الأجهزة والمعدات", "تأجير المعدات"],
-      color: "from-emerald-600 to-teal-800",
-      gradient: "bg-gradient-to-br from-emerald-50 to-teal-100"
+      color: "from-orange-600 to-red-700",
+      gradient: "bg-gradient-to-br from-orange-50 to-red-100"
     },
     {
       icon: React.createElement(getMiscIcon('package'), { className: "w-8 h-8" }),
       title: language === 'en' ? "Material Supplies" : "إمدادات المواد",
       description: language === 'en' ? "API & Aramco approved materials including pipes & fittings, valves & actuators, raw materials & metals, and storage & infrastructure solutions." : "مواد معتمدة من API وأرامكو تشمل الأنابيب والتجهيزات والصمامات والمحركات والمواد الخام والمعادن وحلول التخزين والبنية التحتية.",
       features: language === 'en' ? ["API Approved Materials", "Aramco Certified", "Pipes & Fittings", "Valves & Actuators", "Raw Materials", "Storage Solutions"] : ["مواد معتمدة من API", "معتمد من أرامكو", "أنابيب وتجهيزات", "صمامات ومحركات", "مواد خام", "حلول التخزين"],
-      color: "from-gray-600 to-gray-800",
-      gradient: "bg-gradient-to-br from-gray-50 to-gray-100"
+      color: "from-slate-600 to-gray-700",
+      gradient: "bg-gradient-to-br from-slate-50 to-gray-100"
     }
   ];
 
-  // Industries - Updated to match catalogue sequence
+  // Industries - Updated to match catalogue sequence  
   const industries = [
     { icon: React.createElement(getIndustryIcon('droplet'), { className: "w-8 h-8" }), name: {en: "Oil & Gas", ar: "النفط والغاز"}, projects: {en: "150+ Projects", ar: "150+ مشروع"} },
     { icon: React.createElement(getIndustryIcon('factory'), { className: "w-8 h-8" }), name: {en: "Petrochemicals", ar: "البتروكيماويات"}, projects: {en: "200+ Projects", ar: "200+ مشروع"} },
@@ -204,7 +204,7 @@ const JAAZLHomepage: React.FC = () => {
                   <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-6 sm:mb-8">
                     {services.map((service, index) => (
                       <div key={index} className={`group text-center p-2 sm:p-4 lg:p-6 rounded-xl sm:rounded-2xl transition-all duration-500 cursor-pointer border border-white/10 hover:border-white/30 ${activeService === index ? 'bg-white/20 scale-105' : 'bg-white/5 hover:bg-white/15'}`} onClick={() => setActiveService(index)}>
-                        <div className="text-orange-400 mb-2 sm:mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                        <div className="text-white mb-2 sm:mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
                         <p className="text-xs sm:text-sm lg:text-base font-semibold text-white">{service.title}</p>
                         <div className={`mt-2 h-1 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${language === 'ar' ? 'bg-gradient-to-l from-blue-500 to-orange-500' : 'bg-gradient-to-r from-blue-500 to-orange-500'}`}></div>
                       </div>
@@ -272,11 +272,11 @@ const JAAZLHomepage: React.FC = () => {
             <div className="sticky top-24">
               <div className={`bg-gradient-to-br ${services[activeService].color} rounded-3xl p-10 text-white shadow-card-active transform transition-all duration-300`}>
                 <div className="mb-8">
-                  <div className="text-orange-400 mb-6 p-4 bg-white/10 rounded-2xl w-fit">{services[activeService].icon}</div>
+                  <div className="text-white mb-6 p-4 bg-white/10 rounded-2xl w-fit">{services[activeService].icon}</div>
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">{services[activeService].title}</h3>
                   <p className="text-blue-100 mb-8 text-xl leading-relaxed">{services[activeService].description}</p>
                 </div>
-                <div className="space-y-4 mb-8">{services[activeService].features.map((feature, index) => (<div key={index} className="flex items-center group">{React.createElement(getFeatureIcon('check-circle'), { className: "w-6 h-6 text-orange-400 mx-4 group-hover:scale-110 transition-transform" })}<span className="text-xl font-medium">{feature}</span></div>))}</div>
+                <div className="space-y-4 mb-8">{services[activeService].features.map((feature, index) => (<div key={index} className="flex items-center group">{React.createElement(getFeatureIcon('check-circle'), { className: "w-6 h-6 text-white mx-4 group-hover:scale-110 transition-transform" })}<span className="text-xl font-medium">{feature}</span></div>))}</div>
                 <div className="flex gap-4">
                   <Link href={`/services/${activeService === 0 ? 'engineering-consulting' : activeService === 1 ? 'ai-automation' : 'chemical-solutions'}`} className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center group">{language === 'en' ? 'Learn More' : 'اعرف المزيد'}{React.createElement(getNavigationIcon('arrow-right'), { className: "mx-2 w-5 h-5 group-hover:translate-x-1 transition-transform" })}</Link>
                   <a href="/docs/JAAZL-Profile.pdf" target="_blank" rel="noopener noreferrer" className="border border-white/30 hover:bg-white/10 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center">{React.createElement(getMiscIcon('download'), { className: "mx-2 w-5 h-5" })}{language === 'en' ? 'Brochure' : 'الكتيب'}</a>
@@ -340,14 +340,14 @@ const JAAZLHomepage: React.FC = () => {
         <div className="absolute inset-0"><div className="absolute top-20 left-20 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl"></div><div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full font-medium mb-4">{React.createElement(getFeatureIcon('award'), { className: "w-4 h-4 mx-2 text-orange-400" })}{language === 'en' ? "Why Choose JAAZL" : "لماذا تختار جازل"}</div>
+            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full font-medium mb-4">{React.createElement(getFeatureIcon('award'), { className: "w-4 h-4 mx-2 text-yellow-300" })}{language === 'en' ? "Why Choose JAAZL" : "لماذا تختار جازل"}</div>
             <h2 className="text-5xl lg:text-6xl font-bold mb-6">{language === 'en' ? "Your Trusted Partner for Industrial Excellence" : "شريكك الموثوق للتميز الصناعي"}</h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">{language === 'en' ? "Combining global expertise with local knowledge to deliver unmatched industrial solutions." : "نجمع بين الخبرة العالمية والمعرفة المحلية لتقديم حلول صناعية لا مثيل لها."}</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="group text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl hover:bg-white/10 transition-all duration-300 border border-white/10 hover:border-white/20 hover:shadow-card-hover">
-                <div className="text-orange-400 mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
+                <div className="text-yellow-300 mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
                 <div className="inline-block px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs font-semibold mb-4">{feature.highlight}</div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-orange-300 transition-colors">{feature.title[language]}</h3>
                 <p className="text-blue-100 leading-relaxed">{feature.description}</p>

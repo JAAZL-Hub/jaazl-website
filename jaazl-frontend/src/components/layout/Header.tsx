@@ -15,21 +15,15 @@ const serviceCategories = {
     name: { en: 'Specialty & Bulk Chemicals', ar: 'الكيماويات المتخصصة والسائبة' },
     services: [
       { name: { en: 'Specialized Industrial Chemicals', ar: 'المواد الكيميائية الصناعية المتخصصة' }, path: '/services/specialized-chemicals' },
-      { name: { en: 'Process Optimization Chemicals', ar: 'كيماويات تحسين العمليات' }, path: '/services/process-chemicals' },
-      { name: { en: 'Chemical Laboratory Services', ar: 'خدمات المختبرات الكيميائية' }, path: '/services/laboratory-services' },
       { name: { en: 'Bulk Industrial Chemicals Supply', ar: 'توريد المواد الكيميائية الصناعية بالجملة' }, path: '/services/bulk-chemicals-supply' },
-      { name: { en: 'Local Chemical Manufacturing & Blending', ar: 'التصنيع والخلط الكيميائي المحلي' }, path: '/services/chemical-blending' },
-      { name: { en: 'Off-Spec & By-Products Management', ar: 'إدارة المنتجات غير المطابقة والمنتجات الثانوية' }, path: '/services/offspec-management' }
+      { name: { en: 'Local Chemical Manufacturing & Blending', ar: 'التصنيع والخلط الكيميائي المحلي' }, path: '/services/chemical-blending' }
     ]
   },
   environmental: {
     name: { en: 'Water & Wastewater Treatment', ar: 'معالجة المياه ومياه الصرف الصحي' },
     services: [
-      { name: { en: 'Environmental Compliance & Sustainability', ar: 'الامتثال البيئي والاستدامة' }, path: '/services/environmental-compliance' },
-      { name: { en: 'Environmental Monitoring & Assessment', ar: 'المراقبة والتقييم البيئي' }, path: '/services/environmental-monitoring' },
-      { name: { en: 'Industrial Waste Management', ar: 'إدارة النفايات الصناعية' }, path: '/services/waste-management' },
       { name: { en: 'Zero Liquid Discharge Systems', ar: 'أنظمة التفريغ السائل الصفري' }, path: '/services/zero-liquid-discharge' },
-      { name: { en: 'Spent Caustic Treatment', ar: 'معالجة الصودا الكاوية المستهلكة' }, path: '/services/spent-caustic-treatment' },
+      { name: { en: 'Industrial Waste Management', ar: 'إدارة النفايات الصناعية' }, path: '/services/waste-management' },
       { name: { en: 'Oily Water & Hydrocarbon Treatment', ar: 'معالجة المياه الزيتية والهيدروكربونية' }, path: '/services/oily-water-treatment' }
     ]
   },
@@ -38,32 +32,23 @@ const serviceCategories = {
     services: [
       { name: { en: 'Industrial Engineering Consulting', ar: 'استشارات الهندسة الصناعية' }, path: '/services/engineering-consulting' },
       { name: { en: 'AI & Industrial Automation', ar: 'الذكاء الاصطناعي والأتمتة الصناعية' }, path: '/services/ai-automation' },
-      { name: { en: 'Industrial Digital Transformation', ar: 'التحول الرقمي الصناعي' }, path: '/services/digital-transformation' },
-      { name: { en: 'Industrial Project Management', ar: 'إدارة المشاريع الصناعية' }, path: '/services/project-management' },
-      { name: { en: 'Industrial System Integration', ar: 'تكامل الأنظمة الصناعية' }, path: '/services/system-integration' },
-      { name: { en: 'Technical Training & Development', ar: 'التدريب والتطوير التقني' }, path: '/services/technical-training' }
+      { name: { en: 'Industrial Digital Transformation', ar: 'التحول الرقمي الصناعي' }, path: '/services/digital-transformation' }
     ]
   },
   electromechanical: {
     name: { en: 'Electromechanical Services', ar: 'الخدمات الكهروميكانيكية' },
     services: [
       { name: { en: 'Industrial Electromechanical Systems', ar: 'أنظمة كهروميكانيكية صناعية' }, path: '/services/electromechanical-systems' },
-      { name: { en: 'Industrial Power Systems', ar: 'أنظمة الطاقة الصناعية' }, path: '/services/power-systems' },
-      { name: { en: 'Industrial Automation & Controls', ar: 'أتمتة وضوابط صناعية' }, path: '/services/automation-controls' },
       { name: { en: 'Shutdown & Turnaround Solutions', ar: 'حلول الإغلاق والصيانة الدورية' }, path: '/services/shutdown-turnaround' },
-      { name: { en: 'Industrial Fabrication Services', ar: 'خدمات التصنيع الصناعي' }, path: '/services/fabrication-services' },
-      { name: { en: 'Prefabricated Tanks & Storage Solutions', ar: 'حلول الخزانات والتخزين مسبقة التصنيع' }, path: '/services/prefabricated-tanks' }
+      { name: { en: 'Industrial Fabrication Services', ar: 'خدمات التصنيع الصناعي' }, path: '/services/fabrication-services' }
     ]
   },
   materials: {
     name: { en: 'Material Supplies', ar: 'إمدادات المواد' },
     services: [
-      { name: { en: 'Bulk Industrial Chemicals Supply', ar: 'توريد المواد الكيميائية الصناعية بالجملة' }, path: '/services/bulk-chemicals-supply' },
-      { name: { en: 'Prefabricated Tanks & Storage Solutions', ar: 'حلول الخزانات والتخزين مسبقة التصنيع' }, path: '/services/prefabricated-tanks' },
-      { name: { en: 'Industrial Fabrication Services', ar: 'خدمات التصنيع الصناعي' }, path: '/services/fabrication-services' },
-      { name: { en: 'Industrial Power Systems', ar: 'أنظمة الطاقة الصناعية' }, path: '/services/power-systems' },
-      { name: { en: 'Industrial Automation & Controls', ar: 'أتمتة وضوابط صناعية' }, path: '/services/automation-controls' },
-      { name: { en: 'Off-Spec & By-Products Management', ar: 'إدارة المنتجات غير المطابقة والمنتجات الثانوية' }, path: '/services/offspec-management' }
+      { name: { en: 'API Approved Materials', ar: 'مواد معتمدة من API' }, path: '/services/api-materials' },
+      { name: { en: 'Pipes & Fittings', ar: 'أنابيب وتجهيزات' }, path: '/services/pipes-fittings' },
+      { name: { en: 'Valves & Actuators', ar: 'صمامات ومحركات' }, path: '/services/valves-actuators' }
     ]
   }
 };
