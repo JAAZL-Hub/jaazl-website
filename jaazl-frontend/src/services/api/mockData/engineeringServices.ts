@@ -1,6 +1,7 @@
 import { Service } from '../../types';
 
 export const engineeringServices: Service[] = [
+  // ===== ENGINEERING CATEGORY =====
   {
     id: 'engineering-consulting',
     slug: 'engineering-consulting',
@@ -100,78 +101,78 @@ Our consulting approach is collaborative, working closely with your team to unde
       ar: 'حلول متطورة للذكاء الاصطناعي وأنظمة الأتمتة لتحويل العمليات الصناعية ودفع التحول الرقمي.'
     },
     fullDescription: {
-      en: `Our AI & Industrial Automation services combine the latest advancements in artificial intelligence with robust industrial automation systems to create intelligent, self-optimizing production environments. We design and implement solutions that reduce human intervention, increase precision, and enable data-driven decision making.
+      en: `Transform your industrial operations with our advanced AI and automation solutions. We integrate artificial intelligence, machine learning, and automated control systems to enhance productivity, reduce costs, and improve operational safety.
 
-From predictive maintenance systems that anticipate equipment failures before they occur to advanced process control systems that continuously optimize operations, our solutions help you achieve unprecedented levels of efficiency and quality. We integrate machine learning algorithms that adapt and improve over time, creating systems that get smarter with use.
+Our AI solutions include predictive maintenance algorithms, quality control systems, process optimization models, and intelligent monitoring systems. These technologies help you anticipate problems before they occur and optimize operations in real-time.
 
-Our team brings expertise in both traditional industrial engineering and cutting-edge data science, ensuring solutions that are both innovative and practical for industrial settings.`,
-      ar: `تجمع خدمات الذكاء الاصطناعي والأتمتة الصناعية لدينا بين أحدث التطورات في الذكاء الاصطناعي وأنظمة الأتمتة الصناعية القوية لإنشاء بيئات إنتاج ذكية وذاتية التحسين. نصمم وننفذ حلولًا تقلل من التدخل البشري وتزيد من الدقة وتمكّن من اتخاذ القرارات المستندة إلى البيانات.
+We design and implement automation systems that seamlessly integrate with your existing infrastructure, providing scalable solutions that grow with your business needs while maintaining the highest standards of reliability and safety.`,
+      ar: `حول عملياتك الصناعية باستخدام حلولنا المتقدمة للذكاء الاصطناعي والأتمتة. ندمج الذكاء الاصطناعي والتعلم الآلي وأنظمة التحكم الآلي لتعزيز الإنتاجية وتقليل التكاليف وتحسين السلامة التشغيلية.
 
-من أنظمة الصيانة التنبؤية التي تتوقع أعطال المعدات قبل حدوثها إلى أنظمة التحكم المتقدمة في العمليات التي تحسن العمليات باستمرار، تساعدك حلولنا على تحقيق مستويات غير مسبوقة من الكفاءة والجودة. نقوم بدمج خوارزميات التعلم الآلي التي تتكيف وتتحسن بمرور الوقت، مما يخلق أنظمة تصبح أكثر ذكاءً مع الاستخدام.
+تشمل حلول الذكاء الاصطناعي لدينا خوارزميات الصيانة التنبؤية وأنظمة مراقبة الجودة ونماذج تحسين العمليات وأنظمة المراقبة الذكية. تساعدك هذه التقنيات على توقع المشكلات قبل حدوثها وتحسين العمليات في الوقت الفعلي.
 
-يجلب فريقنا الخبرة في كل من الهندسة الصناعية التقليدية وعلوم البيانات المتطورة، مما يضمن حلولًا مبتكرة وعملية للبيئات الصناعية.`
+نصمم وننفذ أنظمة الأتمتة التي تتكامل بسلاسة مع البنية التحتية الحالية لديك، مما يوفر حلولًا قابلة للتطوير تنمو مع احتياجات عملك مع الحفاظ على أعلى معايير الموثوقية والسلامة.`
     },
     features: [
       {
         id: 'predictive-maintenance',
         title: {
-          en: 'Predictive Maintenance',
-          ar: 'الصيانة التنبؤية'
+          en: 'Predictive Maintenance AI',
+          ar: 'الذكاء الاصطناعي للصيانة التنبؤية'
         },
         description: {
-          en: 'AI-powered systems that predict equipment failures before they occur.',
-          ar: 'أنظمة تعتمد على الذكاء الاصطناعي تتنبأ بأعطال المعدات قبل حدوثها.'
+          en: 'AI algorithms that predict equipment failures before they occur.',
+          ar: 'خوارزميات ذكية تتنبأ بأعطال المعدات قبل حدوثها.'
         },
-        icon: 'tool'
+        icon: 'brain'
       },
       {
-        id: 'advanced-process-control',
+        id: 'process-automation',
         title: {
-          en: 'Advanced Process Control',
-          ar: 'التحكم المتقدم في العمليات'
+          en: 'Process Automation',
+          ar: 'أتمتة العمليات'
         },
         description: {
-          en: 'Intelligent control systems that continuously optimize industrial processes.',
-          ar: 'أنظمة تحكم ذكية تعمل باستمرار على تحسين العمليات الصناعية.'
+          en: 'Automated control systems for optimized industrial processes.',
+          ar: 'أنظمة تحكم آلية للعمليات الصناعية المحسنة.'
         },
-        icon: 'sliders'
+        icon: 'cpu'
       },
       {
-        id: 'data-analytics',
+        id: 'intelligent-monitoring',
         title: {
-          en: 'Industrial Data Analytics',
-          ar: 'تحليلات البيانات الصناعية'
+          en: 'Intelligent Monitoring',
+          ar: 'المراقبة الذكية'
         },
         description: {
-          en: 'Transform operational data into actionable business insights.',
-          ar: 'تحويل بيانات التشغيل إلى رؤى عملية قابلة للتنفيذ.'
+          en: 'Real-time monitoring and analysis of operational data.',
+          ar: 'مراقبة وتحليل البيانات التشغيلية في الوقت الفعلي.'
         },
-        icon: 'bar-chart-2'
+        icon: 'eye'
       }
     ],
-    icon: 'cpu',
+    icon: 'brain',
     image: {
       id: 'ai-automation-image',
       url: '/images/services/ai-automation.jpg',
       altText: {
-        en: 'AI and industrial automation systems',
-        ar: 'أنظمة الذكاء الاصطناعي والأتمتة الصناعية'
+        en: 'AI and industrial automation',
+        ar: 'الذكاء الاصطناعي والأتمتة الصناعية'
       },
       width: 800,
       height: 600
     },
     meta: {
       title: {
-        en: 'AI & Industrial Automation Services | JAAZL',
-        ar: 'خدمات الذكاء الاصطناعي والأتمتة الصناعية | جازل'
+        en: 'AI & Industrial Automation Solutions | JAAZL',
+        ar: 'حلول الذكاء الاصطناعي والأتمتة الصناعية | جازل'
       },
       description: {
-        en: 'Transform industrial operations with cutting-edge AI and automation solutions that increase efficiency, reduce costs, and drive innovation.',
-        ar: 'تحويل العمليات الصناعية باستخدام حلول متطورة للذكاء الاصطناعي والأتمتة التي تزيد الكفاءة وتقلل التكاليف وتدفع الابتكار.'
+        en: 'Advanced AI and automation solutions for industrial transformation, predictive maintenance, and process optimization.',
+        ar: 'حلول متقدمة للذكاء الاصطناعي والأتمتة للتحول الصناعي والصيانة التنبؤية وتحسين العمليات.'
       },
-      keywords: ['artificial intelligence', 'industrial automation', 'predictive maintenance', 'process control', 'data analytics']
+      keywords: ['artificial intelligence', 'industrial automation', 'predictive maintenance', 'machine learning', 'process optimization']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'manufacturing']
   },
   {
     id: 'digital-transformation',
@@ -182,60 +183,60 @@ Our team brings expertise in both traditional industrial engineering and cutting
       ar: 'التحول الرقمي الصناعي'
     },
     shortDescription: {
-      en: 'Comprehensive digital transformation strategies to modernize industrial operations and improve operational efficiency.',
-      ar: 'استراتيجيات شاملة للتحول الرقمي لتحديث العمليات الصناعية وتحسين الكفاءة التشغيلية.'
+      en: 'Comprehensive digital transformation strategies to modernize industrial operations and enhance competitive advantage.',
+      ar: 'استراتيجيات شاملة للتحول الرقمي لتحديث العمليات الصناعية وتعزيز الميزة التنافسية.'
     },
     fullDescription: {
-      en: `JAAZL's Industrial Digital Transformation service helps companies evolve from traditional manufacturing and industrial operations to data-driven, connected enterprises. We develop customized strategies for digital adoption that align with your business goals and infrastructure reality.
+      en: `Accelerate your industrial digital transformation journey with our comprehensive suite of digital solutions. We help organizations modernize their operations through advanced technologies, data analytics, and integrated digital platforms.
 
-Our approach encompasses everything from foundational technologies like IIoT (Industrial Internet of Things) implementation to advanced solutions such as digital twins and cloud-based operations platforms. We help you collect, analyze, and leverage operational data to drive continuous improvement and innovation.
+Our digital transformation services encompass IoT implementation, cloud migration, data analytics platforms, and digital twin development. We create connected ecosystems that enable real-time visibility, improved decision-making, and enhanced operational efficiency.
 
-We understand that digital transformation is a journey, not a destination. Our team provides ongoing support to ensure successful implementation, adoption by your workforce, and continuous optimization of your digital solutions.`,
-      ar: `تساعد خدمة التحول الرقمي الصناعي من جازل الشركات على التطور من التصنيع التقليدي والعمليات الصناعية إلى مؤسسات متصلة تعتمد على البيانات. نحن نطور استراتيجيات مخصصة للتبني الرقمي تتماشى مع أهداف عملك وواقع البنية التحتية.
+We work with you to develop a customized digital strategy that aligns with your business objectives, ensuring seamless integration with existing systems while building a foundation for future growth and innovation.`,
+      ar: `تسريع رحلة التحول الرقمي الصناعي لديك من خلال مجموعتنا الشاملة من الحلول الرقمية. نساعد المؤسسات على تحديث عملياتها من خلال التقنيات المتقدمة وتحليلات البيانات والمنصات الرقمية المتكاملة.
 
-يشمل نهجنا كل شيء من التقنيات الأساسية مثل تنفيذ إنترنت الأشياء الصناعية (IIoT) إلى الحلول المتقدمة مثل التوائم الرقمية ومنصات العمليات السحابية. نساعدك على جمع وتحليل واستفادة من البيانات التشغيلية لدفع التحسين المستمر والابتكار.
+تشمل خدمات التحول الرقمي لدينا تطبيق إنترنت الأشياء والهجرة السحابية ومنصات تحليل البيانات وتطوير التوأم الرقمي. نخلق نظمًا بيئية متصلة تتيح الرؤية في الوقت الفعلي وتحسين عملية اتخاذ القرار وتعزيز الكفاءة التشغيلية.
 
-نحن نتفهم أن التحول الرقمي هو رحلة وليس وجهة. يقدم فريقنا دعمًا مستمرًا لضمان التنفيذ الناجح والتبني من قبل القوى العاملة لديك والتحسين المستمر لحلولك الرقمية.`
+نعمل معك لتطوير استراتيجية رقمية مخصصة تتماشى مع أهداف عملك، مما يضمن التكامل السلس مع الأنظمة الحالية مع بناء أساس للنمو والابتكار المستقبليين.`
     },
     features: [
       {
-        id: 'iiot-implementation',
+        id: 'iot-integration',
         title: {
-          en: 'IIoT Implementation',
-          ar: 'تنفيذ إنترنت الأشياء الصناعية'
+          en: 'IoT Integration',
+          ar: 'تكامل إنترنت الأشياء'
         },
         description: {
-          en: 'Connect industrial equipment to gather real-time operational data.',
-          ar: 'ربط المعدات الصناعية لجمع بيانات التشغيل في الوقت الفعلي.'
+          en: 'Connect and integrate IoT devices for comprehensive data collection.',
+          ar: 'ربط ودمج أجهزة إنترنت الأشياء لجمع البيانات الشامل.'
         },
         icon: 'wifi'
       },
       {
-        id: 'digital-twins',
+        id: 'data-analytics',
         title: {
-          en: 'Digital Twin Technology',
-          ar: 'تقنية التوأم الرقمي'
+          en: 'Advanced Data Analytics',
+          ar: 'تحليلات البيانات المتقدمة'
         },
         description: {
-          en: 'Create virtual models of physical assets to simulate and optimize operations.',
-          ar: 'إنشاء نماذج افتراضية للأصول المادية لمحاكاة وتحسين العمليات.'
+          en: 'Transform raw data into actionable business insights.',
+          ar: 'تحويل البيانات الخام إلى رؤى تجارية قابلة للتنفيذ.'
         },
-        icon: 'copy'
+        icon: 'bar-chart'
       },
       {
-        id: 'cloud-integration',
+        id: 'cloud-solutions',
         title: {
-          en: 'Cloud Integration',
-          ar: 'التكامل السحابي'
+          en: 'Cloud Solutions',
+          ar: 'الحلول السحابية'
         },
         description: {
-          en: 'Migrate industrial systems to secure cloud platforms for enhanced accessibility and scalability.',
-          ar: 'نقل الأنظمة الصناعية إلى منصات سحابية آمنة لتحسين إمكانية الوصول وقابلية التوسع.'
+          en: 'Scalable cloud infrastructure for modern industrial operations.',
+          ar: 'بنية تحتية سحابية قابلة للتطوير للعمليات الصناعية الحديثة.'
         },
         icon: 'cloud'
       }
     ],
-    icon: 'refresh-cw',
+    icon: 'smartphone',
     image: {
       id: 'digital-transformation-image',
       url: '/images/services/digital-transformation.webp',
@@ -248,189 +249,19 @@ We understand that digital transformation is a journey, not a destination. Our t
     },
     meta: {
       title: {
-        en: 'Industrial Digital Transformation | JAAZL',
-        ar: 'التحول الرقمي الصناعي | جازل'
+        en: 'Industrial Digital Transformation Services | JAAZL',
+        ar: 'خدمات التحول الرقمي الصناعي | جازل'
       },
       description: {
-        en: 'Comprehensive digital transformation strategies and solutions for modern industrial enterprises seeking operational excellence.',
-        ar: 'استراتيجيات وحلول شاملة للتحول الرقمي للمؤسسات الصناعية الحديثة التي تسعى إلى التميز التشغيلي.'
+        en: 'Comprehensive digital transformation services to modernize industrial operations with IoT, data analytics, and cloud solutions.',
+        ar: 'خدمات تحول رقمي شاملة لتحديث العمليات الصناعية بتقنيات إنترنت الأشياء وتحليلات البيانات والحلول السحابية.'
       },
-      keywords: ['digital transformation', 'IIoT', 'industrial IoT', 'industry 4.0', 'digital twins', 'cloud integration']
+      keywords: ['digital transformation', 'IoT', 'data analytics', 'cloud solutions', 'industrial modernization']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'power', 'mining']
+    relatedIndustries: ['manufacturing', 'oil-gas', 'petrochemicals']
   },
-  {
-    id: 'project-management',
-    slug: 'project-management',
-    categoryId: 'engineering',
-    name: {
-      en: 'Industrial Project Management',
-      ar: 'إدارة المشاريع الصناعية'
-    },
-    shortDescription: {
-      en: 'Comprehensive project management services for complex industrial projects, ensuring on-time and on-budget delivery.',
-      ar: 'خدمات شاملة لإدارة المشاريع للمشاريع الصناعية المعقدة، مما يضمن التسليم في الوقت المحدد وضمن الميزانية.'
-    },
-    fullDescription: {
-      en: `JAAZL's Industrial Project Management service provides end-to-end oversight and coordination for complex industrial projects. From initial planning and design to execution, commissioning, and handover, our experienced project managers ensure every phase is completed to the highest standards.
 
-We utilize proven project management methodologies adapted for industrial settings, with particular emphasis on risk management, quality control, and stakeholder communication. Our systematic approach helps identify and mitigate potential issues before they impact your timeline or budget.
-
-Our team brings extensive experience across various industrial sectors, allowing us to anticipate challenges specific to your industry and project type. We serve as your dedicated partner throughout the project lifecycle, maintaining transparent communication and detailed documentation at every stage.`,
-      ar: `توفر خدمة إدارة المشاريع الصناعية من جازل إشرافًا وتنسيقًا شاملاً للمشاريع الصناعية المعقدة. من التخطيط الأولي والتصميم إلى التنفيذ والتكليف والتسليم، يضمن مديرو المشاريع ذوو الخبرة لدينا إكمال كل مرحلة وفقًا لأعلى المعايير.
-
-نحن نستخدم منهجيات إدارة المشاريع المثبتة والمكيفة للبيئات الصناعية، مع التركيز بشكل خاص على إدارة المخاطر ومراقبة الجودة والتواصل مع أصحاب المصلحة. يساعد نهجنا المنهجي في تحديد والتخفيف من المشكلات المحتملة قبل أن تؤثر على الجدول الزمني أو الميزانية.
-
-يجلب فريقنا خبرة واسعة عبر مختلف القطاعات الصناعية، مما يتيح لنا توقع التحديات الخاصة بصناعتك ونوع مشروعك. نحن نعمل كشريك مخصص لك طوال دورة حياة المشروع، مع الحفاظ على التواصل الشفاف والتوثيق التفصيلي في كل مرحلة.`
-    },
-    features: [
-      {
-        id: 'schedule-management',
-        title: {
-          en: 'Schedule Management',
-          ar: 'إدارة الجدول الزمني'
-        },
-        description: {
-          en: 'Develop and maintain detailed project schedules with critical path analysis.',
-          ar: 'تطوير وصيانة جداول زمنية تفصيلية للمشروع مع تحليل المسار الحرج.'
-        },
-        icon: 'calendar'
-      },
-      {
-        id: 'risk-management',
-        title: {
-          en: 'Risk Management',
-          ar: 'إدارة المخاطر'
-        },
-        description: {
-          en: 'Identify, assess, and mitigate project risks before they impact delivery.',
-          ar: 'تحديد وتقييم والتخفيف من مخاطر المشروع قبل أن تؤثر على التسليم.'
-        },
-        icon: 'alert-triangle'
-      },
-      {
-        id: 'quality-control',
-        title: {
-          en: 'Quality Control',
-          ar: 'مراقبة الجودة'
-        },
-        description: {
-          en: 'Implement rigorous quality assurance processes throughout project execution.',
-          ar: 'تنفيذ عمليات صارمة لضمان الجودة طوال تنفيذ المشروع.'
-        },
-        icon: 'check-circle'
-      }
-    ],
-    icon: 'clipboard-check',
-    image: {
-      id: 'project-management-image',
-      url: '/images/services/project-management.webp',
-      altText: {
-        en: 'Industrial project management',
-        ar: 'إدارة المشاريع الصناعية'
-      },
-      width: 800,
-      height: 600
-    },
-    meta: {
-      title: {
-        en: 'Industrial Project Management Services | JAAZL',
-        ar: 'خدمات إدارة المشاريع الصناعية | جازل'
-      },
-      description: {
-        en: 'Expert project management services for complex industrial projects, ensuring successful delivery through meticulous planning and execution.',
-        ar: 'خدمات إدارة مشاريع خبيرة للمشاريع الصناعية المعقدة، مما يضمن تسليمًا ناجحًا من خلال التخطيط والتنفيذ الدقيق.'
-      },
-      keywords: ['project management', 'industrial projects', 'risk management', 'quality control', 'schedule management']
-    },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'power']
-  },
-  {
-    id: 'environmental-compliance',
-    slug: 'environmental-compliance',
-    categoryId: 'environmental',
-    name: {
-      en: 'Environmental Compliance & Sustainability',
-      ar: 'الامتثال البيئي والاستدامة'
-    },
-    shortDescription: {
-      en: 'Comprehensive environmental compliance and sustainability solutions for industrial operations.',
-      ar: 'حلول شاملة للامتثال البيئي والاستدامة للعمليات الصناعية.'
-    },
-    fullDescription: {
-      en: `JAAZL's Environmental Compliance & Sustainability service helps industrial companies navigate complex environmental regulations while implementing sustainable practices that reduce ecological impact. We provide comprehensive solutions for compliance management, emissions monitoring, waste reduction, and resource optimization.
-
-Our team of environmental specialists develops customized strategies that address your specific regulatory requirements while aligning with your operational constraints and business objectives. We help you transform environmental compliance from a regulatory burden into a competitive advantage through efficient resource management and sustainability initiatives.
-
-From conducting thorough environmental impact assessments to implementing continuous monitoring systems, we ensure your operations not only meet current standards but are prepared for future regulatory developments. Our solutions help you maintain your social license to operate while improving your sustainability profile with stakeholders.`,
-      ar: `تساعد خدمة الامتثال البيئي والاستدامة من جازل الشركات الصناعية على التنقل في اللوائح البيئية المعقدة مع تنفيذ ممارسات مستدامة تقلل من التأثير البيئي. نقدم حلولاً شاملة لإدارة الامتثال ومراقبة الانبعاثات وتقليل النفايات وتحسين الموارد.
-
-يطور فريقنا من المتخصصين البيئيين استراتيجيات مخصصة تلبي متطلباتك التنظيمية المحددة مع التوافق مع قيود التشغيل وأهداف العمل. نساعدك على تحويل الامتثال البيئي من عبء تنظيمي إلى ميزة تنافسية من خلال إدارة الموارد بكفاءة ومبادرات الاستدامة.
-
-من إجراء تقييمات شاملة للأثر البيئي إلى تنفيذ أنظمة المراقبة المستمرة، نضمن أن عملياتك لا تلبي المعايير الحالية فحسب، بل هي أيضًا مستعدة للتطورات التنظيمية المستقبلية. تساعدك حلولنا على الحفاظ على رخصتك الاجتماعية للعمل مع تحسين ملف الاستدامة مع أصحاب المصلحة.`
-    },
-    features: [
-      {
-        id: 'compliance-management',
-        title: {
-          en: 'Compliance Management',
-          ar: 'إدارة الامتثال'
-        },
-        description: {
-          en: 'Navigate complex environmental regulations and ensure ongoing compliance.',
-          ar: 'التنقل في اللوائح البيئية المعقدة وضمان الامتثال المستمر.'
-        },
-        icon: 'check-square'
-      },
-      {
-        id: 'emissions-monitoring',
-        title: {
-          en: 'Emissions Monitoring',
-          ar: 'مراقبة الانبعاثات'
-        },
-        description: {
-          en: 'Track, analyze, and reduce emissions with advanced monitoring solutions.',
-          ar: 'تتبع وتحليل وتقليل الانبعاثات باستخدام حلول المراقبة المتقدمة.'
-        },
-        icon: 'cloud'
-      },
-      {
-        id: 'sustainability-planning',
-        title: {
-          en: 'Sustainability Planning',
-          ar: 'تخطيط الاستدامة'
-        },
-        description: {
-          en: 'Develop long-term sustainability strategies aligned with business objectives.',
-          ar: 'تطوير استراتيجيات استدامة طويلة الأمد تتماشى مع أهداف العمل.'
-        },
-        icon: 'trending-up'
-      }
-    ],
-    icon: 'leaf',
-    image: {
-      id: 'environmental-compliance-image',
-      url: '/images/services/environmental-compliance.jpg',
-      altText: {
-        en: 'Environmental compliance and sustainability',
-        ar: 'الامتثال البيئي والاستدامة'
-      },
-      width: 800,
-      height: 600
-    },
-    meta: {
-      title: {
-        en: 'Environmental Compliance & Sustainability Services | JAAZL',
-        ar: 'خدمات الامتثال البيئي والاستدامة | جازل'
-      },
-      description: {
-        en: 'Comprehensive environmental compliance and sustainability solutions that reduce ecological impact while supporting business objectives.',
-        ar: 'حلول شاملة للامتثال البيئي والاستدامة تقلل من التأثير البيئي مع دعم أهداف العمل.'
-      },
-      keywords: ['environmental compliance', 'sustainability', 'emissions monitoring', 'waste reduction', 'resource optimization']
-    },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'power']
-  },
+  // ===== CHEMICALS CATEGORY =====
   {
     id: 'specialized-chemicals',
     slug: 'specialized-chemicals',
@@ -440,63 +271,63 @@ From conducting thorough environmental impact assessments to implementing contin
       ar: 'المواد الكيميائية الصناعية المتخصصة'
     },
     shortDescription: {
-      en: 'Custom-formulated chemical solutions for specific industrial applications and challenges.',
-      ar: 'حلول كيميائية مخصصة للتطبيقات والتحديات الصناعية المحددة.'
+      en: 'High-performance specialty chemicals designed for specific industrial applications and processes.',
+      ar: 'مواد كيميائية متخصصة عالية الأداء مصممة للتطبيقات والعمليات الصناعية المحددة.'
     },
     fullDescription: {
-      en: `JAAZL's Specialized Industrial Chemicals service provides tailor-made chemical formulations and solutions for complex industrial processes. We develop, manufacture, and supply high-performance chemicals that address specific operational challenges while meeting stringent safety and environmental requirements.
+      en: `Our specialized industrial chemicals portfolio includes high-performance formulations designed for specific industrial applications. We supply drilling chemicals, production chemicals, water treatment chemicals, and process additives that meet the most demanding specifications.
 
-Our team of chemical engineers and specialists works closely with your operations personnel to understand your exact requirements, then develops formulations optimized for your specific process conditions, equipment, and performance goals. We conduct extensive laboratory and field testing to ensure efficacy and compatibility.
+Each chemical solution is carefully selected and tested to ensure optimal performance in your specific operating conditions. Our technical team provides comprehensive support including product selection, application guidance, and performance optimization.
 
-Beyond product development, we provide comprehensive application support, including dosing recommendations, handling procedures, and performance monitoring. Our solutions help you improve process efficiency, extend equipment life, and reduce operational costs while maintaining environmental compliance.`,
-      ar: `توفر خدمة المواد الكيميائية الصناعية المتخصصة من جازل تركيبات وحلولًا كيميائية مخصصة للعمليات الصناعية المعقدة. نقوم بتطوير وتصنيع وتوريد مواد كيميائية عالية الأداء تعالج تحديات تشغيلية محددة مع تلبية متطلبات السلامة والبيئة الصارمة.
+We maintain strategic partnerships with leading chemical manufacturers worldwide, ensuring consistent supply of premium quality products that comply with international standards and regulatory requirements.`,
+      ar: `تشمل محفظة المواد الكيميائية الصناعية المتخصصة لدينا تركيبات عالية الأداء مصممة لتطبيقات صناعية محددة. نوفر كيماويات الحفر وكيماويات الإنتاج وكيماويات معالجة المياه والمضافات الكيميائية التي تلبي أصعب المواصفات.
 
-يعمل فريقنا من المهندسين والمتخصصين في الكيمياء بشكل وثيق مع موظفي العمليات لديك لفهم متطلباتك الدقيقة، ثم يطور تركيبات محسنة لظروف عمليتك المحددة ومعداتك وأهداف الأداء. نجري اختبارات مختبرية وميدانية مكثفة لضمان الفعالية والتوافق.
+يتم اختبار واختيار كل محلول كيميائي بعناية لضمان الأداء الأمثل في ظروف التشغيل المحددة لديك. يقدم فريقنا التقني دعمًا شاملاً يشمل اختيار المنتج والإرشاد في التطبيق وتحسين الأداء.
 
-بالإضافة إلى تطوير المنتج، نقدم دعمًا شاملاً للتطبيق، بما في ذلك توصيات الجرعات وإجراءات المناولة ومراقبة الأداء. تساعدك حلولنا على تحسين كفاءة العملية وإطالة عمر المعدات وتقليل تكاليف التشغيل مع الحفاظ على الامتثال البيئي.`
+نحافظ على شراكات استراتيجية مع كبرى الشركات المصنعة للكيماويات عالميًا، مما يضمن التوريد المستمر لمنتجات عالية الجودة تتوافق مع المعايير الدولية والمتطلبات التنظيمية.`
     },
     features: [
       {
-        id: 'custom-formulations',
+        id: 'drilling-chemicals',
         title: {
-          en: 'Custom Formulations',
-          ar: 'تركيبات مخصصة'
+          en: 'Drilling Chemicals',
+          ar: 'كيماويات الحفر'
         },
         description: {
-          en: 'Tailor-made chemical solutions developed specifically for your processes.',
-          ar: 'حلول كيميائية مصممة خصيصًا لعملياتك.'
+          en: 'Specialized chemicals for drilling operations and mud systems.',
+          ar: 'مواد كيميائية متخصصة لعمليات الحفر وأنظمة الطين.'
         },
-        icon: 'flask-conical'
+        icon: 'drill'
       },
       {
-        id: 'performance-optimization',
+        id: 'production-chemicals',
         title: {
-          en: 'Performance Optimization',
-          ar: 'تحسين الأداء'
+          en: 'Production Chemicals',
+          ar: 'كيماويات الإنتاج'
         },
         description: {
-          en: 'Improve efficiency and results through optimized chemical applications.',
-          ar: 'تحسين الكفاءة والنتائج من خلال التطبيقات الكيميائية المحسنة.'
+          en: 'Chemical solutions for enhanced oil and gas production.',
+          ar: 'حلول كيميائية لتعزيز إنتاج النفط والغاز.'
         },
-        icon: 'zap'
+        icon: 'flask'
       },
       {
-        id: 'technical-support',
+        id: 'process-additives',
         title: {
-          en: 'Technical Support',
-          ar: 'الدعم الفني'
+          en: 'Process Additives',
+          ar: 'المضافات الكيميائية'
         },
         description: {
-          en: 'Comprehensive application support from experienced chemical specialists.',
-          ar: 'دعم تطبيق شامل من متخصصي الكيمياء ذوي الخبرة.'
+          en: 'Additives to optimize industrial processes and improve efficiency.',
+          ar: 'مضافات لتحسين العمليات الصناعية وزيادة الكفاءة.'
         },
-        icon: 'life-buoy'
+        icon: 'plus-circle'
       }
     ],
-    icon: 'droplet',
+    icon: 'flask',
     image: {
       id: 'specialized-chemicals-image',
-      url: '/images/services/engineering-consulting.jpg',
+      url: '/images/services/specialized-chemicals.jpg',
       altText: {
         en: 'Specialized industrial chemicals',
         ar: 'المواد الكيميائية الصناعية المتخصصة'
@@ -510,356 +341,272 @@ Beyond product development, we provide comprehensive application support, includ
         ar: 'المواد الكيميائية الصناعية المتخصصة | جازل'
       },
       description: {
-        en: 'Custom-formulated chemical solutions that solve specific industrial challenges and optimize process performance.',
-        ar: 'حلول كيميائية مخصصة تحل التحديات الصناعية المحددة وتحسن أداء العملية.'
+        en: 'High-performance specialty chemicals for drilling, production, and industrial processes with comprehensive technical support.',
+        ar: 'مواد كيميائية متخصصة عالية الأداء للحفر والإنتاج والعمليات الصناعية مع دعم تقني شامل.'
       },
-      keywords: ['industrial chemicals', 'custom formulations', 'process chemicals', 'chemical optimization', 'technical support']
+      keywords: ['specialty chemicals', 'drilling chemicals', 'production chemicals', 'industrial processes', 'chemical additives']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'water-treatment']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'mining']
   },
   {
-    id: 'electromechanical-systems',
-    slug: 'electromechanical-systems',
-    categoryId: 'electromechanical',
+    id: 'bulk-chemicals-supply',
+    slug: 'bulk-chemicals-supply',
+    categoryId: 'chemicals',
     name: {
-      en: 'Industrial Electromechanical Systems',
-      ar: 'أنظمة كهروميكانيكية صناعية'
+      en: 'Bulk Industrial Chemicals Supply',
+      ar: 'توريد المواد الكيميائية الصناعية بالجملة'
     },
     shortDescription: {
-      en: 'Comprehensive design, installation, and maintenance of integrated electromechanical systems for industrial applications.',
-      ar: 'تصميم وتركيب وصيانة شاملة لأنظمة كهروميكانيكية متكاملة للتطبيقات الصناعية.'
+      en: 'Reliable supply of bulk industrial chemicals with consistent quality and competitive pricing for large-scale operations.',
+      ar: 'توريد موثوق للمواد الكيميائية الصناعية بالجملة بجودة ثابتة وأسعار تنافسية للعمليات واسعة النطاق.'
     },
     fullDescription: {
-      en: `JAAZL's Industrial Electromechanical Systems service provides end-to-end solutions for complex industrial power and mechanical systems integration. We specialize in designing, installing, and maintaining robust electromechanical systems that ensure reliable operation in demanding industrial environments.
+      en: `Our bulk chemical supply service provides reliable, cost-effective solutions for high-volume industrial operations. We supply a comprehensive range of commodity and industrial-grade chemicals including acids, bases, solvents, and process chemicals.
 
-Our experienced team handles all aspects of electromechanical projects, from initial engineering and system design to equipment selection, installation supervision, commissioning, and ongoing maintenance. We integrate electrical power systems, instrumentation, control solutions, and mechanical components into cohesive systems optimized for your specific operational requirements.
+We maintain strategic inventory levels and established supply chains to ensure uninterrupted availability of critical chemicals for your operations. Our logistics network enables efficient delivery scheduling and just-in-time supply management.
 
-We emphasize energy efficiency, reliability, and maintainability in all our designs, helping you reduce operational costs while ensuring maximum uptime. Our preventive maintenance programs and troubleshooting expertise keep your critical systems running at peak performance throughout their lifecycle.`,
-      ar: `توفر خدمة الأنظمة الكهروميكانيكية الصناعية من جازل حلولاً شاملة لتكامل أنظمة الطاقة والأنظمة الميكانيكية الصناعية المعقدة. نحن متخصصون في تصميم وتركيب وصيانة أنظمة كهروميكانيكية قوية تضمن التشغيل الموثوق في البيئات الصناعية الصعبة.
+All bulk chemicals are sourced from certified suppliers and undergo rigorous quality control testing to ensure consistent specifications. We provide comprehensive documentation including certificates of analysis, safety data sheets, and regulatory compliance documentation.`,
+      ar: `تقدم خدمة توريد الكيماويات بالجملة لدينا حلولًا موثوقة وفعالة من حيث التكلفة للعمليات الصناعية عالية الحجم. نوفر مجموعة شاملة من الكيماويات التجارية والصناعية بما في ذلك الأحماض والقواعد والمذيبات والكيماويات الكيميائية.
 
-يتعامل فريقنا ذو الخبرة مع جميع جوانب المشاريع الكهروميكانيكية، من الهندسة الأولية وتصميم النظام إلى اختيار المعدات والإشراف على التركيب والتكليف والصيانة المستمرة. نقوم بدمج أنظمة الطاقة الكهربائية والأجهزة وحلول التحكم والمكونات الميكانيكية في أنظمة متماسكة محسنة لمتطلبات التشغيل المحددة الخاصة بك.
+نحافظ على مستويات مخزون استراتيجية وسلاسل توريد راسخة لضمان التوافر المستمر للكيماويات الحرجة لعملياتك. تتيح شبكة اللوجستيات لدينا جدولة التسليم الفعالة وإدارة التوريد في الوقت المناسب.
 
-نحن نركز على كفاءة الطاقة والموثوقية وقابلية الصيانة في جميع تصميماتنا، مما يساعدك على تقليل تكاليف التشغيل مع ضمان أقصى وقت تشغيل. تحافظ برامج الصيانة الوقائية وخبرة استكشاف الأخطاء وإصلاحها على تشغيل أنظمتك الحيوية بأعلى أداء طوال دورة حياتها.`
+يتم الحصول على جميع الكيماويات بالجملة من موردين معتمدين وتخضع لاختبارات صارمة لمراقبة الجودة لضمان المواصفات المتسقة. نقدم وثائق شاملة تتضمن شهادات التحليل وأوراق بيانات السلامة ووثائق الامتثال التنظيمي.`
     },
     features: [
       {
-        id: 'power-systems',
+        id: 'commodity-chemicals',
         title: {
-          en: 'Power Distribution Systems',
-          ar: 'أنظمة توزيع الطاقة'
+          en: 'Commodity Chemicals',
+          ar: 'الكيماويات التجارية'
         },
         description: {
-          en: 'Design and implementation of reliable industrial power distribution networks.',
-          ar: 'تصميم وتنفيذ شبكات توزيع الطاقة الصناعية الموثوقة.'
+          en: 'Bulk supply of essential industrial chemicals and raw materials.',
+          ar: 'توريد بالجملة للكيماويات الصناعية الأساسية والمواد الخام.'
         },
-        icon: 'zap'
+        icon: 'package'
       },
       {
-        id: 'control-automation',
+        id: 'logistics-management',
         title: {
-          en: 'Control & Automation',
-          ar: 'التحكم والأتمتة'
+          en: 'Logistics Management',
+          ar: 'إدارة اللوجستيات'
         },
         description: {
-          en: 'Integrated control systems for precise management of electromechanical equipment.',
-          ar: 'أنظمة تحكم متكاملة للإدارة الدقيقة للمعدات الكهروميكانيكية.'
+          en: 'Efficient delivery and inventory management for bulk chemicals.',
+          ar: 'إدارة فعالة للتسليم والمخزون للكيماويات بالجملة.'
         },
-        icon: 'settings'
+        icon: 'truck'
       },
       {
-        id: 'preventive-maintenance',
+        id: 'quality-assurance',
         title: {
-          en: 'Preventive Maintenance',
-          ar: 'الصيانة الوقائية'
+          en: 'Quality Assurance',
+          ar: 'ضمان الجودة'
         },
         description: {
-          en: 'Comprehensive maintenance programs to maximize system reliability and longevity.',
-          ar: 'برامج صيانة شاملة لتعظيم موثوقية النظام وطول عمره.'
+          en: 'Rigorous quality control and certification for all chemical supplies.',
+          ar: 'مراقبة جودة صارمة وشهادات لجميع إمدادات الكيماويات.'
         },
-        icon: 'tool'
+        icon: 'shield-check'
       }
     ],
-    icon: 'cpu',
+    icon: 'package',
     image: {
-      id: 'electromechanical-systems-image',
-      url: '/images/services/ai-automation.jpg',
+      id: 'bulk-chemicals-image',
+      url: '/images/services/bulk-chemicals.jpg',
       altText: {
-        en: 'Industrial electromechanical systems',
-        ar: 'أنظمة كهروميكانيكية صناعية'
+        en: 'Bulk industrial chemicals supply',
+        ar: 'توريد المواد الكيميائية الصناعية بالجملة'
       },
       width: 800,
       height: 600
     },
     meta: {
       title: {
-        en: 'Industrial Electromechanical Systems | JAAZL',
-        ar: 'أنظمة كهروميكانيكية صناعية | جازل'
+        en: 'Bulk Industrial Chemicals Supply | JAAZL',
+        ar: 'توريد المواد الكيميائية الصناعية بالجملة | جازل'
       },
       description: {
-        en: 'Comprehensive electromechanical engineering solutions for industrial power, control, and mechanical system integration.',
-        ar: 'حلول هندسية كهروميكانيكية شاملة لتكامل الطاقة الصناعية والتحكم والنظم الميكانيكية.'
+        en: 'Reliable bulk chemical supply services with quality assurance, efficient logistics, and competitive pricing for industrial operations.',
+        ar: 'خدمات توريد موثوقة للكيماويات بالجملة مع ضمان الجودة واللوجستيات الفعالة والأسعار التنافسية للعمليات الصناعية.'
       },
-      keywords: ['electromechanical systems', 'power distribution', 'control systems', 'industrial automation', 'preventive maintenance']
+      keywords: ['bulk chemicals', 'chemical supply', 'industrial chemicals', 'commodity chemicals', 'chemical logistics']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'power']
+    relatedIndustries: ['petrochemicals', 'manufacturing', 'mining']
   },
   {
-    id: 'system-integration',
-    slug: 'system-integration',
-    categoryId: 'engineering',
+    id: 'chemical-blending',
+    slug: 'chemical-blending',
+    categoryId: 'chemicals',
     name: {
-      en: 'Industrial System Integration',
-      ar: 'تكامل الأنظمة الصناعية'
+      en: 'Local Chemical Manufacturing & Blending',
+      ar: 'التصنيع والخلط الكيميائي المحلي'
     },
     shortDescription: {
-      en: 'Comprehensive integration of industrial systems, technologies, and processes for seamless operation and enhanced efficiency.',
-      ar: 'تكامل شامل للأنظمة والتقنيات والعمليات الصناعية للعمل السلس وتعزيز الكفاءة.'
+      en: 'Custom chemical formulations and blending services to meet specific industrial requirements and applications.',
+      ar: 'تركيبات كيميائية مخصصة وخدمات الخلط لتلبية المتطلبات والتطبيقات الصناعية المحددة.'
     },
     fullDescription: {
-      en: `JAAZL's Industrial System Integration service provides comprehensive solutions for connecting and optimizing diverse industrial systems, technologies, and processes. We specialize in creating unified, efficient operations that maximize productivity while ensuring seamless communication between different system components.
+      en: `Our chemical manufacturing and blending facility provides custom formulation services to meet your specific industrial requirements. We blend and manufacture chemicals according to your exact specifications, ensuring optimal performance for your applications.
 
-Our team of integration specialists works with your existing infrastructure to design, implement, and maintain integrated solutions that bridge legacy systems with modern technologies. We focus on creating scalable, robust integrations that enhance operational efficiency and provide real-time visibility across your entire operation.
+Our state-of-the-art blending facility is equipped with advanced mixing technology and quality control systems. We can produce custom formulations in various package sizes from laboratory samples to large-scale production runs.
 
-Through careful planning and execution, we deliver integration solutions that reduce operational complexity, improve data accuracy, and enable better decision-making across all levels of your organization.`,
-      ar: `تقدم خدمة تكامل الأنظمة الصناعية من جازل حلولاً شاملة لربط وتحسين الأنظمة والتقنيات والعمليات الصناعية المتنوعة. نحن متخصصون في إنشاء عمليات موحدة وفعالة تزيد الإنتاجية إلى أقصى حد مع ضمان التواصل السلس بين مكونات النظام المختلفة.
+We work closely with our clients to develop new formulations, optimize existing products, and provide technical support throughout the development and manufacturing process. All products are manufactured to the highest quality standards with full traceability and documentation.`,
+      ar: `توفر منشأة التصنيع والخلط الكيميائي لدينا خدمات التركيب المخصصة لتلبية متطلباتك الصناعية المحددة. نقوم بخلط وتصنيع الكيماويات وفقًا لمواصفاتك الدقيقة، مما يضمن الأداء الأمثل لتطبيقاتك.
 
-يعمل فريقنا من متخصصي التكامل مع البنية التحتية الحالية لديك لتصميم وتنفيذ وصيانة الحلول المتكاملة التي تربط الأنظمة القديمة بالتقنيات الحديثة. نحن نركز على إنشاء تكاملات قابلة للتوسع وقوية تعزز الكفاءة التشغيلية وتوفر رؤية في الوقت الفعلي عبر عمليتك بأكملها.
+منشأة الخلط المتطورة لدينا مجهزة بتكنولوجيا خلط متقدمة وأنظمة مراقبة الجودة. يمكننا إنتاج تركيبات مخصصة في أحجام تعبئة مختلفة من عينات المختبر إلى دورات الإنتاج واسعة النطاق.
 
-من خلال التخطيط والتنفيذ الدقيق، نقدم حلول التكامل التي تقلل من التعقيد التشغيلي وتحسن دقة البيانات وتمكن من اتخاذ قرارات أفضل عبر جميع مستويات مؤسستك.`
+نعمل بشكل وثيق مع عملائنا لتطوير تركيبات جديدة وتحسين المنتجات الحالية وتقديم الدعم التقني طوال عملية التطوير والتصنيع. يتم تصنيع جميع المنتجات وفقًا لأعلى معايير الجودة مع إمكانية التتبع الكامل والوثائق.`
     },
     features: [
       {
-        id: 'legacy-modernization',
+        id: 'custom-formulations',
         title: {
-          en: 'Legacy System Modernization',
-          ar: 'تحديث الأنظمة القديمة'
+          en: 'Custom Formulations',
+          ar: 'التركيبات المخصصة'
         },
         description: {
-          en: 'Integrate and modernize existing legacy systems with current technologies.',
-          ar: 'دمج وتحديث الأنظمة القديمة الحالية مع التقنيات الحديثة.'
+          en: 'Develop and manufacture chemicals to your exact specifications.',
+          ar: 'تطوير وتصنيع المواد الكيميائية حسب مواصفاتك الدقيقة.'
         },
-        icon: 'refresh-cw'
+        icon: 'beaker'
       },
       {
-        id: 'data-harmonization',
+        id: 'quality-control',
         title: {
-          en: 'Data Harmonization',
-          ar: 'توحيد البيانات'
+          en: 'Quality Control',
+          ar: 'مراقبة الجودة'
         },
         description: {
-          en: 'Standardize and harmonize data across different systems and platforms.',
-          ar: 'توحيد ومواءمة البيانات عبر الأنظمة والمنصات المختلفة.'
-        },
-        icon: 'database'
-      },
-      {
-        id: 'real-time-monitoring',
-        title: {
-          en: 'Real-time System Monitoring',
-          ar: 'مراقبة النظام في الوقت الفعلي'
-        },
-        description: {
-          en: 'Implement comprehensive monitoring for integrated system performance.',
-          ar: 'تنفيذ مراقبة شاملة لأداء النظام المتكامل.'
-        },
-        icon: 'monitor'
-      }
-    ],
-    icon: 'network',
-    image: {
-      id: 'system-integration-image',
-      url: '/images/services/digital-transformation.webp',
-      altText: {
-        en: 'Industrial system integration',
-        ar: 'تكامل الأنظمة الصناعية'
-      },
-      width: 800,
-      height: 600
-    },
-    meta: {
-      title: {
-        en: 'Industrial System Integration Services | JAAZL',
-        ar: 'خدمات تكامل الأنظمة الصناعية | جازل'
-      },
-      description: {
-        en: 'Comprehensive integration of industrial systems and technologies for seamless operation and enhanced efficiency.',
-        ar: 'تكامل شامل للأنظمة والتقنيات الصناعية للعمل السلس وتعزيز الكفاءة.'
-      },
-      keywords: ['system integration', 'industrial systems', 'technology integration', 'legacy modernization', 'data harmonization']
-    },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'mining', 'power', 'water-treatment']
-  },
-  {
-    id: 'technical-training',
-    slug: 'technical-training',
-    categoryId: 'engineering',
-    name: {
-      en: 'Technical Training & Development',
-      ar: 'التدريب والتطوير التقني'
-    },
-    shortDescription: {
-      en: 'Specialized technical training programs to enhance workforce capabilities and ensure optimal operation of industrial systems.',
-      ar: 'برامج تدريب تقني متخصصة لتعزيز قدرات القوى العاملة وضمان التشغيل الأمثل للأنظمة الصناعية.'
-    },
-    fullDescription: {
-      en: `JAAZL's Technical Training & Development service provides comprehensive educational programs designed to enhance your team's technical skills and operational capabilities. We develop customized training solutions that address specific industry requirements and ensure your workforce can effectively operate, maintain, and optimize industrial systems.
-
-Our experienced instructors combine theoretical knowledge with hands-on practical experience to deliver training that directly applies to your operational environment. We offer both on-site and remote training options, covering topics from basic system operation to advanced troubleshooting and optimization techniques.
-
-Through structured learning programs and continuous development initiatives, we help build internal expertise that reduces dependency on external support while improving overall operational efficiency and safety standards.`,
-      ar: `تقدم خدمة التدريب والتطوير التقني من جازل برامج تعليمية شاملة مصممة لتعزيز المهارات التقنية والقدرات التشغيلية لفريقك. نطور حلول تدريب مخصصة تلبي متطلبات الصناعة المحددة وتضمن أن قوتك العاملة يمكنها تشغيل وصيانة وتحسين الأنظمة الصناعية بفعالية.
-
-يجمع مدربونا ذوو الخبرة بين المعرفة النظرية والخبرة العملية لتقديم تدريب ينطبق مباشرة على بيئتك التشغيلية. نقدم خيارات تدريب في الموقع وعن بُعد، تغطي مواضيع من التشغيل الأساسي للنظام إلى تقنيات استكشاف الأخطاء والتحسين المتقدمة.
-
-من خلال برامج التعلم المنظمة ومبادرات التطوير المستمر، نساعد في بناء خبرة داخلية تقلل الاعتماد على الدعم الخارجي مع تحسين الكفاءة التشغيلية الإجمالية ومعايير السلامة.`
-    },
-    features: [
-      {
-        id: 'customized-curricula',
-        title: {
-          en: 'Customized Training Curricula',
-          ar: 'مناهج تدريب مخصصة'
-        },
-        description: {
-          en: 'Develop training programs tailored to your specific industrial requirements.',
-          ar: 'تطوير برامج تدريبية مصممة خصيصاً لمتطلباتك الصناعية المحددة.'
-        },
-        icon: 'book-open'
-      },
-      {
-        id: 'hands-on-training',
-        title: {
-          en: 'Hands-on Practical Training',
-          ar: 'التدريب العملي التطبيقي'
-        },
-        description: {
-          en: 'Interactive training sessions with real equipment and operational scenarios.',
-          ar: 'جلسات تدريب تفاعلية مع معدات حقيقية وسيناريوهات تشغيلية.'
-        },
-        icon: 'wrench'
-      },
-      {
-        id: 'competency-assessment',
-        title: {
-          en: 'Competency Assessment & Certification',
-          ar: 'تقييم الكفاءة والشهادات'
-        },
-        description: {
-          en: 'Comprehensive assessment and certification of technical competencies.',
-          ar: 'تقييم وشهادة شاملة للكفاءات التقنية.'
+          en: 'Comprehensive testing and quality assurance for all products.',
+          ar: 'اختبار شامل وضمان الجودة لجميع المنتجات.'
         },
         icon: 'check-circle'
+      },
+      {
+        id: 'flexible-packaging',
+        title: {
+          en: 'Flexible Packaging',
+          ar: 'التعبئة المرنة'
+        },
+        description: {
+          en: 'Various packaging options from lab samples to bulk quantities.',
+          ar: 'خيارات تعبئة متنوعة من عينات المختبر إلى الكميات الكبيرة.'
+        },
+        icon: 'box'
       }
     ],
-    icon: 'graduation-cap',
+    icon: 'flask-conical',
     image: {
-      id: 'technical-training-image',
-      url: '/images/services/project-management.webp',
+      id: 'chemical-blending-image',
+      url: '/images/services/chemical-blending.jpg',
       altText: {
-        en: 'Technical training and development',
-        ar: 'التدريب والتطوير التقني'
+        en: 'Chemical manufacturing and blending',
+        ar: 'التصنيع والخلط الكيميائي'
       },
       width: 800,
       height: 600
     },
     meta: {
       title: {
-        en: 'Technical Training & Development Services | JAAZL',
-        ar: 'خدمات التدريب والتطوير التقني | جازل'
+        en: 'Chemical Manufacturing & Blending Services | JAAZL',
+        ar: 'خدمات التصنيع والخلط الكيميائي | جازل'
       },
       description: {
-        en: 'Specialized technical training programs to enhance workforce capabilities and ensure optimal operation of industrial systems.',
-        ar: 'برامج تدريب تقني متخصصة لتعزيز قدرات القوى العاملة وضمان التشغيل الأمثل للأنظمة الصناعية.'
+        en: 'Custom chemical formulations and blending services with quality control, flexible packaging, and technical support.',
+        ar: 'خدمات التركيبات الكيميائية المخصصة والخلط مع مراقبة الجودة والتعبئة المرنة والدعم التقني.'
       },
-      keywords: ['technical training', 'workforce development', 'industrial training', 'competency assessment', 'skills enhancement']
+      keywords: ['chemical blending', 'custom formulations', 'chemical manufacturing', 'quality control', 'industrial chemicals']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'power', 'mining']
+    relatedIndustries: ['petrochemicals', 'oil-gas', 'manufacturing']
   },
+
+  // ===== ENVIRONMENTAL CATEGORY =====
   {
-    id: 'environmental-monitoring',
-    slug: 'environmental-monitoring',
+    id: 'zero-liquid-discharge',
+    slug: 'zero-liquid-discharge',
     categoryId: 'environmental',
     name: {
-      en: 'Environmental Monitoring & Assessment',
-      ar: 'المراقبة والتقييم البيئي'
+      en: 'Zero Liquid Discharge Systems',
+      ar: 'أنظمة التفريغ السائل الصفري'
     },
     shortDescription: {
-      en: 'Comprehensive environmental monitoring systems and assessment services to ensure regulatory compliance and environmental protection.',
-      ar: 'أنظمة مراقبة بيئية شاملة وخدمات تقييم لضمان الامتثال التنظيمي وحماية البيئة.'
+      en: 'Advanced zero liquid discharge systems for sustainable water management and complete wastewater recovery.',
+      ar: 'أنظمة متقدمة للتفريغ السائل الصفري لإدارة المياه المستدامة واستعادة مياه الصرف الكاملة.'
     },
     fullDescription: {
-      en: `JAAZL's Environmental Monitoring & Assessment service provides comprehensive solutions for tracking, measuring, and analyzing environmental parameters across industrial operations. We implement advanced monitoring systems that ensure compliance with environmental regulations while protecting surrounding ecosystems and communities.
+      en: `Our Zero Liquid Discharge (ZLD) systems provide complete wastewater treatment solutions that eliminate liquid waste discharge to the environment. These advanced systems recover and reuse water while converting waste into manageable solid forms.
 
-Our team of environmental specialists designs and deploys customized monitoring networks that track air quality, water quality, soil conditions, noise levels, and emissions in real-time. We provide detailed analysis, reporting, and recommendations to help you maintain environmental compliance and improve sustainability performance.
+Our ZLD solutions combine multiple technologies including evaporation, crystallization, membrane processes, and advanced oxidation to achieve maximum water recovery rates. We design custom systems based on your specific wastewater characteristics and regulatory requirements.
 
-Through continuous monitoring and assessment, we help identify potential environmental risks early, enabling proactive measures that protect both your operations and the environment while ensuring long-term regulatory compliance.`,
-      ar: `تقدم خدمة المراقبة والتقييم البيئي من جازل حلولاً شاملة لتتبع وقياس وتحليل المعايير البيئية عبر العمليات الصناعية. ننفذ أنظمة مراقبة متقدمة تضمن الامتثال للوائح البيئية مع حماية النظم البيئية والمجتمعات المحيطة.
+These systems not only ensure environmental compliance but also provide significant cost savings through water recovery and reuse. Our ZLD solutions are ideal for industries facing stringent environmental regulations or water scarcity challenges.`,
+      ar: `توفر أنظمة التفريغ السائل الصفري (ZLD) لدينا حلول معالجة شاملة لمياه الصرف تلغي تصريف النفايات السائلة إلى البيئة. تستعيد هذه الأنظمة المتقدمة المياه وتعيد استخدامها مع تحويل النفايات إلى أشكال صلبة قابلة للإدارة.
 
-يصمم فريقنا من المتخصصين البيئيين وينشر شبكات مراقبة مخصصة تتتبع جودة الهواء وجودة المياه وظروف التربة ومستويات الضوضاء والانبعاثات في الوقت الفعلي. نقدم تحليلاً مفصلاً وتقارير وتوصيات لمساعدتك في الحفاظ على الامتثال البيئي وتحسين أداء الاستدامة.
+تجمع حلول ZLD لدينا بين تقنيات متعددة بما في ذلك التبخر والتبلور وعمليات الأغشية والأكسدة المتقدمة لتحقيق أقصى معدلات استعادة المياه. نصمم أنظمة مخصصة بناءً على خصائص مياه الصرف المحددة لديك والمتطلبات التنظيمية.
 
-من خلال المراقبة والتقييم المستمر، نساعد في تحديد المخاطر البيئية المحتملة مبكراً، مما يتيح اتخاذ تدابير استباقية تحمي عملياتك والبيئة مع ضمان الامتثال التنظيمي طويل المدى.`
+لا تضمن هذه الأنظمة الامتثال البيئي فحسب، بل توفر أيضًا وفورات كبيرة في التكاليف من خلال استعادة المياه وإعادة استخدامها. حلول ZLD لدينا مثالية للصناعات التي تواجه لوائح بيئية صارمة أو تحديات ندرة المياه.`
     },
     features: [
       {
-        id: 'real-time-monitoring',
+        id: 'water-recovery',
         title: {
-          en: 'Real-time Environmental Monitoring',
-          ar: 'المراقبة البيئية في الوقت الفعلي'
+          en: 'Maximum Water Recovery',
+          ar: 'أقصى استعادة للمياه'
         },
         description: {
-          en: 'Continuous monitoring of environmental parameters with instant alerts and reporting.',
-          ar: 'مراقبة مستمرة للمعايير البيئية مع تنبيهات وتقارير فورية.'
+          en: 'Recover up to 95% of water for reuse from industrial wastewater.',
+          ar: 'استعادة ما يصل إلى 95% من المياه لإعادة الاستخدام من مياه الصرف الصناعي.'
         },
-        icon: 'activity'
+        icon: 'droplet'
       },
       {
-        id: 'compliance-reporting',
+        id: 'zero-discharge',
         title: {
-          en: 'Regulatory Compliance Reporting',
-          ar: 'تقارير الامتثال التنظيمي'
+          en: 'Zero Liquid Discharge',
+          ar: 'تفريغ سائل صفري'
         },
         description: {
-          en: 'Automated generation of compliance reports for regulatory authorities.',
-          ar: 'توليد آلي لتقارير الامتثال للسلطات التنظيمية.'
+          en: 'Complete elimination of liquid waste discharge to environment.',
+          ar: 'إزالة كاملة لتصريف النفايات السائلة إلى البيئة.'
         },
-        icon: 'file-text'
+        icon: 'shield-check'
       },
       {
-        id: 'risk-assessment',
+        id: 'solid-waste-management',
         title: {
-          en: 'Environmental Risk Assessment',
-          ar: 'تقييم المخاطر البيئية'
+          en: 'Solid Waste Management',
+          ar: 'إدارة النفايات الصلبة'
         },
         description: {
-          en: 'Comprehensive assessment of environmental risks and mitigation strategies.',
-          ar: 'تقييم شامل للمخاطر البيئية واستراتيجيات التخفيف.'
+          en: 'Convert liquid waste to manageable solid by-products.',
+          ar: 'تحويل النفايات السائلة إلى منتجات ثانوية صلبة قابلة للإدارة.'
         },
-        icon: 'shield'
+        icon: 'recycle'
       }
     ],
-    icon: 'eye',
+    icon: 'droplet',
     image: {
-      id: 'environmental-monitoring-image',
-      url: '/images/services/environmental-compliance.jpg',
+      id: 'zld-image',
+      url: '/images/services/zero-liquid-discharge.jpg',
       altText: {
-        en: 'Environmental monitoring and assessment',
-        ar: 'المراقبة والتقييم البيئي'
+        en: 'Zero liquid discharge system',
+        ar: 'نظام التفريغ السائل الصفري'
       },
       width: 800,
       height: 600
     },
     meta: {
       title: {
-        en: 'Environmental Monitoring & Assessment Services | JAAZL',
-        ar: 'خدمات المراقبة والتقييم البيئي | جازل'
+        en: 'Zero Liquid Discharge Systems | JAAZL',
+        ar: 'أنظمة التفريغ السائل الصفري | جازل'
       },
       description: {
-        en: 'Comprehensive environmental monitoring systems and assessment services to ensure regulatory compliance and environmental protection.',
-        ar: 'أنظمة مراقبة بيئية شاملة وخدمات تقييم لضمان الامتثال التنظيمي وحماية البيئة.'
+        en: 'Advanced ZLD systems for complete wastewater treatment, maximum water recovery, and zero environmental discharge.',
+        ar: 'أنظمة ZLD متقدمة لمعالجة مياه الصرف الكاملة وأقصى استعادة للمياه وتفريغ بيئي صفري.'
       },
-      keywords: ['environmental monitoring', 'compliance reporting', 'risk assessment', 'environmental protection', 'sustainability']
+      keywords: ['zero liquid discharge', 'wastewater treatment', 'water recovery', 'environmental compliance', 'sustainable water management']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'power']
+    relatedIndustries: ['petrochemicals', 'oil-gas', 'power']
   },
   {
     id: 'waste-management',
@@ -870,63 +617,63 @@ Through continuous monitoring and assessment, we help identify potential environ
       ar: 'إدارة النفايات الصناعية'
     },
     shortDescription: {
-      en: 'Comprehensive waste management solutions for industrial operations, focusing on reduction, treatment, and sustainable disposal practices.',
-      ar: 'حلول شاملة لإدارة النفايات للعمليات الصناعية، مع التركيز على التقليل والمعالجة وممارسات التخلص المستدامة.'
+      en: 'Comprehensive waste management solutions for safe handling, treatment, and disposal of industrial waste streams.',
+      ar: 'حلول شاملة لإدارة النفايات للتعامل الآمن ومعالجة والتخلص من تيارات النفايات الصناعية.'
     },
     fullDescription: {
-      en: `JAAZL's Industrial Waste Management service provides comprehensive solutions for managing all types of industrial waste streams. We specialize in developing integrated waste management strategies that minimize environmental impact while ensuring compliance with regulations and optimizing operational costs.
+      en: `Our industrial waste management services provide comprehensive solutions for the safe handling, treatment, and disposal of various industrial waste streams. We help industries comply with environmental regulations while minimizing waste disposal costs.
 
-Our team of waste management experts conducts detailed waste audits, designs treatment systems, and implements comprehensive waste reduction programs. We focus on the waste hierarchy principles: reduction, reuse, recycling, recovery, and safe disposal, ensuring maximum resource efficiency and minimal environmental impact.
+Our services include waste characterization, treatment technology selection, system design and implementation, and ongoing operational support. We handle hazardous and non-hazardous waste streams including chemical waste, contaminated water, and solid industrial waste.
 
-Through innovative treatment technologies and sustainable disposal practices, we help transform waste management from a cost center into a value-generating operation that supports both environmental goals and business objectives.`,
-      ar: `تقدم خدمة إدارة النفايات الصناعية من جازل حلولاً شاملة لإدارة جميع أنواع تدفقات النفايات الصناعية. نحن متخصصون في تطوير استراتيجيات متكاملة لإدارة النفايات تقلل من التأثير البيئي مع ضمان الامتثال للوائح وتحسين التكاليف التشغيلية.
+We implement waste minimization strategies, recycling programs, and treatment technologies that convert waste into valuable by-products where possible. Our approach focuses on sustainable waste management practices that protect the environment and support circular economy principles.`,
+      ar: `تقدم خدمات إدارة النفايات الصناعية لدينا حلولًا شاملة للتعامل الآمن ومعالجة والتخلص من تيارات النفايات الصناعية المختلفة. نساعد الصناعات على الامتثال للوائح البيئية مع تقليل تكاليف التخلص من النفايات.
 
-يقوم فريقنا من خبراء إدارة النفايات بإجراء تدقيق مفصل للنفايات وتصميم أنظمة المعالجة وتنفيذ برامج شاملة لتقليل النفايات. نحن نركز على مبادئ التسلسل الهرمي للنفايات: التقليل وإعادة الاستخدام وإعادة التدوير والاستعادة والتخلص الآمن، مما يضمن أقصى كفاءة للموارد وأقل تأثير بيئي.
+تشمل خدماتنا تحديد خصائص النفايات واختيار تكنولوجيا المعالجة وتصميم وتنفيذ الأنظمة والدعم التشغيلي المستمر. نتعامل مع تيارات النفايات الخطرة وغير الخطرة بما في ذلك النفايات الكيميائية والمياه الملوثة والنفايات الصناعية الصلبة.
 
-من خلال تقنيات المعالجة المبتكرة وممارسات التخلص المستدامة، نساعد في تحويل إدارة النفايات من مركز تكلفة إلى عملية مولدة للقيمة تدعم كلاً من الأهداف البيئية وأهداف الأعمال.`
+ننفذ استراتيجيات تقليل النفايات وبرامج إعادة التدوير وتقنيات المعالجة التي تحول النفايات إلى منتجات ثانوية قيمة حيثما أمكن. يركز نهجنا على ممارسات إدارة النفايات المستدامة التي تحمي البيئة وتدعم مبادئ الاقتصاد الدائري.`
     },
     features: [
       {
-        id: 'waste-audit',
+        id: 'waste-characterization',
         title: {
-          en: 'Comprehensive Waste Auditing',
-          ar: 'تدقيق شامل للنفايات'
+          en: 'Waste Characterization',
+          ar: 'تحديد خصائص النفايات'
         },
         description: {
-          en: 'Detailed analysis of waste streams to identify reduction and optimization opportunities.',
-          ar: 'تحليل مفصل لتدفقات النفايات لتحديد فرص التقليل والتحسين.'
+          en: 'Comprehensive analysis and classification of waste streams.',
+          ar: 'تحليل وتصنيف شامل لتيارات النفايات.'
         },
         icon: 'search'
       },
       {
         id: 'treatment-systems',
         title: {
-          en: 'Waste Treatment Systems',
-          ar: 'أنظمة معالجة النفايات'
+          en: 'Treatment Systems',
+          ar: 'أنظمة المعالجة'
         },
         description: {
-          en: 'Design and implementation of advanced waste treatment and processing systems.',
-          ar: 'تصميم وتنفيذ أنظمة متقدمة لمعالجة ومعالجة النفايات.'
+          en: 'Advanced treatment technologies for various waste types.',
+          ar: 'تقنيات معالجة متقدمة لأنواع مختلفة من النفايات.'
         },
-        icon: 'recycle'
+        icon: 'cog'
       },
       {
-        id: 'circular-economy',
+        id: 'regulatory-compliance',
         title: {
-          en: 'Circular Economy Solutions',
-          ar: 'حلول الاقتصاد الدائري'
+          en: 'Regulatory Compliance',
+          ar: 'الامتثال التنظيمي'
         },
         description: {
-          en: 'Implementation of circular economy principles to maximize resource utilization.',
-          ar: 'تنفيذ مبادئ الاقتصاد الدائري لتعظيم استخدام الموارد.'
+          en: 'Ensure compliance with environmental regulations and standards.',
+          ar: 'ضمان الامتثال للوائح والمعايير البيئية.'
         },
-        icon: 'rotate-ccw'
+        icon: 'shield-check'
       }
     ],
-    icon: 'trash-2',
+    icon: 'trash',
     image: {
       id: 'waste-management-image',
-      url: '/images/services/environmental-compliance.jpg',
+      url: '/images/services/waste-management.jpg',
       altText: {
         en: 'Industrial waste management',
         ar: 'إدارة النفايات الصناعية'
@@ -940,528 +687,12 @@ Through innovative treatment technologies and sustainable disposal practices, we
         ar: 'خدمات إدارة النفايات الصناعية | جازل'
       },
       description: {
-        en: 'Comprehensive waste management solutions for industrial operations, focusing on reduction, treatment, and sustainable disposal practices.',
-        ar: 'حلول شاملة لإدارة النفايات للعمليات الصناعية، مع التركيز على التقليل والمعالجة وممارسات التخلص المستدامة.'
+        en: 'Comprehensive industrial waste management solutions for safe treatment, disposal, and regulatory compliance.',
+        ar: 'حلول شاملة لإدارة النفايات الصناعية للمعالجة الآمنة والتخلص والامتثال التنظيمي.'
       },
-      keywords: ['waste management', 'industrial waste', 'waste treatment', 'circular economy', 'sustainability']
+      keywords: ['waste management', 'industrial waste', 'hazardous waste', 'environmental compliance', 'waste treatment']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'power', 'municipal']
-  },
-  {
-    id: 'process-chemicals',
-    slug: 'process-chemicals',
-    categoryId: 'chemicals',
-    name: {
-      en: 'Process Optimization Chemicals',
-      ar: 'كيماويات تحسين العمليات'
-    },
-    shortDescription: {
-      en: 'Advanced chemical solutions designed to optimize industrial processes, improve efficiency, and enhance product quality across various industries.',
-      ar: 'حلول كيميائية متقدمة مصممة لتحسين العمليات الصناعية وتحسين الكفاءة وتعزيز جودة المنتج عبر مختلف الصناعات.'
-    },
-    fullDescription: {
-      en: `JAAZL's Process Optimization Chemicals service provides specialized chemical formulations designed to enhance industrial process performance. Our team of chemical engineers develops tailored solutions that address specific operational challenges while improving overall efficiency and product quality.
-
-We offer a comprehensive range of process chemicals including catalysts, inhibitors, surfactants, and specialty additives that are formulated to work within your specific operating conditions. Our chemicals are designed to optimize reaction rates, reduce energy consumption, minimize waste generation, and improve product yields.
-
-Through extensive research and development, we continuously innovate to provide cutting-edge chemical solutions that help our clients achieve superior process performance while maintaining the highest standards of safety and environmental responsibility.`,
-      ar: `تقدم خدمة كيماويات تحسين العمليات من جازل تركيبات كيميائية متخصصة مصممة لتعزيز أداء العمليات الصناعية. يطور فريقنا من المهندسين الكيميائيين حلولاً مخصصة تعالج التحديات التشغيلية المحددة مع تحسين الكفاءة الإجمالية وجودة المنتج.
-
-نقدم مجموعة شاملة من المواد الكيميائية للعمليات بما في ذلك المحفزات والمثبطات والمواد الخافضة للتوتر السطحي والمضافات المتخصصة المصممة للعمل ضمن ظروف التشغيل المحددة لديك. تم تصميم مواردنا الكيميائية لتحسين معدلات التفاعل وتقليل استهلاك الطاقة وتقليل توليد النفايات وتحسين عوائد المنتج.
-
-من خلال البحث والتطوير المكثف، نبتكر باستمرار لتقديم حلول كيميائية متطورة تساعد عملاءنا على تحقيق أداء فائق للعمليات مع الحفاظ على أعلى معايير السلامة والمسؤولية البيئية.`
-    },
-    features: [
-      {
-        id: 'catalyst-systems',
-        title: {
-          en: 'Advanced Catalyst Systems',
-          ar: 'أنظمة المحفزات المتقدمة'
-        },
-        description: {
-          en: 'High-performance catalysts designed to accelerate chemical reactions and improve yields.',
-          ar: 'محفزات عالية الأداء مصممة لتسريع التفاعلات الكيميائية وتحسين العوائد.'
-        },
-        icon: 'zap'
-      },
-      {
-        id: 'specialty-additives',
-        title: {
-          en: 'Specialty Additives',
-          ar: 'المضافات المتخصصة'
-        },
-        description: {
-          en: 'Custom-formulated additives to enhance process performance and product quality.',
-          ar: 'مضافات مصممة خصيصاً لتعزيز أداء العمليات وجودة المنتج.'
-        },
-        icon: 'plus-circle'
-      },
-      {
-        id: 'process-monitoring',
-        title: {
-          en: 'Chemical Process Monitoring',
-          ar: 'مراقبة العمليات الكيميائية'
-        },
-        description: {
-          en: 'Real-time monitoring and optimization of chemical processes for maximum efficiency.',
-          ar: 'مراقبة وتحسين العمليات الكيميائية في الوقت الفعلي لتحقيق أقصى كفاءة.'
-        },
-        icon: 'bar-chart'
-      }
-    ],
-    icon: 'beaker',
-    image: {
-      id: 'process-chemicals-image',
-      url: '/images/services/engineering-consulting.jpg',
-      altText: {
-        en: 'Process optimization chemicals',
-        ar: 'كيماويات تحسين العمليات'
-      },
-      width: 800,
-      height: 600
-    },
-    meta: {
-      title: {
-        en: 'Process Optimization Chemicals | JAAZL',
-        ar: 'كيماويات تحسين العمليات | جازل'
-      },
-      description: {
-        en: 'Advanced chemical solutions designed to optimize industrial processes, improve efficiency, and enhance product quality.',
-        ar: 'حلول كيميائية متقدمة مصممة لتحسين العمليات الصناعية وتحسين الكفاءة وتعزيز جودة المنتج.'
-      },
-      keywords: ['process chemicals', 'catalysts', 'specialty additives', 'process optimization', 'chemical formulations']
-    },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'water-treatment']
-  },
-  {
-    id: 'laboratory-services',
-    slug: 'laboratory-services',
-    categoryId: 'chemicals',
-    name: {
-      en: 'Chemical Laboratory Services',
-      ar: 'خدمات المختبرات الكيميائية'
-    },
-    shortDescription: {
-      en: 'Comprehensive analytical and testing services for chemical analysis, quality control, and product development in industrial applications.',
-      ar: 'خدمات تحليلية واختبار شاملة للتحليل الكيميائي ومراقبة الجودة وتطوير المنتجات في التطبيقات الصناعية.'
-    },
-    fullDescription: {
-      en: `JAAZL's Chemical Laboratory Services provide comprehensive analytical testing and quality control solutions for industrial operations. Our state-of-the-art laboratory facilities are equipped with advanced instrumentation and staffed by experienced analytical chemists who deliver accurate, reliable results.
-
-We offer a full range of analytical services including compositional analysis, contamination testing, material characterization, and method development. Our testing capabilities cover organic and inorganic compounds, trace metals, physical properties, and specialized analyses tailored to specific industry requirements.
-
-Through rigorous quality assurance protocols and accredited testing procedures, we provide the analytical data and insights necessary to ensure product quality, process optimization, and regulatory compliance across diverse industrial applications.`,
-      ar: `تقدم خدمات المختبرات الكيميائية من جازل حلول اختبار تحليلية ومراقبة جودة شاملة للعمليات الصناعية. مرافق مختبراتنا المتطورة مجهزة بأجهزة متقدمة ومزودة بكيميائيين تحليليين ذوي خبرة يقدمون نتائج دقيقة وموثوقة.
-
-نقدم مجموعة كاملة من الخدمات التحليلية بما في ذلك تحليل التركيب واختبار التلوث وتوصيف المواد وتطوير الطرق. تغطي قدراتنا في الاختبار المركبات العضوية وغير العضوية والمعادن النزرة والخصائص الفيزيائية والتحاليل المتخصصة المصممة خصيصاً لمتطلبات الصناعة المحددة.
-
-من خلال بروتوكولات ضمان الجودة الصارمة وإجراءات الاختبار المعتمدة، نقدم البيانات التحليلية والرؤى اللازمة لضمان جودة المنتج وتحسين العمليات والامتثال التنظيمي عبر التطبيقات الصناعية المتنوعة.`
-    },
-    features: [
-      {
-        id: 'analytical-testing',
-        title: {
-          en: 'Comprehensive Analytical Testing',
-          ar: 'اختبارات تحليلية شاملة'
-        },
-        description: {
-          en: 'Full spectrum of chemical analysis using advanced instrumentation and methods.',
-          ar: 'طيف كامل من التحليل الكيميائي باستخدام أجهزة وطرق متقدمة.'
-        },
-        icon: 'microscope'
-      },
-      {
-        id: 'quality-control',
-        title: {
-          en: 'Quality Control Testing',
-          ar: 'اختبارات مراقبة الجودة'
-        },
-        description: {
-          en: 'Rigorous quality control testing to ensure product specifications and standards.',
-          ar: 'اختبارات مراقبة جودة صارمة لضمان مواصفات ومعايير المنتج.'
-        },
-        icon: 'check-square'
-      },
-      {
-        id: 'method-development',
-        title: {
-          en: 'Custom Method Development',
-          ar: 'تطوير طرق مخصصة'
-        },
-        description: {
-          en: 'Development of specialized analytical methods for unique testing requirements.',
-          ar: 'تطوير طرق تحليلية متخصصة لمتطلبات الاختبار الفريدة.'
-        },
-        icon: 'settings'
-      }
-    ],
-    icon: 'flask',
-    image: {
-      id: 'laboratory-services-image',
-      url: '/images/services/engineering-consulting.jpg',
-      altText: {
-        en: 'Chemical laboratory services',
-        ar: 'خدمات المختبرات الكيميائية'
-      },
-      width: 800,
-      height: 600
-    },
-    meta: {
-      title: {
-        en: 'Chemical Laboratory Services | JAAZL',
-        ar: 'خدمات المختبرات الكيميائية | جازل'
-      },
-      description: {
-        en: 'Comprehensive analytical and testing services for chemical analysis, quality control, and product development.',
-        ar: 'خدمات تحليلية واختبار شاملة للتحليل الكيميائي ومراقبة الجودة وتطوير المنتجات.'
-      },
-      keywords: ['laboratory services', 'chemical analysis', 'quality control', 'analytical testing', 'method development']
-    },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'mining', 'power', 'water-treatment']
-  },
-  {
-    id: 'power-systems',
-    slug: 'power-systems',
-    categoryId: 'electromechanical',
-    name: {
-      en: 'Industrial Power Systems',
-      ar: 'أنظمة الطاقة الصناعية'
-    },
-    shortDescription: {
-      en: 'Comprehensive design, installation, and maintenance of industrial power distribution systems, ensuring reliable and efficient electrical infrastructure.',
-      ar: 'تصميم وتركيب وصيانة شاملة لأنظمة توزيع الطاقة الصناعية، مما يضمن بنية تحتية كهربائية موثوقة وفعالة.'
-    },
-    fullDescription: {
-      en: `JAAZL's Industrial Power Systems service provides comprehensive solutions for designing, installing, and maintaining robust electrical power infrastructure for industrial facilities. Our team of electrical engineers specializes in power distribution, load management, and system optimization to ensure reliable, efficient operation.
-
-We offer end-to-end services from initial power system design and equipment selection to installation supervision, commissioning, and ongoing maintenance. Our expertise covers medium and high-voltage systems, transformers, switchgear, motor control centers, and power quality solutions.
-
-Through advanced monitoring and predictive maintenance strategies, we help ensure maximum uptime, optimal energy efficiency, and long-term reliability of your electrical infrastructure while maintaining the highest safety standards.`,
-      ar: `تقدم خدمة أنظمة الطاقة الصناعية من جازل حلولاً شاملة لتصميم وتركيب وصيانة البنية التحتية الكهربائية القوية للمرافق الصناعية. يتخصص فريقنا من المهندسين الكهربائيين في توزيع الطاقة وإدارة الأحمال وتحسين النظام لضمان تشغيل موثوق وفعال.
-
-نقدم خدمات شاملة من تصميم نظام الطاقة الأولي واختيار المعدات إلى الإشراف على التركيب والتشغيل والصيانة المستمرة. تغطي خبرتنا أنظمة الجهد المتوسط والعالي والمحولات ومعدات التبديل ومراكز التحكم في المحركات وحلول جودة الطاقة.
-
-من خلال استراتيجيات المراقبة المتقدمة والصيانة التنبؤية، نساعد في ضمان أقصى وقت تشغيل وكفاءة مثلى للطاقة وموثوقية طويلة المدى للبنية التحتية الكهربائية لديك مع الحفاظ على أعلى معايير السلامة.`
-    },
-    features: [
-      {
-        id: 'power-distribution',
-        title: {
-          en: 'Power Distribution Design',
-          ar: 'تصميم توزيع الطاقة'
-        },
-        description: {
-          en: 'Comprehensive design of electrical distribution systems for optimal power delivery.',
-          ar: 'تصميم شامل لأنظمة التوزيع الكهربائي لتوصيل الطاقة الأمثل.'
-        },
-        icon: 'zap'
-      },
-      {
-        id: 'load-management',
-        title: {
-          en: 'Load Management Systems',
-          ar: 'أنظمة إدارة الأحمال'
-        },
-        description: {
-          en: 'Advanced load management solutions for efficient power utilization and cost optimization.',
-          ar: 'حلول متقدمة لإدارة الأحمال لاستخدام فعال للطاقة وتحسين التكلفة.'
-        },
-        icon: 'activity'
-      },
-      {
-        id: 'power-quality',
-        title: {
-          en: 'Power Quality Solutions',
-          ar: 'حلول جودة الطاقة'
-        },
-        description: {
-          en: 'Implementation of power quality improvement systems for stable electrical supply.',
-          ar: 'تنفيذ أنظمة تحسين جودة الطاقة لإمداد كهربائي مستقر.'
-        },
-        icon: 'trending-up'
-      }
-    ],
-    icon: 'battery',
-    image: {
-      id: 'power-systems-image',
-      url: '/images/services/ai-automation.jpg',
-      altText: {
-        en: 'Industrial power systems',
-        ar: 'أنظمة الطاقة الصناعية'
-      },
-      width: 800,
-      height: 600
-    },
-    meta: {
-      title: {
-        en: 'Industrial Power Systems | JAAZL',
-        ar: 'أنظمة الطاقة الصناعية | جازل'
-      },
-      description: {
-        en: 'Comprehensive design, installation, and maintenance of industrial power distribution systems for reliable electrical infrastructure.',
-        ar: 'تصميم وتركيب وصيانة شاملة لأنظمة توزيع الطاقة الصناعية للبنية التحتية الكهربائية الموثوقة.'
-      },
-      keywords: ['power systems', 'electrical distribution', 'load management', 'power quality', 'industrial electrical']
-    },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'power', 'mining']
-  },
-  {
-    id: 'automation-controls',
-    slug: 'automation-controls',
-    categoryId: 'electromechanical',
-    name: {
-      en: 'Industrial Automation & Controls',
-      ar: 'أتمتة وضوابط صناعية'
-    },
-    shortDescription: {
-      en: 'Advanced automation and control systems for industrial processes, providing precision control, monitoring, and optimization capabilities.',
-      ar: 'أنظمة أتمتة وتحكم متقدمة للعمليات الصناعية، توفر قدرات تحكم دقيقة ومراقبة وتحسين.'
-    },
-    fullDescription: {
-      en: `JAAZL's Industrial Automation & Controls service provides comprehensive solutions for automating industrial processes and implementing advanced control systems. Our team of automation engineers designs and implements sophisticated control strategies that enhance operational efficiency, improve product quality, and ensure safe operation.
-
-We specialize in programmable logic controllers (PLCs), distributed control systems (DCS), supervisory control and data acquisition (SCADA) systems, and human-machine interfaces (HMI). Our solutions integrate seamlessly with existing infrastructure while providing advanced capabilities for process monitoring, control, and optimization.
-
-Through intelligent automation and control strategies, we help transform manual operations into efficient, automated processes that reduce operational costs, minimize human error, and provide real-time visibility into critical process parameters.`,
-      ar: `تقدم خدمة الأتمتة والضوابط الصناعية من جازل حلولاً شاملة لأتمتة العمليات الصناعية وتنفيذ أنظمة التحكم المتقدمة. يصمم فريقنا من مهندسي الأتمتة وينفذ استراتيجيات تحكم متطورة تعزز الكفاءة التشغيلية وتحسن جودة المنتج وتضمن التشغيل الآمن.
-
-نحن متخصصون في وحدات التحكم المنطقية القابلة للبرمجة (PLCs) وأنظمة التحكم الموزعة (DCS) وأنظمة الإشراف والتحكم وجمع البيانات (SCADA) وواجهات الإنسان والآلة (HMI). تتكامل حلولنا بسلاسة مع البنية التحتية الحالية مع توفير قدرات متقدمة لمراقبة العمليات والتحكم والتحسين.
-
-من خلال استراتيجيات الأتمتة والتحكم الذكية، نساعد في تحويل العمليات اليدوية إلى عمليات آلية فعالة تقلل التكاليف التشغيلية وتقلل الأخطاء البشرية وتوفر رؤية في الوقت الفعلي لمعايير العمليات الحرجة.`
-    },
-    features: [
-      {
-        id: 'plc-programming',
-        title: {
-          en: 'PLC Programming & Configuration',
-          ar: 'برمجة وتكوين PLC'
-        },
-        description: {
-          en: 'Custom PLC programming and configuration for precise process control.',
-          ar: 'برمجة وتكوين PLC مخصصة للتحكم الدقيق في العمليات.'
-        },
-        icon: 'cpu'
-      },
-      {
-        id: 'scada-systems',
-        title: {
-          en: 'SCADA System Implementation',
-          ar: 'تنفيذ أنظمة SCADA'
-        },
-        description: {
-          en: 'Implementation of comprehensive SCADA systems for centralized monitoring and control.',
-          ar: 'تنفيذ أنظمة SCADA شاملة للمراقبة والتحكم المركزي.'
-        },
-        icon: 'monitor'
-      },
-      {
-        id: 'hmi-development',
-        title: {
-          en: 'HMI Development',
-          ar: 'تطوير واجهات HMI'
-        },
-        description: {
-          en: 'User-friendly human-machine interfaces for intuitive system operation.',
-          ar: 'واجهات إنسان-آلة سهلة الاستخدام للتشغيل البديهي للنظام.'
-        },
-        icon: 'smartphone'
-      }
-    ],
-    icon: 'settings',
-    image: {
-      id: 'automation-controls-image',
-      url: '/images/services/ai-automation.jpg',
-      altText: {
-        en: 'Industrial automation and controls',
-        ar: 'أتمتة وضوابط صناعية'
-      },
-      width: 800,
-      height: 600
-    },
-    meta: {
-      title: {
-        en: 'Industrial Automation & Controls | JAAZL',
-        ar: 'أتمتة وضوابط صناعية | جازل'
-      },
-      description: {
-        en: 'Advanced automation and control systems for industrial processes, providing precision control, monitoring, and optimization.',
-        ar: 'أنظمة أتمتة وتحكم متقدمة للعمليات الصناعية، توفر تحكماً دقيقاً ومراقبة وتحسين.'
-      },
-      keywords: ['industrial automation', 'PLC programming', 'SCADA systems', 'process control', 'HMI development']
-    },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'power', 'water-treatment']
-  },
-  {
-    id: 'zero-liquid-discharge',
-    slug: 'zero-liquid-discharge',
-    categoryId: 'environmental',
-    name: {
-      en: 'Zero Liquid Discharge Systems',
-      ar: 'أنظمة التفريغ السائل الصفري'
-    },
-    shortDescription: {
-      en: 'Advanced zero liquid discharge (ZLD) systems that eliminate wastewater discharge through innovative water recovery and treatment technologies.',
-      ar: 'أنظمة متقدمة للتفريغ السائل الصفري (ZLD) تلغي تصريف مياه الصرف من خلال تقنيات مبتكرة لاستعادة ومعالجة المياه.'
-    },
-    fullDescription: {
-      en: `JAAZL's Zero Liquid Discharge (ZLD) Systems provide comprehensive solutions for eliminating industrial wastewater discharge through advanced water treatment and recovery technologies. Our ZLD systems are designed to recover up to 95% of water from industrial wastewater while concentrating all dissolved solids into solid waste for safe disposal.
-
-Our team of environmental engineers designs customized ZLD systems that integrate multiple treatment technologies including reverse osmosis, evaporation, crystallization, and advanced oxidation processes. We focus on maximizing water recovery while minimizing energy consumption and operational costs.
-
-Through innovative design and proven technologies, our ZLD systems help industries achieve complete water cycle closure, ensuring zero environmental impact from liquid discharge while recovering valuable water resources for reuse in industrial processes.`,
-      ar: `توفر أنظمة التفريغ السائل الصفري (ZLD) من جازل حلولاً شاملة للقضاء على تصريف مياه الصرف الصناعي من خلال تقنيات متقدمة لمعالجة واستعادة المياه. تم تصميم أنظمة ZLD لدينا لاستعادة ما يصل إلى 95% من المياه من مياه الصرف الصناعي مع تركيز جميع المواد الصلبة المذابة في نفايات صلبة للتخلص الآمن.
-
-يصمم فريقنا من المهندسين البيئيين أنظمة ZLD مخصصة تدمج تقنيات معالجة متعددة بما في ذلك التناضح العكسي والتبخير والتبلور وعمليات الأكسدة المتقدمة. نحن نركز على تعظيم استعادة المياه مع تقليل استهلاك الطاقة والتكاليف التشغيلية.
-
-من خلال التصميم المبتكر والتقنيات المثبتة، تساعد أنظمة ZLD لدينا الصناعات على تحقيق إغلاق كامل لدورة المياه، مما يضمن عدم وجود تأثير بيئي من التصريف السائل مع استعادة موارد مياه قيمة لإعادة الاستخدام في العمليات الصناعية.`
-    },
-    features: [
-      {
-        id: 'water-recovery',
-        title: {
-          en: 'Maximum Water Recovery',
-          ar: 'أقصى استعادة للمياه'
-        },
-        description: {
-          en: 'Achieve up to 95% water recovery from industrial wastewater streams.',
-          ar: 'تحقيق استعادة مياه تصل إلى 95% من تدفقات مياه الصرف الصناعي.'
-        },
-        icon: 'droplet'
-      },
-      {
-        id: 'energy-optimization',
-        title: {
-          en: 'Energy-Optimized Design',
-          ar: 'تصميم محسن للطاقة'
-        },
-        description: {
-          en: 'Advanced heat recovery and energy optimization to minimize operational costs.',
-          ar: 'استعادة حرارة متقدمة وتحسين الطاقة لتقليل التكاليف التشغيلية.'
-        },
-        icon: 'zap'
-      },
-      {
-        id: 'solid-waste',
-        title: {
-          en: 'Solid Waste Management',
-          ar: 'إدارة النفايات الصلبة'
-        },
-        description: {
-          en: 'Convert liquid waste into manageable solid waste for safe disposal or reuse.',
-          ar: 'تحويل النفايات السائلة إلى نفايات صلبة قابلة للإدارة للتخلص الآمن أو إعادة الاستخدام.'
-        },
-        icon: 'recycle'
-      }
-    ],
-    icon: 'droplets',
-    image: {
-      id: 'zld-image',
-      url: '/images/services/environmental-compliance.jpg',
-      altText: {
-        en: 'Zero liquid discharge systems',
-        ar: 'أنظمة التفريغ السائل الصفري'
-      },
-      width: 800,
-      height: 600
-    },
-    meta: {
-      title: {
-        en: 'Zero Liquid Discharge Systems | JAAZL',
-        ar: 'أنظمة التفريغ السائل الصفري | جازل'
-      },
-      description: {
-        en: 'Advanced zero liquid discharge systems that eliminate wastewater discharge through innovative water recovery technologies.',
-        ar: 'أنظمة متقدمة للتفريغ السائل الصفري تلغي تصريف مياه الصرف من خلال تقنيات مبتكرة لاستعادة المياه.'
-      },
-      keywords: ['zero liquid discharge', 'ZLD', 'water recovery', 'wastewater treatment', 'environmental compliance']
-    },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'mining', 'power']
-  },
-  {
-    id: 'spent-caustic-treatment',
-    slug: 'spent-caustic-treatment',
-    categoryId: 'environmental',
-    name: {
-      en: 'Spent Caustic Treatment',
-      ar: 'معالجة الصودا الكاوية المستهلكة'
-    },
-    shortDescription: {
-      en: 'Specialized treatment solutions for spent caustic waste streams, converting hazardous alkaline waste into valuable products or safe disposal.',
-      ar: 'حلول معالجة متخصصة لتدفقات نفايات الصودا الكاوية المستهلكة، تحويل النفايات القلوية الخطرة إلى منتجات قيمة أو تخلص آمن.'
-    },
-    fullDescription: {
-      en: `JAAZL's Spent Caustic Treatment service provides comprehensive solutions for managing and treating spent caustic waste streams from refineries, petrochemical plants, and other industrial facilities. Our treatment systems are designed to handle various types of spent caustic including sulfidic, naphthenic, and phenolic caustics.
-
-Our team of chemical engineers develops customized treatment processes that neutralize hazardous components, recover valuable chemicals, and minimize environmental impact. We utilize advanced technologies including wet air oxidation, biological treatment, and chemical neutralization to achieve optimal treatment results.
-
-Through innovative treatment approaches, we help convert waste caustic streams into valuable products such as sodium sulfate, recover reusable caustic, or prepare waste for safe disposal, turning a disposal cost into a potential revenue stream while ensuring environmental compliance.`,
-      ar: `تقدم خدمة معالجة الصودا الكاوية المستهلكة من جازل حلولاً شاملة لإدارة ومعالجة تدفقات نفايات الصودا الكاوية المستهلكة من المصافي ومصانع البتروكيماويات والمرافق الصناعية الأخرى. تم تصميم أنظمة المعالجة لدينا للتعامل مع أنواع مختلفة من الصودا الكاوية المستهلكة بما في ذلك الكبريتيدية والنافثينية والفينولية.
-
-يطور فريقنا من المهندسين الكيميائيين عمليات معالجة مخصصة تعادل المكونات الخطرة وتستعيد المواد الكيميائية القيمة وتقلل من التأثير البيئي. نحن نستخدم تقنيات متقدمة بما في ذلك الأكسدة الهوائية الرطبة والمعالجة البيولوجية والمعادلة الكيميائية لتحقيق نتائج معالجة مثلى.
-
-من خلال أساليب المعالجة المبتكرة، نساعد في تحويل تدفقات الصودا الكاوية النفايات إلى منتجات قيمة مثل كبريتات الصوديوم، واستعادة الصودا الكاوية القابلة لإعادة الاستخدام، أو إعداد النفايات للتخلص الآمن، وتحويل تكلفة التخلص إلى تدفق إيرادات محتمل مع ضمان الامتثال البيئي.`
-    },
-    features: [
-      {
-        id: 'hazard-neutralization',
-        title: {
-          en: 'Hazardous Component Neutralization',
-          ar: 'معادلة المكونات الخطرة'
-        },
-        description: {
-          en: 'Safely neutralize toxic sulfides, phenols, and other hazardous compounds.',
-          ar: 'معادلة آمنة للكبريتيدات السامة والفينولات والمركبات الخطرة الأخرى.'
-        },
-        icon: 'shield'
-      },
-      {
-        id: 'chemical-recovery',
-        title: {
-          en: 'Chemical Recovery',
-          ar: 'استعادة المواد الكيميائية'
-        },
-        description: {
-          en: 'Recover valuable chemicals and convert waste into marketable products.',
-          ar: 'استعادة المواد الكيميائية القيمة وتحويل النفايات إلى منتجات قابلة للتسويق.'
-        },
-        icon: 'refresh-cw'
-      },
-      {
-        id: 'wet-air-oxidation',
-        title: {
-          en: 'Advanced Wet Air Oxidation',
-          ar: 'الأكسدة الهوائية الرطبة المتقدمة'
-        },
-        description: {
-          en: 'State-of-the-art wet air oxidation technology for complete contaminant destruction.',
-          ar: 'تقنية متطورة للأكسدة الهوائية الرطبة للتدمير الكامل للملوثات.'
-        },
-        icon: 'wind'
-      }
-    ],
-    icon: 'flask',
-    image: {
-      id: 'spent-caustic-image',
-      url: '/images/services/environmental-compliance.jpg',
-      altText: {
-        en: 'Spent caustic treatment facility',
-        ar: 'مرفق معالجة الصودا الكاوية المستهلكة'
-      },
-      width: 800,
-      height: 600
-    },
-    meta: {
-      title: {
-        en: 'Spent Caustic Treatment Solutions | JAAZL',
-        ar: 'حلول معالجة الصودا الكاوية المستهلكة | جازل'
-      },
-      description: {
-        en: 'Specialized treatment solutions for spent caustic waste streams, converting hazardous waste into valuable products.',
-        ar: 'حلول معالجة متخصصة لتدفقات نفايات الصودا الكاوية المستهلكة، تحويل النفايات الخطرة إلى منتجات قيمة.'
-      },
-      keywords: ['spent caustic treatment', 'hazardous waste', 'chemical recovery', 'wet air oxidation', 'environmental treatment']
-    },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries']
+    relatedIndustries: ['petrochemicals', 'manufacturing', 'oil-gas']
   },
   {
     id: 'oily-water-treatment',
@@ -1472,340 +703,170 @@ Through innovative treatment approaches, we help convert waste caustic streams i
       ar: 'معالجة المياه الزيتية والهيدروكربونية'
     },
     shortDescription: {
-      en: 'Advanced treatment systems for oily wastewater and hydrocarbon-contaminated water, ensuring compliance with discharge standards and water recovery.',
-      ar: 'أنظمة معالجة متقدمة للمياه العادمة الزيتية والمياه الملوثة بالهيدروكربونات، مما يضمن الامتثال لمعايير التصريف واستعادة المياه.'
+      en: 'Specialized treatment systems for oily water separation and hydrocarbon recovery in industrial operations.',
+      ar: 'أنظمة معالجة متخصصة لفصل المياه الزيتية واستعادة الهيدروكربونات في العمليات الصناعية.'
     },
     fullDescription: {
-      en: `JAAZL's Oily Water & Hydrocarbon Treatment service provides comprehensive solutions for treating industrial wastewater contaminated with oil, grease, and hydrocarbons. Our treatment systems are designed to remove both free and emulsified oil while recovering clean water that meets environmental discharge standards.
+      en: `Our oily water treatment systems provide efficient separation and recovery of hydrocarbons from contaminated water streams. These systems are essential for oil and gas operations, petrochemical facilities, and other industries dealing with hydrocarbon contamination.
 
-Our team of environmental engineers utilizes advanced separation technologies including dissolved air flotation (DAF), coalescing plate separators, membrane bioreactors, and advanced oxidation processes. We design integrated treatment systems that achieve oil content levels below 5 ppm in treated effluent.
+We utilize advanced separation technologies including dissolved air flotation (DAF), coalescers, hydrocyclones, and membrane systems to achieve the required water quality standards for discharge or reuse.
 
-Through innovative treatment approaches and proven technologies, we help industries comply with stringent environmental regulations while maximizing water recovery and minimizing waste disposal costs. Our systems are particularly effective for refinery wastewater, petrochemical effluents, and produced water treatment.`,
-      ar: `تقدم خدمة معالجة المياه الزيتية والهيدروكربونية من جازل حلولاً شاملة لمعالجة مياه الصرف الصناعي الملوثة بالزيت والشحوم والهيدروكربونات. تم تصميم أنظمة المعالجة لدينا لإزالة الزيت الحر والمستحلب مع استعادة المياه النظيفة التي تلبي معايير التصريف البيئي.
+Our systems not only ensure environmental compliance but also recover valuable hydrocarbons that can be processed and sold, providing additional revenue streams. We design custom solutions based on the specific characteristics of your oily water streams and discharge requirements.`,
+      ar: `توفر أنظمة معالجة المياه الزيتية لدينا فصل واستعادة فعالين للهيدروكربونات من تيارات المياه الملوثة. هذه الأنظمة ضرورية لعمليات النفط والغاز ومرافق البتروكيماويات والصناعات الأخرى التي تتعامل مع التلوث بالهيدروكربونات.
 
-يستخدم فريقنا من المهندسين البيئيين تقنيات فصل متقدمة بما في ذلك التعويم بالهواء المذاب (DAF) وفواصل الألواح المتجمعة والمفاعلات الحيوية الغشائية وعمليات الأكسدة المتقدمة. نصمم أنظمة معالجة متكاملة تحقق مستويات محتوى زيت أقل من 5 جزء في المليون في النفايات السائلة المعالجة.
+نستخدم تقنيات فصل متقدمة بما في ذلك التعويم بالهواء المذاب (DAF) والمتحدات والهيدروسيكلون وأنظمة الأغشية لتحقيق معايير جودة المياه المطلوبة للتصريف أو إعادة الاستخدام.
 
-من خلال أساليب المعالجة المبتكرة والتقنيات المثبتة، نساعد الصناعات على الامتثال للوائح البيئية الصارمة مع تعظيم استعادة المياه وتقليل تكاليف التخلص من النفايات. أنظمتنا فعالة بشكل خاص لمياه الصرف في المصافي ونفايات البتروكيماويات ومعالجة المياه المنتجة.`
+أنظمتنا لا تضمن الامتثال البيئي فحسب، بل تستعيد أيضًا الهيدروكربونات القيمة التي يمكن معالجتها وبيعها، مما يوفر مصادر إيرادات إضافية. نصمم حلولًا مخصصة بناءً على الخصائص المحددة لتيارات المياه الزيتية لديك ومتطلبات التصريف.`
     },
     features: [
       {
-        id: 'oil-separation',
+        id: 'oil-water-separation',
         title: {
-          en: 'Advanced Oil Separation',
-          ar: 'فصل الزيت المتقدم'
+          en: 'Oil-Water Separation',
+          ar: 'فصل النفط والماء'
         },
         description: {
-          en: 'Remove free and emulsified oil to achieve <5 ppm in treated effluent.',
-          ar: 'إزالة الزيت الحر والمستحلب لتحقيق <5 جزء في المليون في النفايات السائلة المعالجة.'
-        },
-        icon: 'droplet'
-      },
-      {
-        id: 'daf-technology',
-        title: {
-          en: 'Dissolved Air Flotation',
-          ar: 'تعويم الهواء المذاب'
-        },
-        description: {
-          en: 'High-efficiency DAF systems for superior oil and suspended solids removal.',
-          ar: 'أنظمة DAF عالية الكفاءة لإزالة فائقة للزيت والمواد الصلبة المعلقة.'
-        },
-        icon: 'wind'
-      },
-      {
-        id: 'produced-water',
-        title: {
-          en: 'Produced Water Treatment',
-          ar: 'معالجة المياه المنتجة'
-        },
-        description: {
-          en: 'Specialized treatment for oil field produced water and refinery wastewater.',
-          ar: 'معالجة متخصصة للمياه المنتجة من حقول النفط ومياه الصرف في المصافي.'
+          en: 'Efficient separation of oil and hydrocarbons from water streams.',
+          ar: 'فصل فعال للنفط والهيدروكربونات من تيارات المياه.'
         },
         icon: 'layers'
+      },
+      {
+        id: 'hydrocarbon-recovery',
+        title: {
+          en: 'Hydrocarbon Recovery',
+          ar: 'استعادة الهيدروكربونات'
+        },
+        description: {
+          en: 'Recover valuable hydrocarbons for processing and reuse.',
+          ar: 'استعادة الهيدروكربونات القيمة للمعالجة وإعادة الاستخدام.'
+        },
+        icon: 'refresh-ccw'
+      },
+      {
+        id: 'advanced-filtration',
+        title: {
+          en: 'Advanced Filtration',
+          ar: 'الترشيح المتقدم'
+        },
+        description: {
+          en: 'Multi-stage filtration for achieving discharge standards.',
+          ar: 'ترشيح متعدد المراحل لتحقيق معايير التصريف.'
+        },
+        icon: 'filter'
       }
     ],
-    icon: 'droplets',
+    icon: 'droplet',
     image: {
       id: 'oily-water-treatment-image',
-      url: '/images/services/environmental-compliance.jpg',
+      url: '/images/services/oily-water-treatment.jpg',
       altText: {
-        en: 'Oily water treatment facility',
-        ar: 'مرفق معالجة المياه الزيتية'
+        en: 'Oily water treatment system',
+        ar: 'نظام معالجة المياه الزيتية'
       },
       width: 800,
       height: 600
     },
     meta: {
       title: {
-        en: 'Oily Water & Hydrocarbon Treatment | JAAZL',
-        ar: 'معالجة المياه الزيتية والهيدروكربونية | جازل'
+        en: 'Oily Water Treatment Systems | JAAZL',
+        ar: 'أنظمة معالجة المياه الزيتية | جازل'
       },
       description: {
-        en: 'Advanced treatment systems for oily wastewater and hydrocarbon-contaminated water, ensuring environmental compliance.',
-        ar: 'أنظمة معالجة متقدمة للمياه العادمة الزيتية والمياه الملوثة بالهيدروكربونات، مما يضمن الامتثال البيئي.'
+        en: 'Advanced oily water treatment systems for hydrocarbon separation, recovery, and environmental compliance.',
+        ar: 'أنظمة متقدمة لمعالجة المياه الزيتية لفصل واستعادة الهيدروكربونات والامتثال البيئي.'
       },
-      keywords: ['oily water treatment', 'hydrocarbon removal', 'produced water', 'DAF systems', 'wastewater treatment']
+      keywords: ['oily water treatment', 'hydrocarbon separation', 'oil water separation', 'environmental compliance', 'water treatment']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'mining']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries']
   },
+
+  // ===== ELECTROMECHANICAL CATEGORY =====
   {
-    id: 'bulk-chemicals-supply',
-    slug: 'bulk-chemicals-supply',
-    categoryId: 'chemicals',
+    id: 'electromechanical-systems',
+    slug: 'electromechanical-systems',
+    categoryId: 'electromechanical',
     name: {
-      en: 'Bulk Industrial Chemicals Supply',
-      ar: 'توريد المواد الكيميائية الصناعية بالجملة'
+      en: 'Industrial Electromechanical Systems',
+      ar: 'أنظمة كهروميكانيكية صناعية'
     },
     shortDescription: {
-      en: 'Reliable supply of high-quality bulk industrial chemicals including acids, bases, solvents, and specialty chemicals for various industrial applications.',
-      ar: 'توريد موثوق للمواد الكيميائية الصناعية عالية الجودة بالجملة بما في ذلك الأحماض والقواعد والمذيبات والمواد الكيميائية المتخصصة لتطبيقات صناعية متنوعة.'
+      en: 'Comprehensive electromechanical systems integration for industrial facilities including design, installation, and maintenance.',
+      ar: 'تكامل شامل للأنظمة الكهروميكانيكية للمرافق الصناعية يشمل التصميم والتركيب والصيانة.'
     },
     fullDescription: {
-      en: `JAAZL's Bulk Industrial Chemicals Supply service provides reliable, high-quality chemical supply solutions for industrial operations across various sectors. We maintain strategic partnerships with leading chemical manufacturers globally to ensure consistent supply of premium-grade chemicals at competitive prices.
+      en: `Our electromechanical systems services provide comprehensive solutions for industrial facilities requiring integrated mechanical and electrical systems. We design, install, and maintain complex systems that combine mechanical components with electrical controls and automation.
 
-Our comprehensive inventory includes acids (sulfuric, hydrochloric, nitric), bases (sodium hydroxide, potassium hydroxide), solvents (aromatics, aliphatics), and specialty chemicals for specific industrial processes. We provide complete supply chain management including procurement, quality assurance, logistics, and technical support.
+Our expertise covers HVAC systems, power distribution, motor control centers, instrumentation and control systems, and integrated automation solutions. We ensure seamless integration between mechanical and electrical components for optimal system performance.
 
-Through our extensive supplier network and local manufacturing partnerships, we ensure uninterrupted supply while maintaining the highest quality standards. Our team provides technical expertise to help optimize chemical usage, reduce costs, and improve process efficiency across your operations.`,
-      ar: `تقدم خدمة توريد المواد الكيميائية الصناعية بالجملة من جازل حلول توريد كيميائية موثوقة وعالية الجودة للعمليات الصناعية عبر قطاعات مختلفة. نحتفظ بشراكات استراتيجية مع الشركات المصنعة للمواد الكيميائية الرائدة عالمياً لضمان الإمداد المتسق للمواد الكيميائية عالية الجودة بأسعار تنافسية.
+We provide end-to-end project management from initial design through commissioning and ongoing maintenance. Our certified technicians and engineers ensure all systems meet industry standards and regulatory requirements while optimizing energy efficiency and operational reliability.`,
+      ar: `تقدم خدمات الأنظمة الكهروميكانيكية لدينا حلولًا شاملة للمرافق الصناعية التي تتطلب أنظمة ميكانيكية وكهربائية متكاملة. نصمم وننصب ونصون الأنظمة المعقدة التي تجمع بين المكونات الميكانيكية والتحكم الكهربائي والأتمتة.
 
-يشمل مخزوننا الشامل الأحماض (الكبريتيك والهيدروكلوريك والنيتريك) والقواعد (هيدروكسيد الصوديوم وهيدروكسيد البوتاسيوم) والمذيبات (العطرية والأليفاتية) والمواد الكيميائية المتخصصة للعمليات الصناعية المحددة. نقدم إدارة شاملة لسلسلة التوريد بما في ذلك الشراء وضمان الجودة واللوجستيات والدعم الفني.
+تغطي خبرتنا أنظمة التكييف وتوزيع الكهرباء ومراكز تحكم المحركات وأنظمة الأجهزة والتحكم وحلول الأتمتة المتكاملة. نضمن التكامل السلس بين المكونات الميكانيكية والكهربائية للحصول على أداء أمثل للنظام.
 
-من خلال شبكة الموردين الواسعة وشراكات التصنيع المحلية، نضمن الإمداد المتواصل مع الحفاظ على أعلى معايير الجودة. يقدم فريقنا الخبرة التقنية للمساعدة في تحسين استخدام المواد الكيميائية وتقليل التكاليف وتحسين كفاءة العمليات عبر عملياتك.`
+نقدم إدارة شاملة للمشاريع من التصميم الأولي وحتى التشغيل والصيانة المستمرة. يضمن فنيونا ومهندسونا المعتمدون أن جميع الأنظمة تلبي معايير الصناعة والمتطلبات التنظيمية مع تحسين كفاءة الطاقة والموثوقية التشغيلية.`
     },
     features: [
       {
-        id: 'quality-assurance',
+        id: 'system-integration',
         title: {
-          en: 'Premium Quality Assurance',
-          ar: 'ضمان الجودة المتميز'
+          en: 'System Integration',
+          ar: 'تكامل الأنظمة'
         },
         description: {
-          en: 'Rigorous quality control and certification for all supplied chemicals.',
-          ar: 'مراقبة جودة صارمة وشهادات لجميع المواد الكيميائية المورّدة.'
+          en: 'Seamless integration of mechanical and electrical components.',
+          ar: 'تكامل سلس للمكونات الميكانيكية والكهربائية.'
         },
-        icon: 'check-circle'
+        icon: 'cpu'
       },
       {
-        id: 'supply-chain',
+        id: 'power-distribution',
         title: {
-          en: 'Integrated Supply Chain',
-          ar: 'سلسلة توريد متكاملة'
+          en: 'Power Distribution',
+          ar: 'توزيع الكهرباء'
         },
         description: {
-          en: 'Complete supply chain management from procurement to delivery.',
-          ar: 'إدارة شاملة لسلسلة التوريد من الشراء إلى التسليم.'
+          en: 'Efficient electrical power distribution and control systems.',
+          ar: 'أنظمة توزيع وتحكم فعالة للطاقة الكهربائية.'
         },
-        icon: 'truck'
+        icon: 'zap'
       },
       {
-        id: 'technical-support',
+        id: 'automation-controls',
         title: {
-          en: 'Technical Consultation',
-          ar: 'الاستشارة التقنية'
+          en: 'Automation Controls',
+          ar: 'التحكم الآلي'
         },
         description: {
-          en: 'Expert technical support for chemical selection and application optimization.',
-          ar: 'دعم فني خبير لاختيار المواد الكيميائية وتحسين التطبيق.'
-        },
-        icon: 'life-buoy'
-      }
-    ],
-    icon: 'package',
-    image: {
-      id: 'bulk-chemicals-image',
-      url: '/images/services/environmental-compliance.jpg',
-      altText: {
-        en: 'Bulk industrial chemicals storage facility',
-        ar: 'مرفق تخزين المواد الكيميائية الصناعية بالجملة'
-      },
-      width: 800,
-      height: 600
-    },
-    meta: {
-      title: {
-        en: 'Bulk Industrial Chemicals Supply | JAAZL',
-        ar: 'توريد المواد الكيميائية الصناعية بالجملة | جازل'
-      },
-      description: {
-        en: 'Reliable supply of high-quality bulk industrial chemicals including acids, bases, solvents, and specialty chemicals.',
-        ar: 'توريد موثوق للمواد الكيميائية الصناعية عالية الجودة بالجملة بما في ذلك الأحماض والقواعد والمذيبات.'
-      },
-      keywords: ['bulk chemicals', 'industrial chemicals supply', 'chemical procurement', 'quality assurance', 'supply chain management']
-    },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'mining', 'water-treatment']
-  },
-  {
-    id: 'chemical-blending',
-    slug: 'chemical-blending',
-    categoryId: 'chemicals',
-    name: {
-      en: 'Local Chemical Manufacturing & Blending',
-      ar: 'التصنيع والخلط الكيميائي المحلي'
-    },
-    shortDescription: {
-      en: 'Local manufacturing and custom blending services for specialty chemicals, providing tailored formulations and just-in-time production for industrial applications.',
-      ar: 'خدمات التصنيع المحلي والخلط المخصص للمواد الكيميائية المتخصصة، توفير تركيبات مخصصة وإنتاج في الوقت المناسب للتطبيقات الصناعية.'
-    },
-    fullDescription: {
-      en: `JAAZL's Local Chemical Manufacturing & Blending service provides customized chemical production and blending solutions tailored to specific industrial requirements. Our state-of-the-art manufacturing facility in Saudi Arabia enables us to produce high-quality specialty chemicals while reducing lead times and logistics costs.
-
-Our team of chemical engineers and technicians specializes in custom formulation development, scale-up from laboratory to commercial production, and quality-controlled blending operations. We manufacture a wide range of products including process chemicals, water treatment chemicals, specialty additives, and custom formulations.
-
-Through local manufacturing capabilities and strategic raw material sourcing, we provide cost-effective solutions while maintaining the highest quality standards. Our flexible production system allows for rapid response to changing market demands and custom formulation requirements.`,
-      ar: `تقدم خدمة التصنيع والخلط الكيميائي المحلي من جازل حلول إنتاج وخلط كيميائية مخصصة مصممة لمتطلبات صناعية محددة. يمكن مرفق التصنيع المتطور لدينا في المملكة العربية السعودية من إنتاج مواد كيميائية متخصصة عالية الجودة مع تقليل أوقات التسليم وتكاليف اللوجستيات.
-
-يتخصص فريقنا من المهندسين الكيميائيين والفنيين في تطوير التركيبات المخصصة والتوسع من المختبر إلى الإنتاج التجاري وعمليات الخلط المتحكم فيها من ناحية الجودة. نصنع مجموعة واسعة من المنتجات بما في ذلك مواد كيميائية للعمليات ومواد كيميائية لمعالجة المياه ومضافات متخصصة وتركيبات مخصصة.
-
-من خلال قدرات التصنيع المحلية والمصادر الاستراتيجية للمواد الخام، نقدم حلولاً فعالة من حيث التكلفة مع الحفاظ على أعلى معايير الجودة. يسمح نظام الإنتاج المرن لدينا بالاستجابة السريعة لمتطلبات السوق المتغيرة ومتطلبات التركيب المخصص.`
-    },
-    features: [
-      {
-        id: 'custom-formulation',
-        title: {
-          en: 'Custom Formulation Development',
-          ar: 'تطوير التركيبات المخصصة'
-        },
-        description: {
-          en: 'Laboratory-to-commercial scale development of specialized chemical formulations.',
-          ar: 'تطوير من المختبر إلى النطاق التجاري للتركيبات الكيميائية المتخصصة.'
-        },
-        icon: 'flask-conical'
-      },
-      {
-        id: 'local-production',
-        title: {
-          en: 'Local Manufacturing',
-          ar: 'التصنيع المحلي'
-        },
-        description: {
-          en: 'State-of-the-art local production facility reducing lead times and costs.',
-          ar: 'مرفق إنتاج محلي متطور يقلل أوقات التسليم والتكاليف.'
-        },
-        icon: 'factory'
-      },
-      {
-        id: 'quality-control',
-        title: {
-          en: 'Quality-Controlled Blending',
-          ar: 'خلط متحكم بالجودة'
-        },
-        description: {
-          en: 'Precision blending operations with rigorous quality control at every step.',
-          ar: 'عمليات خلط دقيقة مع مراقبة جودة صارمة في كل خطوة.'
+          en: 'Advanced automation and control systems for industrial operations.',
+          ar: 'أنظمة أتمتة وتحكم متقدمة للعمليات الصناعية.'
         },
         icon: 'settings'
       }
     ],
-    icon: 'beaker',
+    icon: 'zap',
     image: {
-      id: 'chemical-blending-image',
-      url: '/images/services/engineering-consulting.jpg',
+      id: 'electromechanical-systems-image',
+      url: '/images/services/electromechanical-systems.jpg',
       altText: {
-        en: 'Chemical blending and manufacturing facility',
-        ar: 'مرفق خلط وتصنيع كيميائي'
+        en: 'Industrial electromechanical systems',
+        ar: 'أنظمة كهروميكانيكية صناعية'
       },
       width: 800,
       height: 600
     },
     meta: {
       title: {
-        en: 'Local Chemical Manufacturing & Blending | JAAZL',
-        ar: 'التصنيع والخلط الكيميائي المحلي | جازل'
+        en: 'Industrial Electromechanical Systems | JAAZL',
+        ar: 'أنظمة كهروميكانيكية صناعية | جازل'
       },
       description: {
-        en: 'Local manufacturing and custom blending services for specialty chemicals with tailored formulations.',
-        ar: 'خدمات التصنيع المحلي والخلط المخصص للمواد الكيميائية المتخصصة مع تركيبات مخصصة.'
+        en: 'Comprehensive electromechanical systems integration, power distribution, and automation controls for industrial facilities.',
+        ar: 'تكامل شامل للأنظمة الكهروميكانيكية وتوزيع الكهرباء والتحكم الآلي للمرافق الصناعية.'
       },
-      keywords: ['chemical manufacturing', 'custom blending', 'local production', 'specialty chemicals', 'formulation development']
+      keywords: ['electromechanical systems', 'power distribution', 'automation controls', 'system integration', 'industrial systems']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'water-treatment', 'mining']
-  },
-  {
-    id: 'offspec-management',
-    slug: 'offspec-management',
-    categoryId: 'chemicals',
-    name: {
-      en: 'Off-Spec & By-Products Management',
-      ar: 'إدارة المنتجات غير المطابقة والمنتجات الثانوية'
-    },
-    shortDescription: {
-      en: 'Comprehensive management services for off-specification products and industrial by-products, converting waste streams into valuable resources.',
-      ar: 'خدمات إدارة شاملة للمنتجات غير المطابقة للمواصفات والمنتجات الثانوية الصناعية، تحويل تدفقات النفايات إلى موارد قيمة.'
-    },
-    fullDescription: {
-      en: `JAAZL's Off-Spec & By-Products Management service provides comprehensive solutions for managing off-specification products, industrial by-products, and waste streams that can be recovered, reprocessed, or repurposed. We help industries transform potential waste disposal costs into revenue opportunities through innovative recovery and reprocessing technologies.
-
-Our team of chemical engineers and process specialists evaluates off-spec materials and by-products to identify recovery opportunities, develop reprocessing strategies, and establish markets for recovered products. We handle a wide range of materials including off-spec chemicals, catalyst waste, spent solvents, and industrial by-products.
-
-Through strategic partnerships with reprocessors, recyclers, and end-users, we create value from waste streams while ensuring full environmental compliance. Our services help reduce disposal costs, generate additional revenue, and support circular economy principles in industrial operations.`,
-      ar: `تقدم خدمة إدارة المنتجات غير المطابقة والمنتجات الثانوية من جازل حلولاً شاملة لإدارة المنتجات غير المطابقة للمواصفات والمنتجات الثانوية الصناعية وتدفقات النفايات التي يمكن استعادتها أو إعادة معالجتها أو إعادة توجيهها. نساعد الصناعات على تحويل تكاليف التخلص المحتملة من النفايات إلى فرص إيرادات من خلال تقنيات الاستعادة وإعادة المعالجة المبتكرة.
-
-يقوم فريقنا من المهندسين الكيميائيين ومتخصصي العمليات بتقييم المواد غير المطابقة للمواصفات والمنتجات الثانوية لتحديد فرص الاستعادة وتطوير استراتيجيات إعادة المعالجة وإنشاء أسواق للمنتجات المستعادة. نتعامل مع مجموعة واسعة من المواد بما في ذلك المواد الكيميائية غير المطابقة للمواصفات ونفايات المحفزات والمذيبات المستهلكة والمنتجات الثانوية الصناعية.
-
-من خلال الشراكات الاستراتيجية مع معالجات إعادة المعالجة وإعادة التدوير والمستخدمين النهائيين، نخلق قيمة من تدفقات النفايات مع ضمان الامتثال البيئي الكامل. تساعد خدماتنا في تقليل تكاليف التخلص وتوليد إيرادات إضافية ودعم مبادئ الاقتصاد الدائري في العمليات الصناعية.`
-    },
-    features: [
-      {
-        id: 'waste-evaluation',
-        title: {
-          en: 'Waste Stream Evaluation',
-          ar: 'تقييم تدفقات النفايات'
-        },
-        description: {
-          en: 'Comprehensive analysis to identify recovery and reprocessing opportunities.',
-          ar: 'تحليل شامل لتحديد فرص الاستعادة وإعادة المعالجة.'
-        },
-        icon: 'search'
-      },
-      {
-        id: 'reprocessing',
-        title: {
-          en: 'Reprocessing & Recovery',
-          ar: 'إعادة المعالجة والاستعادة'
-        },
-        description: {
-          en: 'Advanced reprocessing technologies to recover valuable materials from waste.',
-          ar: 'تقنيات إعادة معالجة متقدمة لاستعادة المواد القيمة من النفايات.'
-        },
-        icon: 'refresh-cw'
-      },
-      {
-        id: 'market-development',
-        title: {
-          en: 'Market Development',
-          ar: 'تطوير السوق'
-        },
-        description: {
-          en: 'Establish markets and supply chains for recovered products and by-products.',
-          ar: 'إنشاء أسواق وسلاسل توريد للمنتجات المستعادة والمنتجات الثانوية.'
-        },
-        icon: 'trending-up'
-      }
-    ],
-    icon: 'recycle',
-    image: {
-      id: 'offspec-management-image',
-      url: '/images/services/engineering-consulting.jpg',
-      altText: {
-        en: 'Off-spec products management facility',
-        ar: 'مرفق إدارة المنتجات غير المطابقة'
-      },
-      width: 800,
-      height: 600
-    },
-    meta: {
-      title: {
-        en: 'Off-Spec & By-Products Management | JAAZL',
-        ar: 'إدارة المنتجات غير المطابقة والمنتجات الثانوية | جازل'
-      },
-      description: {
-        en: 'Comprehensive management services for off-specification products and by-products, converting waste into valuable resources.',
-        ar: 'خدمات إدارة شاملة للمنتجات غير المطابقة والمنتجات الثانوية، تحويل النفايات إلى موارد قيمة.'
-      },
-      keywords: ['off-spec management', 'by-products recovery', 'waste to value', 'circular economy', 'industrial waste']
-    },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'mining']
+    relatedIndustries: ['manufacturing', 'oil-gas', 'power']
   },
   {
     id: 'shutdown-turnaround',
@@ -1816,82 +877,82 @@ Through strategic partnerships with reprocessors, recyclers, and end-users, we c
       ar: 'حلول الإغلاق والصيانة الدورية'
     },
     shortDescription: {
-      en: 'Comprehensive shutdown and turnaround services for industrial facilities, ensuring safe, efficient, and timely maintenance operations.',
-      ar: 'خدمات شاملة للإغلاق والصيانة الدورية للمرافق الصناعية، مما يضمن عمليات صيانة آمنة وفعالة وفي الوقت المناسب.'
+      en: 'Comprehensive shutdown and turnaround services to minimize downtime and ensure efficient maintenance operations.',
+      ar: 'خدمات شاملة للإغلاق والصيانة الدورية لتقليل وقت التوقف وضمان عمليات صيانة فعالة.'
     },
     fullDescription: {
-      en: `JAAZL's Shutdown & Turnaround Solutions provide comprehensive planning, coordination, and execution services for planned industrial shutdowns and turnarounds. Our experienced team specializes in managing complex multi-discipline projects that require precise scheduling, resource coordination, and safety management.
+      en: `Our shutdown and turnaround services help industrial facilities execute planned maintenance shutdowns efficiently while minimizing downtime and costs. We provide comprehensive planning, execution, and project management for complex maintenance operations.
 
-We offer end-to-end turnaround services including pre-shutdown planning, resource mobilization, work execution, quality assurance, and post-turnaround startup support. Our multidisciplinary team covers mechanical, electrical, instrumentation, civil, and specialized services to ensure all aspects of your turnaround are properly managed.
+Our services include pre-shutdown planning, work scope development, resource scheduling, safety management, and post-shutdown evaluation. We coordinate multiple disciplines and contractors to ensure seamless execution of maintenance activities.
 
-Through proven project management methodologies and extensive industry experience, we help minimize shutdown duration, reduce costs, and ensure safe return to operations. Our focus on detailed planning, risk management, and continuous improvement helps optimize turnaround performance and operational reliability.`,
-      ar: `تقدم حلول الإغلاق والصيانة الدورية من جازل خدمات شاملة للتخطيط والتنسيق والتنفيذ لعمليات الإغلاق والصيانة الدورية الصناعية المخططة. يتخصص فريقنا ذو الخبرة في إدارة مشاريع متعددة التخصصات معقدة تتطلب جدولة دقيقة وتنسيق الموارد وإدارة السلامة.
+We utilize advanced project management tools and methodologies to optimize shutdown duration and minimize business impact. Our experienced team has successfully managed turnarounds for refineries, petrochemical plants, and other critical industrial facilities.`,
+      ar: `تساعد خدمات الإغلاق والصيانة الدورية لدينا المرافق الصناعية على تنفيذ إغلاقات الصيانة المخططة بكفاءة مع تقليل وقت التوقف والتكاليف. نقدم تخطيطًا وتنفيذًا وإدارة مشاريع شاملة لعمليات الصيانة المعقدة.
 
-نقدم خدمات شاملة للصيانة الدورية بما في ذلك التخطيط قبل الإغلاق وتعبئة الموارد وتنفيذ العمل وضمان الجودة ودعم بدء التشغيل بعد الصيانة الدورية. يغطي فريقنا متعدد التخصصات الخدمات الميكانيكية والكهربائية والأجهزة والمدنية والمتخصصة لضمان إدارة جميع جوانب صيانتك الدورية بشكل صحيح.
+تشمل خدماتنا التخطيط قبل الإغلاق وتطوير نطاق العمل وجدولة الموارد وإدارة السلامة وتقييم ما بعد الإغلاق. ننسق تخصصات ومقاولين متعددين لضمان التنفيذ السلس لأنشطة الصيانة.
 
-من خلال منهجيات إدارة المشاريع المثبتة والخبرة الصناعية الواسعة، نساعد في تقليل مدة الإغلاق وخفض التكاليف وضمان العودة الآمنة للعمليات. يساعد تركيزنا على التخطيط التفصيلي وإدارة المخاطر والتحسين المستمر في تحسين أداء الصيانة الدورية والموثوقية التشغيلية.`
+نستخدم أدوات ومنهجيات إدارة مشاريع متقدمة لتحسين مدة الإغلاق وتقليل التأثير التجاري. فريقنا المتمرس نجح في إدارة الصيانة الدورية للمصافي ومصانع البتروكيماويات والمرافق الصناعية الحرجة الأخرى.`
     },
     features: [
       {
-        id: 'turnaround-planning',
+        id: 'project-planning',
         title: {
-          en: 'Comprehensive Turnaround Planning',
-          ar: 'تخطيط شامل للصيانة الدورية'
+          en: 'Project Planning',
+          ar: 'تخطيط المشاريع'
         },
         description: {
-          en: 'Detailed planning and scheduling to minimize shutdown duration and optimize resources.',
-          ar: 'تخطيط وجدولة مفصلة لتقليل مدة الإغلاق وتحسين الموارد.'
+          en: 'Comprehensive planning and scheduling for shutdown operations.',
+          ar: 'تخطيط وجدولة شاملة لعمليات الإغلاق.'
         },
         icon: 'calendar'
       },
       {
-        id: 'multidiscipline-execution',
+        id: 'resource-management',
         title: {
-          en: 'Multi-Discipline Execution',
-          ar: 'تنفيذ متعدد التخصصات'
+          en: 'Resource Management',
+          ar: 'إدارة الموارد'
         },
         description: {
-          en: 'Integrated mechanical, electrical, instrumentation, and civil services.',
-          ar: 'خدمات متكاملة ميكانيكية وكهربائية وأجهزة ومدنية.'
+          en: 'Efficient coordination of personnel, equipment, and materials.',
+          ar: 'تنسيق فعال للأفراد والمعدات والمواد.'
         },
         icon: 'users'
       },
       {
         id: 'safety-management',
         title: {
-          en: 'Safety & Risk Management',
-          ar: 'إدارة السلامة والمخاطر'
+          en: 'Safety Management',
+          ar: 'إدارة السلامة'
         },
         description: {
-          en: 'Comprehensive safety protocols and risk management throughout turnaround operations.',
-          ar: 'بروتوكولات سلامة شاملة وإدارة مخاطر طوال عمليات الصيانة الدورية.'
+          en: 'Comprehensive safety protocols and risk management.',
+          ar: 'بروتوكولات سلامة شاملة وإدارة المخاطر.'
         },
         icon: 'shield'
       }
     ],
-    icon: 'tool',
+    icon: 'refresh-cw',
     image: {
       id: 'shutdown-turnaround-image',
-      url: '/images/services/ai-automation.jpg',
+      url: '/images/services/shutdown-turnaround.jpg',
       altText: {
-        en: 'Industrial shutdown and turnaround operations',
-        ar: 'عمليات الإغلاق والصيانة الدورية الصناعية'
+        en: 'Shutdown and turnaround operations',
+        ar: 'عمليات الإغلاق والصيانة الدورية'
       },
       width: 800,
       height: 600
     },
     meta: {
       title: {
-        en: 'Shutdown & Turnaround Solutions | JAAZL',
-        ar: 'حلول الإغلاق والصيانة الدورية | جازل'
+        en: 'Shutdown & Turnaround Services | JAAZL',
+        ar: 'خدمات الإغلاق والصيانة الدورية | جازل'
       },
       description: {
-        en: 'Comprehensive shutdown and turnaround services for industrial facilities, ensuring safe and efficient maintenance operations.',
-        ar: 'خدمات شاملة للإغلاق والصيانة الدورية للمرافق الصناعية، مما يضمن عمليات صيانة آمنة وفعالة.'
+        en: 'Comprehensive shutdown and turnaround services with project planning, resource management, and safety protocols.',
+        ar: 'خدمات شاملة للإغلاق والصيانة الدورية مع تخطيط المشاريع وإدارة الموارد وبروتوكولات السلامة.'
       },
-      keywords: ['shutdown services', 'turnaround management', 'industrial maintenance', 'project management', 'safety management']
+      keywords: ['shutdown services', 'turnaround management', 'maintenance planning', 'project management', 'industrial maintenance']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'power']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries']
   },
   {
     id: 'fabrication-services',
@@ -1902,66 +963,66 @@ Through proven project management methodologies and extensive industry experienc
       ar: 'خدمات التصنيع الصناعي'
     },
     shortDescription: {
-      en: 'Comprehensive fabrication services for industrial equipment, structures, and components, delivering high-quality solutions for various industrial applications.',
-      ar: 'خدمات تصنيع شاملة للمعدات والهياكل والمكونات الصناعية، تقديم حلول عالية الجودة لتطبيقات صناعية متنوعة.'
+      en: 'Custom fabrication services for industrial equipment, structures, and components with precision manufacturing.',
+      ar: 'خدمات تصنيع مخصصة للمعدات والهياكل والمكونات الصناعية بالتصنيع الدقيق.'
     },
     fullDescription: {
-      en: `JAAZL's Industrial Fabrication Services provide comprehensive solutions for manufacturing industrial equipment, structures, and specialized components. Our state-of-the-art fabrication facility is equipped with advanced machinery and staffed by skilled craftsmen and certified welders who deliver high-quality work to international standards.
+      en: `Our industrial fabrication services provide custom manufacturing solutions for a wide range of industrial equipment and structures. We combine advanced fabrication techniques with quality craftsmanship to deliver precision-engineered components.
 
-We specialize in structural steel fabrication, pressure vessel manufacturing, piping systems, equipment skids, and custom industrial components. Our fabrication capabilities include cutting, welding, machining, assembly, and finishing services, all performed under strict quality control procedures.
+Our fabrication capabilities include structural steelwork, pressure vessels, piping systems, heat exchangers, and custom industrial equipment. We work with various materials including carbon steel, stainless steel, and specialized alloys.
 
-Through advanced fabrication technologies and experienced personnel, we deliver projects on time and to specification while maintaining the highest standards of quality and safety. Our services support various industries including oil & gas, petrochemicals, power generation, and manufacturing.`,
-      ar: `تقدم خدمات التصنيع الصناعي من جازل حلولاً شاملة لتصنيع المعدات والهياكل والمكونات المتخصصة الصناعية. يضم مرفق التصنيع المتطور لدينا آلات متقدمة ومزود بحرفيين مهرة ولحامين معتمدين يقدمون عملاً عالي الجودة وفقاً للمعايير الدولية.
+All fabrication work is performed to international standards with comprehensive quality control and testing. We provide complete fabrication services from design and engineering through manufacturing, testing, and delivery to site.`,
+      ar: `تقدم خدمات التصنيع الصناعي لدينا حلول تصنيع مخصصة لمجموعة واسعة من المعدات والهياكل الصناعية. نجمع بين تقنيات التصنيع المتقدمة والحرفية عالية الجودة لتقديم مكونات مهندسة بدقة.
 
-نحن متخصصون في تصنيع الهياكل الفولاذية وتصنيع أوعية الضغط وأنظمة الأنابيب ومنصات المعدات والمكونات الصناعية المخصصة. تشمل قدرات التصنيع لدينا خدمات القطع واللحام والتشغيل والتجميع والتشطيب، وكلها تُؤدى تحت إجراءات مراقبة جودة صارمة.
+تشمل قدرات التصنيع لدينا الأعمال الفولاذية الهيكلية وأوعية الضغط وأنظمة الأنابيب ومبادلات الحرارة والمعدات الصناعية المخصصة. نعمل مع مواد مختلفة بما في ذلك الفولاذ الكربوني والفولاذ المقاوم للصدأ والسبائك المتخصصة.
 
-من خلال تقنيات التصنيع المتقدمة والموظفين ذوي الخبرة، نسلم المشاريع في الوقت المحدد ووفقاً للمواصفات مع الحفاظ على أعلى معايير الجودة والسلامة. تدعم خدماتنا صناعات مختلفة بما في ذلك النفط والغاز والبتروكيماويات وتوليد الطاقة والتصنيع.`
+يتم تنفيذ جميع أعمال التصنيع وفقًا للمعايير الدولية مع مراقبة جودة واختبار شاملين. نقدم خدمات تصنيع كاملة من التصميم والهندسة وحتى التصنيع والاختبار والتسليم إلى الموقع.`
     },
     features: [
       {
-        id: 'structural-fabrication',
+        id: 'custom-fabrication',
         title: {
-          en: 'Structural Steel Fabrication',
-          ar: 'تصنيع الهياكل الفولاذية'
+          en: 'Custom Fabrication',
+          ar: 'التصنيع المخصص'
         },
         description: {
-          en: 'High-quality structural steel fabrication for industrial buildings and infrastructure.',
-          ar: 'تصنيع هياكل فولاذية عالية الجودة للمباني والبنية التحتية الصناعية.'
+          en: 'Precision fabrication of custom industrial equipment and components.',
+          ar: 'تصنيع دقيق للمعدات والمكونات الصناعية المخصصة.'
         },
-        icon: 'square'
+        icon: 'hammer'
       },
       {
-        id: 'pressure-vessels',
+        id: 'quality-control',
         title: {
-          en: 'Pressure Vessel Manufacturing',
-          ar: 'تصنيع أوعية الضغط'
+          en: 'Quality Control',
+          ar: 'مراقبة الجودة'
         },
         description: {
-          en: 'ASME-certified pressure vessel manufacturing for critical industrial applications.',
-          ar: 'تصنيع أوعية ضغط معتمدة من ASME للتطبيقات الصناعية الحرجة.'
+          en: 'Comprehensive testing and quality assurance for all fabricated items.',
+          ar: 'اختبار شامل وضمان الجودة لجميع العناصر المصنعة.'
         },
-        icon: 'circle'
+        icon: 'check-circle'
       },
       {
-        id: 'custom-components',
+        id: 'material-expertise',
         title: {
-          en: 'Custom Industrial Components',
-          ar: 'مكونات صناعية مخصصة'
+          en: 'Material Expertise',
+          ar: 'خبرة المواد'
         },
         description: {
-          en: 'Specialized fabrication of custom components and equipment skids.',
-          ar: 'تصنيع متخصص للمكونات المخصصة ومنصات المعدات.'
+          en: 'Expertise in working with various metals and specialized alloys.',
+          ar: 'خبرة في العمل مع المعادن المختلفة والسبائك المتخصصة.'
         },
-        icon: 'settings'
+        icon: 'layers'
       }
     ],
-    icon: 'wrench',
+    icon: 'hammer',
     image: {
       id: 'fabrication-services-image',
-      url: '/images/services/ai-automation.jpg',
+      url: '/images/services/fabrication-services.jpg',
       altText: {
-        en: 'Industrial fabrication workshop',
-        ar: 'ورشة التصنيع الصناعي'
+        en: 'Industrial fabrication services',
+        ar: 'خدمات التصنيع الصناعي'
       },
       width: 800,
       height: 600
@@ -1972,97 +1033,271 @@ Through advanced fabrication technologies and experienced personnel, we deliver 
         ar: 'خدمات التصنيع الصناعي | جازل'
       },
       description: {
-        en: 'Comprehensive fabrication services for industrial equipment, structures, and components with high-quality standards.',
-        ar: 'خدمات تصنيع شاملة للمعدات والهياكل والمكونات الصناعية بمعايير جودة عالية.'
+        en: 'Custom industrial fabrication services with precision manufacturing, quality control, and material expertise.',
+        ar: 'خدمات تصنيع صناعي مخصصة مع التصنيع الدقيق ومراقبة الجودة وخبرة المواد.'
       },
-      keywords: ['industrial fabrication', 'structural steel', 'pressure vessels', 'custom components', 'manufacturing services']
+      keywords: ['industrial fabrication', 'custom manufacturing', 'structural steel', 'pressure vessels', 'quality control']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'power', 'construction']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'manufacturing']
   },
+
+  // ===== MATERIALS CATEGORY =====
   {
-    id: 'prefabricated-tanks',
-    slug: 'prefabricated-tanks',
-    categoryId: 'electromechanical',
+    id: 'api-materials',
+    slug: 'api-materials',
+    categoryId: 'materials',
     name: {
-      en: 'Prefabricated Tanks & Storage Solutions',
-      ar: 'حلول الخزانات والتخزين مسبقة التصنيع'
+      en: 'API Approved Materials',
+      ar: 'مواد معتمدة من API'
     },
     shortDescription: {
-      en: 'Design, manufacture, and installation of prefabricated storage tanks and liquid storage solutions for industrial and municipal applications.',
-      ar: 'تصميم وتصنيع وتركيب خزانات التخزين مسبقة التصنيع وحلول تخزين السوائل للتطبيقات الصناعية والبلدية.'
+      en: 'High-quality API approved materials and equipment for oil and gas operations with full certification and traceability.',
+      ar: 'مواد ومعدات عالية الجودة معتمدة من API لعمليات النفط والغاز مع شهادات كاملة وإمكانية التتبع.'
     },
     fullDescription: {
-      en: `JAAZL's Prefabricated Tanks & Storage Solutions provide comprehensive design, manufacturing, and installation services for industrial liquid storage requirements. Through our partnership with leading tank manufacturers, we offer a complete range of storage solutions from small process tanks to large-capacity storage systems.
+      en: `Our API approved materials service provides certified products that meet American Petroleum Institute standards for oil and gas operations. We supply a comprehensive range of materials including pipes, fittings, valves, and equipment components.
 
-Our product range includes bolted steel tanks, glass-fused steel tanks, fire protection tanks, water storage tanks, and specialty chemical storage tanks. All tanks are manufactured to international standards including NFPA 22, FM Global, and API specifications, ensuring reliable performance and regulatory compliance.
+All materials come with full API certification, mill test certificates, and complete traceability documentation. We work with certified manufacturers and maintain strict quality control processes to ensure compliance with API specifications.
 
-We provide complete project management from initial design and engineering to manufacturing, transportation, installation, and commissioning. Our experienced installation teams ensure proper assembly and testing, while our quality assurance program guarantees long-term reliability and performance.`,
-      ar: `تقدم حلول الخزانات والتخزين مسبقة التصنيع من جازل خدمات شاملة للتصميم والتصنيع والتركيب لمتطلبات تخزين السوائل الصناعية. من خلال شراكتنا مع الشركات المصنعة الرائدة للخزانات، نقدم مجموعة كاملة من حلول التخزين من خزانات العمليات الصغيرة إلى أنظمة التخزين عالية السعة.
+Our inventory includes materials for upstream, midstream, and downstream operations. We provide technical support for material selection and ensure all products meet the specific requirements of your projects and operating conditions.`,
+      ar: `تقدم خدمة المواد المعتمدة من API منتجات معتمدة تلبي معايير المعهد الأمريكي للبترول لعمليات النفط والغاز. نوفر مجموعة شاملة من المواد بما في ذلك الأنابيب والتجهيزات والصمامات ومكونات المعدات.
 
-تشمل مجموعة منتجاتنا الخزانات الفولاذية المثبتة بالمسامير وخزانات الفولاذ المصهور بالزجاج وخزانات الحماية من الحرائق وخزانات تخزين المياه وخزانات تخزين المواد الكيميائية المتخصصة. جميع الخزانات مصنعة وفقاً للمعايير الدولية بما في ذلك NFPA 22 وFM Global ومواصفات API، مما يضمن الأداء الموثوق والامتثال التنظيمي.
+تأتي جميع المواد مع شهادة API كاملة وشهادات اختبار المصنع ووثائق إمكانية التتبع الكاملة. نعمل مع مصنعين معتمدين ونحافظ على عمليات مراقبة جودة صارمة لضمان الامتثال لمواصفات API.
 
-نقدم إدارة مشاريع كاملة من التصميم والهندسة الأولية إلى التصنيع والنقل والتركيب والتشغيل. تضمن فرق التركيب ذات الخبرة لدينا التجميع والاختبار السليم، بينما يضمن برنامج ضمان الجودة لدينا الموثوقية والأداء طويل المدى.`
+تشمل مخزوناتنا مواد لعمليات المنبع والوسط والمصب. نقدم دعمًا تقنيًا لاختيار المواد ونضمن أن جميع المنتجات تلبي المتطلبات المحددة لمشاريعك وظروف التشغيل.`
     },
     features: [
       {
-        id: 'bolted-tanks',
+        id: 'api-certification',
         title: {
-          en: 'Bolted Steel Tanks',
-          ar: 'خزانات فولاذية مثبتة بالمسامير'
+          en: 'API Certification',
+          ar: 'شهادة API'
         },
         description: {
-          en: 'High-quality bolted steel tanks with various coating and lining options.',
-          ar: 'خزانات فولاذية عالية الجودة مثبتة بالمسامير مع خيارات طلاء وبطانة متنوعة.'
+          en: 'Full API certification and compliance documentation for all materials.',
+          ar: 'شهادة API كاملة ووثائق الامتثال لجميع المواد.'
         },
-        icon: 'cylinder'
+        icon: 'certificate'
       },
       {
-        id: 'glass-fused-tanks',
+        id: 'quality-assurance',
         title: {
-          en: 'Glass-Fused Steel Tanks',
-          ar: 'خزانات الفولاذ المصهور بالزجاج'
+          en: 'Quality Assurance',
+          ar: 'ضمان الجودة'
         },
         description: {
-          en: 'Corrosion-resistant glass-fused steel tanks for demanding applications.',
-          ar: 'خزانات فولاذ مصهور بالزجاج مقاومة للتآكل للتطبيقات الصعبة.'
+          en: 'Rigorous quality control and testing for all supplied materials.',
+          ar: 'مراقبة جودة واختبار صارم لجميع المواد المورد.'
         },
-        icon: 'shield'
+        icon: 'shield-check'
       },
       {
-        id: 'fire-protection',
+        id: 'technical-support',
         title: {
-          en: 'Fire Protection Tanks',
-          ar: 'خزانات الحماية من الحرائق'
+          en: 'Technical Support',
+          ar: 'الدعم التقني'
         },
         description: {
-          en: 'NFPA 22 and FM Global approved fire protection water storage systems.',
-          ar: 'أنظمة تخزين مياه الحماية من الحرائق معتمدة من NFPA 22 وFM Global.'
+          en: 'Expert guidance on material selection and specifications.',
+          ar: 'إرشادات خبيرة حول اختيار المواد والمواصفات.'
         },
-        icon: 'flame'
+        icon: 'headphones'
       }
     ],
-    icon: 'database',
+    icon: 'package',
     image: {
-      id: 'prefabricated-tanks-image',
-      url: '/images/services/ai-automation.jpg',
+      id: 'api-materials-image',
+      url: '/images/services/api-materials.jpg',
       altText: {
-        en: 'Prefabricated storage tanks installation',
-        ar: 'تركيب خزانات التخزين مسبقة التصنيع'
+        en: 'API approved materials',
+        ar: 'مواد معتمدة من API'
       },
       width: 800,
       height: 600
     },
     meta: {
       title: {
-        en: 'Prefabricated Tanks & Storage Solutions | JAAZL',
-        ar: 'حلول الخزانات والتخزين مسبقة التصنيع | جازل'
+        en: 'API Approved Materials | JAAZL',
+        ar: 'مواد معتمدة من API | جازل'
       },
       description: {
-        en: 'Design, manufacture, and installation of prefabricated storage tanks and liquid storage solutions for industrial applications.',
-        ar: 'تصميم وتصنيع وتركيب خزانات التخزين مسبقة التصنيع وحلول تخزين السوائل للتطبيقات الصناعية.'
+        en: 'High-quality API approved materials for oil and gas operations with full certification, quality assurance, and technical support.',
+        ar: 'مواد عالية الجودة معتمدة من API لعمليات النفط والغاز مع شهادات كاملة وضمان الجودة والدعم التقني.'
       },
-      keywords: ['prefabricated tanks', 'storage solutions', 'bolted steel tanks', 'glass-fused tanks', 'fire protection tanks']
+      keywords: ['API materials', 'certified materials', 'oil gas materials', 'API approved', 'petroleum materials']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries',  'power', 'municipal', 'water-treatment']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries']
+  },
+  {
+    id: 'pipes-fittings',
+    slug: 'pipes-fittings',
+    categoryId: 'materials',
+    name: {
+      en: 'Pipes & Fittings',
+      ar: 'أنابيب وتجهيزات'
+    },
+    shortDescription: {
+      en: 'Comprehensive range of industrial pipes and fittings for various applications with certified quality and specifications.',
+      ar: 'مجموعة شاملة من الأنابيب والتجهيزات الصناعية للتطبيقات المختلفة بجودة ومواصفات معتمدة.'
+    },
+    fullDescription: {
+      en: `Our pipes and fittings supply service provides a comprehensive range of products for industrial piping systems. We supply carbon steel, stainless steel, and alloy pipes and fittings in various sizes and specifications.
+
+Our product range includes seamless and welded pipes, elbows, tees, reducers, flanges, and specialized fittings for high-pressure and high-temperature applications. All products meet international standards including ASME, ASTM, and API specifications.
+
+We provide complete material packages for piping projects including material take-offs, procurement, quality control, and delivery coordination. Our technical team assists with material selection and specification to ensure optimal performance for your specific applications.`,
+      ar: `تقدم خدمة توريد الأنابيب والتجهيزات لدينا مجموعة شاملة من المنتجات لأنظمة الأنابيب الصناعية. نوفر أنابيب وتجهيزات من الفولاذ الكربوني والفولاذ المقاوم للصدأ والسبائك بأحجام ومواصفات مختلفة.
+
+تشمل مجموعة منتجاتنا أنابيب ملحومة وغير ملحومة وكوعيات وتيهات ومخفضات وشفاهيات وتجهيزات متخصصة للتطبيقات عالية الضغط ودرجة الحرارة. جميع المنتجات تلبي المعايير الدولية بما في ذلك مواصفات ASME وASTM وAPI.
+
+نقدم حزم مواد كاملة لمشاريع الأنابيب بما في ذلك قوائم المواد والشراء ومراقبة الجودة وتنسيق التسليم. يساعد فريقنا التقني في اختيار المواد والمواصفات لضمان الأداء الأمثل لتطبيقاتك المحددة.`
+    },
+    features: [
+      {
+        id: 'material-variety',
+        title: {
+          en: 'Material Variety',
+          ar: 'تنوع المواد'
+        },
+        description: {
+          en: 'Wide range of materials including carbon steel, stainless steel, and alloys.',
+          ar: 'مجموعة واسعة من المواد بما في ذلك الفولاذ الكربوني والمقاوم للصدأ والسبائك.'
+        },
+        icon: 'layers'
+      },
+      {
+        id: 'size-specifications',
+        title: {
+          en: 'Size Specifications',
+          ar: 'مواصفات الأحجام'
+        },
+        description: {
+          en: 'Complete range of sizes and specifications for all applications.',
+          ar: 'مجموعة كاملة من الأحجام والمواصفات لجميع التطبيقات.'
+        },
+        icon: 'ruler'
+      },
+      {
+        id: 'quality-standards',
+        title: {
+          en: 'Quality Standards',
+          ar: 'معايير الجودة'
+        },
+        description: {
+          en: 'Products meeting international standards and certifications.',
+          ar: 'منتجات تلبي المعايير والشهادات الدولية.'
+        },
+        icon: 'award'
+      }
+    ],
+    icon: 'pipe',
+    image: {
+      id: 'pipes-fittings-image',
+      url: '/images/services/pipes-fittings.jpg',
+      altText: {
+        en: 'Industrial pipes and fittings',
+        ar: 'أنابيب وتجهيزات صناعية'
+      },
+      width: 800,
+      height: 600
+    },
+    meta: {
+      title: {
+        en: 'Industrial Pipes & Fittings | JAAZL',
+        ar: 'أنابيب وتجهيزات صناعية | جازل'
+      },
+      description: {
+        en: 'Comprehensive range of industrial pipes and fittings with material variety, size specifications, and quality standards.',
+        ar: 'مجموعة شاملة من الأنابيب والتجهيزات الصناعية مع تنوع المواد ومواصفات الأحجام ومعايير الجودة.'
+      },
+      keywords: ['industrial pipes', 'pipe fittings', 'carbon steel pipes', 'stainless steel', 'piping materials']
+    },
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'manufacturing']
+  },
+  {
+    id: 'valves-actuators',
+    slug: 'valves-actuators',
+    categoryId: 'materials',
+    name: {
+      en: 'Valves & Actuators',
+      ar: 'صمامات ومحركات'
+    },
+    shortDescription: {
+      en: 'Professional valve and actuator solutions for precise flow control in industrial applications with automation capabilities.',
+      ar: 'حلول احترافية للصمامات والمحركات للتحكم الدقيق في التدفق في التطبيقات الصناعية مع قدرات الأتمتة.'
+    },
+    fullDescription: {
+      en: `Our valves and actuators service provides comprehensive flow control solutions for industrial applications. We supply a wide range of valve types including ball valves, gate valves, globe valves, check valves, and control valves.
+
+Our actuator solutions include pneumatic, electric, and hydraulic actuators for automated valve operation. We provide complete packages including valves, actuators, positioners, and control accessories for precise flow control applications.
+
+All valves and actuators are sourced from leading manufacturers and meet international standards. We provide technical support for selection, sizing, and application to ensure optimal performance and reliability in your specific operating conditions.`,
+      ar: `تقدم خدمة الصمامات والمحركات لدينا حلول تحكم شاملة في التدفق للتطبيقات الصناعية. نوفر مجموعة واسعة من أنواع الصمامات بما في ذلك الصمامات الكروية وصمامات البوابة والصمامات الكروية وصمامات الفحص وصمامات التحكم.
+
+تشمل حلول المحركات لدينا محركات هوائية وكهربائية وهيدروليكية لتشغيل الصمامات الآلي. نقدم حزم كاملة تشمل الصمامات والمحركات وأجهزة التموضع وملحقات التحكم لتطبيقات التحكم الدقيق في التدفق.
+
+جميع الصمامات والمحركات مصدرة من مصنعين رائدين وتلبي المعايير الدولية. نقدم دعمًا تقنيًا للاختيار والحجم والتطبيق لضمان الأداء الأمثل والموثوقية في ظروف التشغيل المحددة لديك.`
+    },
+    features: [
+      {
+        id: 'valve-types',
+        title: {
+          en: 'Valve Types',
+          ar: 'أنواع الصمامات'
+        },
+        description: {
+          en: 'Complete range of valve types for all industrial applications.',
+          ar: 'مجموعة كاملة من أنواع الصمامات لجميع التطبيقات الصناعية.'
+        },
+        icon: 'settings'
+      },
+      {
+        id: 'automation-solutions',
+        title: {
+          en: 'Automation Solutions',
+          ar: 'حلول الأتمتة'
+        },
+        description: {
+          en: 'Pneumatic, electric, and hydraulic actuators for automated control.',
+          ar: 'محركات هوائية وكهربائية وهيدروليكية للتحكم الآلي.'
+        },
+        icon: 'cpu'
+      },
+      {
+        id: 'precision-control',
+        title: {
+          en: 'Precision Control',
+          ar: 'التحكم الدقيق'
+        },
+        description: {
+          en: 'Precise flow control with positioners and control accessories.',
+          ar: 'تحكم دقيق في التدفق مع أجهزة التموضع وملحقات التحكم.'
+        },
+        icon: 'target'
+      }
+    ],
+    icon: 'sliders',
+    image: {
+      id: 'valves-actuators-image',
+      url: '/images/services/valves-actuators.jpg',
+      altText: {
+        en: 'Industrial valves and actuators',
+        ar: 'صمامات ومحركات صناعية'
+      },
+      width: 800,
+      height: 600
+    },
+    meta: {
+      title: {
+        en: 'Industrial Valves & Actuators | JAAZL',
+        ar: 'صمامات ومحركات صناعية | جازل'
+      },
+      description: {
+        en: 'Professional valve and actuator solutions with automation capabilities, precision control, and comprehensive technical support.',
+        ar: 'حلول احترافية للصمامات والمحركات مع قدرات الأتمتة والتحكم الدقيق والدعم التقني الشامل.'
+      },
+      keywords: ['industrial valves', 'valve actuators', 'flow control', 'automation', 'process control']
+    },
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'power']
   }
 ];
