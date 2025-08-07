@@ -44,8 +44,8 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative pt-36 pb-24 overflow-hidden text-white bg-gradient-to-br from-blue-600 via-slate-600 to-indigo-600">
         <div className="absolute inset-0 bg-grid-white/[0.05]"></div>
-        <div className="absolute top-20 left-10 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
+        <div className={`absolute top-20 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse ${language === 'ar' ? 'right-10' : 'left-10'}`}></div>
+        <div className={`absolute bottom-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-700 ${language === 'ar' ? 'left-10' : 'right-10'}`}></div>
         
         <div className="container mx-auto px-6 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -107,13 +107,13 @@ export default function ServicesPage() {
                         className="block bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-blue-300"
                       >
                         <div className="p-8">
-                          <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-800 transition-colors duration-300">
+                          <h3 className={`text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-800 transition-colors duration-300 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
                             {getLocalizedContent(service.name, language)}
                           </h3>
-                          <p className="text-gray-600 min-h-[6rem] mb-5">
+                          <p className={`text-gray-600 min-h-[6rem] mb-5 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
                             {getLocalizedContent(service.shortDescription, language)}
                           </p>
-                          <div className="inline-block text-blue-700 font-semibold group-hover:text-orange-600 transition-colors duration-300">
+                          <div className={`inline-block text-blue-700 font-semibold group-hover:text-orange-600 transition-colors duration-300 ${language === 'ar' ? 'text-right w-full' : 'text-left'}`}>
                             {language === 'en' ? 'Learn More' : 'اعرف المزيد'}
                           </div>
                         </div>

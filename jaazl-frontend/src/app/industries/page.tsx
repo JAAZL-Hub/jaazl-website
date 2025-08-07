@@ -33,8 +33,8 @@ export default function IndustriesPage() {
       {/* Hero Section */}
       <section className="relative pt-36 pb-24 overflow-hidden text-white overflow-hidden bg-gradient-to-br from-blue-600 via-slate-600 to-indigo-600">
         <div className="absolute inset-0 bg-grid-white/[0.05]"></div>
-        <div className="absolute top-20 left-10 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
+        <div className={`absolute top-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse ${language === 'ar' ? 'right-10' : 'left-10'}`}></div>
+        <div className={`absolute bottom-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-700 ${language === 'ar' ? 'left-10' : 'right-10'}`}></div>
         
         <div className="container mx-auto px-6 relative z-10 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -77,15 +77,15 @@ export default function IndustriesPage() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-                  <h3 className="absolute bottom-4 left-4 text-2xl font-bold text-white">
+                  <h3 className={`absolute bottom-4 ${language === 'ar' ? 'right-4' : 'left-4'} text-2xl font-bold text-white`}>
                     {getLocalizedContent(industry.name, language)}
                   </h3>
                 </div>
                 <div className="p-6">
-                  <p className="text-gray-600 mb-4 leading-relaxed h-20">
+                  <p className={`text-gray-600 mb-4 leading-relaxed h-20 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
                     {getLocalizedContent(industry.shortDescription, language)}
                   </p>
-                  <div className="inline-block text-blue-700 font-semibold group-hover:text-orange-600 transition-colors duration-300">
+                  <div className={`inline-block text-blue-700 font-semibold group-hover:text-orange-600 transition-colors duration-300 ${language === 'ar' ? 'text-right w-full' : 'text-left'}`}>
                     {language === 'en' ? 'Explore Solutions' : 'استكشاف الحلول'}
                   </div>
                 </div>

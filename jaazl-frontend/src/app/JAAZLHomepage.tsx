@@ -147,7 +147,7 @@ const JAAZLHomepage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       {/* Enhanced Hero Section */}
-      <section id="hero" className="relative h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 text-white overflow-hidden flex items-center" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+      <section id="hero" className="relative min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 text-white overflow-hidden flex items-center" dir={language === 'ar' ? 'rtl' : 'ltr'}>
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-slate-900/95 to-blue-900/90"></div>
@@ -489,37 +489,158 @@ const JAAZLHomepage: React.FC = () => {
           }
 
           /* HEIGHT-BASED OVERRIDES */
-          @media (max-height: 800px) {
-            .hero-responsive-container {
-              padding-top: calc(4rem + 0.5rem) !important;
-              padding-bottom: 0.5rem !important;
+          @media (max-height: 840px) {
+            #hero {
+              min-height: auto !important;
+              padding-top: 5rem !important;
+              padding-bottom: 2rem !important;
             }
-            .hero-heading { font-size: 2rem !important; }
-            .hero-subtitle { font-size: 1rem !important; }
-            .hero-description { font-size: 0.875rem !important; }
+            .hero-responsive-container {
+              padding-top: 1rem !important;
+              padding-bottom: 1rem !important;
+            }
+            .hero-responsive-container > div {
+              gap: 1rem !important;
+            }
+            .hero-heading { 
+              font-size: 2.25rem !important; 
+              margin-bottom: 1rem !important;
+            }
+            .hero-subtitle { 
+              font-size: 1.125rem !important; 
+              margin-bottom: 0.5rem !important;
+            }
+            .hero-description { 
+              font-size: 1rem !important; 
+              margin-bottom: 1.5rem !important;
+            }
+            .hero-visual-container { 
+              padding: 1rem !important; 
+              margin-top: 1rem !important;
+            }
+            .hero-services-grid { 
+              gap: 0.5rem !important; 
+            }
+            .hero-service-card {
+              padding: 0.75rem !important;
+            }
+            .hero-visual-bottom {
+              padding: 1rem !important;
+            }
+            .hero-active-title {
+              font-size: 1.125rem !important;
+              margin-bottom: 0.5rem !important;
+            }
+            .hero-active-description {
+              font-size: 0.875rem !important;
+              margin-bottom: 1rem !important;
+            }
+          }
+
+          @media (max-height: 800px) {
+            #hero {
+              padding-top: 4.5rem !important;
+              padding-bottom: 1.5rem !important;
+            }
+            .hero-responsive-container {
+              padding-top: 0.75rem !important;
+              padding-bottom: 0.75rem !important;
+            }
+            .hero-heading { 
+              font-size: 2rem !important; 
+              margin-bottom: 0.75rem !important;
+            }
+            .hero-subtitle { 
+              font-size: 1rem !important; 
+              margin-bottom: 0.5rem !important;
+            }
+            .hero-description { 
+              font-size: 0.875rem !important; 
+              margin-bottom: 1.25rem !important;
+            }
+            .hero-visual-container { 
+              padding: 0.75rem !important; 
+            }
+            .hero-service-card {
+              padding: 0.5rem !important;
+            }
           }
           
           @media (max-height: 700px) {
-            .hero-responsive-container {
-              padding-top: calc(4rem + 0.25rem) !important;
-              padding-bottom: 0.25rem !important;
+            #hero {
+              padding-top: 4rem !important;
+              padding-bottom: 1rem !important;
             }
-            .hero-heading { font-size: 1.75rem !important; }
-            .hero-subtitle { font-size: 0.875rem !important; }
-            .hero-description { font-size: 0.75rem !important; }
-            .hero-visual-container { padding: 0.75rem !important; }
+            .hero-responsive-container {
+              padding-top: 0.5rem !important;
+              padding-bottom: 0.5rem !important;
+            }
+            .hero-responsive-container > div {
+              gap: 0.75rem !important;
+            }
+            .hero-heading { 
+              font-size: 1.75rem !important; 
+              margin-bottom: 0.5rem !important;
+            }
+            .hero-subtitle { 
+              font-size: 0.875rem !important; 
+              margin-bottom: 0.25rem !important;
+            }
+            .hero-description { 
+              font-size: 0.75rem !important; 
+              margin-bottom: 1rem !important;
+            }
+            .hero-visual-container { 
+              padding: 0.75rem !important; 
+              margin-top: 0.75rem !important;
+            }
+            .hero-service-card {
+              padding: 0.5rem !important;
+            }
           }
           
           @media (max-height: 600px) {
+            #hero {
+              padding-top: 3.5rem !important;
+              padding-bottom: 0.75rem !important;
+            }
             .hero-responsive-container {
-              padding-top: calc(4rem + 0.25rem) !important;
+              padding-top: 0.25rem !important;
               padding-bottom: 0.25rem !important;
             }
-            .hero-heading { font-size: 1.5rem !important; }
-            .hero-subtitle { font-size: 0.75rem !important; }
-            .hero-description { font-size: 0.625rem !important; }
-            .hero-visual-container { padding: 0.5rem !important; }
-            .hero-service-card { padding: 0.5rem !important; }
+            .hero-responsive-container > div {
+              gap: 0.5rem !important;
+            }
+            .hero-heading { 
+              font-size: 1.5rem !important; 
+              margin-bottom: 0.25rem !important;
+            }
+            .hero-subtitle { 
+              font-size: 0.75rem !important; 
+              margin-bottom: 0.25rem !important;
+            }
+            .hero-description { 
+              font-size: 0.625rem !important; 
+              margin-bottom: 0.75rem !important;
+            }
+            .hero-visual-container { 
+              padding: 0.5rem !important; 
+              margin-top: 0.5rem !important;
+            }
+            .hero-service-card { 
+              padding: 0.5rem !important; 
+            }
+            .hero-visual-bottom {
+              padding: 0.5rem !important;
+            }
+            .hero-active-title {
+              font-size: 0.875rem !important;
+              margin-bottom: 0.25rem !important;
+            }
+            .hero-active-description {
+              font-size: 0.75rem !important;
+              margin-bottom: 0.5rem !important;
+            }
           }
         `
       }} />
@@ -558,7 +679,7 @@ const JAAZLHomepage: React.FC = () => {
                 </div>
                 <div className="space-y-4 mb-8">{services[activeService].features.map((feature, index) => (<div key={index} className="flex items-center group">{React.createElement(getFeatureIcon('check-circle'), { className: "w-6 h-6 text-white mx-4 group-hover:scale-110 transition-transform" })}<span className="text-xl font-medium">{feature}</span></div>))}</div>
                 <div className="flex gap-4">
-                  <Link href={`/services/${activeService === 0 ? 'zero-liquid-discharge' : activeService === 1 ? 'specialized-chemicals' : activeService === 2 ? 'engineering-consulting' : activeService === 3 ? 'ai-automation' : activeService === 4 ? 'api-materials' : 'electromechanical-systems'}`} className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center group">{language === 'en' ? 'Learn More' : 'اعرف المزيد'}{React.createElement(getNavigationIcon('arrow-right'), { className: "mx-2 w-5 h-5 group-hover:translate-x-1 transition-transform" })}</Link>
+                  <Link href={`/services/${activeService === 0 ? 'zero-liquid-discharge' : activeService === 1 ? 'specialized-chemicals' : activeService === 2 ? 'engineering-consulting' : activeService === 3 ? 'ai-automation' : activeService === 4 ? 'api-materials' : 'electromechanical-systems'}`} className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center group">{language === 'en' ? 'Learn More' : 'اعرف المزيد'}{React.createElement(getNavigationIcon(language === 'ar' ? 'arrow-left' : 'arrow-right'), { className: `mx-2 w-5 h-5 transition-transform ${language === 'ar' ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'}` })}</Link>
                   <a href="/docs/JAAZL-Profile.pdf" target="_blank" rel="noopener noreferrer" className="border border-white/30 hover:bg-white/10 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center">{React.createElement(getMiscIcon('download'), { className: "mx-2 w-5 h-5" })}{language === 'en' ? 'Brochure' : 'الكتيب'}</a>
                 </div>
               </div>
@@ -683,14 +804,14 @@ const JAAZLHomepage: React.FC = () => {
             <h2 className="text-5xl lg:text-7xl font-bold mb-8">{language === 'en' ? "Ready to Transform Your Industrial Operations?" : "هل أنت مستعد لتحويل عملياتك الصناعية؟"}</h2>
             <p className="text-3xl text-orange-100 mb-12 leading-relaxed">{language === 'en' ? "Get expert consultation and tailored solutions for your industrial challenges. Our team is ready to help you achieve operational excellence." : "احصل على استشارة الخبراء وحلول مصممة خصيصًا لتحدياتك الصناعية. فريقنا جاهز لمساعدتك."}</p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <Link href="/contact" className="group bg-white text-orange-600 px-10 py-5 rounded-2xl font-bold transition-all duration-300 hover:bg-gray-50 shadow-btn-cta hover:shadow-btn-cta-hover transform hover:-translate-y-1 flex items-center justify-center text-xl">{React.createElement(getMiscIcon('calendar'), { className: "mx-3 w-6 h-6 group-hover:scale-110 transition-transform" })}{language === 'en' ? "Schedule Free Consultation" : "احجز استشارة مجانية"}{React.createElement(getNavigationIcon('arrow-right'), { className: "mx-3 w-6 h-6 group-hover:translate-x-1 transition-transform" })}</Link>
+              <Link href="/contact" className="group bg-white text-orange-600 px-10 py-5 rounded-2xl font-bold transition-all duration-300 hover:bg-gray-50 shadow-btn-cta hover:shadow-btn-cta-hover transform hover:-translate-y-1 flex items-center justify-center text-xl">{React.createElement(getMiscIcon('calendar'), { className: "mx-3 w-6 h-6 group-hover:scale-110 transition-transform" })}{language === 'en' ? "Schedule Free Consultation" : "احجز استشارة مجانية"}{React.createElement(getNavigationIcon(language === 'ar' ? 'arrow-left' : 'arrow-right'), { className: `mx-3 w-6 h-6 transition-transform ${language === 'ar' ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'}` })}</Link>
               <a href="/docs/JAAZL-Profile.pdf" target="_blank" rel="noopener noreferrer" className="group border-2 border-white/30 hover:border-white text-white px-10 py-5 rounded-2xl font-bold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex items-center justify-center text-xl">{React.createElement(getMiscIcon('download'), { className: "mx-3 w-6 h-6 group-hover:scale-110 transition-transform" })}{language === 'en' ? "Download Company Profile" : "تحميل ملف الشركة"}</a>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className="grid md:grid-cols-3 gap-8">
-                <div className="flex items-center justify-center md:justify-start">{React.createElement(getContactIcon('phone'), { className: "w-6 h-6 mx-3 text-green-300" })}<div className="text-left"><div className="font-semibold">{language === 'en' ? "Call Us Now" : "اتصل بنا الآن"}</div><a href="tel:+966555109268" className="text-orange-100 hover:text-white transition-colors">+966 55 510 9268</a></div></div>
-                <div className="flex items-center justify-center md:justify-start">{React.createElement(getContactIcon('mail'), { className: "w-6 h-6 mx-3 text-blue-300" })}<div className="text-left"><div className="font-semibold">{language === 'en' ? "Email Us" : "راسلنا"}</div><a href="mailto:info@jaazl.com" className="text-orange-100 hover:text-white transition-colors">info@jaazl.com</a></div></div>
-                <div className="flex items-center justify-center md:justify-start">{React.createElement(getContactIcon('map-pin'), { className: "w-6 h-6 mx-3 text-yellow-300" })}<div className="text-left"><div className="font-semibold">{language === 'en' ? "Visit Our Office" : "زر مكتبنا"}</div><p className="text-orange-100">Jubail Industrial Area 1</p></div></div>
+                <div className={`flex items-center justify-center ${language === 'ar' ? 'md:justify-end md:flex-row-reverse' : 'md:justify-start'}`}>{React.createElement(getContactIcon('phone'), { className: `w-6 h-6 mx-3 text-green-300` })}<div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}><div className={`font-semibold ${language === 'ar' ? 'font-arabic' : ''}`}>{language === 'en' ? "Call Us Now" : "اتصل بنا الآن"}</div><a href="tel:+966555109268" className="text-orange-100 hover:text-white transition-colors">+966 55 510 9268</a></div></div>
+                <div className={`flex items-center justify-center ${language === 'ar' ? 'md:justify-end md:flex-row-reverse' : 'md:justify-start'}`}>{React.createElement(getContactIcon('mail'), { className: `w-6 h-6 mx-3 text-blue-300` })}<div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}><div className={`font-semibold ${language === 'ar' ? 'font-arabic' : ''}`}>{language === 'en' ? "Email Us" : "راسلنا"}</div><a href="mailto:info@jaazl.com" className="text-orange-100 hover:text-white transition-colors">info@jaazl.com</a></div></div>
+                <div className={`flex items-center justify-center ${language === 'ar' ? 'md:justify-end md:flex-row-reverse' : 'md:justify-start'}`}>{React.createElement(getContactIcon('map-pin'), { className: `w-6 h-6 mx-3 text-yellow-300` })}<div className={`${language === 'ar' ? 'text-right' : 'text-left'}`}><div className={`font-semibold ${language === 'ar' ? 'font-arabic' : ''}`}>{language === 'en' ? "Visit Our Office" : "زر مكتبنا"}</div><p className={`text-orange-100 ${language === 'ar' ? 'font-arabic' : ''}`}>Jubail Industrial Area 1</p></div></div>
               </div>
             </div>
           </div>

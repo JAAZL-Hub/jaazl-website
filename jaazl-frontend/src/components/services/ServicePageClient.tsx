@@ -28,8 +28,8 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
         {/* Glass Morphism Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-600">
           <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:30px_30px]"></div>
-          <div className="absolute top-20 start-10 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 end-10 w-96 h-96 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className={`absolute top-20 w-80 h-80 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 rounded-full blur-3xl animate-pulse ${isRTL ? 'right-10' : 'left-10'}`}></div>
+          <div className={`absolute bottom-20 w-96 h-96 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000 ${isRTL ? 'left-10' : 'right-10'}`}></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-full blur-3xl"></div>
           <div className="absolute inset-0 backdrop-blur-[1px]"></div>
         </div>
@@ -46,13 +46,13 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
                   {isRTL ? (
                     <>
                       <span className="font-arabic">العودة إلى الخدمات</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 rotate-180" viewBox="0 0 20 20" fill="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ms-2 rotate-180" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
                       </svg>
                     </>
                   ) : (
                     <>
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 me-2" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
                       </svg>
                       <span>Back to Services</span>

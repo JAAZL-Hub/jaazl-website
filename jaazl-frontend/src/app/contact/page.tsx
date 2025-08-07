@@ -75,14 +75,14 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative pt-36 pb-24 overflow-hidden text-white bg-gradient-to-br from-blue-900 via-slate-800 to-indigo-900">
         <div className="absolute inset-0 bg-grid-white/[0.05]"></div>
-        <div className="absolute top-20 left-10 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
+        <div className={`absolute top-20 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse ${language === 'ar' ? 'right-10' : 'left-10'}`}></div>
+        <div className={`absolute bottom-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-700 ${language === 'ar' ? 'left-10' : 'right-10'}`}></div>
         
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight ${language === 'ar' ? 'font-arabic' : ''}`}>
             {language === 'en' ? 'Contact Us' : 'اتصل بنا'}
           </h1>
-          <p className="text-xl md:text-2xl text-blue-200 mb-10 max-w-3xl mx-auto">
+          <p className={`text-xl md:text-2xl text-blue-200 mb-10 max-w-3xl mx-auto ${language === 'ar' ? 'font-arabic' : ''}`}>
             {language === 'en' 
               ? 'Get in touch with our expert team to discuss your industrial solutions needs and discover how JAAZL can transform your operations.' 
               : 'تواصل مع فريق الخبراء لدينا لمناقشة احتياجاتك من الحلول الصناعية واكتشف كيف يمكن لـ جازل تحويل عملياتك.'}
