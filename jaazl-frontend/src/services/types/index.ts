@@ -77,7 +77,7 @@ export interface CaseStudy {
 
 export interface TeamMember {
   id: string;
-  name: string;
+  name: LocalizedContent;
   position: LocalizedContent;
   bio: LocalizedContent;
   image?: Image;
@@ -117,13 +117,14 @@ export interface AboutInfo {
   history: LocalizedContent;
   mission: LocalizedContent;
   vision: LocalizedContent;
+  ceoMessage: LocalizedContent;
   values: {
     id: string;
     title: LocalizedContent;
     description: LocalizedContent;
     icon: string;
   }[];
-  team: TeamMember[];
+  ceo: TeamMember;
   certificates: Certificate[];
 }
 

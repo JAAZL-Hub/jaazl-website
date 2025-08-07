@@ -28,7 +28,7 @@ export default function AboutPage() {
   const { language } = useLanguage();
   const { aboutInfo } = useAboutInfo();
   
-  // Modal state
+  // Modal state (kept for potential future use)
   const [showModal, setShowModal] = useState(false);
   const [activeMember, setActiveMember] = useState<ImportedTeamMember | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -44,7 +44,7 @@ export default function AboutPage() {
     return <IconComponent className="w-8 h-8 text-orange-500 mb-4 mx-auto" />;
   };
 
-  // Handle modal
+  // Handle modal (kept for potential future use)
   const openModal = (member: ImportedTeamMember) => {
     setActiveMember(member);
     setShowModal(true);
@@ -169,49 +169,55 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Team Section */}
-      {(aboutInfo.leadership || aboutInfo.team) && (aboutInfo.leadership || aboutInfo.team).length > 0 && (
+      {/* CEO Message Section */}
+      {aboutInfo.ceoMessage && (
         <section className="py-24 bg-gray-50">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                {language === 'en' ? 'Leadership Team' : 'فريق القيادة'}
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                {language === 'en' 
-                  ? 'Meet the experienced professionals leading JAAZL towards continued success.'
-                  : 'تعرف على المهنيين ذوي الخبرة الذين يقودون جازل نحو النجاح المستمر.'}
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {(aboutInfo.leadership || aboutInfo.team).map((member, index) => (
-                <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-blue-300">
-                  <div className="relative h-64 bg-gradient-to-br from-blue-100 to-gray-100">
-                    <Image
-                      src={member.image?.url || '/images/team/placeholder.png'}
-                      alt={member.image?.altText ? getLocalizedValue(member.image.altText, language) : getLocalizedValue(member.name, language)}
-                      fill
-                      style={{ objectFit: 'cover' }}
-                      className="group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-900 transition-colors">
-                      {getLocalizedValue(member.name, language)}
-                    </h3>
-                    <p className="text-blue-600 font-medium mb-4">
-                      {getLocalizedValue(member.position, language)}
-                    </p>
-                    <button
-                      onClick={() => openModal(member)}
-                      className="inline-block text-orange-600 font-semibold hover:text-orange-700 transition-colors duration-300"
-                    >
-                      {language === 'en' ? 'Learn More' : 'اعرف المزيد'}
-                    </button>
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                  {language === 'en' ? 'CEO Message' : 'رسالة الرئيس التنفيذي'}
+                </h2>
+              </div>
+              
+              <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100">
+                <div className="flex flex-col lg:flex-row gap-8 items-center">
+                  {/* CEO Image */}
+                  {aboutInfo.ceo && (
+                    <div className="flex-shrink-0">
+                      <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden bg-gradient-to-br from-blue-100 to-gray-100 shadow-lg">
+                        <Image
+                          src={aboutInfo.ceo.image?.url || '/images/team/placeholder.png'}
+                          alt={aboutInfo.ceo.image?.altText ? getLocalizedValue(aboutInfo.ceo.image.altText, language) : getLocalizedValue(aboutInfo.ceo.name, language)}
+                          fill
+                          style={{ objectFit: 'cover' }}
+                        />
+                      </div>
+                      <div className="text-center mt-4">
+                        <h3 className="text-xl font-bold text-gray-900">
+                          {getLocalizedValue(aboutInfo.ceo.name, language)}
+                        </h3>
+                        <p className="text-blue-600 font-medium">
+                          {getLocalizedValue(aboutInfo.ceo.position, language)}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* CEO Message */}
+                  <div className="flex-1">
+                    <div className="prose prose-lg max-w-none">
+                      <div className="text-4xl text-blue-600 mb-4 opacity-50">"
+                      </div>
+                      <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                        {getLocalizedValue(aboutInfo.ceoMessage, language)}
+                      </p>
+                      <div className="text-4xl text-blue-600 mt-4 opacity-50 text-right">"
+                      </div>
+                    </div>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </section>
@@ -282,7 +288,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Member Modal */}
+      {/* CEO Bio Modal (if needed in future) */}
       {showModal && activeMember && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">

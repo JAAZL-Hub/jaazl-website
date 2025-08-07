@@ -2,24 +2,36 @@ import { AboutInfo } from '../../types';
 
 export const aboutInfo: AboutInfo = {
   history: {
-    en: `JAAZL was established in 2021 as a specialized industrial solutions provider, located in Jubail Industrial Area 1, Saudi Arabia. Since our establishment, JAAZL has emerged as a trusted partner for industrial excellence across Saudi Arabia. Our journey began with a clear vision: to provide world-class industrial solutions that support the Kingdom's economic diversification and sustainability goals.
+    en: `Founded in 2021 in Jubail Industrial Area 1, JAAZL has quickly established itself as a trusted partner for industrial excellence across Saudi Arabia. We provide comprehensive solutions spanning Specialty Chemicals, Water Treatment, Technical Consultancy & AI, Electromechanical Services, and Material Supplies.
 
-We have developed into a comprehensive industrial solutions company with capabilities across five main service categories: Specialty & Bulk Chemicals, Water & Wastewater Treatment, Technical Consultancy & AI, Electromechanical Services, and Material Supplies. Our approach provides end-to-end solutions from concept to commissioning.
+With world-class partnerships from USA, India, Europe, and Australia, we serve major industrial sectors including Oil & Gas, Petrochemicals, Refineries, Mining, and Municipal facilities. Our commitment aligns with Saudi Vision 2030 through innovative, sustainable solutions.`,
+    ar: `تأسست جازل في عام 2021 في الجبيل المنطقة الصناعية الأولى، وسرعان ما رسخت نفسها كشريك موثوق للتميز الصناعي في المملكة. نقدم حلولاً شاملة تشمل الكيماويات المتخصصة ومعالجة المياه والاستشارات التقنية والذكاء الاصطناعي والخدمات الكهروميكانيكية وإمدادات المواد.
 
-With 25+ years of collective experience and 45+ projects completed, JAAZL serves major industrial sectors including Oil & Gas, Petrochemicals, Refineries, Mining & Minerals, Municipal, Power & Electricity, Manufacturing, and Food & Beverages. We are committed to transforming Saudi Arabia's industrial landscape through innovative solutions, advanced technologies, and sustainable practices that align with Vision 2030.`,
-    ar: `تأسست جازل في عام 2021 كمزود متخصص للحلول الصناعية، وتقع في الجبيل المنطقة الصناعية الأولى، المملكة العربية السعودية. منذ تأسيسنا، برزت جازل كشريك موثوق للتميز الصناعي عبر المملكة العربية السعودية. بدأت رحلتنا برؤية واضحة: تقديم حلول صناعية عالمية المستوى تدعم أهداف التنويع الاقتصادي والاستدامة في المملكة.
-
-تطورنا إلى شركة حلول صناعية شاملة مع قدرات عبر خمس فئات خدمات رئيسية: المواد الكيميائية المتخصصة والسائبة، ومعالجة المياه والصرف الصحي، والاستشارات التقنية والذكاء الاصطناعي، والخدمات الكهروميكانيكية، وإمدادات المواد. نهجنا يوفر حلولاً شاملة من المفهوم إلى التشغيل.
-
-مع خبرة جماعية تزيد عن 25 عاماً وإكمال أكثر من 45 مشروعاً، تخدم جازل القطاعات الصناعية الرئيسية بما في ذلك النفط والغاز، والبتروكيماويات، والمصافي، والتعدين والمعادن، والبلديات، والطاقة والكهرباء، والتصنيع، والأغذية والمشروبات. نحن ملتزمون بتحويل المشهد الصناعي السعودي من خلال الحلول المبتكرة والتقنيات المتقدمة والممارسات المستدامة المتماشية مع رؤية 2030.`
+مع شراكات عالمية من الولايات المتحدة والهند وأوروبا وأستراليا، نخدم القطاعات الصناعية الرئيسية بما في ذلك النفط والغاز والبتروكيماويات والمصافي والتعدين والبلديات. التزامنا يتماشى مع رؤية السعودية 2030 من خلال الحلول المبتكرة والمستدامة.`
   },
   mission: {
-    en: `Transforming industry through innovative engineering, expert consulting, and tech for safe, efficient, sustainable operations.`,
-    ar: `تحويل الصناعة من خلال الهندسة المبتكرة والاستشارات الخبيرة والتقنيات للعمليات الآمنة والفعالة والمستدامة.`
+    en: `Provide innovative high-quality solutions for industrial excellence through comprehensive engineering, environmental, and technical services that support Saudi Arabia's sustainable development.`,
+    ar: `تقديم حلول مبتكرة عالية الجودة للتميز الصناعي من خلال الخدمات الهندسية والبيئية والتقنية الشاملة التي تدعم التنمية المستدامة للمملكة.`
   },
   vision: {
-    en: `To lead in integrated industrial solutions through innovation, expertise, and commitment to sustainable excellence.`,
-    ar: `القيادة في الحلول الصناعية المتكاملة من خلال الابتكار والخبرة والالتزام بالتميز المستدام.`
+    en: `Align with Saudi Arabian Vision 2030 for sustainability and energy transition, becoming the preferred partner for integrated industrial solutions in the Kingdom.`,
+    ar: `التماشي مع رؤية المملكة 2030 للاستدامة وتحول الطاقة، والصبح الشريك المفضل للحلول الصناعية المتكاملة في المملكة.`
+  },
+  ceoMessage: {
+    en: `At JAAZL Industrial Company, we stand at the forefront of Saudi Arabia's industrial transformation. Since our establishment in 2021, we have been dedicated to providing innovative, high-quality solutions that align with the Kingdom's Vision 2030.
+
+Our comprehensive approach encompasses specialty chemicals, environmental solutions, advanced consulting, and cutting-edge technologies. Through strategic partnerships with world-class companies from USA, India, Europe, and Australia, we deliver excellence across Oil & Gas, Petrochemicals, Mining, and Municipal sectors.
+
+We believe in sustainable solutions that not only meet today's industrial challenges but also pave the way for a more efficient and environmentally responsible future. Our commitment to quality, safety, and innovation drives everything we do.
+
+Together, we are building the industrial foundation for Saudi Arabia's sustainable tomorrow.`,
+    ar: `في شركة جازل الصناعية، نقف في مقدمة التحول الصناعي للمملكة العربية السعودية. منذ تأسيسنا في عام 2021، كنا مكرسين لتقديم حلول مبتكرة وعالية الجودة تتماشى مع رؤية المملكة 2030.
+
+يشمل نهجنا الشامل الكيماويات المتخصصة والحلول البيئية والاستشارات المتقدمة والتقنيات الحديثة. من خلال الشراكات الاستراتيجية مع شركات عالمية من الولايات المتحدة والهند وأوروبا وأستراليا، نقدم التميز عبر قطاعات النفط والغاز والبتروكيماويات والتعدين والبلديات.
+
+نؤمن بالحلول المستدامة التي لا تلبي تحديات اليوم الصناعية فحسب، بل تمهد الطريق لمستقبل أكثر كفاءة ومسؤولية بيئية. التزامنا بالجودة والسلامة والابتكار يقود كل ما نقوم به.
+
+معاً، نبني الأساس الصناعي لغد المملكة المستدام.`
   },
   values: [
     {
@@ -95,108 +107,31 @@ With 25+ years of collective experience and 45+ projects completed, JAAZL serves
       icon: 'handshake'
     }
   ],
-  team: [
-    {
-      id: 'team-1',
-      name: {
-        en: 'Eng. Ahmad Alkhlaif',
-        ar: 'المهندس أحمد الخليف'
-      },
-      position: {
-        en: 'Chief Executive Officer',
-        ar: 'الرئيس التنفيذي ورئيس مجلس الإدارة'
-      },
-      bio: {
-        en: '"At JAAZL Industrial Company, we are committed to transforming Saudi Arabia\'s industrial landscape through innovative solutions, advanced technologies, and sustainable practices that align with Vision 2030." - Eng. Ahmad Alkhlaif brings over 25 years of experience in industrial engineering and business leadership, founding JAAZL in 2021 with a clear vision to provide world-class industrial solutions.',
-        ar: '"في شركة جازل الصناعية، نحن ملتزمون بتحويل المشهد الصناعي السعودي من خلال الحلول المبتكرة والتقنيات المتقدمة والممارسات المستدامة المتماشية مع رؤية 2030." - يجلب المهندس أحمد الخليف أكثر من 25 عامًا من الخبرة في الهندسة الصناعية والقيادة التجارية، حيث أسس جازل في عام 2021 برؤية واضحة لتقديم حلول صناعية عالمية المستوى.'
-      },
-      image: {
-        id: 'ahmad-alghamdi-image',
-        url: '/images/team/Ahmad Alghamdi.jpg',
-        altText: {
-          en: 'Eng. Ahmad Alkhlaif, CEO',
-          ar: 'المهندس أحمد الخليف، الرئيس التنفيذي'
-        },
-        width: 400,
-        height: 500
-      }
+  ceo: {
+    id: 'ceo-1',
+    name: {
+      en: 'Eng. Ahmad Alkhlaif',
+      ar: 'المهندس أحمد الخليف'
     },
-    {
-      id: 'team-2',
-      name: {
-        en: 'Eng. Ratnakar Prabhu',
-        ar: 'المهندس راتناكار برابهو'
-      },
-      position: {
-        en: 'General Manager',
-        ar: 'مدير عام'
-      },
-      bio: {
-        en: 'Eng. Ratnakar Prabhu serves as General Manager at JAAZL, overseeing daily operations and project execution across all service divisions. With extensive experience in industrial engineering and operations management, he ensures seamless delivery of our comprehensive solutions to clients.',
-        ar: 'يشغل المهندس راتناكار برابهو منصب المدير العام في جازل، حيث يشرف على العمليات اليومية وتنفيذ المشاريع عبر جميع أقسام الخدمات. بخبرة واسعة في الهندسة الصناعية وإدارة العمليات، يضمن التسليم السلس لحلولنا الشاملة للعملاء.'
-      },
-      image: {
-        id: 'ratnakar-prabhu-image',
-        url: '/images/team/Ratnakar Prabhu.jpeg',
-        altText: {
-          en: 'Eng. Ratnakar Prabhu, General Manager',
-          ar: 'المهندس راتناكار برابهو، المدير العام'
-        },
-        width: 400,
-        height: 500
-      }
+    position: {
+      en: 'Chief Executive Officer & Chairman',
+      ar: 'الرئيس التنفيذي ورئيس مجلس الإدارة'
     },
-    {
-      id: 'team-3',
-      name: {
-        en: 'Eng. Mohammed Aldossary',
-        ar: 'المهندس محمد الدوسري'
-      },
-      position: {
-        en: 'Chief Operating Officer',
-        ar: 'مدير العمليات التنفيذي'
-      },
-      bio: {
-        en: 'Eng. Mohammed Aldossary brings 25+ years of experience in industrial operations management and process optimization. His expertise in implementing lean methodologies has helped many clients achieve significant improvements in operational efficiency.',
-        ar: 'يجلب المهندس محمد الدوسري أكثر من 25 عامًا من الخبرة في إدارة العمليات الصناعية وتحسين العمليات. ساعدت خبرته في تنفيذ منهجيات التصنيع المرشد العديد من العملاء في تحقيق تحسينات كبيرة في كفاءة العمليات.'
-      },
-      image: {
-        id: 'mohammed-aldossary-image',
-        url: '/images/team/Mohammed Aldossary.jpg',
-        altText: {
-          en: 'Eng. Mohammed Aldossary, Chief Operating Officer',
-          ar: 'المهندس محمد الدوسري، مدير العمليات التنفيذي'
-        },
-        width: 400,
-        height: 500
-      }
+    bio: {
+      en: 'Eng. Ahmad Alkhlaif is the visionary founder and CEO of JAAZL Industrial Company. With over 25 years of experience in industrial engineering and business leadership, he established JAAZL in 2021 with a mission to transform Saudi Arabia\'s industrial landscape through innovative, sustainable solutions that align with Vision 2030. His expertise spans across multiple industrial sectors, and his commitment to excellence has positioned JAAZL as a trusted partner for world-class industrial solutions.',
+      ar: 'المهندس أحمد الخليف هو المؤسس والرئيس التنفيذي الرؤيوي لشركة جازل الصناعية. بخبرة تزيد عن 25 عامًا في الهندسة الصناعية والقيادة التجارية، أسس جازل في عام 2021 بمهمة تحويل المشهد الصناعي السعودي من خلال الحلول المبتكرة والمستدامة المتماشية مع رؤية 2030. تمتد خبرته عبر قطاعات صناعية متعددة، والتزامه بالتميز وضع جازل كشريك موثوق للحلول الصناعية عالمية المستوى.'
     },
-    {
-      id: 'team-4',
-      name: {
-        en: 'Eng. Faisal Aldossary',
-        ar: 'المهندس فيصل الدوسري'
+    image: {
+      id: 'ahmad-alghamdi-image',
+      url: '/images/team/Ahmad Alghamdi.jpg',
+      altText: {
+        en: 'Eng. Ahmad Alkhlaif, CEO & Chairman',
+        ar: 'المهندس أحمد الخليف، الرئيس التنفيذي ورئيس مجلس الإدارة'
       },
-      position: {
-        en: 'Director',
-        ar: 'مدير'
-      },
-      bio: {
-        en: 'Eng. Faisal Aldossary serves as a Director at JAAZL, bringing over 10 years of strategic leadership and business development expertise. His vision and guidance have been instrumental in expanding our service offerings and strengthening client relationships across various industrial sectors.',
-        ar: 'يشغل المهندس فيصل الدوسري منصب مدير في جازل، حيث يجلب أكثر من 10 عامًا من الخبرة في القيادة الاستراتيجية وتطوير الأعمال. كانت رؤيته وتوجيهاته محورية في توسيع عروض خدماتنا وتعزيز علاقات العملاء عبر مختلف القطاعات الصناعية.'
-      },
-      image: {
-        id: 'faisal-aldossary-image',
-        url: '/images/team/Faisal Aldossary.jpg',
-        altText: {
-          en: 'Mr. Faisal Aldossary, Director',
-          ar: 'السيد فيصل الدوسري، عضو مجلس الإدارة'
-        },
-        width: 400,
-        height: 500
-      }
-    },
-  ],
+      width: 400,
+      height: 500
+    }
+  },
   certifications: [
     {
       id: 'iso-9001',
@@ -208,10 +143,10 @@ With 25+ years of collective experience and 45+ projects completed, JAAZL serves
         en: 'Quality Management System certification, demonstrating our commitment to consistent quality and customer satisfaction.',
         ar: 'شهادة نظام إدارة الجودة، توضح التزامنا بالجودة المتسقة ورضا العملاء.'
       },
-      imageSrc: '/images/certificates/placeholder.png',
+      imageSrc: '/images/certificates/iso.png',
       image: {
         id: 'iso-9001-image',
-        url: '/images/certificates/placeholder.png',
+        url: '/images/certificates/iso.png',
         altText: {
           en: 'ISO 9001:2015 Certificate',
           ar: 'شهادة آيزو 9001:2015'
@@ -231,10 +166,10 @@ With 25+ years of collective experience and 45+ projects completed, JAAZL serves
         en: 'Environmental Management System certification, reflecting our dedication to environmental responsibility.',
         ar: 'شهادة نظام الإدارة البيئية، تعكس تفانينا في المسؤولية البيئية.'
       },
-      imageSrc: '/images/certificates/placeholder.png',
+      imageSrc: '/images/certificates/iso.png',
       image: {
         id: 'iso-14001-image',
-        url: '/images/certificates/placeholder.png',
+        url: '/images/certificates/iso.png',
         altText: {
           en: 'ISO 14001:2015 Certificate',
           ar: 'شهادة آيزو 14001:2015'
@@ -254,10 +189,10 @@ With 25+ years of collective experience and 45+ projects completed, JAAZL serves
         en: 'Occupational Health and Safety Management System certification, underscoring our priority on workplace safety.',
         ar: 'شهادة نظام إدارة الصحة والسلامة المهنية، تؤكد أولويتنا على سلامة مكان العمل.'
       },
-      imageSrc: '/images/certificates/placeholder.png',
+      imageSrc: '/images/certificates/iso.png',
       image: {
         id: 'iso-45001-image',
-        url: '/images/certificates/placeholder.png',
+        url: '/images/certificates/iso.png',
         altText: {
           en: 'ISO 45001:2018 Certificate',
           ar: 'شهادة آيزو 45001:2018'
