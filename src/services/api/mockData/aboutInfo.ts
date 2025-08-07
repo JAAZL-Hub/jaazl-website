@@ -136,8 +136,8 @@ Together, we are building the industrial foundation for Saudi Arabia's sustainab
     {
       id: 'iso-9001',
       name: {
-        en: 'ISO 9001:2015',
-        ar: 'آيزو 9001:2015'
+        en: 'ISO 9001',
+        ar: 'آيزو 9001'
       },
       description: {
         en: 'Quality Management System certification, demonstrating our commitment to consistent quality and customer satisfaction.',
