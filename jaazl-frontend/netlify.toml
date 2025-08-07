@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npm ci && npm run build"
   publish = ".next"
 
 [[plugins]]
@@ -8,8 +8,9 @@
 # Handle form submissions
 [build.environment]
   NEXT_PUBLIC_SITE_URL = "https://jaazl.com"
-  NODE_VERSION = "22.17.0"
-  NEXT_PRIVATE_TARGET = "server"
+  NODE_VERSION = "20.18.0"
+  NPM_FLAGS = "--legacy-peer-deps"
+  NETLIFY = "true"
 
 # Form notifications settings
 [forms]
