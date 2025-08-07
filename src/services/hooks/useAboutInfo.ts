@@ -50,12 +50,12 @@ export function useLocalizedAboutContent(aboutInfo: AboutInfo | null) {
       localizedTitle: getLocalizedContent(value.title, language),
       localizedDescription: getLocalizedContent(value.description, language)
     })),
-    team: aboutInfo.team.map(member => ({
+    team: aboutInfo.team?.map(member => ({
       ...member,
       localizedPosition: getLocalizedContent(member.position, language),
       localizedBio: getLocalizedContent(member.bio, language),
       localizedImageAlt: member.image?.altText ? getLocalizedContent(member.image.altText, language) : ''
-    })),
+    })) || [],
     certifications: aboutInfo.certifications.map(certificate => ({
       ...certificate,
       localizedName: getLocalizedContent(certificate.name, language),

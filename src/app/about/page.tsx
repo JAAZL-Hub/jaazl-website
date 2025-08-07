@@ -45,10 +45,10 @@ export default function AboutPage() {
   };
 
   // Handle modal (kept for potential future use)
-  const openModal = (member: ImportedTeamMember) => {
-    setActiveMember(member);
-    setShowModal(true);
-  };
+  // const openModal = (member: ImportedTeamMember) => {
+  //   setActiveMember(member);
+  //   setShowModal(true);
+  // };
 
   const closeModal = () => {
     setShowModal(false);
@@ -207,12 +207,12 @@ export default function AboutPage() {
                   {/* CEO Message */}
                   <div className="flex-1">
                     <div className="prose prose-lg max-w-none">
-                      <div className="text-4xl text-blue-600 mb-4 opacity-50">"
+                      <div className="text-4xl text-blue-600 mb-4 opacity-50">&quot;
                       </div>
                       <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line">
                         {getLocalizedValue(aboutInfo.ceoMessage, language)}
                       </p>
-                      <div className="text-4xl text-blue-600 mt-4 opacity-50 text-right">"
+                      <div className="text-4xl text-blue-600 mt-4 opacity-50 text-right">&quot;
                       </div>
                     </div>
                   </div>

@@ -143,9 +143,11 @@ export interface AboutInfo {
   mission: LocalizedContent;
   vision: LocalizedContent;
   history: LocalizedContent;
+  ceoMessage?: LocalizedContent; // CEO message for the about page
+  ceo?: TeamMember; // CEO information
   values: CoreValue[]; // The values field from the mock data
   coreValues?: CoreValue[]; // Keeping for backward compatibility
-  team: TeamMember[]; // The team field from the mock data
+  team?: TeamMember[]; // The team field from the mock data
   leadership?: TeamMember[]; // Keeping for backward compatibility
   certifications: Certification[];
 }
