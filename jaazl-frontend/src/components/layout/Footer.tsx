@@ -66,9 +66,9 @@ const Footer: React.FC = () => {
                 : "شركة رائدة في تقديم الحلول الصناعية في المنطقة الشرقية بالمملكة العربية السعودية، نقدم التميز من خلال الابتكار والخبرة والشراكات العالمية."}
             </p>
             <div className="flex gap-4">
-              <a href="https://www.linkedin.com/company/jaazl" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 hover:bg-secondary-500 rounded-xl flex items-center justify-center transition-all duration-300 shadow-card hover:shadow-btn-secondary">{React.createElement(getSocialIcon('linkedin'), { className: "w-5 h-5" })}</a>
-              <a href="https://twitter.com/jaazl" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 hover:bg-secondary-500 rounded-xl flex items-center justify-center transition-all duration-300 shadow-card hover:shadow-btn-secondary">{React.createElement(getSocialIcon('twitter'), { className: "w-5 h-5" })}</a>
-              <a href="https://facebook.com/jaazl" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 hover:bg-secondary-500 rounded-xl flex items-center justify-center transition-all duration-300 shadow-card hover:shadow-btn-secondary">{React.createElement(getSocialIcon('facebook'), { className: "w-5 h-5" })}</a>
+              <a href="https://www.linkedin.com/company/jaazl-industrial-company" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 hover:bg-secondary-500 rounded-xl flex items-center justify-center transition-all duration-300 shadow-card hover:shadow-btn-secondary">{React.createElement(getSocialIcon('linkedin'), { className: "w-5 h-5" })}</a>
+              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 hover:bg-secondary-500 rounded-xl flex items-center justify-center transition-all duration-300 shadow-card hover:shadow-btn-secondary">{React.createElement(getSocialIcon('twitter'), { className: "w-5 h-5" })}</a>
+              <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 hover:bg-secondary-500 rounded-xl flex items-center justify-center transition-all duration-300 shadow-card hover:shadow-btn-secondary">{React.createElement(getSocialIcon('facebook'), { className: "w-5 h-5" })}</a>
             </div>
           </div>
 

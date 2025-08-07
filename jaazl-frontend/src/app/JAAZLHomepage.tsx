@@ -102,15 +102,15 @@ const JAAZLHomepage: React.FC = () => {
 
   // Industries - Updated to match catalogue sequence  
   const industries = [
-    { icon: React.createElement(getIndustryIcon('droplet'), { className: "w-8 h-8" }), name: {en: "Oil & Gas", ar: "النفط والغاز"}, projects: {en: "150+ Projects", ar: "150+ مشروع"} },
-    { icon: React.createElement(getIndustryIcon('factory'), { className: "w-8 h-8" }), name: {en: "Petrochemicals", ar: "البتروكيماويات"}, projects: {en: "200+ Projects", ar: "200+ مشروع"} },
-    { icon: React.createElement(getIndustryIcon('filter'), { className: "w-8 h-8" }), name: {en: "Refineries", ar: "المصافي"}, projects: {en: "80+ Projects", ar: "80+ مشروع"} },
-    { icon: React.createElement(getIndustryIcon('hammer'), { className: "w-8 h-8" }), name: {en: "Mining & Minerals", ar: "التعدين والمعادن"}, projects: {en: "60+ Projects", ar: "60+ مشروع"} },
-    { icon: React.createElement(getIndustryIcon('seedling'), { className: "w-8 h-8" }), name: {en: "Fertilizers", ar: "الأسمدة"}, projects: {en: "35+ Projects", ar: "35+ مشروع"} },
-    { icon: React.createElement(getIndustryIcon('power'), { className: "w-8 h-8" }), name: {en: "Power & Electricity", ar: "الطاقة والكهرباء"}, projects: {en: "95+ Projects", ar: "95+ مشروع"} },
-    { icon: React.createElement(getMiscIcon('cog'), { className: "w-8 h-8" }), name: {en: "Manufacturing", ar: "التصنيع"}, projects: {en: "75+ Projects", ar: "75+ مشروع"} },
-    { icon: React.createElement(getMiscIcon('utensils'), { className: "w-8 h-8" }), name: {en: "Food & Beverages", ar: "الأغذية والمشروبات"}, projects: {en: "40+ Projects", ar: "40+ مشروع"} },
-    { icon: React.createElement(getIndustryIcon('building'), { className: "w-8 h-8" }), name: {en: "Municipal", ar: "البلديات"}, projects: {en: "120+ Projects", ar: "120+ مشروع"} }
+    { icon: React.createElement(getIndustryIcon('droplet'), { className: "w-8 h-8" }), name: {en: "Oil & Gas", ar: "النفط والغاز"}, projects: {en: "25+ Projects", ar: "25+ مشروع"} },
+    { icon: React.createElement(getIndustryIcon('factory'), { className: "w-8 h-8" }), name: {en: "Petrochemicals", ar: "البتروكيماويات"}, projects: {en: "30+ Projects", ar: "30+ مشروع"} },
+    { icon: React.createElement(getIndustryIcon('filter'), { className: "w-8 h-8" }), name: {en: "Refineries", ar: "المصافي"}, projects: {en: "25+ Projects", ar: "25+ مشروع"} },
+    { icon: React.createElement(getIndustryIcon('hammer'), { className: "w-8 h-8" }), name: {en: "Mining & Minerals", ar: "التعدين والمعادن"}, projects: {en: "15+ Projects", ar: "15+ مشروع"} },
+    { icon: React.createElement(getIndustryIcon('seedling'), { className: "w-8 h-8" }), name: {en: "Fertilizers", ar: "الأسمدة"}, projects: {en: "20+ Projects", ar: "20+ مشروع"} },
+    { icon: React.createElement(getIndustryIcon('power'), { className: "w-8 h-8" }), name: {en: "Power & Electricity", ar: "الطاقة والكهرباء"}, projects: {en: "20+ Projects", ar: "20+ مشروع"} },
+    { icon: React.createElement(getMiscIcon('cog'), { className: "w-8 h-8" }), name: {en: "Manufacturing", ar: "التصنيع"}, projects: {en: "20+ Projects", ar: "20+ مشروع"} },
+    { icon: React.createElement(getMiscIcon('utensils'), { className: "w-8 h-8" }), name: {en: "Food & Beverages", ar: "الأغذية والمشروبات"}, projects: {en: "20+ Projects", ar: "20+ مشروع"} },
+    { icon: React.createElement(getIndustryIcon('building'), { className: "w-8 h-8" }), name: {en: "Municipal", ar: "البلديات"}, projects: {en: "20+ Projects", ar: "20+ مشروع"} }
   ];
 
   
