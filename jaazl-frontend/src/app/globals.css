@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
-/* Custom Font Definitions with Performance Optimizations */
+/* ===================================
+   FONT DEFINITIONS
+   =================================== */
 @font-face {
   font-family: 'ManifaPro2';
   src: url('/Fonts/manifa-pro-2-bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
-  font-display: swap; /* Prevents invisible text during font swap */
-  font-feature-settings: 'kern' 1; /* Enable kerning for better typography */
+  font-display: swap;
+  font-feature-settings: 'kern' 1;
   font-variant: normal;
 }
 
@@ -16,28 +18,28 @@
   src: url('/Fonts/Manifa-Pro-2-Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
-  font-display: swap; /* Prevents invisible text during font swap */
-  font-feature-settings: 'kern' 1; /* Enable kerning for better typography */
+  font-display: swap;
+  font-feature-settings: 'kern' 1;
   font-variant: normal;
 }
 
-/* Font preload hints - Add to head for critical fonts */
-/*
-<link rel="preload" href="/Fonts/manifa-pro-2-bold.otf" as="font" type="font/otf" crossorigin>
-<link rel="preload" href="/Fonts/Manifa-Pro-2-Light.otf" as="font" type="font/otf" crossorigin>
-*/
-
+/* ===================================
+   CSS VARIABLES & THEME
+   =================================== */
 :root {
+  /* Colors */
   --background: #ffffff;
   --foreground: #171717;
-}
-
-/* Base theme variables */
-:root {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-main: 'ManifaPro2', sans-serif;
-  --font-heading: 'ManifaPro2', sans-serif;
+  
+  /* Typography */
+  --font-family: 'ManifaPro2', sans-serif;
+  --font-arabic: 'ManifaPro2', 'Almarai', 'Tajawal', sans-serif;
+  
+  /* Shadows */
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-btn-cta: 0 10px 15px -3px rgba(249, 115, 22, 0.4), 0 4px 6px -2px rgba(249, 115, 22, 0.05);
+  --shadow-btn-cta-hover: 0 20px 25px -5px rgba(249, 115, 22, 0.4), 0 10px 10px -5px rgba(249, 115, 22, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,64 +49,70 @@
   }
 }
 
-/* Override dark mode for hero sections to maintain consistent gradient */
-.hero-section {
-  background: unset !important;
-}
-
-.hero-section .absolute.inset-0 {
-  background: unset !important;
+/* ===================================
+   BASE STYLES
+   =================================== */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-family);
+  font-weight: 300;
+  
   /* Performance optimizations */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  
   /* Prevent layout shifts */
   min-height: 100vh;
 }
 
-/* Typography styling */
-body {
-  font-family: 'ManifaPro2', sans-serif;
-  font-weight: 300; /* Light for normal text */
-}
-
-/* Increased paragraph font size for better readability */
+/* Typography */
 p {
   font-size: 1.125rem; /* 18px */
   line-height: 1.7;
 }
 
-h1, h2, h3, h4, h5, h6, .font-bold, .font-semibold, .font-medium, button, .btn, nav a {
-  font-weight: 700; /* Bold for headings and UI elements */
+h1, h2, h3, h4, h5, h6, 
+.font-bold, .font-semibold, .font-medium, 
+button, .btn, nav a {
+  font-weight: 700;
 }
 
-/* Custom animations for the JAAZL homepage */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Arabic Typography */
+.font-arabic {
+  font-family: var(--font-arabic) !important;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "liga", "kern";
+  font-feature-settings: "liga", "kern";
 }
 
-.animate-fadeIn {
-  animation: fadeIn 0.5s ease-out;
+.font-arabic h1,
+.font-arabic h2,
+.font-arabic h3,
+.font-arabic h4,
+.font-arabic h5,
+.font-arabic h6 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+.font-arabic p,
+.font-arabic span {
+  font-weight: 300;
+  letter-spacing: 0.01em;
 }
 
-/* Custom scrollbar */
+/* ===================================
+   CUSTOM SCROLLBAR
+   =================================== */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -122,589 +130,455 @@ html {
   background: #475569;
 }
 
-/* RTL Support - Clean and Targeted */
-/* Base RTL text alignment */
-[dir="rtl"] {
-  text-align: right;
+/* ===================================
+   CUSTOM SHADOWS (for Tailwind extension)
+   =================================== */
+.shadow-card {
+  box-shadow: var(--shadow-card);
 }
 
-/* Essential RTL flex adjustments */
-[dir="rtl"] .lg\:flex-row-reverse {
-  flex-direction: row-reverse;
+.shadow-card-hover {
+  box-shadow: var(--shadow-card-hover);
 }
 
-
-/* Only reverse specific flex layouts that need RTL adjustment */
-[dir="rtl"] .flex-row {
-  flex-direction: row-reverse;
-}
-
-/* Specific elements that should reverse in RTL */
-[dir="rtl"] .nav-items,
-[dir="rtl"] .breadcrumb-items,
-[dir="rtl"] .button-group {
-  flex-direction: row-reverse;
-}
-
-/* Preserve original flex direction for columns and grids */
-[dir="rtl"] .flex-col,
-[dir="rtl"] .flex-column,
-[dir="rtl"] .grid {
-  flex-direction: column;
-}
-
-/* Fix specific flex items that should not reverse */
-[dir="rtl"] .justify-between {
-  justify-content: space-between;
-}
-
-[dir="rtl"] .justify-center {
-  justify-content: center;
-}
-
-[dir="rtl"] .items-center {
-  align-items: center;
-}
-
-/* Gap utility works correctly in RTL, no changes needed for gap-* */
-
-/* Margin and padding adjustments for RTL */
-[dir="rtl"] .ml-auto {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-[dir="rtl"] .mr-auto {
-  margin-right: auto;
-  margin-left: 0;
-}
-
-/* Text alignment utilities for RTL */
-[dir="rtl"] .text-left {
-  text-align: right;
-}
-
-[dir="rtl"] .text-right {
-  text-align: left;
-}
-
-/* Border radius adjustments for RTL */
-[dir="rtl"] .rounded-l-none {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 0.375rem;
-  border-bottom-right-radius: 0.375rem;
-}
-
-[dir="rtl"] .rounded-r-none {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: 0.375rem;
-  border-bottom-left-radius: 0.375rem;
-}
-
-/* Transform adjustments for RTL */
-[dir="rtl"] .translate-x-1 {
-  transform: translateX(-0.25rem);
-}
-
-[dir="rtl"] .group-hover\:translate-x-1 {
-  transform: translateX(-0.25rem);
-}
-
-/* Position adjustments for RTL */
-[dir="rtl"] .left-0 {
-  left: auto;
-  right: 0;
-}
-
-[dir="rtl"] .right-0 {
-  right: auto;
-  left: 0;
-}
-
-/* Specific RTL fixes for dropdowns */
-[dir="rtl"] .dropdown-menu {
-  left: auto;
-  right: 0;
-}
-
-/* Arabic font optimizations */
-[dir="rtl"] {
-  font-family: 'ManifaPro2', 'Almarai', 'Tajawal', sans-serif;
-  letter-spacing: 0.01em;
-}
-
-/* Better Arabic text rendering */
-[dir="rtl"] p,
-[dir="rtl"] span,
-[dir="rtl"] div {
-  text-rendering: optimizeLegibility;
-  -webkit-font-feature-settings: "liga", "kern";
-  font-feature-settings: "liga", "kern";
-}
-
-/* Enhanced Spacing System */
-/* Consistent section spacing */
-.section-spacing {
-  @apply py-24;
-}
-
-.section-spacing-sm {
-  @apply py-16 md:py-20;
-}
-
-.section-spacing-lg {
-  @apply py-32 md:py-40;
-}
-
-/* Container consistency */
-.container-custom {
-  @apply container mx-auto px-6;
-}
-
-/* Card spacing and shadows */
-.card-base {
-  background: white;
-  border-radius: 1rem;
-  border: 1px solid rgb(229 231 235);
-  transition: all 0.3s ease;
-}
-
-.card-hover:hover {
+.shadow-card-active {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  border-color: rgb(147 197 253);
-  transform: translateY(-4px);
 }
 
-.card-interactive {
-  background: white;
-  border-radius: 1rem;
-  border: 1px solid rgb(229 231 235);
-  transition: all 0.3s ease;
+.shadow-btn-cta {
+  box-shadow: var(--shadow-btn-cta);
 }
 
-/* Icon container spacing */
-.icon-container {
-  @apply flex items-center justify-center mb-6;
+.shadow-btn-cta-hover {
+  box-shadow: var(--shadow-btn-cta-hover);
 }
 
-.icon-container-sm {
-  @apply flex items-center justify-center mb-4;
+.shadow-btn-secondary {
+  box-shadow: 0 4px 14px 0 rgba(249, 115, 22, 0.39);
 }
 
-/* Text spacing improvements */
-.text-section {
-  @apply mb-16 text-center;
+.shadow-btn-secondary-hover {
+  box-shadow: 0 6px 20px 0 rgba(249, 115, 22, 0.5);
 }
 
-.text-section h2 {
-  @apply text-4xl md:text-5xl font-bold text-gray-900 mb-4;
-}
-
-.text-section p {
-  @apply text-xl text-gray-600 max-w-3xl mx-auto;
-}
-
-/* Grid spacing consistency */
-.grid-cards {
-  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
-}
-
-.grid-cards-2 {
-  @apply grid md:grid-cols-2 gap-8;
-}
-
-.grid-cards-4 {
-  @apply grid md:grid-cols-2 lg:grid-cols-4 gap-6;
-}
-
-/* Button spacing */
-.btn-spacing {
-  @apply py-4 px-8 rounded-full font-bold transition-all duration-300;
-}
-
-.btn-spacing-lg {
-  @apply py-4 px-10 rounded-full font-bold text-xl transition-all duration-300;
-}
-
-/* Modal improvements */
-.modal-backdrop {
-  @apply fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4;
-}
-
-.modal-content {
-  @apply bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl;
-}
-
-/* Enhanced Mobile Optimizations */
-@media (max-width: 768px) {
-  .section-spacing {
-    @apply py-12;
+/* ===================================
+   ANIMATIONS
+   =================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .text-section h2 {
-    @apply text-2xl md:text-3xl;
-  }
-  
-  .text-section p {
-    @apply text-base md:text-lg;
-  }
-  
-  /* Mobile-specific padding and margins */
-  .container-custom {
-    @apply px-4;
-  }
-  
-  /* Touch targets for mobile */
-  button, .btn, a[role="button"] {
-    min-height: 44px;
-    min-width: 44px;
-  }
-  
-  /* Mobile navigation improvements */
-  .mobile-nav-item {
-    @apply py-4 px-6 text-lg;
-  }
-  
-  /* Mobile form improvements */
-  input, textarea, select {
-    @apply text-base; /* Prevent zoom on iOS */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .hero-text {
-    @apply text-2xl;
-  }
-  
-  .service-card {
-    @apply p-4;
-  }
-  
-  .grid-cards {
-    @apply grid-cols-1 gap-4;
-  }
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .grid-cards {
-    @apply md:grid-cols-2;
-  }
-}
+/* ===================================
+   RTL SUPPORT
+   =================================== */
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .section-spacing {
-    @apply py-16;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .section-spacing {
-    @apply py-20;
-  }
-  
-  .grid-cards {
-    @apply lg:grid-cols-3;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .section-spacing {
-    @apply py-24;
-  }
-}
-
-/* Focus states for accessibility */
-.focus-visible:focus-visible {
-  @apply outline-2 outline-blue-500 outline-offset-2;
-}
-
-/* Improved hover states */
-.hover-lift {
-  @apply transition-transform duration-300 hover:-translate-y-1;
-}
-
-.hover-scale {
-  @apply transition-transform duration-300 hover:scale-105;
-}
-
-/* Footer specific RTL fixes */
-[dir="rtl"] footer .grid {
-  direction: rtl;
-}
-
-[dir="rtl"] footer .flex-col {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-[dir="rtl"] footer .justify-center {
-  justify-content: center;
-}
-
-[dir="rtl"] footer .justify-start {
-  justify-content: flex-start;
-}
-
-[dir="rtl"] footer .text-center {
-  text-align: center;
-}
-
-[dir="rtl"] footer .text-start {
+/* Base RTL Direction */
+[dir="rtl"] {
   text-align: right;
 }
 
-/* Dropdown positioning fixes */
-[dir="rtl"] .dropdown-menu,
-[dir="rtl"] .absolute.left-0 {
-  left: auto;
-  right: 0;
-}
-
-[dir="rtl"] .absolute.right-0 {
-  right: auto;
-  left: 0;
-}
-
-/* Header dropdown specific fixes */
-[dir="rtl"] .relative .absolute {
-  left: auto;
-  right: 0;
-}
-
-/* Mobile menu positioning */
-[dir="rtl"] .fixed.end-0 {
-  right: 0;
-  left: auto;
-}
-
-[dir="rtl"] .fixed.start-0 {
-  left: 0;
-  right: auto;
-}
-
-/* Add these additional RTL styles to your existing globals.css */
-
-/* Service page RTL handled by component logic */
-
-/* Arabic Typography Enhancements */
-.font-arabic {
-  font-family: 'ManifaPro2', 'Segoe UI', 'Arial Unicode MS', 'Tahoma', sans-serif !important;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.6;
-}
-
-/* Improve Arabic text rendering */
-[dir="rtl"] .font-arabic {
-  text-rendering: optimizeLegibility;
-  -webkit-font-feature-settings: "liga", "kern";
-  font-feature-settings: "liga", "kern";
-}
-
-/* RTL Flexbox Specific Adjustments */
-[dir="rtl"] .lg\:flex-row-reverse {
-  flex-direction: row-reverse !important;
-}
-
-/* RTL Padding and Margin Fixes */
-[dir="rtl"] .lg\:pr-12 {
-  padding-right: 0 !important;
-  padding-left: 3rem !important;
-}
-
-[dir="rtl"] .lg\:pl-12 {
-  padding-left: 0 !important;
-  padding-right: 3rem !important;
-}
-
-[dir="rtl"] .ml-2 {
-  margin-left: 0 !important;
-  margin-right: 0.5rem !important;
-}
-
-[dir="rtl"] .mr-2 {
-  margin-right: 0 !important;
-  margin-left: 0.5rem !important;
-}
-
-/* RTL Border Fixes */
-[dir="rtl"] .border-l-4 {
-  border-left: none !important;
-  border-right: 4px solid !important;
-}
-
-[dir="rtl"] .border-r-4 {
-  border-right: 4px solid !important;
-  border-left: none !important;
-}
-
-/* RTL Text Alignment - Keep Simple */
-
-/* Prose RTL Support */
-.prose-rtl {
-  text-align: right;
-  direction: rtl;
-}
-
-.prose-rtl p {
-  text-align: right;
-  text-align-last: right;
-  direction: rtl;
-}
-
-.prose-rtl h1,
-.prose-rtl h2,
-.prose-rtl h3,
-.prose-rtl h4,
-.prose-rtl h5,
-.prose-rtl h6 {
-  text-align: right;
-  direction: rtl;
-}
-
-/* RTL Icon and Arrow Adjustments */
-[dir="rtl"] .rotate-180 {
-  transform: rotate(180deg);
-}
-
-/* RTL Link Styling */
-[dir="rtl"] .inline-flex.items-center {
-  flex-direction: row-reverse;
-}
-
+/* Flex Direction Adjustments */
 [dir="rtl"] .flex-row-reverse {
   flex-direction: row-reverse !important;
 }
 
-/* Simplified RTL typography - avoid conflicts */
-
-/* RTL Grid and Card Adjustments */
-[dir="rtl"] .group:hover h3 {
-  text-align: right;
+[dir="rtl"] .lg\:flex-row-reverse {
+  flex-direction: row-reverse !important;
 }
 
-/* RTL Animation Support */
-[dir="rtl"] .hover\:-translate-y-1:hover {
-  transform: translateY(-0.25rem);
+[dir="rtl"] .md\:flex-row-reverse {
+  flex-direction: row-reverse !important;
 }
 
-[dir="rtl"] .transition-all {
-  transition: all 0.3s ease;
+[dir="rtl"] .justify-end {
+  justify-content: flex-end !important;
 }
 
-/* Simplified modal support */
+[dir="rtl"] .md\:justify-end {
+  justify-content: flex-end !important;
+}
 
-/* Remove overly broad selector */
+/* Text Alignment */
+[dir="rtl"] .text-left {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left !important;
+}
 
 [dir="rtl"] .text-center {
   text-align: center !important;
 }
 
-/* RTL List Adjustments */
+/* Margin and Padding Logical Properties Support */
+[dir="rtl"] .ms-1 { margin-inline-start: 0.25rem !important; }
+[dir="rtl"] .ms-2 { margin-inline-start: 0.5rem !important; }
+[dir="rtl"] .ms-3 { margin-inline-start: 0.75rem !important; }
+[dir="rtl"] .ms-4 { margin-inline-start: 1rem !important; }
+
+[dir="rtl"] .me-1 { margin-inline-end: 0.25rem !important; }
+[dir="rtl"] .me-2 { margin-inline-end: 0.5rem !important; }
+[dir="rtl"] .me-3 { margin-inline-end: 0.75rem !important; }
+[dir="rtl"] .me-4 { margin-inline-end: 1rem !important; }
+
+[dir="rtl"] .ps-1 { padding-inline-start: 0.25rem !important; }
+[dir="rtl"] .ps-2 { padding-inline-start: 0.5rem !important; }
+[dir="rtl"] .ps-4 { padding-inline-start: 1rem !important; }
+[dir="rtl"] .ps-6 { padding-inline-start: 1.5rem !important; }
+
+[dir="rtl"] .pe-1 { padding-inline-end: 0.25rem !important; }
+[dir="rtl"] .pe-2 { padding-inline-end: 0.5rem !important; }
+[dir="rtl"] .pe-4 { padding-inline-end: 1rem !important; }
+[dir="rtl"] .pe-6 { padding-inline-end: 1.5rem !important; }
+
+/* Legacy Margin/Padding Overrides (for backward compatibility) */
+[dir="rtl"] .ml-1 { margin-left: 0 !important; margin-right: 0.25rem !important; }
+[dir="rtl"] .ml-2 { margin-left: 0 !important; margin-right: 0.5rem !important; }
+[dir="rtl"] .ml-3 { margin-left: 0 !important; margin-right: 0.75rem !important; }
+
+[dir="rtl"] .mr-1 { margin-right: 0 !important; margin-left: 0.25rem !important; }
+[dir="rtl"] .mr-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
+[dir="rtl"] .mr-3 { margin-right: 0 !important; margin-left: 0.75rem !important; }
+
+[dir="rtl"] .pl-2 { padding-left: 0 !important; padding-right: 0.5rem !important; }
+[dir="rtl"] .pl-4 { padding-left: 0 !important; padding-right: 1rem !important; }
+[dir="rtl"] .pl-6 { padding-left: 0 !important; padding-right: 1.5rem !important; }
+
+[dir="rtl"] .pr-2 { padding-right: 0 !important; padding-left: 0.5rem !important; }
+[dir="rtl"] .pr-4 { padding-right: 0 !important; padding-left: 1rem !important; }
+[dir="rtl"] .pr-6 { padding-right: 0 !important; padding-left: 1.5rem !important; }
+
+/* Large Screen Padding */
+[dir="rtl"] .lg\:pl-12 { padding-left: 0 !important; padding-right: 3rem !important; }
+[dir="rtl"] .lg\:pr-12 { padding-right: 0 !important; padding-left: 3rem !important; }
+
+/* Positioning */
+[dir="rtl"] .left-0 { left: auto !important; right: 0 !important; }
+[dir="rtl"] .right-0 { right: auto !important; left: 0 !important; }
+[dir="rtl"] .left-10 { left: auto !important; right: 2.5rem !important; }
+[dir="rtl"] .right-10 { right: auto !important; left: 2.5rem !important; }
+
+/* Border Adjustments */
+[dir="rtl"] .border-l-2 { border-left: none !important; border-right: 2px solid !important; }
+[dir="rtl"] .border-r-2 { border-right: 2px solid !important; border-left: none !important; }
+[dir="rtl"] .border-l-4 { border-left: none !important; border-right: 4px solid !important; }
+
+/* Transform Adjustments for Arrows and Icons */
+[dir="rtl"] .group-hover\:translate-x-1:hover {
+  transform: translateX(-0.25rem) !important;
+}
+
+[dir="rtl"] .group-hover\:-translate-x-1:hover {
+  transform: translateX(0.25rem) !important;
+}
+
+/* List Adjustments */
+[dir="rtl"] .list-disc {
+  list-style-position: inside;
+}
+
 [dir="rtl"] ul,
 [dir="rtl"] ol {
   padding-right: 1.5rem;
   padding-left: 0;
 }
 
-/* RTL Image Container Adjustments */
-[dir="rtl"] .relative img {
-  text-align: initial;
+/* Dropdown and Menu Positioning */
+[dir="rtl"] .absolute.left-0 {
+  left: auto !important;
+  right: 0 !important;
 }
 
-/* RTL Responsive Adjustments */
-@media (max-width: 1024px) {
-  [dir="rtl"] .lg\:pr-12,
-  [dir="rtl"] .lg\:pl-12 {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+[dir="rtl"] .absolute.right-0 {
+  right: auto !important;
+  left: 0 !important;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  /* Reduced section spacing on mobile */
+  .py-24 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+  
+  /* Mobile touch targets */
+  button, .btn, a[role="button"] {
+    min-height: 44px;
+    min-width: 44px;
   }
   
-  [dir="rtl"] .lg\:flex-row-reverse {
-    flex-direction: column !important;
+  /* Prevent iOS zoom on form inputs */
+  input, textarea, select {
+    font-size: 16px !important;
   }
-}
-
-@media (max-width: 768px) {
+  
+  /* RTL Mobile Adjustments */
+  [dir="rtl"] .lg\:flex-row-reverse,
   [dir="rtl"] .md\:flex-row-reverse {
     flex-direction: column !important;
   }
-  
-  /* Mobile RTL handled by component */
 }
 
-/* RTL Focus States */
+/* Tablet Adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Tablet-specific spacing */
+  .py-24 { padding-top: 4rem; padding-bottom: 4rem; }
+}
+
+/* Large Screen Adjustments */
+@media (min-width: 1024px) {
+  /* Full section spacing on large screens */
+  .py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+}
+
+/* ===================================
+   ACCESSIBILITY
+   =================================== */
+
+/* Focus States */
+.focus-visible:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
 [dir="rtl"] .focus-visible:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
 
-/* RTL Button and Interactive Elements */
-[dir="rtl"] button,
-[dir="rtl"] .btn {
-  text-align: center;
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .shadow-card,
+  .shadow-card-hover {
+    border: 1px solid currentColor;
+  }
 }
 
-[dir="rtl"] .inline-block {
-  text-align: center;
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
 }
 
-/* RTL Shadow and Transform Consistency */
-[dir="rtl"] .shadow-lg,
-[dir="rtl"] .shadow-xl,
-[dir="rtl"] .shadow-2xl {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+/* Glass Morphism */
+.backdrop-blur-glass {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-/* Remove gradient direction changes - keep backgrounds consistent */
+/* Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease;
+}
 
-/* Fix hero background in RTL mode - ensure it overrides body background */
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Text Gradients */
+.text-gradient-blue-orange {
+  background: linear-gradient(135deg, #3b82f6 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-orange-yellow {
+  background: linear-gradient(135deg, #f97316 0%, #eab308 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===================================
+   COMPONENT-SPECIFIC STYLES
+   =================================== */
+
+/* Hero Section Background Override */
 #hero {
   background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 50%, #1e3a8a 100%) !important;
 }
 
-/* Ensure hero gradient works in both LTR and RTL modes */
-[dir="rtl"] #hero,
-[dir="ltr"] #hero {
-  background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 50%, #1e3a8a 100%) !important;
+/* Enhanced Sticky Positioning */
+.sticky-widget {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 6rem; /* 24 in Tailwind = 6rem */
+  align-self: flex-start;
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
 }
 
-/* RTL Navigation Breadcrumb */
-[dir="rtl"] .breadcrumb {
-  flex-direction: row-reverse;
+/* Smooth scrollbar for sticky widgets */
+.sticky-widget::-webkit-scrollbar {
+  width: 4px;
 }
 
-[dir="rtl"] .breadcrumb svg {
-  transform: rotate(180deg);
+.sticky-widget::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
 }
 
-/* Specific fixes for ManifaPro2 font in RTL */
-[dir="rtl"].font-arabic h1,
-[dir="rtl"].font-arabic h2,
-[dir="rtl"].font-arabic h3 {
-  font-family: 'ManifaPro2', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+.sticky-widget::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
 }
 
-[dir="rtl"].font-arabic p,
-[dir="rtl"].font-arabic span {
-  font-family: 'ManifaPro2', sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.01em;
+.sticky-widget::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
 
-/* Font smoothing handled by body */
+/* Splide Carousel Customization */
+.splide__track {
+  overflow: visible !important;
+}
 
+.splide__list {
+  align-items: center;
+}
 
-/* RTL Image object-fit consistency */
-[dir="rtl"] img[style*="object-fit"] {
-  object-fit: cover;
+.splide__slide {
+  opacity: 0.6;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
+
+.splide__slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.splide__slide.is-visible {
+  opacity: 0.8;
+  transform: scale(0.95);
+}
+
+/* Remove arrows and pagination dots */
+.splide__arrows,
+.splide__pagination {
+  display: none !important;
+}
+
+/* RTL Support for Splide */
+[dir="rtl"] .splide__track {
+  direction: rtl;
+}
+
+[dir="rtl"] .splide__list {
+  direction: rtl;
+}
+
+/* Ensure carousel is visible in RTL */
+[dir="rtl"] .splide {
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+}
+
+[dir="rtl"] .splide__slide {
+  text-align: center;
+}
+
+/* Fix RTL carousel direction classes */
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+/* Additional RTL fixes for Splide */
+[dir="rtl"] .splide__container {
+  direction: rtl;
+}
+
+/* Ensure proper width and display */
+.splide {
+  width: 100%;
+  min-height: 200px;
+}
+
+.hero-section {
+  background: unset !important;
+}
+
+.hero-section .absolute.inset-0 {
+  background: unset !important;
+}
+
+/* Grid Background Pattern */
+.bg-grid-white\/\[0\.05\] {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+}
+
+/* Smooth Transitions for Interactive Elements */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+.transition-colors {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.transition-transform {
+  transition: transform 0.3s ease;
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+  
+  .shadow-card,
+  .shadow-card-hover,
+  .shadow-btn-cta {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
 }
