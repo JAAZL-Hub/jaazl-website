@@ -154,13 +154,13 @@ Together, we are building the industrial foundation for Saudi Arabia's sustainab
         width: 300,
         height: 400
       },
-      year: 2016
+      year: 2021
     },
     {
       id: 'iso-14001',
       name: {
-        en: 'ISO 14001:2015',
-        ar: 'آيزو 14001:2015'
+        en: 'ISO 14001',
+        ar: 'آيزو 14001'
       },
       description: {
         en: 'Environmental Management System certification, reflecting our dedication to environmental responsibility.',
@@ -171,19 +171,19 @@ Together, we are building the industrial foundation for Saudi Arabia's sustainab
         id: 'iso-14001-image',
         url: '/images/certificates/iso.png',
         altText: {
-          en: 'ISO 14001:2015 Certificate',
-          ar: 'شهادة آيزو 14001:2015'
+          en: 'ISO 14001 Certificate',
+          ar: 'شهادة آيزو 14001'
         },
         width: 300,
         height: 400
       },
-      year: 2017
+      year: 2023
     },
     {
       id: 'iso-45001',
       name: {
-        en: 'ISO 45001:2018',
-        ar: 'آيزو 45001:2018'
+        en: 'ISO 45001',
+        ar: 'آيزو 45001'
       },
       description: {
         en: 'Occupational Health and Safety Management System certification, underscoring our priority on workplace safety.',
@@ -200,7 +200,7 @@ Together, we are building the industrial foundation for Saudi Arabia's sustainab
         width: 300,
         height: 400
       },
-      year: 2019
+      year: 2023
     }
   ]
 };
