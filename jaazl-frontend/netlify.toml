@@ -1,16 +1,11 @@
 [build]
-  command = "bash scripts/netlify-build.sh"
-  publish = ".next"
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = "out"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-# Force these environment variables to override UI settings
 [build.environment]
   NEXT_PUBLIC_SITE_URL = "https://jaazl.com"
   NODE_VERSION = "20"
   NPM_FLAGS = "--legacy-peer-deps"
-  NETLIFY_NEXT_PLUGIN_SKIP = "false"
   NEXT_TELEMETRY_DISABLED = "1"
 
 # Form notifications settings

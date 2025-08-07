@@ -13,8 +13,9 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     domains: ['localhost', 'jaazl.com', 'www.jaazl.com'],
   },
-  // Ensure Netlify plays well with Next.js static assets
-  output: 'standalone',
+  // Use static export for better Netlify compatibility
+  output: 'export',
+  trailingSlash: true,
   poweredByHeader: false,
   // Ensure Next.js loads all static files correctly
   assetPrefix: process.env.NODE_ENV === 'production' ? '' : undefined,
