@@ -9,7 +9,10 @@
       "Bash(rm:*)",
       "Bash(find:*)",
       "Bash(npm run dev:*)",
-      "Bash(timeout 15 npm run dev)"
+      "Bash(timeout 15 npm run dev)",
+      "Bash(git commit:*)",
+      "Bash(git add:*)",
+      "Bash(ls:*)"
     ],
     "deny": []
   }
