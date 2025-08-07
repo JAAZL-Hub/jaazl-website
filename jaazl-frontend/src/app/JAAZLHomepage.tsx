@@ -248,14 +248,14 @@ const JAAZLHomepage: React.FC = () => {
             </div>
             
             {/* Enhanced Hero Visual */}
-            <div className={`relative transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${isRTL ? 'lg:col-start-1' : ''} lg:mt-0 mt-8`}>
+            <div className={`relative transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${isRTL ? 'lg:col-start-1' : ''} lg:mt-0 mt-8 max-w-lg mx-auto lg:max-w-none`}>
               <div className="relative">
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-2xl">
-                  <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 lg:p-6 border border-white/20 shadow-2xl">
+                  <div className="grid grid-cols-2 gap-3 mb-4">
                     {services.map((service, index) => (
                       <button
                         key={index}
-                        className={`group text-center p-4 rounded-xl transition-all duration-500 cursor-pointer border border-white/10 hover:border-white/30 ${
+                        className={`group text-center p-3 rounded-xl transition-all duration-500 cursor-pointer border border-white/10 hover:border-white/30 ${
                           activeService === index 
                             ? 'bg-white/20 scale-105 border-white/50' 
                             : 'bg-white/5 hover:bg-white/15'
@@ -266,7 +266,7 @@ const JAAZLHomepage: React.FC = () => {
                         <div className="text-white mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">
                           {service.icon}
                         </div>
-                        <p className={`text-xs font-semibold text-white leading-tight ${isRTL ? 'font-arabic' : ''}`}>
+                        <p className={`text-[10px] lg:text-xs font-semibold text-white leading-tight ${isRTL ? 'font-arabic' : ''}`}>
                           {service.title}
                         </p>
                         <div className={`mt-2 h-1 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ${
@@ -277,16 +277,16 @@ const JAAZLHomepage: React.FC = () => {
                       </button>
                     ))}
                   </div>
-                  <div className="bg-white/10 rounded-xl p-6 border border-white/20">
-                    <h3 className={`text-lg font-bold text-white mb-3 ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                  <div className="bg-white/10 rounded-xl p-4 lg:p-6 border border-white/20">
+                    <h3 className={`text-base lg:text-lg font-bold text-white mb-2 lg:mb-3 ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
                       {services[activeService].title}
                     </h3>
-                    <p className={`text-blue-100 text-sm mb-4 leading-relaxed ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                    <p className={`text-blue-100 text-xs lg:text-sm mb-3 lg:mb-4 leading-relaxed ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
                       {services[activeService].description}
                     </p>
                     <div className="grid grid-cols-1 gap-2">
                       {services[activeService].features.map((feature, idx) => (
-                        <div key={idx} className={`flex items-center text-sm text-blue-200 ${isRTL ? 'flex-row-reverse justify-end' : 'justify-start'}`}>
+                        <div key={idx} className={`flex items-center text-xs lg:text-sm text-blue-200 ${isRTL ? 'flex-row-reverse justify-end' : 'justify-start'}`}>
                           {React.createElement(getFeatureIcon('check-circle'), { 
                             className: `w-3 h-3 text-green-400 ${isRTL ? 'ms-2' : 'me-2'}` 
                           })}
@@ -297,13 +297,13 @@ const JAAZLHomepage: React.FC = () => {
                   </div>
                 </div>
                 <div 
-                  className={`absolute -top-4 w-16 h-16 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-2xl rotate-12 opacity-80 animate-bounce ${
+                  className={`absolute -top-3 w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-2xl rotate-12 opacity-80 animate-bounce ${
                     isRTL ? 'left-0' : 'right-0'
                   }`}
                   aria-hidden="true"
                 ></div>
                 <div 
-                  className={`absolute -bottom-4 w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl -rotate-12 opacity-80 animate-pulse ${
+                  className={`absolute -bottom-3 w-8 h-8 lg:w-12 lg:h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl -rotate-12 opacity-80 animate-pulse ${
                     isRTL ? 'right-0' : 'left-0'
                   }`}
                   aria-hidden="true"
@@ -371,7 +371,7 @@ const JAAZLHomepage: React.FC = () => {
                 </div>
               ))}
             </div>
-            <div className="sticky-widget">
+            <div className="services-sticky-widget">
               <div className={`bg-gradient-to-br ${services[activeService].color} rounded-3xl p-8 lg:p-10 text-white shadow-xl transform transition-all duration-300`}>
                 <div className="mb-8">
                   <div className="text-white mb-6 p-4 bg-white/10 rounded-2xl w-fit">
@@ -763,12 +763,23 @@ const JAAZLHomepage: React.FC = () => {
           animation: fadeIn 0.5s ease-out;
         }
         
-        /* Sticky widget for services section */
-        .sticky-widget {
+        /* Enhanced sticky widget for services section */
+        .services-sticky-widget {
           position: sticky;
-          top: 6rem;
+          top: 2rem;
           align-self: flex-start;
           z-index: 10;
+          max-height: calc(100vh - 4rem);
+          overflow-y: auto;
+        }
+        
+        @media (max-width: 1024px) {
+          .services-sticky-widget {
+            position: relative;
+            top: auto;
+            max-height: none;
+            overflow-y: visible;
+          }
         }
       `}</style>
     </div>
