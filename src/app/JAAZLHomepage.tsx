@@ -405,7 +405,8 @@ const JAAZLHomepage: React.FC = () => {
                     })}
                   </Link>
                   <a 
-                    href="/docs/JAAZL-Profile.pdf" 
+                    href="/Docs/JAAZL Industrial Corporate.pdf" 
+                    download="JAAZL Industrial Corporate.pdf"
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className={`border border-white/30 hover:bg-white/10 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center ${isRTL ? 'flex-row-reverse font-arabic' : ''}`}
