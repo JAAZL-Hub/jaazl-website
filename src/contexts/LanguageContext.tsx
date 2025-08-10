@@ -2,7 +2,7 @@
 
 import React, { createContext, useState, useEffect, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import i18next from 'i18next'; // Import directly for fallback
+import i18n from '@/i18n'; // Import the configured i18n instance
 
 export type Direction = 'ltr' | 'rtl';
 export type Language = 'en' | 'ar';
@@ -31,9 +31,9 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   const [language, setLanguageState] = useState<Language>('en');
   const [direction, setDirection] = useState<Direction>('ltr');
   
-  // Use optional chaining and error handling for i18n
+  // Use the imported i18n instance with useTranslation as fallback
   const translation = useTranslation();
-  const i18n = translation?.i18n;
+  const i18nInstance = translation?.i18n || i18n;
 
   // Initialize language from localStorage or default to browser language
   useEffect(() => {
@@ -81,14 +81,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
         document.documentElement.classList.remove('rtl');
       }
       
-      // Try to change language in i18n (with fallback to direct i18next)
+      // Try to change language in i18n
       try {
-        if (i18n && typeof i18n.changeLanguage === 'function') {
-          // Use the useTranslation hook's i18n instance
-          i18n.changeLanguage(lang);
-        } else if (i18next && typeof i18next.changeLanguage === 'function') {
-          // Fallback to direct i18next import
-          i18next.changeLanguage(lang);
+        if (i18nInstance && typeof i18nInstance.changeLanguage === 'function') {
+          i18nInstance.changeLanguage(lang);
         } else {
           console.warn('i18n.changeLanguage not available, language text will not update until page refresh');
         }

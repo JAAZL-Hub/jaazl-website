@@ -284,7 +284,7 @@ const JAAZLHomepage: React.FC = () => {
                     <p className={`text-blue-100 text-xs lg:text-sm mb-3 lg:mb-4 leading-relaxed ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
                       {services[activeService].description}
                     </p>
-                    <div className="grid grid-cols-1 gap-2">
+                    {/* <div className="grid grid-cols-1 gap-2">
                       {services[activeService].features.map((feature, idx) => (
                         <div key={idx} className={`flex items-center text-xs lg:text-sm text-blue-200 ${isRTL ? 'flex-row-reverse justify-end' : 'justify-start'}`}>
                           {React.createElement(getFeatureIcon('check-circle'), { 
@@ -293,7 +293,7 @@ const JAAZLHomepage: React.FC = () => {
                           <span className={isRTL ? 'font-arabic' : ''}>{feature}</span>
                         </div>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div 
@@ -327,51 +327,37 @@ const JAAZLHomepage: React.FC = () => {
                 : "من الهندسة المتقدمة إلى الحلول البيئية، نقدم خدمات متكاملة للقطاع الصناعي في المملكة."}
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            <div className="space-y-6">
+          <div className="relative grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div className="space-y-4">
               {services.map((service, index) => (
                 <div 
                   key={index} 
-                  className={`group p-8 rounded-2xl border-2 cursor-pointer transition-all duration-300 ${
+                  className={`group p-6 rounded-xl border cursor-pointer transition-all duration-300 ${
                     activeService === index 
-                      ? 'border-blue-900 bg-gradient-to-br from-blue-50 to-blue-100 shadow-xl' 
-                      : 'border-gray-200 hover:shadow-lg bg-white hover:border-blue-300'
+                      ? 'border-blue-900 bg-blue-50 shadow-lg' 
+                      : 'border-gray-200 hover:shadow-md bg-white hover:border-blue-300'
                   }`} 
                   onClick={() => setActiveService(index)}
                 >
-                  <div className={`flex items-start gap-6 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <div className={`p-4 rounded-xl transition-all duration-300 ${
+                  <div className={`flex items-center gap-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                    <div className={`p-3 rounded-lg transition-all duration-300 ${
                       activeService === index 
-                        ? 'bg-blue-900 text-white scale-110' 
+                        ? 'bg-blue-900 text-white' 
                         : 'bg-gray-100 text-gray-600 group-hover:bg-blue-100 group-hover:text-blue-900'
                     }`}>
                       {service.icon}
                     </div>
                     <div className="flex-1">
-                      <h3 className={`text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-blue-900 transition-colors ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                      <h3 className={`text-lg font-bold text-gray-900 group-hover:text-blue-900 transition-colors ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
                         {service.title}
                       </h3>
-                      <p className={`text-gray-600 mb-6 leading-relaxed ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
-                        {service.description}
-                      </p>
-                      {activeService === index && (
-                        <div className="grid grid-cols-1 gap-3 animate-fadeIn">
-                          {service.features.map((feature, idx) => (
-                            <div key={idx} className={`flex items-center text-base text-blue-900 ${isRTL ? 'flex-row-reverse justify-end' : 'justify-start'}`}>
-                              {React.createElement(getFeatureIcon('check-circle'), { 
-                                className: `w-4 h-4 text-green-500 ${isRTL ? 'ms-2' : 'me-2'}` 
-                              })}
-                              <span className={`font-medium ${isRTL ? 'font-arabic' : ''}`}>{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="services-sticky-widget">
+            {/* services-sticky-widget */}
+            <div className=" mt-22">
               <div className={`bg-gradient-to-br ${services[activeService].color} rounded-3xl p-8 lg:p-10 text-white shadow-xl transform transition-all duration-300`}>
                 <div className="mb-8">
                   <div className="text-white mb-6 p-4 bg-white/10 rounded-2xl w-fit">
@@ -766,12 +752,19 @@ const JAAZLHomepage: React.FC = () => {
         
         /* Enhanced sticky widget for services section */
         .services-sticky-widget {
+          position: -webkit-sticky;
           position: sticky;
-          top: 2rem;
-          align-self: flex-start;
+          top: 50%;
+          transform: translateY(-50%);
           z-index: 10;
-          max-height: calc(100vh - 4rem);
-          overflow-y: auto;
+          height: fit-content;
+          will-change: transform;
+        }
+        
+        /* Ensure no parent breaks sticky */
+        #services .max-w-7xl,
+        #services .grid {
+          overflow: visible;
         }
         
         @media (max-width: 1024px) {
@@ -780,6 +773,13 @@ const JAAZLHomepage: React.FC = () => {
             top: auto;
             max-height: none;
             overflow-y: visible;
+          }
+        }
+        
+        /* Hide sticky widget on phone viewport */
+        @media (max-width: 767px) {
+          .services-sticky-widget {
+            display: none;
           }
         }
       `}</style>

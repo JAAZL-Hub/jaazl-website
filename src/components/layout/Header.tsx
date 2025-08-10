@@ -75,14 +75,14 @@ const Header: React.FC = () => {
           <div className="flex justify-between items-center h-16 sm:h-20">
             
             {/* Logo */}
-            <Link href="/" className="flex items-center group flex-shrink-0 relative overflow-hidden">
-              <div className="w-24 h-8 sm:w-32 sm:h-12 flex items-center justify-center group-hover:scale-105 transition-all duration-300 relative logo-container">
+            <Link href="/" className="flex items-center group flex-shrink-0 relative">
+              <div className="w-28 h-12 sm:w-40 sm:h-16 flex items-center justify-center group-hover:scale-105 transition-all duration-300 relative logo-container">
                 <Image 
                   src="/images/JAAZL-Logo.svg" 
                   alt="JAAZL Logo" 
-                  width={128} 
-                  height={48} 
-                  className={`object-contain transition-all duration-300 relative z-10 ${
+                  width={160} 
+                  height={64} 
+                  className={`object-contain w-full h-full transition-all duration-300 relative z-10 ${
                     scrolled 
                       ? 'brightness-100 contrast-100' 
                       : 'brightness-0 invert'

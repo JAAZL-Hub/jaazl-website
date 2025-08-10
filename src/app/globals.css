@@ -407,7 +407,9 @@ button, .btn, nav a {
   padding-right: 1.5rem;
   padding-left: 0;
 }
-
+.mt-22 {
+    margin-top: calc(var(--spacing) * 22);
+}
 /* Dropdown and Menu Positioning */
 [dir="rtl"] .absolute.left-0 {
   left: auto !important;

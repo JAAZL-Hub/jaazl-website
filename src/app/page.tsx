@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://jaazl.com'),
+  metadataBase: new URL(process.env.NODE_ENV === 'production' ? 'https://jaazl.com' : 'http://localhost:3000'),
   alternates: {
     canonical: '/',
     languages: {
