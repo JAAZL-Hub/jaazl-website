@@ -328,7 +328,7 @@ const JAAZLHomepage: React.FC = () => {
               ))}
             </div>
             {/* services-sticky-widget */}
-            <div className=" mt-22">
+            <div className=" mt-10">
               <div className={`bg-gradient-to-br ${services[activeService].color} rounded-3xl p-8 lg:p-10 text-white shadow-xl transform transition-all duration-300`}>
                 <div className="mb-8">
                   <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
