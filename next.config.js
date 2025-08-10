@@ -9,6 +9,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.jsdelivr.net',
+        port: '',
+        pathname: '/**',
+      },
     ],
     // Enable modern formats for better performance
     formats: ['image/webp', 'image/avif'],
@@ -20,6 +26,9 @@ const nextConfig = {
     domains: ['localhost', 'jaazl.com', 'www.jaazl.com'],
     // Use unoptimized for static export compatibility
     unoptimized: true,
+    // Loader configuration for CDN
+    loader: process.env.NODE_ENV === 'production' ? 'custom' : 'default',
+    loaderFile: process.env.NODE_ENV === 'production' ? './src/utils/imageLoader.js' : undefined,
   },
 
   // Performance Optimizations

@@ -17,6 +17,7 @@ interface OptimizedImageProps {
   blurDataURL?: string;
   loading?: 'lazy' | 'eager';
   style?: React.CSSProperties;
+  fetchPriority?: 'high' | 'low' | 'auto';
 }
 
 // Generate a simple blur placeholder
@@ -52,7 +53,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 85,
   placeholder = 'blur',
   blurDataURL,
-  loading,
+  loading = 'lazy', // Default to lazy loading for better performance
+  fetchPriority = 'auto',
   style,
   ...props
 }) => {
@@ -99,6 +101,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       blurDataURL: finalBlurDataURL 
     }),
     ...(loading && { loading }),
+    ...(fetchPriority && { fetchPriority }),
     ...props,
   };
 

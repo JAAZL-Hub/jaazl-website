@@ -107,7 +107,7 @@ const Header: React.FC = () => {
                 className="relative group"
               >
                 <DropdownLink href="/services" scrolled={scrolled} pathname={pathname}>
-                  {language === 'en' ? 'Services' : 'الخدمات'}
+                  {language === 'en' ? 'Products & Services' : 'المنتجات والخدمات'}
                 </DropdownLink>
                 
                 <ServicesMegaMenu isOpen={isServicesDropdownOpen} scrolled={scrolled} />

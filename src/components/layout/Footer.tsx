@@ -8,17 +8,25 @@ import {
   getSocialIcon,
   getNavigationIcon,
   getContactIcon,
-
+  getMiscIcon,
 } from '@/utils/iconMapping';
 
 const Footer: React.FC = () => {
   const { language, toggleLanguage } = useLanguage();
 
-  const servicesLinks = [
-    { text: { en: 'Zero Liquid Discharge', ar: 'التفريغ السائل الصفري' }, path: '/services/zero-liquid-discharge' },
-    { text: { en: 'Specialized Chemicals', ar: 'المواد الكيميائية المتخصصة' }, path: '/services/specialized-chemicals' },
-    { text: { en: 'Engineering Consulting', ar: 'الاستشارات الهندسية' }, path: '/services/engineering-consulting' },
-    { text: { en: 'AI & Automation', ar: 'الذكاء الاصطناعي والأتمتة' }, path: '/services/ai-automation' },
+  const productsServicesLinks = [
+    { text: { en: 'Water & Wastewater Treatment', ar: 'معالجة المياه ومياه الصرف' }, path: '/services#water' },
+    { text: { en: 'Specialty & Bulk Chemicals', ar: 'المواد الكيميائية المتخصصة والسائبة' }, path: '/services#chemical' },
+    { text: { en: 'Technical Consultancy & AI', ar: 'الاستشارات التقنية والذكاء الاصطناعي' }, path: '/services#consulting' },
+    { text: { en: 'Digital Technologies & Automation', ar: 'التقنيات الرقمية والأتمتة' }, path: '/services#technologies' },
+    { text: { en: 'Material Supplies', ar: 'توريد المواد' }, path: '/services#material' },
+    { text: { en: 'Electromechanical Services', ar: 'الخدمات الكهروميكانيكية' }, path: '/services#electromech' },
+  ];
+
+  const specializedInLinks = [
+    { text: { en: 'Water & Wastewater Treatment', ar: 'معالجة المياه ومياه الصرف' }, path: '/services/#water' },
+    { text: { en: 'Specialty & Bulk Chemicals', ar: 'المواد الكيميائية المتخصصة والسائبة' }, path: '/services/#chemical' },
+    { text: { en: 'Technical Consultancy & AI', ar: 'الاستشارات التقنية والذكاء الاصطناعي' }, path: '/services/#consulting' },
   ];
 
   const industriesLinks = [
@@ -72,15 +80,29 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Products & Services */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-orange-400">{language === 'en' ? 'Services' : 'الخدمات'}</h4>
-            <ul className="space-y-3">
-              {servicesLinks.map((link, index) => (
+            <h4 className="text-lg font-bold mb-6 text-orange-400">{language === 'en' ? 'Products & Services' : 'المنتجات والخدمات'}</h4>
+            <ul className="space-y-3 mb-6">
+              {productsServicesLinks.map((link, index) => (
                 <li key={index}>
                   <Link href={link.path} className={`text-gray-400 hover:text-white transition-colors duration-300 flex items-center group ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
                     {React.createElement(getNavigationIcon(language === 'ar' ? 'arrow-left' : 'arrow-right'), { 
                       className: `w-4 h-4 mx-2 transition-transform ${language === 'ar' ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'}` 
+                    })}
+                    {link.text[language]}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            
+            <h5 className="text-sm font-semibold mb-3 text-blue-300 uppercase tracking-wider">{language === 'en' ? 'Specialized In' : 'متخصصون في'}</h5>
+            <ul className="space-y-2">
+              {specializedInLinks.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.path} className={`text-gray-500 hover:text-gray-300 text-sm transition-colors duration-300 flex items-center group ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                    {React.createElement(getNavigationIcon(language === 'ar' ? 'arrow-left' : 'arrow-right'), { 
+                      className: `w-3 h-3 mx-2 transition-transform ${language === 'ar' ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'}` 
                     })}
                     {link.text[language]}
                   </Link>
@@ -147,7 +169,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <div className={`flex items-center justify-center ${language === 'ar' ? 'md:justify-end md:flex-row-reverse' : 'md:justify-start'}`}>
-              {React.createElement(getContactIcon('map-pin'), { className: "w-6 h-6 mx-3 text-orange-400" })}
+              {React.createElement(getMiscIcon('map-pin'), { className: "w-6 h-6 mx-3 text-orange-400" })}
               <div className={language === 'ar' ? 'text-right' : 'text-left'}>
                 <div className="font-semibold">{language === 'en' ? 'Our Office' : 'مكتبنا'}</div>
                 <p className="text-gray-400">{language === 'en' ? 'Jubail Industrial Area 1' : 'الجبيل الصناعية ١'}</p>

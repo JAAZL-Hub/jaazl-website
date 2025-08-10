@@ -77,14 +77,14 @@ These systems not only ensure environmental compliance but also provide signific
     },
     meta: {
       title: {
-        en: 'Zero Liquid Discharge Systems | JAAZL',
-        ar: 'أنظمة التفريغ السائل الصفري | جازل'
+        en: 'Zero Liquid Discharge Systems | JAAZL Industrial Solutions',
+        ar: 'أنظمة التفريغ السائل الصفري | حلول جازل الصناعية'
       },
       description: {
-        en: 'Advanced ZLD systems for complete wastewater treatment, maximum water recovery, and zero environmental discharge.',
-        ar: 'أنظمة ZLD متقدمة لمعالجة مياه الصرف الكاملة وأقصى استعادة للمياه وتفريغ بيئي صفري.'
+        en: 'Leading ZLD systems in Saudi Arabia\'s Eastern Province. Complete wastewater treatment, 95% water recovery, zero environmental discharge. Serving Jubail, Dammam, Khobar petrochemical & oil gas industries.',
+        ar: 'أنظمة ZLD رائدة في المنطقة الشرقية بالسعودية. معالجة مياه الصرف الكاملة، استعادة 95% من المياه، تفريغ بيئي صفري. خدمة الجبيل والدمام والخبر للصناعات البتروكيماوية والنفط والغاز.'
       },
-      keywords: ['zero liquid discharge', 'wastewater treatment', 'water recovery']
+      keywords: ['zero liquid discharge', 'ZLD systems Saudi Arabia', 'wastewater treatment Jubail', 'water recovery Dammam', 'petrochemical wastewater', 'oil gas water treatment', 'أنظمة التفريغ السائل الصفري', 'معالجة مياه الصرف السعودية', 'استعادة المياه الجبيل', 'معالجة مياه البتروكيماويات']
     },
     relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'power', 'manufacturing', 'mining', 'fertilizers', 'municipal']
   },
@@ -155,14 +155,14 @@ These systems not only ensure environmental compliance but also provide signific
     },
     meta: {
       title: {
-        en: 'Industrial Waste Management Services | JAAZL',
-        ar: 'خدمات إدارة النفايات الصناعية | جازل'
+        en: 'Industrial Waste Management Services | JAAZL Eastern Province',
+        ar: 'خدمات إدارة النفايات الصناعية | جازل المنطقة الشرقية'
       },
       description: {
-        en: 'Comprehensive industrial waste management solutions for safe treatment, disposal, and regulatory compliance.',
-        ar: 'حلول شاملة لإدارة النفايات الصناعية للمعالجة الآمنة والتخلص والامتثال التنظيمي.'
+        en: 'Expert industrial waste management in Saudi Arabia. Safe treatment, disposal & regulatory compliance for petrochemical, oil & gas industries. Licensed waste management in Jubail, Dammam, Khobar.',
+        ar: 'إدارة نفايات صناعية خبيرة في السعودية. معالجة آمنة وتخلص وامتثال تنظيمي لصناعات البتروكيماويات والنفط والغاز. إدارة نفايات مرخصة في الجبيل والدمام والخبر.'
       },
-      keywords: ['waste management', 'industrial waste', 'hazardous waste']
+      keywords: ['industrial waste management Saudi Arabia', 'hazardous waste disposal Jubail', 'waste treatment Eastern Province', 'petrochemical waste management', 'oil gas waste disposal', 'إدارة النفايات الصناعية السعودية', 'تخلص النفايات الخطرة الجبيل', 'معالجة النفايات المنطقة الشرقية']
     },
     relatedIndustries: ['petrochemicals', 'manufacturing', 'oil-gas', 'refineries', 'mining', 'fertilizers', 'power', 'municipal', 'food-beverages']
   },
@@ -549,14 +549,14 @@ These systems not only ensure environmental compliance but also provide signific
     },
     meta: {
       title: {
-        en: 'Industrial Engineering Consulting Services | JAAZL',
-        ar: 'خدمات استشارات الهندسة الصناعية | جازل'
+        en: 'Industrial Engineering Consulting | JAAZL Technical Solutions',
+        ar: 'استشارات الهندسة الصناعية | حلول جازل التقنية'
       },
       description: {
-        en: 'Expert industrial engineering consulting to optimize operations and improve efficiency.',
-        ar: 'استشارات هندسية صناعية متخصصة لتحسين العمليات وزيادة الكفاءة.'
+        en: 'Leading industrial engineering consulting in Saudi Arabia. Process optimization, reliability engineering, AI solutions for oil & gas, petrochemicals. Expert consulting services in Jubail, Dammam.',
+        ar: 'استشارات هندسية صناعية رائدة في السعودية. تحسين العمليات، هندسة الموثوقية، حلول الذكاء الاصطناعي للنفط والغاز والبتروكيماويات. خدمات استشارية خبيرة في الجبيل والدمام.'
       },
-      keywords: ['industrial engineering', 'consulting', 'process optimization']
+      keywords: ['industrial engineering consulting Saudi Arabia', 'process optimization Jubail', 'reliability engineering Eastern Province', 'AI solutions petrochemicals', 'technical consulting oil gas', 'استشارات الهندسة الصناعية السعودية', 'تحسين العمليات الجبيل', 'الاستشارات التقنية المنطقة الشرقية']
     },
     relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'power', 'mining', 'manufacturing', 'fertilizers']
   },

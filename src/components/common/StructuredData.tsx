@@ -8,10 +8,10 @@ export const OrganizationSchema = () => {
   
   const organizationData = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': ['Organization', 'Corporation'],
     '@id': 'https://jaazl.com/#organization',
     name: 'JAAZL Industrial Company',
-    alternateName: ['JAAZL', 'JAAZL Industrial', 'جعازل للشركة الصناعية'],
+    alternateName: ['JAAZL', 'JAAZL Industrial', 'جازل الشركة الصناعية', 'شركة جازل الصناعية'],
     url: 'https://jaazl.com',
     logo: 'https://jaazl.com/images/JAAZL-Logo.svg',
     image: 'https://jaazl.com/images/company-hero.jpg',
@@ -22,6 +22,9 @@ export const OrganizationSchema = () => {
     industry: language === 'ar' ? 'الحلول الصناعية' : 'Industrial Solutions',
     numberOfEmployees: '50-100',
     knowsLanguage: ['en', 'ar'],
+    keywords: language === 'ar' 
+      ? ['الحلول الصناعية', 'استشارات هندسية', 'معالجة المياه', 'مواد كيميائية', 'خدمات كهروميكانيكية', 'الجبيل', 'الدمام', 'الخبر', 'الظهران', 'المنطقة الشرقية', 'السعودية', 'صناعة النفط والغاز', 'البتروكيماويات', 'المصافي', 'التعدين']
+      : ['Industrial Solutions', 'Engineering Consulting', 'Water Treatment', 'Chemicals', 'Electromechanical Services', 'Jubail', 'Dammam', 'Khobar', 'Dhahran', 'Eastern Province', 'Saudi Arabia', 'Oil Gas Industry', 'Petrochemicals', 'Refineries', 'Mining'],
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Jubail Industrial Area 1',

@@ -226,22 +226,13 @@ const JAAZLHomepage: React.FC = () => {
                   className={`group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:from-orange-600 hover:to-orange-700 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center ${isRTL ? 'flex-row-reverse font-arabic' : ''}`}
                   aria-label={language === 'en' ? 'Request consultation' : 'اطلب استشارة'}
                 >
-                  {React.createElement(getContactIcon('message-circle'), { 
-                    className: `w-5 h-5 group-hover:scale-110 transition-transform ${isRTL ? 'ms-3' : 'me-3'}` 
-                  })}
                   {language === 'en' ? 'Request Consultation' : 'اطلب استشارة'}
-                  {React.createElement(getNavigationIcon(isRTL ? 'arrow-left' : 'arrow-right'), { 
-                    className: `w-5 h-5 transition-transform ${isRTL ? 'me-3 group-hover:-translate-x-1' : 'ms-3 group-hover:translate-x-1'}` 
-                  })}
                 </Link>
                 <Link 
                   href="#services" 
                   className={`group border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex items-center justify-center ${isRTL ? 'flex-row-reverse font-arabic' : ''}`}
                   aria-label={language === 'en' ? 'Learn more about services' : 'اعرف المزيد عن الخدمات'}
                 >
-                  {React.createElement(getMiscIcon('circle-ellipsis'), { 
-                    className: `w-5 h-5 group-hover:scale-110 transition-transform ${isRTL ? 'ms-3' : 'me-3'}` 
-                  })}
                   {language === 'en' ? 'Learn More' : 'اعرف المزيد'}
                 </Link>
               </div>
@@ -263,9 +254,6 @@ const JAAZLHomepage: React.FC = () => {
                         onClick={() => setActiveService(index)}
                         aria-label={`Select ${service.title} service`}
                       >
-                        <div className="text-white mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">
-                          {service.icon}
-                        </div>
                         <p className={`text-[10px] lg:text-xs font-semibold text-white leading-tight ${isRTL ? 'font-arabic' : ''}`}>
                           {service.title}
                         </p>
@@ -329,14 +317,7 @@ const JAAZLHomepage: React.FC = () => {
                   }`} 
                   onClick={() => setActiveService(index)}
                 >
-                  <div className={`flex items-center gap-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <div className={`p-3 rounded-lg transition-all duration-300 ${
-                      activeService === index 
-                        ? 'bg-blue-900 text-white' 
-                        : 'bg-gray-100 text-gray-600 group-hover:bg-blue-100 group-hover:text-blue-900'
-                    }`}>
-                      {service.icon}
-                    </div>
+                  <div className={`flex items-center ${isRTL ? 'flex-row-reverse' : ''}`}>
                     <div className="flex-1">
                       <h3 className={`text-lg font-bold text-gray-900 group-hover:text-blue-900 transition-colors ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
                         {service.title}
@@ -350,9 +331,6 @@ const JAAZLHomepage: React.FC = () => {
             <div className=" mt-22">
               <div className={`bg-gradient-to-br ${services[activeService].color} rounded-3xl p-8 lg:p-10 text-white shadow-xl transform transition-all duration-300`}>
                 <div className="mb-8">
-                  <div className="text-white mb-6 p-4 bg-white/10 rounded-2xl w-fit">
-                    {services[activeService].icon}
-                  </div>
                   <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
                     {services[activeService].title}
                   </h3>
@@ -363,9 +341,6 @@ const JAAZLHomepage: React.FC = () => {
                 <div className="space-y-4 mb-8">
                   {services[activeService].features.map((feature, index) => (
                     <div key={index} className={`flex items-center group ${isRTL ? 'flex-row-reverse justify-end' : 'justify-start'}`}>
-                      {React.createElement(getFeatureIcon('check-circle'), { 
-                        className: `w-6 h-6 text-white group-hover:scale-110 transition-transform ${isRTL ? 'ms-4' : 'me-4'}` 
-                      })}
                       <span className={`text-xl font-medium ${isRTL ? 'font-arabic' : ''}`}>{feature}</span>
                     </div>
                   ))}
@@ -376,21 +351,15 @@ const JAAZLHomepage: React.FC = () => {
                     className={`bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center group ${isRTL ? 'flex-row-reverse font-arabic' : ''}`}
                   >
                     {language === 'en' ? 'Learn More' : 'اعرف المزيد'}
-                    {React.createElement(getNavigationIcon(isRTL ? 'arrow-left' : 'arrow-right'), { 
-                      className: `w-5 h-5 transition-transform ${isRTL ? 'me-2 group-hover:-translate-x-1' : 'ms-2 group-hover:translate-x-1'}` 
-                    })}
                   </Link>
                   <a 
-                    href="/Docs/JAAZL Industrial Corporate.pdf" 
-                    download="JAAZL Industrial Corporate.pdf"
+                    href="/Docs/JAAZL Profile.pdf" 
+                    download="JAAZL Profile.pdf"
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className={`border border-white/30 hover:bg-white/10 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center ${isRTL ? 'flex-row-reverse font-arabic' : ''}`}
                   >
-                    {React.createElement(getMiscIcon('download'), { 
-                      className: `w-5 h-5 ${isRTL ? 'ms-2' : 'me-2'}` 
-                    })}
-                    {language === 'en' ? 'Brochure' : 'الكتيب'}
+                    {language === 'en' ? 'Profile' : 'ملف الشركة'}
                   </a>
                 </div>
               </div>
@@ -569,14 +538,11 @@ const JAAZLHomepage: React.FC = () => {
                 })}
               </Link>
               <a 
-                href="/docs/JAAZL-Profile.pdf" 
+                href="/Docs/JAAZL Profile.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className={`group border-2 border-white/30 hover:border-white text-white px-10 py-5 rounded-2xl font-bold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex items-center justify-center text-xl ${isRTL ? 'flex-row-reverse font-arabic' : ''}`}
               >
-                {React.createElement(getMiscIcon('download'), { 
-                  className: `w-6 h-6 group-hover:scale-110 transition-transform ${isRTL ? 'ms-3' : 'me-3'}` 
-                })}
                 {language === 'en' ? "Download Company Profile" : "تحميل ملف الشركة"}
               </a>
             </div>
@@ -609,7 +575,7 @@ const JAAZLHomepage: React.FC = () => {
                   </div>
                 </div>
                 <div className={`flex items-center justify-center ${isRTL ? 'md:justify-end md:flex-row-reverse' : 'md:justify-start'}`}>
-                  {React.createElement(getContactIcon('map-pin'), { 
+                  {React.createElement(getMiscIcon('map-pin'), { 
                     className: `w-6 h-6 text-yellow-300 ${isRTL ? 'ms-3' : 'me-3'}` 
                   })}
                   <div className={isRTL ? 'text-right' : 'text-left'}>
