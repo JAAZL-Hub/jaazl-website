@@ -47,8 +47,9 @@ class ErrorBoundary extends Component<Props, State> {
     });
 
     // Report to error reporting service (if available)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
+    const windowWithGtag = window as any;
+    if (typeof window !== 'undefined' && windowWithGtag.gtag) {
+      windowWithGtag.gtag('event', 'exception', {
         description: error.message,
         fatal: false,
       });

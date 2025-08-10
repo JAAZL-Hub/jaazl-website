@@ -38,12 +38,13 @@ interface PerformanceMetrics {
   scrollLatency?: number[];
 }
 
-interface PerformanceEntry {
-  name: string;
-  entryType: string;
-  startTime: number;
-  duration: number;
+interface NetworkInformation {
+  type?: string;
+  effectiveType?: string;
+  downlink?: number;
+  rtt?: number;
 }
+
 
 class AdvancedPerformanceTracker {
   private metrics: PerformanceMetrics = {};
@@ -93,7 +94,7 @@ class AdvancedPerformanceTracker {
       // Observe navigation timing
       const navigationObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          this.handleNavigationMetric(entry);
+          this.handleNavigationMetric(entry as PerformanceNavigationTiming);
         }
       });
 
@@ -105,31 +106,33 @@ class AdvancedPerformanceTracker {
     }
   }
 
-  private handleVitalMetric(entry: any) {
+  private handleVitalMetric(entry: PerformanceEntry) {
     switch (entry.entryType) {
       case 'largest-contentful-paint':
         this.metrics.lcp = entry.startTime;
         break;
       case 'first-input':
-        this.metrics.fid = entry.processingStart - entry.startTime;
+        const fidEntry = entry as PerformanceEntry & { processingStart: number };
+        this.metrics.fid = fidEntry.processingStart - entry.startTime;
         break;
       case 'layout-shift':
-        if (!entry.hadRecentInput) {
-          this.metrics.cls = (this.metrics.cls || 0) + entry.value;
+        const clsEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
+        if (!clsEntry.hadRecentInput) {
+          this.metrics.cls = (this.metrics.cls || 0) + clsEntry.value;
         }
         break;
     }
     this.reportMetrics();
   }
 
-  private handlePaintMetric(entry: any) {
+  private handlePaintMetric(entry: PerformanceEntry) {
     if (entry.name === 'first-contentful-paint') {
       this.metrics.fcp = entry.startTime;
     }
     this.reportMetrics();
   }
 
-  private handleNavigationMetric(entry: any) {
+  private handleNavigationMetric(entry: PerformanceNavigationTiming) {
     this.metrics.ttfb = entry.responseStart - entry.requestStart;
     this.metrics.loadTime = entry.loadEventEnd - entry.loadEventStart;
     this.metrics.domContentLoaded = entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
@@ -167,9 +170,13 @@ class AdvancedPerformanceTracker {
   private trackNetworkInformation() {
     if (typeof window === 'undefined') return;
 
-    const connection = (navigator as any).connection || 
-                      (navigator as any).mozConnection || 
-                      (navigator as any).webkitConnection;
+    const connection = (navigator as Navigator & { 
+      connection?: NetworkInformation; 
+      mozConnection?: NetworkInformation; 
+      webkitConnection?: NetworkInformation; 
+    }).connection || 
+    (navigator as Navigator & { mozConnection?: NetworkInformation }).mozConnection || 
+    (navigator as Navigator & { webkitConnection?: NetworkInformation }).webkitConnection;
 
     if (connection) {
       this.metrics.connectionType = connection.type;
@@ -181,7 +188,7 @@ class AdvancedPerformanceTracker {
   private trackDeviceInformation() {
     if (typeof window === 'undefined') return;
 
-    this.metrics.deviceMemory = (navigator as any).deviceMemory;
+    this.metrics.deviceMemory = (navigator as Navigator & { deviceMemory?: number }).deviceMemory;
     this.metrics.hardwareConcurrency = navigator.hardwareConcurrency;
   }
 
@@ -192,7 +199,7 @@ class AdvancedPerformanceTracker {
     const scrollLatencies: number[] = [];
 
     // Track click interactions
-    document.addEventListener('click', (event) => {
+    document.addEventListener('click', () => {
       const startTime = performance.now();
       requestAnimationFrame(() => {
         const latency = performance.now() - startTime;
@@ -238,10 +245,11 @@ class AdvancedPerformanceTracker {
     if (typeof window === 'undefined') return;
 
     // Google Analytics 4
-    if ((window as any).gtag) {
+    const windowWithGtag = window as any;
+    if (windowWithGtag.gtag) {
       Object.entries(this.metrics).forEach(([key, value]) => {
         if (typeof value === 'number' && !isNaN(value)) {
-          (window as any).gtag('event', 'performance_metric', {
+          windowWithGtag.gtag('event', 'performance_metric', {
             metric_name: key,
             metric_value: Math.round(value),
             page_path: window.location.pathname,
@@ -255,8 +263,9 @@ class AdvancedPerformanceTracker {
     // Report to external performance monitoring service
     // This could be Sentry, LogRocket, DataDog, etc.
     
-    if (typeof window !== 'undefined' && (window as any).performanceMonitoringService) {
-      (window as any).performanceMonitoringService.track('performance_metrics', {
+    const windowWithService = window as any;
+    if (typeof window !== 'undefined' && windowWithService.performanceMonitoringService) {
+      windowWithService.performanceMonitoringService.track('performance_metrics', {
         ...this.metrics,
         url: window.location.href,
         timestamp: Date.now(),
@@ -360,8 +369,9 @@ export const trackCustomMetric = (name: string, value: number, unit: string = 'm
   if (typeof window === 'undefined') return;
 
   // Report to analytics
-  if ((window as any).gtag) {
-    (window as any).gtag('event', 'custom_performance_metric', {
+  const windowWithGtag = window as any;
+  if (windowWithGtag.gtag) {
+    windowWithGtag.gtag('event', 'custom_performance_metric', {
       metric_name: name,
       metric_value: Math.round(value),
       metric_unit: unit,

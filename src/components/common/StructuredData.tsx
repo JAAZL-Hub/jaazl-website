@@ -175,7 +175,6 @@ export const OrganizationSchema = () => {
 
 // Local Business Schema
 export const LocalBusinessSchema = () => {
-  const { language } = useLanguage();
 
   const localBusinessData = {
     '@context': 'https://schema.org',
@@ -271,7 +270,6 @@ export const WebsiteSchema = () => {
 
 // Industry-specific Schema
 export const IndustrySchema = ({ industry }: { industry: string }) => {
-  const { language } = useLanguage();
 
   const industryData = {
     '@context': 'https://schema.org',
@@ -303,7 +301,6 @@ export const IndustrySchema = ({ industry }: { industry: string }) => {
 
 // Service-specific Schema
 export const ServiceSchema = ({ service }: { service: string }) => {
-  const { language } = useLanguage();
 
   const serviceData = {
     '@context': 'https://schema.org',

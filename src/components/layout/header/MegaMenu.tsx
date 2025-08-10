@@ -74,7 +74,7 @@ interface ServicesMegaMenuProps {
   scrolled: boolean;
 }
 
-export const ServicesMegaMenu: React.FC<ServicesMegaMenuProps> = ({ isOpen, scrolled }) => {
+export const ServicesMegaMenu: React.FC<ServicesMegaMenuProps> = ({ isOpen }) => {
   const { language } = useLanguage();
   const isRTL = language === 'ar';
 
@@ -140,7 +140,7 @@ interface IndustriesMegaMenuProps {
   scrolled: boolean;
 }
 
-export const IndustriesMegaMenu: React.FC<IndustriesMegaMenuProps> = ({ isOpen, scrolled }) => {
+export const IndustriesMegaMenu: React.FC<IndustriesMegaMenuProps> = ({ isOpen }) => {
   const { language } = useLanguage();
   const isRTL = language === 'ar';
 

@@ -284,16 +284,6 @@ const JAAZLHomepage: React.FC = () => {
                     <p className={`text-blue-100 text-xs lg:text-sm mb-3 lg:mb-4 leading-relaxed ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
                       {services[activeService].description}
                     </p>
-                    {/* <div className="grid grid-cols-1 gap-2">
-                      {services[activeService].features.map((feature, idx) => (
-                        <div key={idx} className={`flex items-center text-xs lg:text-sm text-blue-200 ${isRTL ? 'flex-row-reverse justify-end' : 'justify-start'}`}>
-                          {React.createElement(getFeatureIcon('check-circle'), { 
-                            className: `w-3 h-3 text-green-400 ${isRTL ? 'ms-2' : 'me-2'}` 
-                          })}
-                          <span className={isRTL ? 'font-arabic' : ''}>{feature}</span>
-                        </div>
-                      ))}
-                    </div> */}
                   </div>
                 </div>
                 <div 
@@ -668,7 +658,9 @@ const JAAZLHomepage: React.FC = () => {
             font-size: 1.25rem;
           }
         }
-        
+        .mt-22 {
+          margin-top: calc(var(--spacing) * 22);
+        }
         @media (min-width: 1024px) {
           .hero-heading {
             font-size: 4.5rem;

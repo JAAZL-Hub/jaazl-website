@@ -15,12 +15,11 @@ export const MobileHeader: React.FC<MobileHeaderProps> = ({
   logo,
   className = ''
 }) => {
-  const { language, setLanguage } = useLanguage();
+  const { language, changeLanguage } = useLanguage();
   const isRTL = language === 'ar';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const { scrollY } = useScroll();
   const headerRef = useRef<HTMLElement>(null);
 
@@ -40,7 +39,6 @@ export const MobileHeader: React.FC<MobileHeaderProps> = ({
     
     // Add background when scrolled
     setIsScrolled(latest > 20);
-    setLastScrollY(latest);
   });
 
   // Close mobile menu when clicking outside
@@ -107,7 +105,7 @@ export const MobileHeader: React.FC<MobileHeaderProps> = ({
   ];
 
   const handleLanguageToggle = () => {
-    setLanguage(language === 'en' ? 'ar' : 'en');
+    changeLanguage(language === 'en' ? 'ar' : 'en');
     
     // Haptic feedback on mobile
     if ('vibrate' in navigator) {
@@ -300,7 +298,6 @@ export const MobileHeader: React.FC<MobileHeaderProps> = ({
             <TouchButton
               variant="primary"
               size="lg"
-              fullWidth
               onClick={() => {
                 setMobileMenuOpen(false);
                 // Handle CTA action
