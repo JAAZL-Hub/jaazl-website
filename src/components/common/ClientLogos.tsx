@@ -4,13 +4,13 @@ import React from 'react';
 import OptimizedImage from './OptimizedImage';
 
 const clients = [
-  { name: "SABIC", nameArabic: "سابك", logo: "/images/clients/sabic-logo.png", logoAlt: "SABIC Logo" },
-  { name: "Aramco", nameArabic: "أرامكو", logo: "/images/clients/aramco-logo.png", logoAlt: "Saudi Aramco Logo" },
-  { name: "Ma'aden", nameArabic: "معادن", logo: "/images/clients/maaden-logo.png", logoAlt: "Ma'aden Logo" },
-  { name: "NEOM", nameArabic: "نيوم", logo: "/images/clients/neom-logo.png", logoAlt: "NEOM Logo" },
-  { name: "SATORP", nameArabic: "ساتورب", logo: "/images/clients/satorp-logo.png", logoAlt: "SATORP Logo" },
-  { name: "Advanced", nameArabic: "المتقدمة", logo: "/images/clients/advanced-logo.png", logoAlt: "Advanced Logo" },
-  { name: "Tasnee", nameArabic: "تصنيع", logo: "/images/clients/tasnee-logo.png", logoAlt: "Tasnee Logo" }
+  { name: "SABIC", nameArabic: "سابك", logo: "/images/clients/sabic-logo.webp", logoAlt: "SABIC Logo" },
+  { name: "Aramco", nameArabic: "أرامكو", logo: "/images/clients/aramco-logo.webp", logoAlt: "Saudi Aramco Logo" },
+  { name: "Ma'aden", nameArabic: "معادن", logo: "/images/clients/maaden-logo.webp", logoAlt: "Ma'aden Logo" },
+  { name: "NEOM", nameArabic: "نيوم", logo: "/images/clients/neom-logo.webp", logoAlt: "NEOM Logo" },
+  { name: "SATORP", nameArabic: "ساتورب", logo: "/images/clients/satorp-logo.webp", logoAlt: "SATORP Logo" },
+  { name: "Advanced", nameArabic: "المتقدمة", logo: "/images/clients/advanced-logo.webp", logoAlt: "Advanced Logo" },
+  { name: "Tasnee", nameArabic: "تصنيع", logo: "/images/clients/tasnee-logo.webp", logoAlt: "Tasnee Logo" }
 ];
 
 const ClientLogos: React.FC = () => {

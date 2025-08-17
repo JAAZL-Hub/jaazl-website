@@ -123,7 +123,7 @@ Together, we are building the industrial foundation for Saudi Arabia's sustainab
     },
     image: {
       id: 'ahmad-alghamdi-image',
-      url: '/images/team/Ahmad Alghamdi.jpg',
+      url: '/images/team/Ahmad Alghamdi.webp',
       altText: {
         en: 'Eng. Ahmad Alkhlaif, CEO & Chairman',
         ar: 'المهندس أحمد الخليف، الرئيس التنفيذي ورئيس مجلس الإدارة'
@@ -143,10 +143,10 @@ Together, we are building the industrial foundation for Saudi Arabia's sustainab
         en: 'Quality Management System certification, demonstrating our commitment to consistent quality and customer satisfaction.',
         ar: 'شهادة نظام إدارة الجودة، توضح التزامنا بالجودة المتسقة ورضا العملاء.'
       },
-      imageSrc: '/images/certificates/iso.png',
+      imageSrc: '/images/certificates/iso.webp',
       image: {
         id: 'iso-9001-image',
-        url: '/images/certificates/iso.png',
+        url: '/images/certificates/iso.webp',
         altText: {
           en: 'ISO 9001:2015 Certificate',
           ar: 'شهادة آيزو 9001:2015'
@@ -166,10 +166,10 @@ Together, we are building the industrial foundation for Saudi Arabia's sustainab
         en: 'Environmental Management System certification, reflecting our dedication to environmental responsibility.',
         ar: 'شهادة نظام الإدارة البيئية، تعكس تفانينا في المسؤولية البيئية.'
       },
-      imageSrc: '/images/certificates/iso.png',
+      imageSrc: '/images/certificates/iso.webp',
       image: {
         id: 'iso-14001-image',
-        url: '/images/certificates/iso.png',
+        url: '/images/certificates/iso.webp',
         altText: {
           en: 'ISO 14001 Certificate',
           ar: 'شهادة آيزو 14001'
@@ -189,10 +189,10 @@ Together, we are building the industrial foundation for Saudi Arabia's sustainab
         en: 'Occupational Health and Safety Management System certification, underscoring our priority on workplace safety.',
         ar: 'شهادة نظام إدارة الصحة والسلامة المهنية، تؤكد أولويتنا على سلامة مكان العمل.'
       },
-      imageSrc: '/images/certificates/iso.png',
+      imageSrc: '/images/certificates/iso.webp',
       image: {
         id: 'iso-45001-image',
-        url: '/images/certificates/iso.png',
+        url: '/images/certificates/iso.webp',
         altText: {
           en: 'ISO 45001:2018 Certificate',
           ar: 'شهادة آيزو 45001:2018'

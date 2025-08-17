@@ -13,13 +13,13 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 import '@splidejs/splide/css';
 
 const clients = [
-  { name: "SABIC", nameArabic: "سابك", logo: "/images/clients/sabic-logo.png", logoAlt: "SABIC Logo" },
-  { name: "Aramco", nameArabic: "أرامكو", logo: "/images/clients/aramco-logo.png", logoAlt: "Saudi Aramco Logo" },
-  { name: "Ma'aden", nameArabic: "معادن", logo: "/images/clients/maaden-logo.png", logoAlt: "Ma'aden Logo" },
-  { name: "NEOM", nameArabic: "نيوم", logo: "/images/clients/neom-logo.png", logoAlt: "NEOM Logo" },
-  { name: "SATORP", nameArabic: "ساتورب", logo: "/images/clients/satorp-logo.png", logoAlt: "SATORP Logo" },
-  { name: "Advanced", nameArabic: "المتقدمة", logo: "/images/clients/advanced-logo.png", logoAlt: "Advanced Logo" },
-  { name: "Tasnee", nameArabic: "تصنيع", logo: "/images/clients/tasnee-logo.png", logoAlt: "Tasnee Logo" }
+  { name: "SABIC", nameArabic: "سابك", logo: "/images/clients/sabic-logo.webp", logoAlt: "SABIC Logo" },
+  { name: "Aramco", nameArabic: "أرامكو", logo: "/images/clients/aramco-logo.webp", logoAlt: "Saudi Aramco Logo" },
+  { name: "Ma'aden", nameArabic: "معادن", logo: "/images/clients/maaden-logo.webp", logoAlt: "Ma'aden Logo" },
+  { name: "NEOM", nameArabic: "نيوم", logo: "/images/clients/neom-logo.webp", logoAlt: "NEOM Logo" },
+  { name: "SATORP", nameArabic: "ساتورب", logo: "/images/clients/satorp-logo.webp", logoAlt: "SATORP Logo" },
+  { name: "Advanced", nameArabic: "المتقدمة", logo: "/images/clients/advanced-logo.webp", logoAlt: "Advanced Logo" },
+  { name: "Tasnee", nameArabic: "تصنيع", logo: "/images/clients/tasnee-logo.webp", logoAlt: "Tasnee Logo" }
 ];
 
 const JAAZLHomepage: React.FC = () => {
@@ -81,7 +81,7 @@ const JAAZLHomepage: React.FC = () => {
       icon: React.createElement(getMiscIcon('cubes'), { className: "w-8 h-8" }),
       title: language === 'en' ? "Material Supplies" : "إمدادات المواد",
       description: language === 'en' ? "API & Aramco approved materials including pipes & fittings, valves & actuators, raw materials & metals, and storage & infrastructure solutions." : "مواد معتمدة من API وأرامكو تشمل الأنابيب والتجهيزات والصمامات والمحركات والمواد الخام والمعادن وحلول التخزين والبنية التحتية.",
-      features: language === 'en' ? ["API Approved Materials", "Pipes & Fittings", "Valves & Actuators"] : ["مواد معتمدة من API", "أنابيب وتجهيزات", "صمامات ومحركات"],
+      features: language === 'en' ? ["Prefabricated Tanks - FM & NFPA", "Pipes & Fittings", "Valves & Actuators"] : ["مواد معتمدة من API", "أنابيب وتجهيزات", "صمامات ومحركات"],
       color: "from-slate-600 to-gray-700",
       slug: 'api-materials'
     },
@@ -100,47 +100,47 @@ const JAAZLHomepage: React.FC = () => {
     { 
       icon: React.createElement(getIndustryIcon('droplet'), { className: "w-8 h-8" }), 
       name: {en: "Oil & Gas", ar: "النفط والغاز"}, 
-      projects: {en: "150+ Projects", ar: "150+ مشروع"} 
+      projects: {en: "40+ Projects", ar: "40+ مشروع"} 
     },
     { 
       icon: React.createElement(getIndustryIcon('factory'), { className: "w-8 h-8" }), 
       name: {en: "Petrochemicals", ar: "البتروكيماويات"}, 
-      projects: {en: "200+ Projects", ar: "200+ مشروع"} 
+      projects: {en: "40+ Projects", ar: "40+ مشروع"} 
     },
     { 
       icon: React.createElement(getIndustryIcon('filter'), { className: "w-8 h-8" }), 
       name: {en: "Refineries", ar: "المصافي"}, 
-      projects: {en: "80+ Projects", ar: "80+ مشروع"} 
+      projects: {en: "40+ Projects", ar: "40+ مشروع"} 
     },
     { 
       icon: React.createElement(getIndustryIcon('hammer'), { className: "w-8 h-8" }), 
       name: {en: "Mining & Minerals", ar: "التعدين والمعادن"}, 
-      projects: {en: "60+ Projects", ar: "60+ مشروع"} 
+      projects: {en: "20+ Projects", ar: "20+ مشروع"} 
     },
     { 
       icon: React.createElement(getIndustryIcon('seedling'), { className: "w-8 h-8" }), 
       name: {en: "Fertilizers", ar: "الأسمدة"}, 
-      projects: {en: "35+ Projects", ar: "35+ مشروع"} 
+      projects: {en: "20+ Projects", ar: "20+ مشروع"} 
     },
     { 
       icon: React.createElement(getIndustryIcon('power'), { className: "w-8 h-8" }), 
       name: {en: "Power & Electricity", ar: "الطاقة والكهرباء"}, 
-      projects: {en: "95+ Projects", ar: "95+ مشروع"} 
+      projects: {en: "20+ Projects", ar: "20+ مشروع"} 
     },
     { 
       icon: React.createElement(getMiscIcon('cog'), { className: "w-8 h-8" }), 
       name: {en: "Manufacturing", ar: "التصنيع"}, 
-      projects: {en: "75+ Projects", ar: "75+ مشروع"} 
+      projects: {en: "20+ Projects", ar: "20+ مشروع"} 
     },
     { 
       icon: React.createElement(getMiscIcon('utensils'), { className: "w-8 h-8" }), 
       name: {en: "Food & Beverages", ar: "الأغذية والمشروبات"}, 
-      projects: {en: "40+ Projects", ar: "40+ مشروع"} 
+      projects: {en: "15+ Projects", ar: "15+ مشروع"} 
     },
     { 
       icon: React.createElement(getIndustryIcon('building'), { className: "w-8 h-8" }), 
       name: {en: "Municipal", ar: "البلديات"}, 
-      projects: {en: "120+ Projects", ar: "120+ مشروع"} 
+      projects: {en: "15+ Projects", ar: "15+ مشروع"} 
     }
   ];
 

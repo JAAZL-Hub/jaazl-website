@@ -67,7 +67,7 @@ These systems not only ensure environmental compliance but also provide signific
     icon: 'droplet',
     image: {
       id: 'zld-image',
-      url: '/images/services/zero-liquid-discharge.jpg',
+      url: '/images/services/zero-liquid-discharge.webp',
       altText: {
         en: 'Zero liquid discharge system',
         ar: 'نظام التفريغ السائل الصفري'
@@ -145,7 +145,7 @@ These systems not only ensure environmental compliance but also provide signific
     icon: 'trash',
     image: {
       id: 'waste-management-image',
-      url: '/images/services/waste-management.jpg',
+      url: '/images/services/waste-management.webp',
       altText: {
         en: 'Industrial waste management',
         ar: 'إدارة النفايات الصناعية'
@@ -223,7 +223,7 @@ These systems not only ensure environmental compliance but also provide signific
     icon: 'droplet',
     image: {
       id: 'oily-water-treatment-image',
-      url: '/images/services/oily-water-treatment.jpg',
+      url: '/images/services/oily-water-treatment.webp',
       altText: {
         en: 'Oily water treatment system',
         ar: 'نظام معالجة المياه الزيتية'
@@ -266,12 +266,12 @@ These systems not only ensure environmental compliance but also provide signific
       {
         id: 'drilling-chemicals',
         title: {
-          en: 'Drilling Chemicals',
-          ar: 'كيماويات الحفر'
+          en: 'Specialty Chemicals',
+          ar: 'كيماويات المتخصصة'
         },
         description: {
-          en: 'Specialized chemicals for drilling operations and mud systems.',
-          ar: 'مواد كيميائية متخصصة لعمليات الحفر وأنظمة الطين.'
+          en: 'Specialized chemicals for water, process, fuel additives, drilling and mud systems.',
+          ar: 'مواد كيميائية متخصصة للماء، والمعالجة، ومشتقات الوقود لعمليات الحفر وأنظمة الطين.'
         },
         icon: 'drill'
       },
@@ -303,7 +303,7 @@ These systems not only ensure environmental compliance but also provide signific
     icon: 'flask',
     image: {
       id: 'specialized-chemicals-image',
-      url: '/images/services/specialized-chemicals.jpg',
+      url: '/images/services/specialized-chemicals.webp',
       altText: {
         en: 'Specialized industrial chemicals',
         ar: 'المواد الكيميائية الصناعية المتخصصة'
@@ -381,7 +381,7 @@ These systems not only ensure environmental compliance but also provide signific
     icon: 'package',
     image: {
       id: 'bulk-chemicals-image',
-      url: '/images/services/bulk-chemicals.jpg',
+      url: '/images/services/bulk-chemicals.webp',
       altText: {
         en: 'Bulk industrial chemicals supply',
         ar: 'توريد المواد الكيميائية الصناعية بالجملة'
@@ -459,7 +459,7 @@ These systems not only ensure environmental compliance but also provide signific
     icon: 'flask',
     image: {
       id: 'chemical-blending-image',
-      url: '/images/services/chemical-blending.jpg',
+      url: '/images/services/chemical-blending.webp',
       altText: {
         en: 'Chemical manufacturing and blending',
         ar: 'التصنيع والخلط الكيميائي'
@@ -539,7 +539,7 @@ These systems not only ensure environmental compliance but also provide signific
     icon: 'clipboard',
     image: {
       id: 'engineering-consulting-image',
-      url: '/images/services/engineering-consulting.jpg',
+      url: '/images/services/engineering-consulting.webp',
       altText: {
         en: 'Industrial engineering consultation',
         ar: 'استشارات الهندسة الصناعية'
@@ -625,7 +625,7 @@ Our PSM approach integrates international best practices with local regulatory r
     icon: 'shield',
     image: {
       id: 'process-safety-image',
-      url: '/images/services/process-safety.jpg',
+      url: '/images/services/process-safety.webp',
       altText: {
         en: 'Process safety management',
         ar: 'إدارة سلامة العمليات'
@@ -711,7 +711,7 @@ Our reliability solutions integrate with your existing maintenance management sy
     icon: 'trending-up',
     image: {
       id: 'reliability-engineering-image',
-      url: '/images/services/reliability-engineering.jpg',
+      url: '/images/services/reliability-engineering.webp',
       altText: {
         en: 'Reliability engineering',
         ar: 'هندسة الموثوقية'
@@ -791,7 +791,7 @@ Our reliability solutions integrate with your existing maintenance management sy
     icon: 'brain',
     image: {
       id: 'ai-automation-image',
-      url: '/images/services/ai-automation.jpg',
+      url: '/images/services/ai-automation.webp',
       altText: {
         en: 'AI and industrial automation',
         ar: 'الذكاء الاصطناعي والأتمتة الصناعية'
@@ -955,7 +955,7 @@ Our smart manufacturing approach combines cutting-edge technology with practical
     icon: 'building',
     image: {
       id: 'smart-manufacturing-image',
-      url: '/images/services/smart-manufacturing.jpg',
+      url: '/images/services/smart-manufacturing.webp',
       altText: {
         en: 'Smart manufacturing solutions',
         ar: 'حلول التصنيع الذكي'
@@ -1035,7 +1035,7 @@ Our smart manufacturing approach combines cutting-edge technology with practical
     icon: 'package',
     image: {
       id: 'api-materials-image',
-      url: '/images/services/api-materials.jpg',
+      url: '/images/services/api-materials.webp',
       altText: {
         en: 'API approved materials',
         ar: 'مواد معتمدة من API'
@@ -1113,7 +1113,7 @@ Our smart manufacturing approach combines cutting-edge technology with practical
     icon: 'circle',
     image: {
       id: 'pipes-fittings-image',
-      url: '/images/services/pipes-fittings.jpg',
+      url: '/images/services/pipes-fittings.webp',
       altText: {
         en: 'Industrial pipes and fittings',
         ar: 'أنابيب وتجهيزات صناعية'
@@ -1191,7 +1191,7 @@ Our smart manufacturing approach combines cutting-edge technology with practical
     icon: 'sliders',
     image: {
       id: 'valves-actuators-image',
-      url: '/images/services/valves-actuators.jpg',
+      url: '/images/services/valves-actuators.webp',
       altText: {
         en: 'Industrial valves and actuators',
         ar: 'صمامات ومحركات صناعية'
@@ -1271,7 +1271,7 @@ Our smart manufacturing approach combines cutting-edge technology with practical
     icon: 'zap',
     image: {
       id: 'electromechanical-systems-image',
-      url: '/images/services/electromechanical-systems.jpg',
+      url: '/images/services/electromechanical-systems.webp',
       altText: {
         en: 'Industrial electromechanical systems',
         ar: 'أنظمة كهروميكانيكية صناعية'
@@ -1349,7 +1349,7 @@ Our smart manufacturing approach combines cutting-edge technology with practical
     icon: 'refresh-cw',
     image: {
       id: 'shutdown-turnaround-image',
-      url: '/images/services/shutdown-turnaround.jpg',
+      url: '/images/services/shutdown-turnaround.webp',
       altText: {
         en: 'Shutdown and turnaround operations',
         ar: 'عمليات الإغلاق والصيانة الدورية'
@@ -1427,7 +1427,7 @@ Our smart manufacturing approach combines cutting-edge technology with practical
     icon: 'hammer',
     image: {
       id: 'fabrication-services-image',
-      url: '/images/services/fabrication-services.jpg',
+      url: '/images/services/fabrication-services.webp',
       altText: {
         en: 'Industrial fabrication services',
         ar: 'خدمات التصنيع الصناعي'

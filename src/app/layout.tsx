@@ -95,7 +95,7 @@ export default function RootLayout({
         <link rel="preload" href="/Fonts/Manifa-Pro-2-Light.otf" as="font" type="font/otf" crossOrigin="anonymous" />
         
         {/* Preload Critical Images */}
-        <link rel="preload" href="/images/JAAZL-Logo 2.png" as="image" />
+        <link rel="preload" href="/images/JAAZL-Logo 2.webp" as="image" />
         
         {/* Performance and SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />

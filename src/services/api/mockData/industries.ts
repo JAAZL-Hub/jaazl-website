@@ -31,7 +31,7 @@ With experience across refineries, processing facilities, and distribution netwo
     icon: 'droplet',
     image: {
       id: 'oil-gas-image',
-      url: '/images/industries/oil-gas-industry.jpg',
+      url: '/images/industries/oil-gas-industry.webp',
       altText: {
         en: 'Oil and gas refinery',
         ar: 'مصفاة نفط وغاز'
@@ -50,7 +50,7 @@ With experience across refineries, processing facilities, and distribution netwo
       },
       keywords: ['oil and gas solutions', 'petroleum industry', 'energy sector', 'refinery services']
     },
-    relatedServices: ['zero-liquid-discharge', 'oily-water-treatment', 'waste-management', 'engineering-consulting', 'process-safety', 'reliability-engineering', 'api-materials', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems', 'shutdown-turnaround'],
+    relatedServices: ['zero-liquid-discharge', 'specialized-chemicals', 'oily-water-treatment', 'waste-management', 'engineering-consulting', 'process-safety', 'reliability-engineering', 'api-materials', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems', 'shutdown-turnaround'],
     caseStudies: [
       {
         id: 'oil-gas-case-1',
@@ -64,7 +64,7 @@ With experience across refineries, processing facilities, and distribution netwo
         },
         image: {
           id: 'refinery-case-image',
-          url: '/images/industries/refineries-industry.jpg',
+          url: '/images/industries/refineries-industry.webp',
           altText: {
             en: 'Refinery process optimization',
             ar: 'تحسين عمليات المصفاة'
@@ -91,7 +91,7 @@ With experience across refineries, processing facilities, and distribution netwo
         },
         image: {
           id: 'oil-gas-zld-case-image',
-          url: '/images/industries/oil-gas-industry.jpg',
+          url: '/images/industries/oil-gas-industry.webp',
           altText: {
             en: 'Zero liquid discharge system at gas facility',
             ar: 'نظام التفريغ السائل الصفري في منشأة الغاز'
@@ -138,7 +138,7 @@ Our team combines technical expertise with practical industry knowledge to deliv
     icon: 'flask-conical',
     image: {
       id: 'petrochemicals-image',
-      url: '/images/industries/petrochemicals-industry.jpg',
+      url: '/images/industries/petrochemicals-industry.webp',
       altText: {
         en: 'Petrochemical processing facility',
         ar: 'منشأة معالجة البتروكيماويات'
@@ -171,7 +171,7 @@ Our team combines technical expertise with practical industry knowledge to deliv
         },
         image: {
           id: 'petrochemical-case-image',
-          url: '/images/industries/petrochemicals-industry.jpg',
+          url: '/images/industries/petrochemicals-industry.webp',
           altText: {
             en: 'Petrochemical automation system',
             ar: 'نظام أتمتة البتروكيماويات'
@@ -198,7 +198,7 @@ Our team combines technical expertise with practical industry knowledge to deliv
         },
         image: {
           id: 'petrochemical-supply-case-image',
-          url: '/images/industries/petrochemicals-industry.jpg',
+          url: '/images/industries/petrochemicals-industry.webp',
           altText: {
             en: 'Chemical supply and blending facility',
             ar: 'منشأة توريد وخلط المواد الكيميائية'
@@ -245,7 +245,7 @@ With expertise across all refinery units from crude distillation to final produc
     icon: 'filter',
     image: {
       id: 'refineries-image',
-      url: '/images/industries/refineries-industry.jpg',
+      url: '/images/industries/refineries-industry.webp',
       altText: {
         en: 'Oil refinery facility',
         ar: 'منشأة تكرير النفط'
@@ -264,7 +264,7 @@ With expertise across all refinery units from crude distillation to final produc
       },
       keywords: ['refinery solutions', 'oil processing', 'refinery optimization', 'petroleum refining']
     },
-    relatedServices: ['oily-water-treatment', 'waste-management', 'engineering-consulting', 'process-safety', 'reliability-engineering', 'api-materials', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems', 'shutdown-turnaround', 'fabrication-services'],
+    relatedServices: ['specialized-chemicals', 'oily-water-treatment', 'waste-management', 'engineering-consulting', 'process-safety', 'reliability-engineering', 'api-materials', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems', 'shutdown-turnaround', 'fabrication-services'],
     caseStudies: [
       {
         id: 'refineries-case-1',
@@ -278,7 +278,7 @@ With expertise across all refinery units from crude distillation to final produc
         },
         image: {
           id: 'refineries-safety-case-image',
-          url: '/images/industries/refineries-industry.jpg',
+          url: '/images/industries/refineries-industry.webp',
           altText: {
             en: 'Refinery safety systems',
             ar: 'أنظمة السلامة في المصفاة'
@@ -305,7 +305,7 @@ With expertise across all refinery units from crude distillation to final produc
         },
         image: {
           id: 'refineries-water-case-image',
-          url: '/images/industries/refineries-industry.jpg',
+          url: '/images/industries/refineries-industry.webp',
           altText: {
             en: 'Refinery water treatment system',
             ar: 'نظام معالجة المياه في المصفاة'
@@ -352,7 +352,7 @@ With expertise in both open-pit and underground mining operations, we deliver pr
     icon: 'hard-hat',
     image: {
       id: 'mining-image',
-      url: '/images/industries/mining-industry.jpg',
+      url: '/images/industries/mining-industry.webp',
       altText: {
         en: 'Mining operations',
         ar: 'عمليات التعدين'
@@ -385,7 +385,7 @@ With expertise in both open-pit and underground mining operations, we deliver pr
         },
         image: {
           id: 'mining-case-image',
-          url: '/images/industries/mining-industry.jpg',
+          url: '/images/industries/mining-industry.webp',
           altText: {
             en: 'Sustainable mining operations',
             ar: 'عمليات التعدين المستدامة'
@@ -412,7 +412,7 @@ With expertise in both open-pit and underground mining operations, we deliver pr
         },
         image: {
           id: 'mining-waste-case-image',
-          url: '/images/industries/mining-industry.jpg',
+          url: '/images/industries/mining-industry.webp',
           altText: {
             en: 'Mining waste management system',
             ar: 'نظام إدارة نفايات التعدين'
@@ -459,7 +459,7 @@ With expertise in fertilizer production facilities, we deliver integrated soluti
     icon: 'flask',
     image: {
       id: 'fertilizers-image',
-      url: '/images/industries/fertilizers-industry.jpg',
+      url: '/images/industries/fertilizers-industry.webp',
       altText: {
         en: 'Fertilizer manufacturing facility',
         ar: 'منشأة تصنيع الأسمدة'
@@ -492,7 +492,7 @@ With expertise in fertilizer production facilities, we deliver integrated soluti
         },
         image: {
           id: 'fertilizers-case-image',
-          url: '/images/industries/fertilizers-industry.jpg',
+          url: '/images/industries/fertilizers-industry.webp',
           altText: {
             en: 'Ammonia processing system',
             ar: 'نظام معالجة الأمونيا'
@@ -519,7 +519,7 @@ With expertise in fertilizer production facilities, we deliver integrated soluti
         },
         image: {
           id: 'fertilizers-reliability-case-image',
-          url: '/images/industries/fertilizers-industry.jpg',
+          url: '/images/industries/fertilizers-industry.webp',
           altText: {
             en: 'Fertilizer production reliability systems',
             ar: 'أنظمة موثوقية إنتاج الأسمدة'
@@ -566,7 +566,7 @@ With expertise in urban systems engineering, we deliver integrated solutions tha
     icon: 'home',
     image: {
       id: 'municipal-image',
-      url: '/images/industries/municipal-industry.jpg',
+      url: '/images/industries/municipal-industry.webp',
       altText: {
         en: 'Municipal infrastructure',
         ar: 'البنية التحتية البلدية'
@@ -599,7 +599,7 @@ With expertise in urban systems engineering, we deliver integrated solutions tha
         },
         image: {
           id: 'municipal-case-image',
-          url: '/images/industries/municipal-industry.jpg',
+          url: '/images/industries/municipal-industry.webp',
           altText: {
             en: 'Municipal water management system',
             ar: 'نظام إدارة المياه البلدية'
@@ -626,7 +626,7 @@ With expertise in urban systems engineering, we deliver integrated solutions tha
         },
         image: {
           id: 'municipal-smart-case-image',
-          url: '/images/industries/municipal-industry.jpg',
+          url: '/images/industries/municipal-industry.webp',
           altText: {
             en: 'Smart city infrastructure systems',
             ar: 'أنظمة البنية التحتية للمدينة الذكية'
@@ -673,7 +673,7 @@ With experience across conventional and renewable generation, transmission netwo
     icon: 'zap',
     image: {
       id: 'power-image',
-      url: '/images/industries/power-generation-industry.jpg',
+      url: '/images/industries/power-generation-industry.webp',
       altText: {
         en: 'Power generation and distribution facility',
         ar: 'منشأة توليد وتوزيع الطاقة'
@@ -706,7 +706,7 @@ With experience across conventional and renewable generation, transmission netwo
         },
         image: {
           id: 'power-case-image',
-          url: '/images/industries/power-generation-industry.jpg',
+          url: '/images/industries/power-generation-industry.webp',
           altText: {
             en: 'Smart grid control center',
             ar: 'مركز التحكم بالشبكة الذكية'
@@ -733,7 +733,7 @@ With experience across conventional and renewable generation, transmission netwo
         },
         image: {
           id: 'power-electromech-case-image',
-          url: '/images/industries/power-generation-industry.jpg',
+          url: '/images/industries/power-generation-industry.webp',
           altText: {
             en: 'Power plant electromechanical systems',
             ar: 'الأنظمة الكهروميكانيكية لمحطة الطاقة'
@@ -780,7 +780,7 @@ With experience across diverse manufacturing industries including automotive, el
     icon: 'layers',
     image: {
       id: 'manufacturing-image',
-      url: '/images/industries/manufacturing-industry.jpg',
+      url: '/images/industries/manufacturing-industry.webp',
       altText: {
         en: 'Modern manufacturing facility',
         ar: 'منشأة تصنيع حديثة'
@@ -813,7 +813,7 @@ With experience across diverse manufacturing industries including automotive, el
         },
         image: {
           id: 'manufacturing-case-image',
-          url: '/images/industries/petrochemicals-industry.jpg',
+          url: '/images/industries/petrochemicals-industry.webp',
           altText: {
             en: 'Smart factory operations',
             ar: 'عمليات المصنع الذكي'
@@ -840,7 +840,7 @@ With experience across diverse manufacturing industries including automotive, el
         },
         image: {
           id: 'manufacturing-fabrication-case-image',
-          url: '/images/industries/petrochemicals-industry.jpg',
+          url: '/images/industries/petrochemicals-industry.webp',
           altText: {
             en: 'Custom manufacturing equipment fabrication',
             ar: 'تصنيع معدات التصنيع المخصص'
@@ -887,7 +887,7 @@ With experience in food processing facilities, we deliver tailored solutions tha
     icon: 'utensils',
     image: {
       id: 'food-beverages-image',
-      url: '/images/industries/f&b-industry.jpg',
+      url: '/images/industries/f&b-industry.webp',
       altText: {
         en: 'Food and beverage processing facility',
         ar: 'منشأة معالجة الأغذية والمشروبات'
@@ -920,7 +920,7 @@ With experience in food processing facilities, we deliver tailored solutions tha
         },
         image: {
           id: 'food-safety-case-image',
-          url: '/images/industries/f&b-industry.jpg',
+          url: '/images/industries/f&b-industry.webp',
           altText: {
             en: 'Food safety and CIP chemical systems',
             ar: 'أنظمة سلامة الغذاء وكيماويات CIP'
@@ -947,7 +947,7 @@ With experience in food processing facilities, we deliver tailored solutions tha
         },
         image: {
           id: 'beverage-shutdown-case-image',
-          url: '/images/industries/f&b-industry.jpg',
+          url: '/images/industries/f&b-industry.webp',
           altText: {
             en: 'Beverage production line maintenance',
             ar: 'صيانة خط إنتاج المشروبات'
