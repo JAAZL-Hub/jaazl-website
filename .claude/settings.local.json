@@ -24,7 +24,8 @@
       "WebFetch(domain:api.github.com)",
       "Bash(npm install)",
       "Bash(npx next:*)",
-      "Bash(npm audit:*)"
+      "Bash(npm audit:*)",
+      "Bash(sed:*)"
     ],
     "deny": []
   }

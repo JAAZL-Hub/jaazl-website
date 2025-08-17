@@ -80,7 +80,7 @@ const JAAZLHomepage: React.FC = () => {
     {
       icon: React.createElement(getMiscIcon('cubes'), { className: "w-8 h-8" }),
       title: language === 'en' ? "Material Supplies" : "إمدادات المواد",
-      description: language === 'en' ? "API & Aramco approved materials including pipes & fittings, valves & actuators, raw materials & metals, and storage & infrastructure solutions." : "مواد معتمدة من API وأرامكو تشمل الأنابيب والتجهيزات والصمامات والمحركات والمواد الخام والمعادن وحلول التخزين والبنية التحتية.",
+      description: language === 'en' ? "API & Aramco approved materials including prefabricated tanks, pipes & fittings, valves & actuators, raw materials & metals, and storage & infrastructure solutions." : "مواد معتمدة من API وأرامكو تشمل الأنابيب والتجهيزات والصمامات والمحركات والمواد الخام والمعادن وحلول التخزين والبنية التحتية.",
       features: language === 'en' ? ["Prefabricated Tanks - FM & NFPA", "Pipes & Fittings", "Valves & Actuators"] : ["مواد معتمدة من API", "أنابيب وتجهيزات", "صمامات ومحركات"],
       color: "from-slate-600 to-gray-700",
       slug: 'api-materials'
@@ -176,18 +176,31 @@ const JAAZLHomepage: React.FC = () => {
       {/* Enhanced Hero Section */}
       <section 
         id="hero" 
-        className="relative min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 text-white overflow-hidden flex items-center"
+        className="relative min-h-screen text-white overflow-hidden flex items-center"
         aria-label={language === 'en' ? 'Hero section' : 'القسم الرئيسي'}
       >
+        {/* Background Image Layer */}
+        <div 
+          className="absolute inset-0 z-0 bg-slate-900"
+          style={{
+            backgroundImage: `url('/images/industries/refineries-industry.webp')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+        
+        {/* Gradient Overlay with 60% transparency */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-br from-blue-900/60 via-slate-900/60 to-blue-900/60"></div>
+        
         {/* Animated Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-slate-900/95 to-blue-900/90"></div>
+        <div className="absolute inset-0 z-20">
           <div className={`absolute top-32 sm:top-28 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse ${isRTL ? 'right-10' : 'left-10'}`}></div>
           <div className={`absolute bottom-20 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000 ${isRTL ? 'left-10' : 'right-10'}`}></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-orange-500/5 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full hero-container">
+        <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full hero-container">
           <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${isRTL ? 'lg:grid-flow-col-dense' : ''}`}>
             <div className={`transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${isRTL ? 'lg:col-start-2 text-right' : 'text-left'}`}>
               <h1 className={`hero-heading font-bold leading-tight mb-6 ${isRTL ? 'font-arabic' : ''}`}>

@@ -69,7 +69,7 @@ export const serviceCategories: ServiceCategory[] = [
       ar: 'إمدادات المواد'
     },
     description: {
-      en: 'API & Aramco approved materials including pipes & fittings, valves & actuators, raw materials & metals, and storage & infrastructure solutions.',
+      en: 'API & Aramco approved materials including prefabricated tanks, pipes & fittings, valves & actuators, raw materials & metals, and storage & infrastructure solutions.',
       ar: 'مواد معتمدة من API وأرامكو تشمل الأنابيب والتجهيزات والصمامات والمحركات والمواد الخام والمعادن وحلول التخزين والبنية التحتية.'
     },
     icon: 'package',

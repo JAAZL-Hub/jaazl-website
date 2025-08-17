@@ -146,7 +146,7 @@ export const OrganizationSchema = () => {
             name: language === 'ar' ? 'إمدادات المواد' : 'Material Supplies',
             description: language === 'ar'
               ? 'مواد معتمدة من API وأرامكو تشمل أنابيب وتجهيزات وصمامات ومحركات ومواد خام ومعادن وحلول تخزين وبنية تحتية.'
-              : 'API & Aramco approved materials including pipes & fittings, valves & actuators, raw materials & metals, and storage & infrastructure solutions.',
+              : 'API & Aramco approved materials including prefabricated tankds, pipes & fittings, valves & actuators, raw materials & metals, and storage & infrastructure solutions.',
             provider: {
               '@type': 'Organization',
               '@id': 'https://jaazl.com/#organization',

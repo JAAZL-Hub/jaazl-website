@@ -104,6 +104,7 @@ export default function RootLayout({
         
         {/* Preload Critical Images */}
         <link rel="preload" href="/images/JAAZL-Logo 2.webp" as="image" />
+        <link rel="preload" href="/images/industries/refineries-industry.webp" as="image" />
         
         {/* Performance and SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />

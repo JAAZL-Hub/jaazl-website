@@ -7,6 +7,7 @@ const STATIC_ASSETS = [
   '/industries',
   '/services',
   '/images/JAAZL-Logo 2.webp',
+  '/images/industries/refineries-industry.webp',
   '/Fonts/manifa-pro-2-bold.otf',
   '/Fonts/Manifa-Pro-2-Light.otf',
 ];

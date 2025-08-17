@@ -48,7 +48,8 @@
   [headers.values]
     Link = '''</Fonts/manifa-pro-2-bold.otf>; rel=preload; as=font; type=font/otf; crossorigin,
               </Fonts/Manifa-Pro-2-Light.otf>; rel=preload; as=font; type=font/otf; crossorigin,
-              </images/JAAZL-Logo 2.webp>; rel=preload; as=image'''
+              </images/JAAZL-Logo 2.webp>; rel=preload; as=image,
+              </images/industries/refineries-industry.webp>; rel=preload; as=image'''
 
 # Redirects
 [[redirects]]
