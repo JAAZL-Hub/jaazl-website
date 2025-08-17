@@ -5,13 +5,13 @@ import type { Industry } from '@/services/types';
 import ServicePageClient from '@/components/services/ServicePageClient';
 
 export const metadata: Metadata = {
-  title: 'API Approved Materials | JAAZL',
-  description: 'High-quality API approved materials for oil, gas, and petrochemical operations.',
-  keywords: ['API materials', 'certified materials', 'oil gas materials', 'petrochemical materials'],
+  title: 'Prefabricated Tanks | JAAZL Industrial Solutions',
+  description: 'Custom prefabricated tanks for industrial storage, processing & wastewater treatment in Saudi Arabia.',
+  keywords: ['prefabricated tanks', 'industrial storage tanks', 'custom tank fabrication', 'storage solutions'],
 };
 
-export default function APIMaterialsPage() {
-  const service = engineeringServices.find(s => s.slug === 'api-materials');
+export default function PrefabricatedTanksPage() {
+  const service = engineeringServices.find(s => s.slug === 'prefabricated-tanks');
   const relatedIndustries = service?.relatedIndustries ? 
     service.relatedIndustries
       .map((slug: string) => industries.find(industry => industry.slug === slug))

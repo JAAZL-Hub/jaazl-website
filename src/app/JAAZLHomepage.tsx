@@ -100,17 +100,17 @@ const JAAZLHomepage: React.FC = () => {
     { 
       icon: React.createElement(getIndustryIcon('droplet'), { className: "w-8 h-8" }), 
       name: {en: "Oil & Gas", ar: "النفط والغاز"}, 
-      projects: {en: "40+ Projects", ar: "40+ مشروع"} 
+      projects: {en: "30+ Projects", ar: "30+ مشروع"} 
     },
     { 
       icon: React.createElement(getIndustryIcon('factory'), { className: "w-8 h-8" }), 
       name: {en: "Petrochemicals", ar: "البتروكيماويات"}, 
-      projects: {en: "40+ Projects", ar: "40+ مشروع"} 
+      projects: {en: "30+ Projects", ar: "30+ مشروع"} 
     },
     { 
       icon: React.createElement(getIndustryIcon('filter'), { className: "w-8 h-8" }), 
       name: {en: "Refineries", ar: "المصافي"}, 
-      projects: {en: "40+ Projects", ar: "40+ مشروع"} 
+      projects: {en: "30+ Projects", ar: "30+ مشروع"} 
     },
     { 
       icon: React.createElement(getIndustryIcon('hammer'), { className: "w-8 h-8" }), 
@@ -120,12 +120,12 @@ const JAAZLHomepage: React.FC = () => {
     { 
       icon: React.createElement(getIndustryIcon('seedling'), { className: "w-8 h-8" }), 
       name: {en: "Fertilizers", ar: "الأسمدة"}, 
-      projects: {en: "20+ Projects", ar: "20+ مشروع"} 
+      projects: {en: "15+ Projects", ar: "15+ مشروع"} 
     },
     { 
       icon: React.createElement(getIndustryIcon('power'), { className: "w-8 h-8" }), 
       name: {en: "Power & Electricity", ar: "الطاقة والكهرباء"}, 
-      projects: {en: "20+ Projects", ar: "20+ مشروع"} 
+      projects: {en: "15+ Projects", ar: "15+ مشروع"} 
     },
     { 
       icon: React.createElement(getMiscIcon('cog'), { className: "w-8 h-8" }), 
@@ -135,12 +135,12 @@ const JAAZLHomepage: React.FC = () => {
     { 
       icon: React.createElement(getMiscIcon('utensils'), { className: "w-8 h-8" }), 
       name: {en: "Food & Beverages", ar: "الأغذية والمشروبات"}, 
-      projects: {en: "15+ Projects", ar: "15+ مشروع"} 
+      projects: {en: "10+ Projects", ar: "10+ مشروع"} 
     },
     { 
       icon: React.createElement(getIndustryIcon('building'), { className: "w-8 h-8" }), 
       name: {en: "Municipal", ar: "البلديات"}, 
-      projects: {en: "15+ Projects", ar: "15+ مشروع"} 
+      projects: {en: "5+ Projects", ar: "5+ مشروع"} 
     }
   ];
 

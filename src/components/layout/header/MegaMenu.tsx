@@ -41,7 +41,7 @@ const serviceCategories = {
   material: {
     name: { en: 'Material Supplies', ar: 'إمدادات المواد' },
     services: [
-      { name: { en: 'API Approved Materials', ar: 'مواد معتمدة من API' }, path: '/services/api-materials' },
+      { name: { en: 'API Approved Materials', ar: 'مواد معتمدة من API' }, path: '/services/prefabricated-tanks' },
       { name: { en: 'Pipes & Fittings', ar: 'أنابيب وتجهيزات' }, path: '/services/pipes-fittings' },
       { name: { en: 'Valves & Actuators', ar: 'صمامات ومحركات' }, path: '/services/valves-actuators' }
     ]

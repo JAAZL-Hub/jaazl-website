@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
     { text: { en: 'Specialty & Bulk Chemicals', ar: 'المواد الكيميائية المتخصصة والسائبة' }, path: '/services#chemical' },
     { text: { en: 'Technical Consultancy & AI', ar: 'الاستشارات التقنية والذكاء الاصطناعي' }, path: '/services#consulting' },
     { text: { en: 'Digital Technologies & Automation', ar: 'التقنيات الرقمية والأتمتة' }, path: '/services#technologies' },
-    { text: { en: 'Material Supplies', ar: 'توريد المواد' }, path: '/services#material' },
+    { text: { en: 'Prefabricated Tanks', ar: 'الخزانات الجاهزة' }, path: '/services#material' },
     { text: { en: 'Electromechanical Services', ar: 'الخدمات الكهروميكانيكية' }, path: '/services#electromech' },
   ];
 

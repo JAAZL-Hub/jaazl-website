@@ -979,82 +979,90 @@ Our smart manufacturing approach combines cutting-edge technology with practical
 
   // ===== MATERIAL CATEGORY =====
   {
-    id: 'api-materials',
-    slug: 'api-materials',
+    id: 'prefabricated-tanks',
+    slug: 'prefabricated-tanks',
     categoryId: 'material',
     name: {
-      en: 'API Approved Materials',
-      ar: 'مواد معتمدة من API'
+      en: 'Prefabricated Tanks',
+      ar: 'الخزانات الجاهزة'
     },
     shortDescription: {
-      en: 'High-quality API approved materials and equipment for oil and gas operations.',
-      ar: 'مواد ومعدات عالية الجودة معتمدة من API لعمليات النفط والغاز.'
+      en: 'Custom-designed prefabricated tanks for storage, processing, and industrial applications.',
+      ar: 'خزانات جاهزة مصممة خصيصاً للتخزين والمعالجة والتطبيقات الصناعية.'
     },
     fullDescription: {
-      en: `Our API approved materials service provides certified products that meet American Petroleum Institute standards.`,
-      ar: `تقدم خدمة المواد المعتمدة من API منتجات معتمدة تلبي معايير المعهد الأمريكي للبترول.`
+      en: `Our prefabricated tanks service provides engineered storage solutions for various industrial applications. We design and manufacture tanks for water storage, chemical processing, oil & gas, and wastewater treatment with full compliance to international standards.
+
+Our tanks are fabricated using advanced welding techniques and premium materials, ensuring long-term durability and chemical compatibility. Each tank comes with complete certification and can be customized for specific operating conditions including pressure, temperature, and corrosive environments.
+
+From small storage vessels to large-scale industrial tanks, we provide turnkey solutions including design, fabrication, transportation, and installation support with comprehensive documentation and quality assurance.`,
+      ar: `تقدم خدمة الخزانات الجاهزة لدينا حلول تخزين مهندسة لتطبيقات صناعية مختلفة. نصمم ونصنع خزانات لتخزين المياه ومعالجة المواد الكيميائية والنفط والغاز ومعالجة مياه الصرف مع الامتثال الكامل للمعايير الدولية.
+
+يتم تصنيع خزاناتنا باستخدام تقنيات لحام متقدمة ومواد فائقة الجودة، مما يضمن المتانة طويلة الأمد والتوافق الكيميائي. كل خزان يأتي مع شهادة كاملة ويمكن تخصيصه لظروف تشغيل محددة بما في ذلك الضغط ودرجة الحرارة والبيئات المسببة للتآكل.
+
+من أوعية التخزين الصغيرة إلى الخزانات الصناعية واسعة النطاق، نقدم حلولاً شاملة تشمل التصميم والتصنيع والنقل ودعم التركيب مع توثيق شامل وضمان الجودة.`
     },
     features: [
       {
-        id: 'api-certification',
+        id: 'custom-design',
         title: {
-          en: 'API Certification',
-          ar: 'شهادة API'
+          en: 'Custom Engineering Design',
+          ar: 'تصميم هندسي مخصص'
         },
         description: {
-          en: 'Full API certification and compliance documentation for all materials.',
-          ar: 'شهادة API كاملة ووثائق الامتثال لجميع المواد.'
+          en: 'Tailored tank designs for specific applications with full engineering calculations and certifications.',
+          ar: 'تصاميم خزانات مخصصة لتطبيقات محددة مع حسابات هندسية كاملة وشهادات.'
         },
-        icon: 'certificate'
+        icon: 'settings'
       },
       {
-        id: 'quality-assurance',
+        id: 'quality-fabrication',
         title: {
-          en: 'Premium Quality Standards',
-          ar: 'معايير جودة فائقة'
+          en: 'Premium Fabrication Standards',
+          ar: 'معايير تصنيع فائقة'
         },
         description: {
-          en: 'Rigorous testing and quality control ensuring superior material performance.',
-          ar: 'اختبارات ومراقبة جودة صارمة لضمان أداء متفوق للمواد.'
+          en: 'Advanced welding and fabrication techniques ensuring structural integrity and leak-proof performance.',
+          ar: 'تقنيات لحام وتصنيع متقدمة تضمن السلامة الهيكلية والأداء المقاوم للتسرب.'
         },
-        icon: 'check-circle'
+        icon: 'tool'
       },
       {
-        id: 'technical-support',
+        id: 'turnkey-solution',
         title: {
-          en: 'Technical Support & Documentation',
-          ar: 'الدعم الفني والتوثيق'
+          en: 'Complete Turnkey Solutions',
+          ar: 'حلول شاملة جاهزة'
         },
         description: {
-          en: 'Comprehensive technical documentation and engineering support.',
-          ar: 'توثيق فني شامل ودعم هندسي.'
+          en: 'End-to-end service including design, fabrication, delivery, installation, and commissioning.',
+          ar: 'خدمة شاملة تشمل التصميم والتصنيع والتسليم والتركيب والتشغيل.'
         },
-        icon: 'file-text'
+        icon: 'package'
       }
     ],
-    icon: 'package',
+    icon: 'database',
     image: {
-      id: 'api-materials-image',
-      url: '/images/services/api-materials.webp',
+      id: 'prefabricated-tanks-image',
+      url: '/images/services/prefab-tank.webp',
       altText: {
-        en: 'API approved materials',
-        ar: 'مواد معتمدة من API'
+        en: 'Prefabricated industrial tanks',
+        ar: 'خزانات صناعية جاهزة'
       },
       width: 800,
       height: 600
     },
     meta: {
       title: {
-        en: 'API Approved Materials | JAAZL',
-        ar: 'مواد معتمدة من API | جازل'
+        en: 'Prefabricated Tanks | JAAZL Industrial Solutions',
+        ar: 'الخزانات الجاهزة | حلول جازل الصناعية'
       },
       description: {
-        en: 'High-quality API approved materials for oil and gas operations.',
-        ar: 'مواد عالية الجودة معتمدة من API لعمليات النفط والغاز.'
+        en: 'Custom prefabricated tanks for industrial storage, processing & wastewater treatment. Expert tank design, fabrication & installation in Saudi Arabia\'s Eastern Province.',
+        ar: 'خزانات جاهزة مخصصة للتخزين الصناعي والمعالجة ومعالجة مياه الصرف. تصميم وتصنيع وتركيب خزانات خبير في المنطقة الشرقية بالسعودية.'
       },
-      keywords: ['API materials', 'certified materials', 'oil gas materials']
+      keywords: ['prefabricated tanks Saudi Arabia', 'industrial storage tanks', 'custom tank fabrication', 'water storage tanks Jubail', 'chemical storage tanks', 'الخزانات الجاهزة السعودية', 'خزانات التخزين الصناعية', 'تصنيع الخزانات المخصصة']
     },
-    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'power', 'mining']
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'power', 'mining', 'municipal', 'water-treatment']
   },
   {
     id: 'pipes-fittings',

@@ -72,7 +72,7 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
             <div className={`lg:w-1/2 w-full mt-10 lg:mt-0 ${isRTL ? 'lg:pr-12' : 'lg:pl-12'}`}>
               <div className="relative w-full h-96 rounded-xl overflow-hidden shadow-2xl">
                 <Image
-                  src={service.image?.url || '/images/services/engineering-consulting.jpg'}
+                  src={service.image?.url || '/images/services/engineering-consulting.webp'}
                   alt={service.image?.altText ? getLocalizedContent(service.image.altText, language) : getLocalizedContent(service.name, language)}
                   fill
                   style={{ objectFit: 'cover' }}
@@ -168,7 +168,7 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
                   <div className="card-base card-hover overflow-hidden">
                     <div className="relative w-full h-48">
                       <Image
-                        src={industry.image?.url || '/images/industries/oil-gas-industry.jpg'}
+                        src={industry.image?.url || '/images/industries/oil-gas-industry.webp'}
                         alt={industry.image?.altText ? getLocalizedContent(industry.image.altText, language) : getLocalizedContent(industry.name, language)}
                         fill
                         style={{ objectFit: 'cover' }}

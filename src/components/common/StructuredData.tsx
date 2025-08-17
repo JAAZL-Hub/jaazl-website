@@ -142,7 +142,7 @@ export const OrganizationSchema = () => {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            '@id': 'https://jaazl.com/services/api-materials',
+            '@id': 'https://jaazl.com/services/prefabricated-tanks',
             name: language === 'ar' ? 'إمدادات المواد' : 'Material Supplies',
             description: language === 'ar'
               ? 'مواد معتمدة من API وأرامكو تشمل أنابيب وتجهيزات وصمامات ومحركات ومواد خام ومعادن وحلول تخزين وبنية تحتية.'

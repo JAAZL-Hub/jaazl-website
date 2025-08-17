@@ -50,7 +50,7 @@ With experience across refineries, processing facilities, and distribution netwo
       },
       keywords: ['oil and gas solutions', 'petroleum industry', 'energy sector', 'refinery services']
     },
-    relatedServices: ['zero-liquid-discharge', 'specialized-chemicals', 'oily-water-treatment', 'waste-management', 'engineering-consulting', 'process-safety', 'reliability-engineering', 'api-materials', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems', 'shutdown-turnaround'],
+    relatedServices: ['zero-liquid-discharge', 'specialized-chemicals', 'oily-water-treatment', 'waste-management', 'engineering-consulting', 'process-safety', 'reliability-engineering', 'prefabricated-tanks', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems', 'shutdown-turnaround'],
     caseStudies: [
       {
         id: 'oil-gas-case-1',
@@ -157,7 +157,7 @@ Our team combines technical expertise with practical industry knowledge to deliv
       },
       keywords: ['petrochemical solutions', 'chemical processing', 'process optimization', 'chemical production']
     },
-    relatedServices: ['specialized-chemicals', 'bulk-chemicals-supply', 'chemical-blending', 'engineering-consulting', 'process-safety', 'reliability-engineering', 'ai-automation', 'api-materials', 'pipes-fittings', 'valves-actuators'],
+    relatedServices: ['specialized-chemicals', 'bulk-chemicals-supply', 'chemical-blending', 'engineering-consulting', 'process-safety', 'reliability-engineering', 'ai-automation', 'prefabricated-tanks', 'pipes-fittings', 'valves-actuators'],
     caseStudies: [
       {
         id: 'petrochemical-case-1',
@@ -264,7 +264,7 @@ With expertise across all refinery units from crude distillation to final produc
       },
       keywords: ['refinery solutions', 'oil processing', 'refinery optimization', 'petroleum refining']
     },
-    relatedServices: ['specialized-chemicals', 'oily-water-treatment', 'waste-management', 'engineering-consulting', 'process-safety', 'reliability-engineering', 'api-materials', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems', 'shutdown-turnaround', 'fabrication-services'],
+    relatedServices: ['specialized-chemicals', 'oily-water-treatment', 'waste-management', 'engineering-consulting', 'process-safety', 'reliability-engineering', 'prefabricated-tanks', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems', 'shutdown-turnaround', 'fabrication-services'],
     caseStudies: [
       {
         id: 'refineries-case-1',
@@ -371,7 +371,7 @@ With expertise in both open-pit and underground mining operations, we deliver pr
       },
       keywords: ['mining solutions', 'mineral processing', 'mining engineering', 'environmental management']
     },
-    relatedServices: ['waste-management', 'engineering-consulting', 'reliability-engineering', 'ai-automation', 'digital-transformation', 'api-materials', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems', 'fabrication-services'],
+    relatedServices: ['waste-management', 'engineering-consulting', 'reliability-engineering', 'ai-automation', 'digital-transformation', 'prefabricated-tanks', 'pipes-fittings', 'valves-actuators', 'electromechanical-systems', 'fabrication-services'],
     caseStudies: [
       {
         id: 'mining-case-1',
@@ -692,7 +692,7 @@ With experience across conventional and renewable generation, transmission netwo
       },
       keywords: ['power solutions', 'electricity generation', 'energy distribution', 'renewable energy', 'smart grid']
     },
-    relatedServices: ['engineering-consulting', 'ai-automation', 'digital-transformation', 'smart-manufacturing', 'electromechanical-systems', 'process-safety', 'reliability-engineering', 'shutdown-turnaround', 'fabrication-services', 'api-materials', 'valves-actuators'],
+    relatedServices: ['engineering-consulting', 'ai-automation', 'digital-transformation', 'smart-manufacturing', 'electromechanical-systems', 'process-safety', 'reliability-engineering', 'shutdown-turnaround', 'fabrication-services', 'prefabricated-tanks', 'valves-actuators'],
     caseStudies: [
       {
         id: 'power-case-1',
@@ -799,7 +799,7 @@ With experience across diverse manufacturing industries including automotive, el
       },
       keywords: ['manufacturing solutions', 'industrial automation', 'quality control', 'production optimization', 'smart factory']
     },
-    relatedServices: ['engineering-consulting', 'ai-automation', 'digital-transformation', 'smart-manufacturing', 'electromechanical-systems', 'process-safety', 'reliability-engineering', 'shutdown-turnaround', 'fabrication-services', 'api-materials', 'valves-actuators'],
+    relatedServices: ['engineering-consulting', 'ai-automation', 'digital-transformation', 'smart-manufacturing', 'electromechanical-systems', 'process-safety', 'reliability-engineering', 'shutdown-turnaround', 'fabrication-services', 'prefabricated-tanks', 'valves-actuators'],
     caseStudies: [
       {
         id: 'manufacturing-case-1',

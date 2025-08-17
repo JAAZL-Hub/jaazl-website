@@ -23,7 +23,8 @@
       "WebFetch(domain:api.github.com)",
       "WebFetch(domain:api.github.com)",
       "Bash(npm install)",
-      "Bash(npx next:*)"
+      "Bash(npx next:*)",
+      "Bash(npm audit:*)"
     ],
     "deny": []
   }
