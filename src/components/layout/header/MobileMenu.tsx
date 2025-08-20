@@ -145,7 +145,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
               key={link.href} 
               href={link.href} 
               className={`block text-white text-xl font-medium py-3 px-2 border-b border-white/10 hover:text-orange-400 transition-colors duration-200 ${
-                isRTL ? 'font-arabic text-right' : 'text-left'
+                isRTL ? 'font-arabic' : ''
               }`}
               onClick={onClose}
             >
@@ -175,7 +175,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
               }`}>
                 {Object.entries(serviceCategories).map(([categoryKey, category]) => (
                   <div key={categoryKey}>
-                    <h4 className={`text-orange-300 font-medium text-sm mb-2 ${isRTL ? 'font-arabic text-right' : ''}`}>
+                    <h4 className={`text-orange-300 font-medium text-sm mb-2 ${isRTL ? 'font-arabic' : ''}`}>
                       {category.name[language]}
                     </h4>
                     <div className={`space-y-1 ${isRTL ? 'pr-2' : 'pl-2'}`}>
@@ -184,7 +184,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                           key={service.path} 
                           href={service.path} 
                           className={`block py-1 text-blue-200 hover:text-white text-sm transition-colors duration-200 ${
-                            isRTL ? 'font-arabic text-right' : ''
+                            isRTL ? 'font-arabic' : ''
                           }`}
                           onClick={onClose}
                         >
@@ -223,7 +223,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                     key={industry.path} 
                     href={industry.path} 
                     className={`block py-2 text-blue-200 hover:text-white transition-colors duration-200 ${
-                      isRTL ? 'font-arabic text-right' : ''
+                      isRTL ? 'font-arabic' : ''
                     }`}
                     onClick={onClose}
                   >

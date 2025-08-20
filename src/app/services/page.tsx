@@ -48,10 +48,10 @@ export default function ServicesPage() {
         <div className={`absolute bottom-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-700 ${language === 'ar' ? 'left-10' : 'right-10'}`}></div>
         
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight ${language === 'ar' ? 'font-arabic' : ''}`}>
             {language === 'en' ? 'Our Industrial Services' : 'خدماتنا الصناعية'}
           </h1>
-          <p className="text-xl md:text-2xl text-blue-200 mb-10 max-w-3xl mx-auto">
+          <p className={`text-xl md:text-2xl text-blue-200 mb-10 max-w-3xl mx-auto ${language === 'ar' ? 'font-arabic' : ''}`}>
             {language === 'en' 
               ? 'Providing end-to-end solutions to enhance efficiency, safety, and sustainability in your operations.' 
               : 'نقدم حلولاً شاملة لتعزيز الكفاءة والسلامة والاستدامة في عملياتكم.'}
@@ -90,10 +90,10 @@ export default function ServicesPage() {
                 <div id={activeCategoryData.slug} className="scroll-mt-24 animate-fade-in">
                   {/* Category Header */}
                   <div className="mb-12 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    <h2 className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${language === 'ar' ? 'font-arabic' : ''}`}>
                       {getLocalizedContent(activeCategoryData.name, language)}
                     </h2>
-                    <p className="max-w-3xl mx-auto text-lg text-gray-600">
+                    <p className={`max-w-3xl mx-auto text-lg text-gray-600 ${language === 'ar' ? 'font-arabic' : ''}`}>
                       {getLocalizedContent(activeCategoryData.description, language)}
                     </p>
                   </div>
@@ -107,13 +107,13 @@ export default function ServicesPage() {
                         className="block bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden group transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-blue-300"
                       >
                         <div className="p-8">
-                          <h3 className={`text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-800 transition-colors duration-300 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
+                          <h3 className={`text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-800 transition-colors duration-300 ${language === 'ar' ? 'font-arabic' : ''}`}>
                             {getLocalizedContent(service.name, language)}
                           </h3>
-                          <p className={`text-gray-600 min-h-[6rem] mb-5 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
+                          <p className={`text-gray-600 min-h-[6rem] mb-5 ${language === 'ar' ? 'font-arabic' : ''}`}>
                             {getLocalizedContent(service.shortDescription, language)}
                           </p>
-                          <div className={`inline-block text-blue-700 font-semibold group-hover:text-orange-600 transition-colors duration-300 ${language === 'ar' ? 'text-right w-full' : 'text-left'}`}>
+                          <div className={`inline-block text-blue-700 font-semibold group-hover:text-orange-600 transition-colors duration-300 ${language === 'ar' ? 'font-arabic w-full' : ''}`}>
                             {language === 'en' ? 'Learn More' : 'اعرف المزيد'}
                           </div>
                         </div>

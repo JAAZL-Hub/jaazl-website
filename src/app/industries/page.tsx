@@ -37,10 +37,10 @@ export default function IndustriesPage() {
         <div className={`absolute bottom-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-700 ${language === 'ar' ? 'left-10' : 'right-10'}`}></div>
         
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight ${language === 'ar' ? 'font-arabic' : ''}`}>
             {language === 'en' ? 'Industries We Empower' : 'الصناعات التي نمكنها'}
           </h1>
-          <p className="text-xl md:text-2xl text-blue-200 mb-10 max-w-3xl mx-auto">
+          <p className={`text-xl md:text-2xl text-blue-200 mb-10 max-w-3xl mx-auto ${language === 'ar' ? 'font-arabic' : ''}`}>
             {language === 'en' 
               ? 'Delivering precision-engineered solutions tailored to the unique demands of each industrial sector.' 
               : 'نقدم حلولاً هندسية دقيقة مصممة خصيصًا لتلبية المتطلبات الفريدة لكل قطاع صناعي.'}
@@ -48,7 +48,7 @@ export default function IndustriesPage() {
           <a 
             href="#industry-cards" 
             onClick={scrollToIndustries}
-            className="inline-block bg-white text-blue-800 px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:bg-gray-100 shadow-2xl hover:shadow-blue-300/20 transform hover:-translate-y-1"
+            className={`inline-block bg-white text-blue-800 px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:bg-gray-100 shadow-2xl hover:shadow-blue-300/20 transform hover:-translate-y-1 ${language === 'ar' ? 'font-arabic' : ''}`}
           >
             {language === 'en' ? 'Explore Our Sectors' : 'استكشف قطاعاتنا'}
           </a>
@@ -77,15 +77,15 @@ export default function IndustriesPage() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-                  <h3 className={`absolute bottom-4 ${language === 'ar' ? 'right-4' : 'left-4'} text-2xl font-bold text-white`}>
+                  <h3 className={`absolute bottom-4 ${language === 'ar' ? 'right-4 font-arabic' : 'left-4'} text-2xl font-bold text-white`}>
                     {getLocalizedContent(industry.name, language)}
                   </h3>
                 </div>
                 <div className="p-6">
-                  <p className={`text-gray-600 mb-4 leading-relaxed h-20 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
+                  <p className={`text-gray-600 mb-4 leading-relaxed h-20 ${language === 'ar' ? 'font-arabic' : ''}`}>
                     {getLocalizedContent(industry.shortDescription, language)}
                   </p>
-                  <div className={`inline-block text-blue-700 font-semibold group-hover:text-orange-600 transition-colors duration-300 ${language === 'ar' ? 'text-right w-full' : 'text-left'}`}>
+                  <div className={`inline-block text-blue-700 font-semibold group-hover:text-orange-600 transition-colors duration-300 ${language === 'ar' ? 'font-arabic w-full' : ''}`}>
                     {language === 'en' ? 'Explore Solutions' : 'استكشاف الحلول'}
                   </div>
                 </div>

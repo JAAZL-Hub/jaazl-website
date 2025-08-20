@@ -279,10 +279,10 @@ const JAAZLHomepage: React.FC = () => {
                     ))}
                   </div>
                   <div className="bg-white/10 rounded-xl p-4 lg:p-6 border border-white/20">
-                    <h3 className={`text-base lg:text-lg font-bold text-white mb-2 lg:mb-3 ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                    <h3 className={`text-base lg:text-lg font-bold text-white mb-2 lg:mb-3 ${isRTL ? 'font-arabic' : ''}`}>
                       {services[activeService].title}
                     </h3>
-                    <p className={`text-blue-100 text-xs lg:text-sm mb-3 lg:mb-4 leading-relaxed ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                    <p className={`text-blue-100 text-xs lg:text-sm mb-3 lg:mb-4 leading-relaxed ${isRTL ? 'font-arabic' : ''}`}>
                       {services[activeService].description}
                     </p>
                   </div>
@@ -332,7 +332,7 @@ const JAAZLHomepage: React.FC = () => {
                 >
                   <div className={`flex items-center ${isRTL ? 'flex-row-reverse' : ''}`}>
                     <div className="flex-1">
-                      <h3 className={`text-lg font-bold text-gray-900 group-hover:text-blue-900 transition-colors ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                      <h3 className={`text-lg font-bold text-gray-900 group-hover:text-blue-900 transition-colors ${isRTL ? 'font-arabic' : ''}`}>
                         {service.title}
                       </h3>
                     </div>
@@ -344,10 +344,10 @@ const JAAZLHomepage: React.FC = () => {
             <div className=" mt-10">
               <div className={`bg-gradient-to-br ${services[activeService].color} rounded-3xl p-8 lg:p-10 text-white shadow-xl transform transition-all duration-300`}>
                 <div className="mb-8">
-                  <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                  <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${isRTL ? 'font-arabic' : ''}`}>
                     {services[activeService].title}
                   </h3>
-                  <p className={`text-blue-100 mb-8 text-xl leading-relaxed ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                  <p className={`text-blue-100 mb-8 text-xl leading-relaxed ${isRTL ? 'font-arabic' : ''}`}>
                     {services[activeService].description}
                   </p>
                 </div>

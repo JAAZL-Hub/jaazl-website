@@ -181,7 +181,7 @@ export const ResponsiveNav: React.FC<ResponsiveNavProps> = ({
                         href={subitem.href}
                         className={`
                           block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600
-                          ${isRTL ? 'font-arabic text-right' : ''}
+                          ${isRTL ? 'font-arabic' : ''}
                         `}
                       >
                         {subitem.label}
@@ -235,7 +235,7 @@ export const ResponsiveNav: React.FC<ResponsiveNavProps> = ({
                         ? 'text-blue-600 bg-blue-50' 
                         : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
                       }
-                      ${isRTL ? 'font-arabic text-right' : ''}
+                      ${isRTL ? 'font-arabic' : ''}
                     `}
                     onClick={onMobileMenuToggle}
                   >
@@ -251,7 +251,7 @@ export const ResponsiveNav: React.FC<ResponsiveNavProps> = ({
                           href={subitem.href}
                           className={`
                             block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg touch-target
-                            ${isRTL ? 'font-arabic text-right' : ''}
+                            ${isRTL ? 'font-arabic' : ''}
                           `}
                           onClick={onMobileMenuToggle}
                         >

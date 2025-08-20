@@ -438,7 +438,7 @@ export const TouchInput: React.FC<TouchInputProps> = ({
   return (
     <div className="w-full">
       {label && (
-        <label className={`block text-sm font-medium text-gray-700 mb-2 ${isRTL ? 'font-arabic text-right' : ''}`}>
+        <label className={`block text-sm font-medium text-gray-700 mb-2 ${isRTL ? 'font-arabic' : ''}`}>
           {label}
         </label>
       )}
@@ -459,7 +459,7 @@ export const TouchInput: React.FC<TouchInputProps> = ({
             text-base leading-6
             transition-all duration-200
             ${error ? 'border-red-500 focus:ring-red-500 focus:border-red-500' : ''}
-            ${isRTL ? 'font-arabic text-right' : ''}
+            ${isRTL ? 'font-arabic' : ''}
             ${className}
           `}
           {...props}
@@ -470,7 +470,7 @@ export const TouchInput: React.FC<TouchInputProps> = ({
         <motion.p
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className={`mt-2 text-sm text-red-600 ${isRTL ? 'font-arabic text-right' : ''}`}
+          className={`mt-2 text-sm text-red-600 ${isRTL ? 'font-arabic' : ''}`}
         >
           {error}
         </motion.p>

@@ -93,7 +93,7 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
           <div className="max-w-3xl mx-auto">
             <div className={`prose prose-lg ${isRTL ? 'prose-rtl' : ''}`}>
               {getLocalizedContent(service.fullDescription, language).split('\n\n').map((paragraph, idx) => (
-                <p key={idx} className={`mb-4 text-gray-800 font-medium leading-relaxed ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                <p key={idx} className={`mb-4 text-gray-800 font-medium leading-relaxed ${isRTL ? 'font-arabic' : ''}`}>
                   {paragraph}
                 </p>
               ))}
@@ -115,10 +115,10 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
                   <div className={`text-primary text-4xl mb-4 ${isRTL ? 'text-right' : 'text-left'}`}>
                     <FaCheck className="text-gray-700"/>
                   </div>
-                  <h3 className={`text-2xl font-bold mb-3 text-gray-700 ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                  <h3 className={`text-2xl font-bold mb-3 text-gray-700 ${isRTL ? 'font-arabic' : ''}`}>
                     {getLocalizedContent(feature.title, language)}
                   </h3>
-                  <p className={`text-gray-700 text-lg leading-relaxed ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                  <p className={`text-gray-700 text-lg leading-relaxed ${isRTL ? 'font-arabic' : ''}`}>
                     {getLocalizedContent(feature.description, language)}
                   </p>
                 </div>
@@ -138,10 +138,10 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
             <div className="grid-cards-2">
               {service.benefits.map((benefit, index) => (
                 <div key={index} className={`bg-gray-50 p-6 rounded-lg border-l-4 border-primary ${isRTL ? 'border-l-0 border-r-4' : ''}`}>
-                  <h3 className={`text-2xl font-bold mb-3 text-gray-700 ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                  <h3 className={`text-2xl font-bold mb-3 text-gray-700 ${isRTL ? 'font-arabic' : ''}`}>
                     {getLocalizedContent(benefit.title, language)}
                   </h3>
-                  <p className={`text-gray-700 leading-relaxed ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                  <p className={`text-gray-700 leading-relaxed ${isRTL ? 'font-arabic' : ''}`}>
                     {getLocalizedContent(benefit.description, language)}
                   </p>
                 </div>
@@ -175,10 +175,10 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className={`text-2xl font-bold mb-2 text-gray-700 transition duration-300 ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                      <h3 className={`text-2xl font-bold mb-2 text-gray-700 transition duration-300 ${isRTL ? 'font-arabic' : ''}`}>
                         {getLocalizedContent(industry.name, language)}
                       </h3>
-                      <p className={`text-gray-600 text-lg leading-relaxed ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                      <p className={`text-gray-600 text-lg leading-relaxed ${isRTL ? 'font-arabic' : ''}`}>
                         {getLocalizedContent(industry.shortDescription, language)}
                       </p>
                     </div>
@@ -200,10 +200,10 @@ const ServicePageClient: React.FC<ServicePageClientProps> = ({ service, relatedI
             <div className="max-w-3xl mx-auto">
               {service.faqs.map((faq, index) => (
                 <div key={index} className="mb-8 border-b border-gray-200 pb-6">
-                  <h3 className={`text-xl font-bold mb-1 ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                  <h3 className={`text-xl font-bold mb-1 ${isRTL ? 'font-arabic' : ''}`}>
                     {getLocalizedContent(faq.question, language)}
                   </h3>
-                  <p className={`text-base text-gray-600 leading-relaxed ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                  <p className={`text-base text-gray-600 leading-relaxed ${isRTL ? 'font-arabic' : ''}`}>
                     {getLocalizedContent(faq.answer, language)}
                   </p>
                 </div>

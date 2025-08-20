@@ -91,7 +91,7 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
           <div className="max-w-3xl mx-auto">
             <div className="prose prose-lg">
               {getLocalizedContent(industry.fullDescription, language).split('\n\n').map((paragraph, idx) => (
-                <p key={idx} className={`mb-4 text-gray-800 font-medium ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                <p key={idx} className={`mb-4 text-gray-800 font-medium ${isRTL ? 'font-arabic' : ''}`}>
                   {paragraph}
                 </p>
               ))}
@@ -108,8 +108,8 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {industry.challenges.map((challenge, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                  <h3 className={`text-3xl font-bold mb-3 text-[#1E1E1E] ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>{getLocalizedContent(challenge.title, language)}</h3>
-                  <p className={`text-gray-600 text-lg ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>{getLocalizedContent(challenge.description, language)}</p>
+                  <h3 className={`text-3xl font-bold mb-3 text-[#1E1E1E] ${isRTL ? 'font-arabic' : ''}`}>{getLocalizedContent(challenge.title, language)}</h3>
+                  <p className={`text-gray-600 text-lg ${isRTL ? 'font-arabic' : ''}`}>{getLocalizedContent(challenge.description, language)}</p>
                 </div>
               ))}
             </div>
@@ -125,8 +125,8 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {industry.solutions.map((solution, index) => (
                 <div key={index} className="bg-gray-50 p-6 rounded-lg border-s-4 border-primary">
-                  <h3 className={`text-3xl font-bold mb-3 text-[#1E1E1E] ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>{getLocalizedContent(solution.title, language)}</h3>
-                  <p className={`text-gray-600 text-lg ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>{getLocalizedContent(solution.description, language)}</p>
+                  <h3 className={`text-3xl font-bold mb-3 text-[#1E1E1E] ${isRTL ? 'font-arabic' : ''}`}>{getLocalizedContent(solution.title, language)}</h3>
+                  <p className={`text-gray-600 text-lg ${isRTL ? 'font-arabic' : ''}`}>{getLocalizedContent(solution.description, language)}</p>
                 </div>
               ))}
             </div>
@@ -153,11 +153,11 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
                     </div>
                   )}
                   <div className="p-6">
-                    <h3 className={`text-3xl font-bold mb-3 text-[#1E1E1E] ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>{getLocalizedContent(caseStudy.title, language)}</h3>
-                    <p className={`text-gray-600 text-lg ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>{getLocalizedContent(caseStudy.description, language)}</p>
+                    <h3 className={`text-3xl font-bold mb-3 text-[#1E1E1E] ${isRTL ? 'font-arabic' : ''}`}>{getLocalizedContent(caseStudy.title, language)}</h3>
+                    <p className={`text-gray-600 text-lg ${isRTL ? 'font-arabic' : ''}`}>{getLocalizedContent(caseStudy.description, language)}</p>
                     {caseStudy.results && (
                       <div className="mt-4">
-                        <h4 className={`font-bold text-lg mb-2 text-[#1E1E1E] ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>{language === 'en' ? 'Results:' : 'النتائج:'}</h4>
+                        <h4 className={`font-bold text-lg mb-2 text-[#1E1E1E] ${isRTL ? 'font-arabic' : ''}`}>{language === 'en' ? 'Results:' : 'النتائج:'}</h4>
                         <ul className={`list-disc ${isRTL ? 'pr-6 text-right' : 'pl-6 text-left'}`}>
                           {Array.isArray(caseStudy.results) ? 
                             caseStudy.results.map((result: LocalizedContent, idx: number) => (
@@ -198,10 +198,10 @@ const IndustryPageClient: React.FC<IndustryPageClientProps> = ({ industry, relat
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className={`text-3xl font-bold mb-2 group-hover:text-primary transition duration-300 text-gray-800 ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>
+                      <h3 className={`text-3xl font-bold mb-2 group-hover:text-primary transition duration-300 text-gray-800 ${isRTL ? 'font-arabic' : ''}`}>
                         {getLocalizedContent(service.name, language)}
                       </h3>
-                      <p className={`text-gray-800 text-lg ${isRTL ? 'text-right font-arabic' : 'text-left'}`}>{getLocalizedContent(service.shortDescription, language)}</p>
+                      <p className={`text-gray-800 text-lg ${isRTL ? 'font-arabic' : ''}`}>{getLocalizedContent(service.shortDescription, language)}</p>
                     </div>
                   </div>
                 </Link>

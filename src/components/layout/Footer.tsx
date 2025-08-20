@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
                 />
               </div>
             </div>
-            <p className={`text-gray-400 mb-8 leading-relaxed max-w-md ${language === 'ar' ? 'text-right' : 'text-left'}`}>
+            <p className={`text-gray-400 mb-8 leading-relaxed max-w-md ${language === 'ar' ? 'font-arabic' : ''}`}>
               {language === 'en' 
                 ? "Leading industrial solutions provider in Saudi Arabia's Eastern Province, delivering excellence through innovation, expertise, and world-class partnerships."
                 : "شركة رائدة في تقديم الحلول الصناعية في المنطقة الشرقية بالمملكة العربية السعودية، نقدم التميز من خلال الابتكار والخبرة والشراكات العالمية."}
@@ -82,11 +82,11 @@ const Footer: React.FC = () => {
 
           {/* Products & Services */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-orange-400">{language === 'en' ? 'Products & Services' : 'المنتجات والخدمات'}</h4>
+            <h4 className={`text-lg font-bold mb-6 text-orange-400 ${language === 'ar' ? 'font-arabic' : ''}`}>{language === 'en' ? 'Products & Services' : 'المنتجات والخدمات'}</h4>
             <ul className="space-y-3 mb-6">
               {productsServicesLinks.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.path} className={`text-gray-400 hover:text-white transition-colors duration-300 flex items-center group ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                  <Link href={link.path} className={`text-gray-400 hover:text-white transition-colors duration-300 flex items-center group ${language === 'ar' ? 'flex-row-reverse font-arabic' : ''}`}>
                     {React.createElement(getNavigationIcon(language === 'ar' ? 'arrow-left' : 'arrow-right'), { 
                       className: `w-4 h-4 mx-2 transition-transform ${language === 'ar' ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'}` 
                     })}
@@ -96,11 +96,11 @@ const Footer: React.FC = () => {
               ))}
             </ul>
             
-            <h5 className="text-sm font-semibold mb-3 text-blue-300 uppercase tracking-wider">{language === 'en' ? 'Specialized In' : 'متخصصون في'}</h5>
+            <h5 className={`text-sm font-semibold mb-3 text-blue-300 uppercase tracking-wider ${language === 'ar' ? 'font-arabic' : ''}`}>{language === 'en' ? 'Specialized In' : 'متخصصون في'}</h5>
             <ul className="space-y-2">
               {specializedInLinks.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.path} className={`text-gray-500 hover:text-gray-300 text-sm transition-colors duration-300 flex items-center group ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                  <Link href={link.path} className={`text-gray-500 hover:text-gray-300 text-sm transition-colors duration-300 flex items-center group ${language === 'ar' ? 'flex-row-reverse font-arabic' : ''}`}>
                     {React.createElement(getNavigationIcon(language === 'ar' ? 'arrow-left' : 'arrow-right'), { 
                       className: `w-3 h-3 mx-2 transition-transform ${language === 'ar' ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'}` 
                     })}
@@ -113,11 +113,11 @@ const Footer: React.FC = () => {
 
           {/* Industries */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-orange-400">{language === 'en' ? 'Industries' : 'الصناعات'}</h4>
+            <h4 className={`text-lg font-bold mb-6 text-orange-400 ${language === 'ar' ? 'font-arabic' : ''}`}>{language === 'en' ? 'Industries' : 'الصناعات'}</h4>
             <ul className="space-y-3">
               {industriesLinks.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.path} className={`text-gray-400 hover:text-white transition-colors duration-300 flex items-center group ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                  <Link href={link.path} className={`text-gray-400 hover:text-white transition-colors duration-300 flex items-center group ${language === 'ar' ? 'flex-row-reverse font-arabic' : ''}`}>
                     {React.createElement(getNavigationIcon(language === 'ar' ? 'arrow-left' : 'arrow-right'), { 
                       className: `w-4 h-4 mx-2 transition-transform ${language === 'ar' ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'}` 
                     })}
@@ -130,11 +130,11 @@ const Footer: React.FC = () => {
 
           {/* Contact & Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-orange-400">{language === 'en' ? 'Quick Links' : 'روابط سريعة'}</h4>
+            <h4 className={`text-lg font-bold mb-6 text-orange-400 ${language === 'ar' ? 'font-arabic' : ''}`}>{language === 'en' ? 'Quick Links' : 'روابط سريعة'}</h4>
             <ul className="space-y-4">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <Link href={link.path} className={`text-gray-400 hover:text-white transition-colors duration-300 flex items-center group ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                  <Link href={link.path} className={`text-gray-400 hover:text-white transition-colors duration-300 flex items-center group ${language === 'ar' ? 'flex-row-reverse font-arabic' : ''}`}>
                     {React.createElement(getNavigationIcon(language === 'ar' ? 'arrow-left' : 'arrow-right'), { 
                       className: `w-4 h-4 mx-2 transition-transform ${language === 'ar' ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'}` 
                     })}
@@ -143,7 +143,7 @@ const Footer: React.FC = () => {
                 </li>
               ))}
                <li className="pt-4">
-                <button onClick={toggleLanguage} className={`text-gray-400 hover:text-white transition-colors duration-300 flex items-center group w-full border border-gray-700 hover:border-secondary-400 rounded-full px-4 py-2 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+                <button onClick={toggleLanguage} className={`text-gray-400 hover:text-white transition-colors duration-300 flex items-center group w-full border border-gray-700 hover:border-secondary-400 rounded-full px-4 py-2 ${language === 'ar' ? 'flex-row-reverse font-arabic' : ''}`}>
                   {React.createElement(getNavigationIcon('globe'), { className: "w-4 h-4 mx-2" })}
                   {language === 'en' ? 'تغيير إلى العربية' : 'Switch to English'}
                 </button>
@@ -153,26 +153,26 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Contact Info Section in Footer */}
-        <div className={`mt-16 pt-10 border-t border-gray-800 grid md:grid-cols-3 gap-8 text-center ${language === 'ar' ? 'md:text-right' : 'md:text-left'}`}>
+        <div className={`mt-16 pt-10 border-t border-gray-800 grid md:grid-cols-3 gap-8 text-center ${language === 'ar' ? 'font-arabic' : ''}`}>
             <div className={`flex items-center justify-center ${language === 'ar' ? 'md:justify-end md:flex-row-reverse' : 'md:justify-start'}`}>
               {React.createElement(getContactIcon('phone'), { className: "w-6 h-6 mx-3 text-green-400" })}
-              <div className={language === 'ar' ? 'text-right' : 'text-left'}>
-                <div className="font-semibold">{language === 'en' ? 'Call Us' : 'اتصل بنا'}</div>
-                <a href="tel:+966555109268" className="text-gray-400 hover:text-white transition-colors">+966 55 510 9268</a>
+              <div className={language === 'ar' ? 'font-arabic' : ''}>
+                <div className={`font-semibold ${language === 'ar' ? 'font-arabic' : ''}`}>{language === 'en' ? 'Call Us' : 'اتصل بنا'}</div>
+                <a href="tel:+966555109268" className={`text-gray-400 hover:text-white transition-colors ${language === 'ar' ? 'font-arabic' : ''}`}>+966 55 510 9268</a>
               </div>
             </div>
             <div className={`flex items-center justify-center ${language === 'ar' ? 'md:justify-end md:flex-row-reverse' : 'md:justify-start'}`}>
               {React.createElement(getContactIcon('mail'), { className: "w-6 h-6 mx-3 text-blue-400" })}
-              <div className={language === 'ar' ? 'text-right' : 'text-left'}>
-                <div className="font-semibold">{language === 'en' ? 'Email Us' : 'راسلنا عبر الإيميل'}</div>
-                <a href="mailto:sales@jaazl.com" className="text-gray-400 hover:text-white transition-colors">sales@jaazl.com</a>
+              <div className={language === 'ar' ? 'font-arabic' : ''}>
+                <div className={`font-semibold ${language === 'ar' ? 'font-arabic' : ''}`}>{language === 'en' ? 'Email Us' : 'راسلنا عبر الإيميل'}</div>
+                <a href="mailto:sales@jaazl.com" className={`text-gray-400 hover:text-white transition-colors ${language === 'ar' ? 'font-arabic' : ''}`}>sales@jaazl.com</a>
               </div>
             </div>
             <div className={`flex items-center justify-center ${language === 'ar' ? 'md:justify-end md:flex-row-reverse' : 'md:justify-start'}`}>
               {React.createElement(getMiscIcon('map-pin'), { className: "w-6 h-6 mx-3 text-orange-400" })}
-              <div className={language === 'ar' ? 'text-right' : 'text-left'}>
-                <div className="font-semibold">{language === 'en' ? 'Our Office' : 'مكتبنا'}</div>
-                <p className="text-gray-400">{language === 'en' ? 'Jubail Industrial Area 1' : 'الجبيل الصناعية ١'}</p>
+              <div className={language === 'ar' ? 'font-arabic' : ''}>
+                <div className={`font-semibold ${language === 'ar' ? 'font-arabic' : ''}`}>{language === 'en' ? 'Our Office' : 'مكتبنا'}</div>
+                <p className={`text-gray-400 ${language === 'ar' ? 'font-arabic' : ''}`}>{language === 'en' ? 'Jubail Industrial Area 1' : 'الجبيل الصناعية ١'}</p>
               </div>
             </div>
         </div>
@@ -180,7 +180,7 @@ const Footer: React.FC = () => {
         {/* Footer Bottom */}
         <div className="border-t border-gray-800 mt-16 pt-8">
           <div className={`flex flex-col md:flex-row justify-between items-center ${language === 'ar' ? 'md:flex-row-reverse' : ''}`}>
-            <p className={`text-gray-400 text-sm mb-4 md:mb-0 ${language === 'ar' ? 'text-center md:text-right' : 'text-center md:text-left'}`}>
+            <p className={`text-gray-400 text-sm mb-4 md:mb-0 ${language === 'ar' ? 'text-center font-arabic' : 'text-center'}`}>
               © {new Date().getFullYear()} JAAZL Industrial Company. {language === 'en' ? 'All rights reserved.' : 'جميع الحقوق محفوظة.'}
             </p>
             <div className={`flex gap-6 text-gray-400 ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
