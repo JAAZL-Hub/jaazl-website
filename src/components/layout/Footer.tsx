@@ -165,7 +165,7 @@ const Footer: React.FC = () => {
               {React.createElement(getContactIcon('mail'), { className: "w-6 h-6 mx-3 text-blue-400" })}
               <div className={language === 'ar' ? 'text-right' : 'text-left'}>
                 <div className="font-semibold">{language === 'en' ? 'Email Us' : 'راسلنا عبر الإيميل'}</div>
-                <a href="mailto:info@jaazl.com" className="text-gray-400 hover:text-white transition-colors">info@jaazl.com</a>
+                <a href="mailto:sales@jaazl.com" className="text-gray-400 hover:text-white transition-colors">sales@jaazl.com</a>
               </div>
             </div>
             <div className={`flex items-center justify-center ${language === 'ar' ? 'md:justify-end md:flex-row-reverse' : 'md:justify-start'}`}>

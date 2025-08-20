@@ -582,8 +582,8 @@ const JAAZLHomepage: React.FC = () => {
                     <div className={`font-semibold ${isRTL ? 'font-arabic' : ''}`}>
                       {language === 'en' ? "Email Us" : "راسلنا"}
                     </div>
-                    <a href="mailto:info@jaazl.com" className="text-orange-100 hover:text-white transition-colors">
-                      info@jaazl.com
+                    <a href="mailto:sales@jaazl.com" className="text-orange-100 hover:text-white transition-colors">
+                      sales@jaazl.com
                     </a>
                   </div>
                 </div>

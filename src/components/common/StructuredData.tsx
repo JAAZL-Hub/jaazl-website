@@ -54,8 +54,8 @@ export const OrganizationSchema = () => {
       },
     ],
     sameAs: [
-      'https://linkedin.com/company/jaazl-industrial',
-      'https://twitter.com/jaazlindustrial',
+      'https://linkedin.com/company/jaazl-industrial-company',
+      'https://twitter.com/jaazl-industrial-company',
     ],
     serviceArea: {
       '@type': 'GeoCircle',
@@ -187,7 +187,7 @@ export const LocalBusinessSchema = () => {
     image: 'https://jaazl.com/images/office-building.jpg',
     url: 'https://jaazl.com',
     telephone: '+966-55-510-9268',
-    email: 'info@jaazl.com',
+    email: 'sales@jaazl.com',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Jubail Industrial Area 1',
@@ -208,8 +208,8 @@ export const LocalBusinessSchema = () => {
       closes: '17:00',
     },
     sameAs: [
-      'https://linkedin.com/company/jaazl-industrial',
-      'https://twitter.com/jaazlindustrial',
+      'https://linkedin.com/company/jaazl-industrial-company',
+      'https://twitter.com/jaazl-industrial-company',
     ],
     priceRange: '$$$',
     aggregateRating: {

@@ -14,7 +14,7 @@ export const contacts: Contact[] = [
   {
     id: 'email-support',
     type: 'email',
-    value: 'info@jaazl.com',
+    value: 'sales@jaazl.com',
     label: {
       en: 'Information',
       ar: 'المعلومات'
@@ -64,7 +64,7 @@ export const contacts: Contact[] = [
   {
     id: 'social-x-twitter',
     type: 'social',
-    value: 'https://X.com/jaazl',
+    value: 'https://X.com/jaazl-industrial-company',
     label: {
       en: 'X',
       ar: 'X'
