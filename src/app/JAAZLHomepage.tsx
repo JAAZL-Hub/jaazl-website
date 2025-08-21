@@ -176,7 +176,7 @@ const JAAZLHomepage: React.FC = () => {
       {/* Enhanced Hero Section */}
       <section 
         id="hero" 
-        className="relative min-h-screen text-white overflow-hidden flex items-center"
+        className="relative min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 text-white overflow-hidden flex items-center"
         aria-label={language === 'en' ? 'Hero section' : 'القسم الرئيسي'}
       >
         {/* Background Image Layer */}
@@ -197,12 +197,12 @@ const JAAZLHomepage: React.FC = () => {
         <div className="absolute inset-0 z-20">
           <div className={`absolute top-32 sm:top-28 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse ${isRTL ? 'right-10' : 'left-10'}`}></div>
           <div className={`absolute bottom-20 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000 ${isRTL ? 'left-10' : 'right-10'}`}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-orange-500/5 rounded-full blur-3xl"></div>
+          <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-3xl ${isRTL ? 'bg-gradient-to-l from-blue-500/5 to-orange-500/5' : 'bg-gradient-to-r from-blue-500/5 to-orange-500/5'}`}></div>
         </div>
         
         <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full hero-container">
           <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${isRTL ? 'lg:grid-flow-col-dense' : ''}`}>
-            <div className={`transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${isRTL ? 'lg:col-start-2 text-right' : 'text-left'}`}>
+            <div className={`transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} ${isRTL ? 'lg:col-start-2' : ''}`}>
               <h1 className={`hero-heading font-bold leading-tight mb-6 ${isRTL ? 'font-arabic' : ''}`}>
                 {language === 'en' ? (
                   <>
@@ -233,7 +233,7 @@ const JAAZLHomepage: React.FC = () => {
                   : "حلول هندسية وبيئية وصناعية شاملة في الجبيل والدمام مع شراكات تقنية عالمية وخبرة محلية."}
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+              <div className={`flex flex-col sm:flex-row gap-4 sm:gap-6 ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
                 <Link 
                   href="/contact" 
                   className={`group bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:from-orange-600 hover:to-orange-700 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center ${isRTL ? 'flex-row-reverse font-arabic' : ''}`}
