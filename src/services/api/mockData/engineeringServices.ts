@@ -101,8 +101,16 @@ These systems not only ensure environmental compliance but also provide signific
       ar: 'حلول شاملة لإدارة النفايات للتعامل الآمن ومعالجة والتخلص من تيارات النفايات الصناعية.'
     },
     fullDescription: {
-      en: `Our industrial waste management services provide comprehensive solutions for the safe handling, treatment, and disposal of various industrial waste streams.`,
-      ar: `تقدم خدمات إدارة النفايات الصناعية لدينا حلولًا شاملة للتعامل الآمن ومعالجة والتخلص من تيارات النفايات الصناعية المختلفة.`
+      en: `JAAZL's Industrial Waste Management services provide comprehensive, end-to-end solutions for the safe handling, treatment, and disposal of various industrial waste streams across the petrochemical, oil & gas, and manufacturing sectors. Our expert team specializes in hazardous and non-hazardous waste characterization, classification, and treatment using state-of-the-art technologies that ensure full regulatory compliance with Saudi environmental standards and international best practices.
+
+We offer complete waste lifecycle management including on-site waste audits, customized treatment system design, implementation of advanced separation and neutralization technologies, and certified disposal services. Our solutions encompass liquid waste treatment, solid waste processing, hazardous material handling, and contaminated soil remediation.
+
+Our approach integrates sustainable waste minimization strategies with cost-effective treatment solutions, helping industrial facilities reduce waste generation, recover valuable materials, and achieve zero-waste-to-landfill objectives while maintaining strict environmental and safety compliance throughout the Eastern Province of Saudi Arabia.`,
+      ar: `تقدم خدمات إدارة النفايات الصناعية من جازل حلولًا شاملة ومتكاملة للتعامل الآمن ومعالجة والتخلص من تيارات النفايات الصناعية المختلفة عبر قطاعات البتروكيماويات والنفط والغاز والتصنيع. يتخصص فريقنا الخبير في تحديد خصائص وتصنيف ومعالجة النفايات الخطرة وغير الخطرة باستخدام تقنيات متطورة تضمن الامتثال التنظيمي الكامل للمعايير البيئية السعودية وأفضل الممارسات الدولية.
+
+نقدم إدارة شاملة لدورة حياة النفايات بما في ذلك عمليات تدقيق النفايات في الموقع وتصميم أنظمة المعالجة المخصصة وتنفيذ تقنيات الفصل والمعادلة المتقدمة وخدمات التخلص المعتمدة. تشمل حلولنا معالجة النفايات السائلة ومعالجة النفايات الصلبة والتعامل مع المواد الخطرة وإصلاح التربة الملوثة.
+
+يدمج نهجنا استراتيجيات تقليل النفايات المستدامة مع حلول المعالجة الفعالة من حيث التكلفة، مما يساعد المرافق الصناعية على تقليل توليد النفايات واستعادة المواد القيمة وتحقيق أهداف عدم إرسال النفايات إلى مكبات النفايات مع الحفاظ على الامتثال البيئي والسلامة الصارم في جميع أنحاء المنطقة الشرقية بالمملكة العربية السعودية.`
     },
     features: [
       {
@@ -179,8 +187,16 @@ These systems not only ensure environmental compliance but also provide signific
       ar: 'أنظمة معالجة متخصصة لفصل المياه الزيتية واستعادة الهيدروكربونات في العمليات الصناعية.'
     },
     fullDescription: {
-      en: `Our oily water treatment systems provide efficient separation and recovery of hydrocarbons from contaminated water streams.`,
-      ar: `توفر أنظمة معالجة المياه الزيتية لدينا فصل واستعادة فعالين للهيدروكربونات من تيارات المياه الملوثة.`
+      en: `JAAZL's Oily Water & Hydrocarbon Treatment systems deliver advanced separation and recovery solutions for contaminated water streams in oil & gas, petrochemical, and refinery operations. Our comprehensive treatment approach combines multiple separation technologies including gravity separation, dissolved air flotation (DAF), induced gas flotation (IGF), and advanced membrane filtration to achieve optimal oil-water separation efficiency.
+
+Our systems are designed to handle various types of oily water including produced water, ballast water, bilge water, and process wastewater with oil concentrations ranging from light sheens to heavily contaminated streams. We employ cutting-edge technologies such as electrocoagulation, advanced oxidation processes, and hydrocyclone separation to ensure maximum hydrocarbon recovery and water quality compliance.
+
+The treatment process not only removes oil and hydrocarbons but also recovers valuable resources for reuse, reducing environmental impact and operational costs. Our solutions meet stringent discharge standards while maximizing resource recovery, making them ideal for facilities requiring efficient wastewater management and environmental compliance in the demanding conditions of Saudi Arabia's industrial sector.`,
+      ar: `تقدم أنظمة معالجة المياه الزيتية والهيدروكربونية من جازل حلول فصل واستعادة متطورة لتيارات المياه الملوثة في عمليات النفط والغاز والبتروكيماويات والمصافي. يجمع نهج المعالجة الشامل لدينا بين تقنيات الفصل المتعددة بما في ذلك الفصل بالجاذبية وتعويم الهواء المذاب (DAF) وتعويم الغاز المحرض (IGF) والترشيح الغشائي المتقدم لتحقيق كفاءة فصل الزيت والماء المثلى.
+
+تم تصميم أنظمتنا للتعامل مع أنواع مختلفة من المياه الزيتية بما في ذلك المياه المنتجة ومياه الصابورة ومياه الحوض ومياه الصرف الصناعي بتراكيز زيت تتراوح من الطبقات الخفيفة إلى التيارات شديدة التلوث. نوظف تقنيات متطورة مثل التخثر الكهربائي وعمليات الأكسدة المتقدمة وفصل الهيدروسيكلون لضمان أقصى استعادة للهيدروكربونات وامتثال جودة المياه.
+
+لا تقوم عملية المعالجة بإزالة الزيت والهيدروكربونات فحسب، بل تستعيد أيضًا الموارد القيمة لإعادة الاستخدام، مما يقلل التأثير البيئي وتكاليف التشغيل. تلبي حلولنا معايير التصريف الصارمة مع تعظيم استعادة الموارد، مما يجعلها مثالية للمرافق التي تتطلب إدارة فعالة لمياه الصرف والامتثال البيئي في الظروف الصعبة لقطاع الصناعة في المملكة العربية السعودية.`
     },
     features: [
       {
@@ -259,8 +275,16 @@ These systems not only ensure environmental compliance but also provide signific
       ar: 'مواد كيميائية متخصصة عالية الأداء مصممة للتطبيقات والعمليات الصناعية المحددة.'
     },
     fullDescription: {
-      en: `Our specialized industrial chemicals portfolio includes high-performance formulations designed for specific industrial applications.`,
-      ar: `تشمل محفظة المواد الكيميائية الصناعية المتخصصة لدينا تركيبات عالية الأداء مصممة لتطبيقات صناعية محددة.`
+      en: `JAAZL's Specialized Industrial Chemicals portfolio encompasses a comprehensive range of high-performance, custom-formulated chemicals specifically engineered for demanding industrial applications across oil & gas, petrochemical, mining, and manufacturing sectors. Our technical expertise spans drilling chemicals, production enhancement chemicals, process treatment chemicals, and specialty additives that optimize operational efficiency and equipment performance.
+
+Our drilling chemicals include advanced mud systems, fluid loss control additives, rheology modifiers, and wellbore stability enhancers designed for challenging drilling conditions in Saudi Arabia's diverse geological formations. Production enhancement chemicals feature corrosion inhibitors, scale inhibitors, biocides, and flow improvers that maximize asset productivity and extend equipment life.
+
+We maintain strategic partnerships with leading global chemical manufacturers while developing local formulation capabilities to ensure reliable supply, technical support, and cost-effective solutions. Our specialized chemicals undergo rigorous quality control testing and are supported by comprehensive technical documentation, safety data sheets, and on-site application support to ensure optimal performance and regulatory compliance in critical industrial processes.`,
+      ar: `تشمل محفظة المواد الكيميائية الصناعية المتخصصة من جازل مجموعة شاملة من المواد الكيميائية عالية الأداء والمصممة خصيصاً والمُهندسة لتطبيقات صناعية صعبة عبر قطاعات النفط والغاز والبتروكيماويات والتعدين والتصنيع. تمتد خبرتنا التقنية لتشمل كيماويات الحفر وكيماويات تعزيز الإنتاج وكيماويات معالجة العمليات والمضافات المتخصصة التي تحسن الكفاءة التشغيلية وأداء المعدات.
+
+تشمل كيماويات الحفر لدينا أنظمة طين متقدمة ومضافات التحكم في فقدان السوائل ومعدلات الريولوجيا ومحسنات استقرار البئر المصممة لظروف الحفر الصعبة في التكوينات الجيولوجية المتنوعة في المملكة العربية السعودية. تتضمن كيماويات تعزيز الإنتاج مثبطات التآكل ومثبطات التقشر والمبيدات الحيوية ومحسنات التدفق التي تعظم إنتاجية الأصول وتمدد عمر المعدات.
+
+نحافظ على شراكات استراتيجية مع الشركات المصنعة للكيماويات الرائدة عالمياً مع تطوير قدرات التركيب المحلي لضمان التوريد الموثوق والدعم التقني والحلول الفعالة من حيث التكلفة. تخضع كيماوياتنا المتخصصة لاختبارات مراقبة جودة صارمة وتدعمها وثائق تقنية شاملة وأوراق بيانات الأمان ودعم التطبيق في الموقع لضمان الأداء الأمثل والامتثال التنظيمي في العمليات الصناعية الحرجة.`
     },
     features: [
       {
@@ -337,8 +361,16 @@ These systems not only ensure environmental compliance but also provide signific
       ar: 'توريد موثوق للمواد الكيميائية الصناعية بالجملة بجودة ثابتة وأسعار تنافسية.'
     },
     fullDescription: {
-      en: `Our bulk chemical supply service provides reliable, cost-effective solutions for high-volume industrial operations.`,
-      ar: `تقدم خدمة توريد الكيماويات بالجملة لدينا حلولًا موثوقة وفعالة من حيث التكلفة.`
+      en: `JAAZL's Bulk Industrial Chemicals Supply service delivers comprehensive procurement and logistics solutions for high-volume chemical requirements across Saudi Arabia's industrial sector. We maintain strategic partnerships with leading global chemical manufacturers and local distributors to ensure reliable, cost-effective supply of essential industrial chemicals including acids, caustics, solvents, and process chemicals.
+
+Our bulk supply capabilities encompass everything from commodity chemicals like sulfuric acid, sodium hydroxide, and ammonia to specialized process chemicals and raw materials. We manage complex supply chains, maintain optimal inventory levels, and provide just-in-time delivery services to minimize storage costs and ensure continuous production operations.
+
+Our comprehensive service includes chemical sourcing, quality verification, regulatory compliance management, transportation coordination, and inventory management. We leverage our extensive supplier network and regional expertise to provide competitive pricing, flexible delivery schedules, and technical support that helps industrial facilities optimize their chemical procurement strategies and reduce operational costs while maintaining quality and safety standards.`,
+      ar: `تقدم خدمة توريد المواد الكيميائية الصناعية بالجملة من جازل حلول شاملة للشراء واللوجستيات لمتطلبات المواد الكيميائية عالية الحجم عبر القطاع الصناعي في المملكة العربية السعودية. نحافظ على شراكات استراتيجية مع الشركات المصنعة للكيماويات الرائدة عالمياً والموزعين المحليين لضمان التوريد الموثوق والفعال من حيث التكلفة للمواد الكيميائية الصناعية الأساسية بما في ذلك الأحماض والقلويات والمذيبات والمواد الكيميائية للعمليات.
+
+تشمل قدرات التوريد بالجملة لدينا كل شيء من المواد الكيميائية الأساسية مثل حمض الكبريتيك وهيدروكسيد الصوديوم والأمونيا إلى المواد الكيميائية المتخصصة للعمليات والمواد الخام. ندير سلاسل توريد معقدة ونحافظ على مستويات مخزون مثالية ونقدم خدمات تسليم في الوقت المحدد لتقليل تكاليف التخزين وضمان استمرار عمليات الإنتاج.
+
+تشمل خدمتنا الشاملة مصادر المواد الكيميائية والتحقق من الجودة وإدارة الامتثال التنظيمي وتنسيق النقل وإدارة المخزون. نستفيد من شبكة الموردين الواسعة لدينا وخبرتنا الإقليمية لتقديم أسعار تنافسية وجداول تسليم مرنة ودعم تقني يساعد المرافق الصناعية على تحسين استراتيجيات شراء المواد الكيميائية وتقليل التكاليف التشغيلية مع الحفاظ على معايير الجودة والسلامة.`
     },
     features: [
       {
@@ -415,8 +447,16 @@ These systems not only ensure environmental compliance but also provide signific
       ar: 'تركيبات كيميائية مخصصة وخدمات الخلط لتلبية المتطلبات الصناعية المحددة.'
     },
     fullDescription: {
-      en: `Our chemical manufacturing and blending facility provides custom formulation services.`,
-      ar: `توفر منشأة التصنيع والخلط الكيميائي لدينا خدمات التركيب المخصصة.`
+      en: `JAAZL's Local Chemical Manufacturing & Blending facility represents a state-of-the-art production capability designed to meet the specific chemical requirements of Saudi Arabia's diverse industrial sectors. Our advanced manufacturing facility combines precision blending technology with strict quality control protocols to produce custom chemical formulations that meet exact customer specifications and international quality standards.
+
+Our capabilities encompass batch and continuous blending processes for a wide range of chemical products including specialty drilling fluids, production chemicals, water treatment formulations, and custom industrial solutions. We maintain comprehensive quality assurance programs with in-house analytical laboratories, certified testing procedures, and full traceability systems to ensure consistent product quality and regulatory compliance.
+
+By establishing local manufacturing capabilities, we significantly reduce lead times, lower transportation costs, and provide greater supply chain flexibility for our industrial customers. Our facility enables rapid prototype development, small-batch production for specialized applications, and large-scale manufacturing for ongoing supply requirements, all while maintaining the highest standards of safety, environmental compliance, and product quality that characterize JAAZL's commitment to excellence in chemical manufacturing.`,
+      ar: `تمثل منشأة التصنيع والخلط الكيميائي المحلي من جازل قدرة إنتاجية حديثة مصممة لتلبية المتطلبات الكيميائية المحددة للقطاعات الصناعية المتنوعة في المملكة العربية السعودية. تجمع منشأتنا الصناعية المتقدمة بين تقنية الخلط عالية الدقة وبروتوكولات مراقبة جودة صارمة لإنتاج تركيبات كيميائية مخصصة تلبي مواصفات العملاء الدقيقة ومعايير الجودة الدولية.
+
+تشمل قدراتنا عمليات الخلط بالدفعات والمستمرة لمجموعة واسعة من المنتجات الكيميائية بما في ذلك سوائل الحفر المتخصصة وكيماويات الإنتاج وتركيبات معالجة المياه والحلول الصناعية المخصصة. نحافظ على برامج ضمان جودة شاملة مع مختبرات تحليلية داخلية وإجراءات اختبار معتمدة وأنظمة تتبع كاملة لضمان جودة منتج ثابتة والامتثال التنظيمي.
+
+من خلال إنشاء قدرات تصنيع محلية، نقلل بشكل كبير من أوقات التسليم ونخفض تكاليف النقل ونوفر مرونة أكبر في سلسلة التوريد لعملائنا الصناعيين. تمكن منشأتنا من تطوير نماذج أولية سريع وإنتاج دفعات صغيرة للتطبيقات المتخصصة والتصنيع واسع النطاق لمتطلبات التوريد الجارية، كل ذلك مع الحفاظ على أعلى معايير السلامة والامتثال البيئي وجودة المنتج التي تميز التزام جازل بالتميز في التصنيع الكيميائي.`
     },
     features: [
       {
@@ -1455,5 +1495,265 @@ From small storage vessels to large-scale industrial tanks, we provide turnkey s
       keywords: ['industrial fabrication', 'custom manufacturing', 'structural steel']
     },
     relatedIndustries: ['oil-gas', 'petrochemicals', 'manufacturing', 'power', 'refineries', 'mining', 'municipal']
+  },
+
+  // ===== PROJECT MANAGEMENT CATEGORY =====
+  {
+    id: 'project-planning-platform',
+    slug: 'project-planning-platform',
+    categoryId: 'projectmgmt',
+    name: {
+      en: 'Project Planning & Management Platform',
+      ar: 'منصة تخطيط وإدارة المشاريع'
+    },
+    shortDescription: {
+      en: 'Comprehensive project management platform combining turnaround management, work packages, scheduling, and capital project coverage.',
+      ar: 'منصة شاملة لإدارة المشاريع تجمع بين إدارة الصيانة الدورية وحزم العمل والجدولة وتغطية المشاريع الرأسمالية.'
+    },
+    fullDescription: {
+      en: `Our Project Planning & Management Platform integrates four critical project management capabilities into a unified solution. This comprehensive platform combines Turnaround Management for planned shutdowns, Work Package Management for organized task execution, Scheduling & Cost Control for timeline and budget oversight, and Coverage Across Capital Projects and STOs (Scheduled Turnarounds and Outages) for complete project lifecycle management.
+
+The platform provides real-time visibility into project progress, resource allocation, and cost performance across all project phases. Advanced analytics and reporting capabilities enable data-driven decision making and continuous improvement in project delivery.
+
+Designed for industrial facilities requiring complex project coordination, our platform streamlines communication, reduces execution risks, and ensures projects are delivered on time and within budget while maintaining the highest safety and quality standards.`,
+      ar: `تدمج منصة تخطيط وإدارة المشاريع لدينا أربع قدرات حاسمة لإدارة المشاريع في حل موحد. تجمع هذه المنصة الشاملة بين إدارة الصيانة الدورية للإغلاقات المخططة وإدارة حزم العمل لتنفيذ المهام المنظمة والجدولة ومراقبة التكاليف لرقابة الجدول الزمني والميزانية والتغطية عبر المشاريع الرأسمالية والصيانة الدورية المجدولة لإدارة دورة حياة المشروع الكاملة.
+
+توفر المنصة رؤية في الوقت الفعلي لتقدم المشروع وتخصيص الموارد وأداء التكلفة عبر جميع مراحل المشروع. تمكن قدرات التحليل والتقارير المتقدمة من اتخاذ القرارات المدفوعة بالبيانات والتحسين المستمر في تسليم المشروع.
+
+مصممة للمرافق الصناعية التي تتطلب تنسيق مشاريع معقدة، تبسط منصتنا التواصل وتقلل مخاطر التنفيذ وتضمن تسليم المشاريع في الوقت المحدد وضمن الميزانية مع الحفاظ على أعلى معايير السلامة والجودة.`
+    },
+    features: [
+      {
+        id: 'turnaround-management',
+        title: {
+          en: 'Turnaround Management Platform',
+          ar: 'منصة إدارة الصيانة الدورية'
+        },
+        description: {
+          en: 'Comprehensive planning and execution management for scheduled turnarounds and shutdowns.',
+          ar: 'تخطيط شامل وإدارة تنفيذ للصيانة الدورية والإغلاقات المجدولة.'
+        },
+        icon: 'refresh-cw'
+      },
+      {
+        id: 'work-package-management',
+        title: {
+          en: 'Work Package Management',
+          ar: 'إدارة حزم العمل'
+        },
+        description: {
+          en: 'Structured work package creation, assignment, and tracking for organized project execution.',
+          ar: 'إنشاء وتعيين وتتبع حزم العمل المنظمة لتنفيذ المشروع المنظم.'
+        },
+        icon: 'package'
+      },
+      {
+        id: 'scheduling-cost-control',
+        title: {
+          en: 'Scheduling & Cost Control',
+          ar: 'الجدولة ومراقبة التكاليف'
+        },
+        description: {
+          en: 'Advanced scheduling algorithms with real-time cost tracking and budget control.',
+          ar: 'خوارزميات جدولة متقدمة مع تتبع التكاليف في الوقت الفعلي ومراقبة الميزانية.'
+        },
+        icon: 'calendar'
+      }
+    ],
+    icon: 'clipboard',
+    image: {
+      id: 'project-planning-platform-image',
+      url: '/images/services/project-planning-platform.webp',
+      altText: {
+        en: 'Project planning and management platform',
+        ar: 'منصة تخطيط وإدارة المشاريع'
+      },
+      width: 800,
+      height: 600
+    },
+    meta: {
+      title: {
+        en: 'Project Planning & Management Platform | JAAZL',
+        ar: 'منصة تخطيط وإدارة المشاريع | جازل'
+      },
+      description: {
+        en: 'Comprehensive project management platform for turnarounds, work packages, scheduling, and capital projects.',
+        ar: 'منصة شاملة لإدارة المشاريع للصيانة الدورية وحزم العمل والجدولة والمشاريع الرأسمالية.'
+      },
+      keywords: ['project management platform', 'turnaround management', 'work package management', 'scheduling cost control']
+    },
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'power', 'manufacturing', 'mining', 'fertilizers']
+  },
+  {
+    id: 'digital-integration-automation',
+    slug: 'digital-integration-automation',
+    categoryId: 'projectmgmt',
+    name: {
+      en: 'Digital Integration & Automation Solutions',
+      ar: 'حلول التكامل الرقمي والأتمتة'
+    },
+    shortDescription: {
+      en: 'Advanced digital solutions integrating BIM technology, project lifecycle digitalization, and automated form tracking systems.',
+      ar: 'حلول رقمية متقدمة تدمج تقنية BIM ورقمنة دورة حياة المشروع وأنظمة تتبع النماذج الآلية.'
+    },
+    fullDescription: {
+      en: `Our Digital Integration & Automation Solutions represent the cutting edge of project management technology, combining BIM Integration for 3D project visualization, Digitalization & Automation of Project Lifecycle for end-to-end digital workflows, and Form Tracking systems for automated documentation and compliance management.
+
+The solution leverages Building Information Modeling (BIM) to create comprehensive 3D models that enhance project planning, coordination, and execution. Our digitalization platform automates routine project tasks, streamlines approvals, and maintains complete digital records throughout the project lifecycle.
+
+Advanced form tracking capabilities ensure all project documentation is captured, routed, and approved efficiently, reducing administrative overhead and improving compliance with regulatory and internal requirements. The integrated platform provides seamless data flow between all project stakeholders and systems.`,
+      ar: `تمثل حلول التكامل الرقمي والأتمتة لدينا أحدث ما وصلت إليه تقنية إدارة المشاريع، حيث تجمع بين تكامل BIM للتصور ثلاثي الأبعاد للمشروع ورقمنة وأتمتة دورة حياة المشروع لتدفقات العمل الرقمية الشاملة وأنظمة تتبع النماذج للتوثيق الآلي وإدارة الامتثال.
+
+يستفيد الحل من نمذجة معلومات البناء (BIM) لإنشاء نماذج ثلاثية الأبعاد شاملة تعزز تخطيط المشروع والتنسيق والتنفيذ. تعمل منصة الرقمنة لدينا على أتمتة مهام المشروع الروتينية وتبسيط الموافقات والاحتفاظ بسجلات رقمية كاملة طوال دورة حياة المشروع.
+
+تضمن قدرات تتبع النماذج المتقدمة التقاط جميع وثائق المشروع وتوجيهها والموافقة عليها بكفاءة، مما يقلل النفقات الإدارية ويحسن الامتثال للمتطلبات التنظيمية والداخلية. توفر المنصة المتكاملة تدفق بيانات سلس بين جميع أصحاب المصلحة والأنظمة في المشروع.`
+    },
+    features: [
+      {
+        id: 'bim-integration',
+        title: {
+          en: 'BIM Integration',
+          ar: 'تكامل BIM'
+        },
+        description: {
+          en: '3D Building Information Modeling integration for enhanced project visualization and coordination.',
+          ar: 'تكامل نمذجة معلومات البناء ثلاثي الأبعاد لتصور وتنسيق محسن للمشروع.'
+        },
+        icon: 'box'
+      },
+      {
+        id: 'lifecycle-digitalization',
+        title: {
+          en: 'Project Lifecycle Digitalization',
+          ar: 'رقمنة دورة حياة المشروع'
+        },
+        description: {
+          en: 'Complete digitalization and automation of project workflows from initiation to completion.',
+          ar: 'رقمنة وأتمتة كاملة لتدفقات عمل المشروع من البداية إلى الإكمال.'
+        },
+        icon: 'repeat'
+      },
+      {
+        id: 'form-tracking',
+        title: {
+          en: 'Automated Form Tracking',
+          ar: 'تتبع النماذج الآلي'
+        },
+        description: {
+          en: 'Intelligent form routing and tracking system for streamlined documentation and approvals.',
+          ar: 'نظام توجيه وتتبع ذكي للنماذج للتوثيق والموافقات المبسطة.'
+        },
+        icon: 'file-text'
+      }
+    ],
+    icon: 'monitor',
+    image: {
+      id: 'digital-integration-automation-image',
+      url: '/images/services/digital-integration-automation.webp',
+      altText: {
+        en: 'Digital integration and automation solutions',
+        ar: 'حلول التكامل الرقمي والأتمتة'
+      },
+      width: 800,
+      height: 600
+    },
+    meta: {
+      title: {
+        en: 'Digital Integration & Automation Solutions | JAAZL',
+        ar: 'حلول التكامل الرقمي والأتمتة | جازل'
+      },
+      description: {
+        en: 'Advanced BIM integration, project lifecycle digitalization, and automated form tracking solutions.',
+        ar: 'تكامل BIM متقدم ورقمنة دورة حياة المشروع وحلول تتبع النماذج الآلية.'
+      },
+      keywords: ['BIM integration', 'project digitalization', 'form tracking', 'digital automation']
+    },
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'manufacturing', 'power', 'mining', 'fertilizers']
+  },
+  {
+    id: 'cost-performance-excellence',
+    slug: 'cost-performance-excellence',
+    categoryId: 'projectmgmt',
+    name: {
+      en: 'Cost Control & Performance Excellence',
+      ar: 'مراقبة التكاليف وتميز الأداء'
+    },
+    shortDescription: {
+      en: 'Comprehensive cost management and performance optimization combining cost estimating, benchmarking, and operational excellence enablement.',
+      ar: 'إدارة شاملة للتكاليف وتحسين الأداء تجمع بين تقدير التكاليف والمقارنة المرجعية وتمكين التميز التشغيلي.'
+    },
+    fullDescription: {
+      en: `Our Cost Control & Performance Excellence solution delivers comprehensive financial management and operational optimization for industrial projects. This integrated platform combines Cost Estimating for accurate project budgeting, Benchmarking against industry standards and best practices, and Operational Excellence Enablement for continuous improvement and performance optimization.
+
+The solution provides advanced cost modeling capabilities, real-time budget tracking, and variance analysis to ensure projects stay within financial parameters. Our benchmarking module compares your performance against industry leaders and identifies optimization opportunities.
+
+The operational excellence component implements lean methodologies, performance metrics, and continuous improvement processes that drive sustainable cost reduction and operational efficiency. The platform enables data-driven decision making for long-term financial and operational success.`,
+      ar: `يقدم حل مراقبة التكاليف وتميز الأداء لدينا إدارة مالية شاملة وتحسين تشغيلي للمشاريع الصناعية. تجمع هذه المنصة المتكاملة بين تقدير التكاليف لإعداد الميزانية الدقيقة للمشروع والمقارنة المرجعية مع المعايير وأفضل الممارسات الصناعية وتمكين التميز التشغيلي للتحسين المستمر وتحسين الأداء.
+
+يوفر الحل قدرات نمذجة تكاليف متقدمة وتتبع الميزانية في الوقت الفعلي وتحليل التباين لضمان بقاء المشاريع ضمن المعايير المالية. تقارن وحدة المقارنة المرجعية لدينا أداءك مع قادة الصناعة وتحدد فرص التحسين.
+
+ينفذ مكون التميز التشغيلي منهجيات الإنتاج الخالي من الهدر ومقاييس الأداء وعمليات التحسين المستمر التي تدفع التخفيض المستدام للتكاليف والكفاءة التشغيلية. تمكن المنصة من اتخاذ القرارات المدفوعة بالبيانات للنجاح المالي والتشغيلي طويل المدى.`
+    },
+    features: [
+      {
+        id: 'cost-estimating',
+        title: {
+          en: 'Advanced Cost Estimating',
+          ar: 'تقدير التكاليف المتقدم'
+        },
+        description: {
+          en: 'Precision cost modeling and estimation tools for accurate project budgeting and financial planning.',
+          ar: 'أدوات نمذجة وتقدير تكاليف دقيقة لإعداد الميزانية الدقيقة والتخطيط المالي للمشروع.'
+        },
+        icon: 'calculator'
+      },
+      {
+        id: 'benchmarking',
+        title: {
+          en: 'Industry Benchmarking',
+          ar: 'المقارنة المرجعية للصناعة'
+        },
+        description: {
+          en: 'Comprehensive benchmarking against industry standards and best-in-class performance metrics.',
+          ar: 'مقارنة مرجعية شاملة مع المعايير الصناعية ومقاييس الأداء الأفضل في فئتها.'
+        },
+        icon: 'bar-chart'
+      },
+      {
+        id: 'operational-excellence',
+        title: {
+          en: 'Operational Excellence Enablement',
+          ar: 'تمكين التميز التشغيلي'
+        },
+        description: {
+          en: 'Lean methodologies and continuous improvement processes for sustainable operational excellence.',
+          ar: 'منهجيات الإنتاج الخالي من الهدر وعمليات التحسين المستمر للتميز التشغيلي المستدام.'
+        },
+        icon: 'trending-up'
+      }
+    ],
+    icon: 'dollar-sign',
+    image: {
+      id: 'cost-performance-excellence-image',
+      url: '/images/services/cost-performance-excellence.webp',
+      altText: {
+        en: 'Cost control and performance excellence',
+        ar: 'مراقبة التكاليف وتميز الأداء'
+      },
+      width: 800,
+      height: 600
+    },
+    meta: {
+      title: {
+        en: 'Cost Control & Performance Excellence | JAAZL',
+        ar: 'مراقبة التكاليف وتميز الأداء | جازل'
+      },
+      description: {
+        en: 'Comprehensive cost management, benchmarking, and operational excellence solutions for industrial projects.',
+        ar: 'إدارة شاملة للتكاليف ومقارنة مرجعية وحلول تميز تشغيلي للمشاريع الصناعية.'
+      },
+      keywords: ['cost control', 'cost estimating', 'benchmarking', 'operational excellence']
+    },
+    relatedIndustries: ['oil-gas', 'petrochemicals', 'refineries', 'power', 'manufacturing', 'mining', 'fertilizers']
   }
 ];

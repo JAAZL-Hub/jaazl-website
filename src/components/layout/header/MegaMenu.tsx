@@ -53,6 +53,14 @@ const serviceCategories = {
       { name: { en: 'Shutdown & Turnaround Solutions', ar: 'حلول الإغلاق والصيانة الدورية' }, path: '/services/shutdown-turnaround' },
       { name: { en: 'Industrial Fabrication Services', ar: 'خدمات التصنيع الصناعي' }, path: '/services/fabrication-services' }
     ]
+  },
+  projectmgmt: {
+    name: { en: 'Project Management Solutions', ar: 'حلول إدارة المشاريع' },
+    services: [
+      { name: { en: 'Project Planning & Management Platform', ar: 'منصة تخطيط وإدارة المشاريع' }, path: '/services/project-planning-platform' },
+      { name: { en: 'Digital Integration & Automation Solutions', ar: 'حلول التكامل الرقمي والأتمتة' }, path: '/services/digital-integration-automation' },
+      { name: { en: 'Cost Control & Performance Excellence', ar: 'مراقبة التكاليف وتميز الأداء' }, path: '/services/cost-performance-excellence' }
+    ]
   }
 };
 

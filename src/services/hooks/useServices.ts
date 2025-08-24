@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useEffect } from 'react';
 import { Service, ServiceCategory, LocalizedContent } from '../types';
 import { useLanguage } from '../../contexts/LanguageContext';

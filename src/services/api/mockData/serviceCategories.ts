@@ -90,5 +90,20 @@ export const serviceCategories: ServiceCategory[] = [
     icon: 'zap',
     color: 'orange',
     gradient: 'service-orange'
+  },
+  {
+    id: 'projectmgmt',
+    slug: 'projectmgmt',
+    name: {
+      en: 'Project Management Solutions',
+      ar: 'حلول إدارة المشاريع'
+    },
+    description: {
+      en: 'Comprehensive project management platforms combining planning, digital integration, and performance excellence for industrial capital projects and scheduled turnarounds.',
+      ar: 'منصات إدارة مشاريع شاملة تجمع بين التخطيط والتكامل الرقمي وتميز الأداء للمشاريع الرأسمالية الصناعية والصيانة الدورية المجدولة.'
+    },
+    icon: 'clipboard',
+    color: 'teal',
+    gradient: 'service-teal'
   }
 ];

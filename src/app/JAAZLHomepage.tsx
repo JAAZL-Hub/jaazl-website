@@ -92,6 +92,14 @@ const JAAZLHomepage: React.FC = () => {
       features: language === 'en' ? ["Electromechanical Systems", "Shutdown & Turnaround", "Fabrication Services"] : ["الأنظمة الكهروميكانيكية", "الإغلاق والصيانة الدورية", "خدمات التصنيع"],
       color: "from-orange-600 to-red-700",
       slug: 'electromechanical-systems'
+    },
+    {
+      icon: React.createElement(getMiscIcon('clipboard'), { className: "w-8 h-8" }),
+      title: language === 'en' ? "Project Management Solutions" : "حلول إدارة المشاريع",
+      description: language === 'en' ? "Comprehensive project management platforms combining planning, digital integration, and performance excellence for industrial capital projects and scheduled turnarounds." : "منصات إدارة مشاريع شاملة تجمع بين التخطيط والتكامل الرقمي وتميز الأداء للمشاريع الرأسمالية الصناعية والصيانة الدورية المجدولة.",
+      features: language === 'en' ? ["Project Planning Platform", "Digital Integration Solutions", "Cost & Performance Excellence"] : ["منصة تخطيط المشاريع", "حلول التكامل الرقمي", "التميز في التكلفة والأداء"],
+      color: "from-teal-600 to-cyan-700",
+      slug: 'project-planning-platform'
     }
   ];
 
