@@ -271,7 +271,7 @@ const JAAZLHomepage: React.FC = () => {
                           activeService === index 
                             ? 'bg-white/20 scale-105 border-white/50' 
                             : 'bg-white/5 hover:bg-white/15'
-                        }`} 
+                        } ${index === services.length - 1 ? 'col-span-2' : ''}`} 
                         onClick={() => setActiveService(index)}
                         aria-label={`Select ${service.title} service`}
                       >
