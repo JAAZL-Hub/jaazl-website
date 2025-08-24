@@ -535,7 +535,11 @@ By establishing local manufacturing capabilities, we significantly reduce lead t
       ar: 'خدمات استشارية هندسية متخصصة لتحسين العمليات الصناعية وزيادة الكفاءة.'
     },
     fullDescription: {
-      en: `Our industrial engineering consulting service provides comprehensive solutions for complex technical challenges.`,
+      en: `JAAZL's Industrial Engineering Consulting services deliver comprehensive technical expertise and strategic guidance for complex industrial challenges across the petrochemical, oil & gas, and manufacturing sectors in Saudi Arabia's Eastern Province. Our multidisciplinary team of certified engineers provides end-to-end consulting solutions including process optimization, equipment selection, system integration, and performance enhancement.
+
+We specialize in feasibility studies, conceptual design, detailed engineering, troubleshooting, and operational efficiency improvements. Our consulting approach combines decades of local industry experience with international best practices to deliver cost-effective solutions that enhance productivity, safety, and environmental compliance.
+
+Our services encompass plant modernization, capacity expansion planning, energy efficiency optimization, regulatory compliance consulting, and technology assessment. We work closely with clients to understand their specific challenges and develop customized solutions that maximize return on investment while ensuring sustainable operations in the demanding industrial environment of Jubail, Dammam, and Al-Khobar.`,
       ar: `تقدم خدمة استشارات الهندسة الصناعية لدينا حلولًا شاملة للتحديات التقنية المعقدة.`
     },
     features: [
@@ -787,7 +791,11 @@ Our reliability solutions integrate with your existing maintenance management sy
       ar: 'حلول متطورة للذكاء الاصطناعي وأنظمة الأتمتة لتحويل العمليات الصناعية.'
     },
     fullDescription: {
-      en: `Transform your industrial operations with our advanced AI and automation solutions.`,
+      en: `JAAZL's AI and Automation solutions revolutionize industrial operations by integrating cutting-edge artificial intelligence, machine learning, and advanced automation technologies to optimize performance, reduce costs, and enhance safety across petrochemical, oil & gas, and manufacturing facilities in Saudi Arabia's Eastern Province.
+
+Our comprehensive AI-driven solutions include predictive maintenance systems, real-time process optimization, intelligent alarm management, automated quality control, and smart energy management. We deploy advanced analytics platforms that leverage big data, IoT sensors, and machine learning algorithms to provide actionable insights and autonomous decision-making capabilities.
+
+Our automation services encompass distributed control systems (DCS), supervisory control and data acquisition (SCADA), programmable logic controllers (PLC), and advanced process control (APC) implementation. We specialize in digital twin development, robotic process automation, and intelligent asset management systems that enable facilities to achieve Industry 4.0 transformation while maintaining the highest standards of safety and regulatory compliance in the challenging industrial environment of the Eastern Province.`,
       ar: `حول عملياتك الصناعية باستخدام حلولنا المتقدمة للذكاء الاصطناعي والأتمتة.`
     },
     features: [
@@ -865,7 +873,11 @@ Our reliability solutions integrate with your existing maintenance management sy
       ar: 'استراتيجيات شاملة للتحول الرقمي لتحديث العمليات الصناعية.'
     },
     fullDescription: {
-      en: `Accelerate your industrial digital transformation journey with our comprehensive suite of digital solutions.`,
+      en: `JAAZL's Digital Transformation services accelerate industrial modernization by implementing comprehensive digital solutions that integrate advanced technologies, optimize operations, and create data-driven decision-making capabilities for petrochemical, oil & gas, and manufacturing facilities across Saudi Arabia's Eastern Province.
+
+Our digital transformation approach encompasses cloud migration, enterprise resource planning (ERP) integration, industrial Internet of Things (IIoT) implementation, digital workflow automation, and advanced analytics platforms. We specialize in creating connected ecosystems that enable real-time monitoring, predictive analytics, and intelligent automation throughout the entire value chain.
+
+We deliver end-to-end digital solutions including cybersecurity frameworks, data governance systems, mobile workforce applications, and augmented reality (AR) maintenance tools. Our transformation strategies focus on improving operational efficiency, reducing downtime, enhancing safety protocols, and enabling remote operations capabilities. With deep understanding of local industrial requirements and international digital standards, we ensure seamless integration of new technologies while maintaining operational continuity and regulatory compliance in the dynamic industrial landscape of Jubail, Dammam, and Al-Khobar.`,
       ar: `تسريع رحلة التحول الرقمي الصناعي لديك من خلال مجموعتنا الشاملة من الحلول الرقمية.`
     },
     features: [
@@ -1195,7 +1207,11 @@ From small storage vessels to large-scale industrial tanks, we provide turnkey s
       ar: 'حلول احترافية للصمامات والمحركات للتحكم الدقيق في التدفق في التطبيقات الصناعية.'
     },
     fullDescription: {
-      en: `Our valves and actuators service provides comprehensive flow control solutions for industrial applications.`,
+      en: `JAAZL's Valves and Actuators services provide comprehensive flow control solutions featuring high-performance valve systems, precision actuators, and advanced control technologies designed for the demanding requirements of petrochemical, oil & gas, and industrial processing facilities across Saudi Arabia's Eastern Province.
+
+Our extensive portfolio includes gate valves, globe valves, ball valves, butterfly valves, check valves, and specialty control valves manufactured to international standards (API, ASME, ANSI) and designed for extreme operating conditions including high pressure, high temperature, and corrosive environments. We supply electric, pneumatic, and hydraulic actuators with intelligent positioners and advanced diagnostic capabilities.
+
+We offer complete lifecycle support including valve sizing and selection, actuator matching, installation supervision, commissioning services, predictive maintenance programs, and emergency repair services. Our technical team provides comprehensive valve automation solutions, smart valve technologies, and integrated control systems that enhance process efficiency, safety, and reliability. With extensive local inventory and rapid response capabilities, we ensure minimal downtime and optimal performance for critical flow control applications in the challenging operating conditions of Jubail's petrochemical complexes and the broader Eastern Province industrial sector.`,
       ar: `تقدم خدمة الصمامات والمحركات لدينا حلول تحكم شاملة في التدفق للتطبيقات الصناعية.`
     },
     features: [
@@ -1275,7 +1291,11 @@ From small storage vessels to large-scale industrial tanks, we provide turnkey s
       ar: 'تكامل شامل للأنظمة الكهروميكانيكية للمرافق الصناعية.'
     },
     fullDescription: {
-      en: `Our electromechanical systems services provide comprehensive solutions for industrial facilities.`,
+      en: `JAAZL's Industrial Electromechanical Systems services deliver comprehensive engineering, installation, and maintenance solutions for complex electromechanical equipment and systems serving petrochemical, oil & gas, power generation, and manufacturing facilities across Saudi Arabia's Eastern Province.
+
+Our multidisciplinary expertise encompasses electrical power systems, motor control centers, variable frequency drives (VFDs), rotating equipment, pumping systems, compressor packages, and integrated automation solutions. We specialize in high-voltage electrical systems, emergency power generation, uninterruptible power supplies (UPS), and critical infrastructure protection systems designed for hazardous area classifications.
+
+We provide end-to-end services including system design, equipment procurement, installation supervision, testing and commissioning, preventive maintenance programs, and emergency response services. Our certified technicians and engineers deliver solutions for motor rewinding, pump refurbishment, gearbox repair, bearing replacement, and vibration analysis. With advanced diagnostic tools and predictive maintenance technologies, we ensure optimal performance, energy efficiency, and extended equipment life while maintaining the highest safety standards and regulatory compliance required for the demanding industrial environment of Jubail, Dammam, and the greater Eastern Province region.`,
       ar: `تقدم خدمات الأنظمة الكهروميكانيكية لدينا حلولًا شاملة للمرافق الصناعية.`
     },
     features: [
@@ -1353,7 +1373,11 @@ From small storage vessels to large-scale industrial tanks, we provide turnkey s
       ar: 'خدمات شاملة للإغلاق والصيانة الدورية لتقليل وقت التوقف.'
     },
     fullDescription: {
-      en: `Our shutdown and turnaround services help industrial facilities execute planned maintenance shutdowns efficiently.`,
+      en: `JAAZL's Shutdown and Turnaround services provide comprehensive planning, execution, and management solutions for scheduled maintenance shutdowns in petrochemical, oil & gas, refinery, and power generation facilities across Saudi Arabia's Eastern Province, ensuring safe, efficient, and cost-effective maintenance operations with minimal downtime.
+
+Our experienced shutdown management team delivers end-to-end services including pre-shutdown planning, work scope development, resource optimization, critical path scheduling, safety planning, contractor coordination, and post-shutdown analysis. We specialize in managing complex multi-unit shutdowns, catalyst changes, vessel inspections, piping modifications, and equipment overhauls while maintaining strict safety and quality standards.
+
+We provide specialized services including scaffolding management, confined space entry procedures, hot work permit systems, and integrated safety management throughout the shutdown lifecycle. Our comprehensive approach includes workforce mobilization, logistics coordination, quality assurance, and real-time progress monitoring to ensure on-time, on-budget completion. With extensive experience in the challenging operating environment of Jubail's industrial complexes and deep understanding of local regulatory requirements, we minimize business interruption while maximizing maintenance effectiveness and ensuring full regulatory compliance for critical industrial operations.`,
       ar: `تساعد خدمات الإغلاق والصيانة الدورية لدينا المرافق الصناعية على تنفيذ إغلاقات الصيانة المخططة بكفاءة.`
     },
     features: [
@@ -1431,7 +1455,11 @@ From small storage vessels to large-scale industrial tanks, we provide turnkey s
       ar: 'خدمات تصنيع مخصصة للمعدات والهياكل الصناعية.'
     },
     fullDescription: {
-      en: `Our industrial fabrication services provide custom manufacturing solutions for industrial equipment.`,
+      en: `JAAZL's Industrial Fabrication Services deliver comprehensive custom manufacturing solutions for specialized industrial equipment, structural components, and process systems serving petrochemical, oil & gas, power generation, and manufacturing facilities across Saudi Arabia's Eastern Province, combining advanced fabrication technologies with strict quality control and international standards compliance.
+
+Our state-of-the-art fabrication facilities provide complete metalworking services including heavy steel fabrication, precision machining, pipe fabrication, vessel manufacturing, skid-mounted system assembly, and modular construction. We specialize in working with carbon steel, stainless steel, duplex alloys, and exotic materials required for corrosive and high-temperature applications in the demanding industrial environment.
+
+We offer end-to-end manufacturing services from design review and material procurement to fabrication, testing, and delivery. Our certified welders and fabricators work to international codes (ASME, API, AWS, AISC) with comprehensive quality assurance including non-destructive testing (NDT), pressure testing, and dimensional verification. With project management capabilities, logistics coordination, and field installation support, we deliver complete turnkey solutions that meet the exacting requirements of critical industrial applications while ensuring on-time delivery and cost-effective manufacturing for the complex projects typical of Jubail's petrochemical sector and the broader Eastern Province industrial landscape.`,
       ar: `تقدم خدمات التصنيع الصناعي لدينا حلول تصنيع مخصصة للمعدات الصناعية.`
     },
     features: [
