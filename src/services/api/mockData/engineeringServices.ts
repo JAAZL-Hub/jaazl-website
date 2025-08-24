@@ -1591,7 +1591,7 @@ Designed for industrial facilities requiring complex project coordination, our p
     icon: 'clipboard',
     image: {
       id: 'project-planning-platform-image',
-      url: '/images/services/project-planning-platform.webp',
+      url: '/images/services/project-management.webp',
       altText: {
         en: 'Project planning and management platform',
         ar: 'منصة تخطيط وإدارة المشاريع'
@@ -1677,7 +1677,7 @@ Advanced form tracking capabilities ensure all project documentation is captured
     icon: 'monitor',
     image: {
       id: 'digital-integration-automation-image',
-      url: '/images/services/digital-integration-automation.webp',
+      url: '/images/services/digital-transformation.webp',
       altText: {
         en: 'Digital integration and automation solutions',
         ar: 'حلول التكامل الرقمي والأتمتة'
@@ -1763,7 +1763,7 @@ The operational excellence component implements lean methodologies, performance 
     icon: 'dollar-sign',
     image: {
       id: 'cost-performance-excellence-image',
-      url: '/images/services/cost-performance-excellence.webp',
+      url: '/images/services/engineering-consulting.webp',
       altText: {
         en: 'Cost control and performance excellence',
         ar: 'مراقبة التكاليف وتميز الأداء'
