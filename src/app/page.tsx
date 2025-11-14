@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: 'JAAZL Industrial Company',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: 'https://jaazl.com/images/JAAZL-Logo.webp',
         width: 1200,
         height: 630,
         alt: 'JAAZL Industrial Company - Industrial Solutions Excellence in Eastern Province',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'JAAZL Industrial Company - Industrial Solutions Excellence',
     description: 'Leading industrial solutions provider in Saudi Arabia\'s Eastern Province with comprehensive engineering and environmental solutions.',
-    images: ['/images/twitter-image.jpg'],
+    images: ['https://jaazl.com/images/JAAZL-Logo.webp'],
     creator: '@jaazlindustrial',
   },
   robots: {
