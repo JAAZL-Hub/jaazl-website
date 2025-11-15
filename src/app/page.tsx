@@ -40,11 +40,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'JAAZL Industrial Company - Industrial Solutions Excellence',
     description: 'Leading industrial solutions provider in Saudi Arabia\'s Eastern Province serving Jubail, Dammam, Khobar, and Dhahran with comprehensive engineering and environmental solutions.',
-    url: 'https://jaazl.com',
+    url: 'https://www.jaazl.com',
     siteName: 'JAAZL Industrial Company',
     images: [
       {
-        url: 'https://jaazl.com/images/JAAZL-Logo%202.webp',
+        url: 'https://www.jaazl.com/images/JAAZL-Logo%202.webp',
         width: 1200,
         height: 630,
         alt: 'JAAZL Industrial Company - Industrial Solutions Excellence in Eastern Province',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'JAAZL Industrial Company - Industrial Solutions Excellence',
     description: 'Leading industrial solutions provider in Saudi Arabia\'s Eastern Province with comprehensive engineering and environmental solutions.',
-    images: ['https://jaazl.com/images/JAAZL-Logo%202.webp'],
+    images: ['https://www.jaazl.com/images/JAAZL-Logo%202.webp'],
     creator: '@jaazlindustrial',
   },
   robots: {
