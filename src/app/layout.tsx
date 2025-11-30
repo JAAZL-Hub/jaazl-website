@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     description: 'Leading industrial solutions provider in Saudi Arabia. Comprehensive chemicals, water treatment, technical consultancy & AI, electromechanical services, and material supplies.',
     images: [
       {
-        url: 'https://www.jaazl.com/images/JAAZL-Logo.webp',
+        url: 'https://www.jaazl.com/images/og-image.png',
         width: 1200,
         height: 630,
         alt: 'JAAZL Industrial Company - Industrial Solutions Excellence',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'JAAZL Industrial Company - Your Ideal Industrial Solutions Partner',
     description: 'Leading industrial solutions provider in Saudi Arabia. Comprehensive industrial solutions across 6 main service categories.',
-    images: ['https://www.jaazl.com/images/JAAZL-Logo.webp'],
+    images: ['https://www.jaazl.com/images/og-image.png'],
   },
   alternates: {
     canonical: 'https://jaazl.com',
